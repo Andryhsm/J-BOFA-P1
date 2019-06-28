@@ -120,6 +120,11 @@ return [
             'icon'        => 'file',
         ],
         [
+            'text'        => 'Gestion utilisateurs',
+            'url'         => 'admin/users',
+            'icon'        => 'user',
+        ],
+        [
             'text'    => 'Multilevel',
             'icon'    => 'share',
             'submenu' => [
