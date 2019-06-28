@@ -21,7 +21,10 @@ Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->group(function
     Route::get('/home', 'HomeController@index')->name('home');
 
     /*start profil*/
+    Route::resource('user','AdminController');
     Route::get('/edit-profil', 'ProfilController@index')->name('profil');
     Route::post('/post-profil', 'ProfilController@update')->name('post-profil');
+    Route::post('/delete/$id', 'AdminController@destroy')->name('delete');
+    Route::post('/update/{id}', 'AdminController@update');
     /*end profil*/
 });

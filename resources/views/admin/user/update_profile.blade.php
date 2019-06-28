@@ -36,7 +36,7 @@
                   {!! csrf_field() !!}
                   <div class="form-group">
                     <label for="inputName" class="col-sm-2 control-label">Nom</label>
-                    <input type="hidden" name="id" value="{{$user->id}}">
+                    <input type="hidden" name="id" value="{{isset($user->id) ? $user->id : '' }}">
                     <div class="col-sm-10">
                       <input type="text" name="inputName" class="form-control" id="inputName" placeholder="Nom" value="{{ isset($user->name) ? $user->name : '' }}">
                     </div>

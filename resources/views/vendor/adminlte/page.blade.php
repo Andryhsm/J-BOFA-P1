@@ -203,13 +203,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ url('image/Admin/Profil/avatar.png') }}" class="user-image" alt="User Image">
+              <img src="{{ (Auth::user()->photo =='' ) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::user()->photo.'') }}" class="user-image" alt="User Image">
               <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header" style="background-color: #f9fafc;">
-                <img src="{{ url('image/Admin/Profil/avatar.png') }}" class="img-circle" alt="User Image">
+                <img src="{{ (Auth::user()->photo =='' ) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::user()->photo.'') }}" class="img-circle" alt="User Image">
 
                 <p style="color: #666666;">
                   {{ Auth::user()->name }}
@@ -276,7 +276,7 @@
             <section class="sidebar">
                 <div class="user-panel">
                 <div class="pull-left image">
-                  <img src="{{ url('image/Admin/Profil/avatar.png') }}" class="img-circle" alt="User Image">
+                  <img src="{{ (Auth::user()->photo =='' ) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::user()->photo.'') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                   <p>{{ Auth::user()->name }}</p>

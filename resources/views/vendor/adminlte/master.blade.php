@@ -69,6 +69,6 @@
 @toastr_render
 
 @yield('adminlte_js')
-
+@include('layouts.modal')
 </body>
 </html>

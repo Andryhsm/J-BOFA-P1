@@ -26,6 +26,15 @@ class UserRepository implements UserRepositoryInterface
         $this->model->name = $data['inputName'];
         $this->model->email = $data['inputEmail'];
         $this->model->phone = $data['inputPhone'];
+        $this->model->photo = $data['inputPhoto'];
         $this->model->save();
+    }
+
+    public function getAllUser(){
+        return $this->model->orderBy('id','desc')->get();
+    }
+
+    public function deleteUser($user_id){
+        return $this->model->where('id', $user_id)->delete();
     }
 }
