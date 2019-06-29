@@ -1,0 +1,24 @@
+
+/*btn header css*/
+.header-button {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+/*profil image start*/
+.img-profil {
+	height: 100px;
+    object-fit: cover;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>img, .navbar-nav>.user-menu .user-image{
+	object-fit: cover;
+}
+
+.user-panel>.image>img, .img-profil-list{
+	height: 45px;
+    object-fit: cover;
+    width: 45px;
+}
+/*profil image end*/

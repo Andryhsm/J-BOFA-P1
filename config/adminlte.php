@@ -114,59 +114,59 @@ return [
             'url'         => 'admin/home',
             'icon'        => 'dashboard',
         ],
-        [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-        ],
+        // [
+        //     'text'        => 'Pages',
+        //     'url'         => 'admin/pages',
+        //     'icon'        => 'file',
+        // ],
         [
             'text'        => 'Gestion utilisateurs',
             'url'         => 'admin/user',
             'icon'        => 'user',
         ],
-        [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-            ],
-        ],
+        // [
+        //     'text'    => 'Multilevel',
+        //     'icon'    => 'share',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Level One',
+        //             'url'  => '#',
+        //         ],
+        //         [
+        //             'text'    => 'Level One',
+        //             'url'     => '#',
+        //             'submenu' => [
+        //                 [
+        //                     'text' => 'Level Two',
+        //                     'url'  => '#',
+        //                 ],
+        //                 [
+        //                     'text'    => 'Level Two',
+        //                     'url'     => '#',
+        //                     'submenu' => [
+        //                         [
+        //                             'text' => 'Level Three',
+        //                             'url'  => '#',
+        //                         ],
+        //                         [
+        //                             'text' => 'Level Three',
+        //                             'url'  => '#',
+        //                         ],
+        //                     ],
+        //                 ],
+        //             ],
+        //         ],
+        //         [
+        //             'text' => 'Level One',
+        //             'url'  => '#',
+        //         ],
+        //     ],
+        // ],
         'CONFIGURATION',
         [
             'text' => 'Profile',
             'url'  => 'admin/edit-profil',
-            'icon' => 'user',
+            'icon' => 'edit',
         ],
         /*[
             'text' => 'Change Password',

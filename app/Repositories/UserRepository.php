@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Interfaces\UserRepositoryInterface;
 Use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
 {
@@ -19,6 +20,16 @@ class UserRepository implements UserRepositoryInterface
         return $this->model->find($user_id);
     }
 
+    public function createUser($data)
+    {
+        $this->model->name = $data['inputName'];
+        $this->model->email = $data['inputEmail'];
+        $this->model->phone = $data['inputPhone'];
+        if (isset($data['inputPhoto'])) 
+            $this->model->photo = $data['inputPhoto'];
+        $this->model->password = Hash::make($data['inputPassword']);
+        $this->model->save();
+    }
 
     public function updateUser($user_id, $data)
     {
@@ -26,7 +37,9 @@ class UserRepository implements UserRepositoryInterface
         $this->model->name = $data['inputName'];
         $this->model->email = $data['inputEmail'];
         $this->model->phone = $data['inputPhone'];
-        $this->model->photo = $data['inputPhoto'];
+        if (isset($data['inputPhoto'])) 
+            $this->model->photo = $data['inputPhoto'];        
+        $this->model->password = (!empty($data['inputPassword']))? Hash::make($data['inputPassword']) : $this->model->password;
         $this->model->save();
     }
 

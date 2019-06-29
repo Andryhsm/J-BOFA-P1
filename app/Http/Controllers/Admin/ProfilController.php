@@ -45,25 +45,25 @@ class ProfilController extends Controller
             'inputName' => 'required',        
             'inputPhone' => 'required',
             'inputEmail' => 'required'
-        );
-        $image_name = null;
-        if ($request->hasFile('inputPhoto')) {
-            $file = $request->file('inputPhoto');
-            try {
-                $image_name = $this->upload_service->upload($file, 'image/Admin/Profil');
-            } catch (\Exception $e) {
-                flash()->error($e->getMessage());
-                return Redirect::back();
-            }
-        }
-        $input = $request->all();
-        $input['inputPhoto'] = $image_name;
-        $id= $request['id'];
+        );        
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
         }else{
             try{
+                $image_name = null;
+                if ($request->hasFile('inputPhoto')) {
+                    $file = $request->file('inputPhoto');
+                    try {
+                        $image_name = $this->upload_service->upload($file, 'image/Admin/Profil');
+                    } catch (\Exception $e) {
+                        flash()->error($e->getMessage());
+                        return Redirect::back();
+                    }
+                }
+                $input = $request->all();
+                $input['inputPhoto'] = $image_name;
+                $id= $request['id'];
                 $users = $this->user_repository->updateUser($id,$input);
             }catch(\Exception $e){
                 return Redirect::back()->withInput()->withErrors($e->getMessage());

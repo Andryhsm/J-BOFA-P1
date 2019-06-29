@@ -40,7 +40,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        $user = false;
+        return view('admin.user.update_profile',compact('user'));
     }
 
     /**
@@ -51,7 +52,26 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = array(    
+            'inputName' => 'required',        
+            'inputPhone' => 'required',
+            'inputEmail' => 'required',
+            'inputPassword' => 'required'
+        );
+        
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            return Redirect::back()->withInput()->withErrors($validator);
+        }else{
+            try{
+                $input = $this->uploadImage($request); 
+                $users = $this->user_repository->createUser($input);
+            }catch(\Exception $e){
+                return Redirect::back()->withInput()->withErrors($e->getMessage());
+            }
+            toastr()->success('Ajout utilisateur réussie!');
+            return redirect()->route('user.index');
+        }
     }
 
     /**
@@ -93,30 +113,19 @@ class AdminController extends Controller
             'inputName' => 'required',        
             'inputPhone' => 'required',
             'inputEmail' => 'required'
-        );
-        $image_name = null;
-        if ($request->hasFile('inputPhoto')) {
-            $file = $request->file('inputPhoto');
-            try {
-                $image_name = $this->upload_service->upload($file, 'image/Admin/Profil');
-            } catch (\Exception $e) {
-                flash()->error($e->getMessage());
-                return Redirect::back();
-            }
-        }
-        $input = $request->all();
-        $input['inputPhoto'] = $image_name;
+        );        
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
         }else{
             try{
+                $input = $this->uploadImage($request); 
                 $users = $this->user_repository->updateUser($id, $input);
             }catch(\Exception $e){
                 return Redirect::back()->withInput()->withErrors($e->getMessage());
             }
             toastr()->success('Modification réussie!');
-            return redirect()->back();
+            return redirect()->route('user.index');
         }
     }
 
@@ -133,5 +142,22 @@ class AdminController extends Controller
         toastr()->success('Suppression réussie!');
         $users = $this->user_repository->getAllUser();
         return view('admin.user.user_list',compact('users'));
+    }
+
+    public function uploadImage($request)
+    {
+        $image_name = null;
+        if ($request->hasFile('inputPhoto')) {
+            $file = $request->file('inputPhoto');
+            try {
+                $image_name = $this->upload_service->upload($file, 'image/Admin/Profil');
+            } catch (\Exception $e) {
+                flash()->error($e->getMessage());
+                return Redirect::back();
+            }
+        }
+        $input = $request->all();
+        $input['inputPhoto'] = $image_name;
+        return $input;
     }
 }

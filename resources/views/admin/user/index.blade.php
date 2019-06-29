@@ -7,16 +7,16 @@
 @stop
 
 @section('content')
-    <section class="content">
+    <section class="user-profil">
         <div class="row">
         <div class="col-md-3">
 
           <!-- Profile Image -->
           <div class="box box-primary">
             <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="{{ ($user->photo =='') ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.$user->photo.'')}}" alt="User profile picture">
+              <img class="profile-user-img img-responsive img-circle img-profil" src="{{ ($user->photo =='' || !isset($user->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.$user->photo.'')}}" alt="User profile picture">
 
-              <h3 class="profile-username text-center">{{ $user->name }}</h3>
+              <h3 class="profile-update text-center">{{ $user->name }}</h3>
             </div>
             <!-- /.box-body -->
           </div>
@@ -35,51 +35,51 @@
                 <form id="form-profil" class="form-horizontal" method="post" action="{{ route('post-profil') }}"  enctype="multipart/form-data">
                   {!! csrf_field() !!}
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Nom</label>
+                    <label for="inputName" class="col-sm-3 control-label">Nom et Pr&eacute;nom</label>
                     <input type="hidden" name="id" value="{{$user->id}}">
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                       <input type="text" name="inputName" class="form-control" id="inputName" placeholder="Nom" value="{{ isset($user->name) ? $user->name : '' }}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <label for="inputEmail" class="col-sm-3 control-label">Email</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                       <input type="email" name="inputEmail" class="form-control" id="inputEmail" placeholder="Email" value="{{ isset($user->email) ? $user->email : '' }}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPhone" class="col-sm-2 control-label">Téléphone</label>
+                    <label for="inputPhone" class="col-sm-3 control-label">Téléphone</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                       <input type="text" name="inputPhone" class="form-control" id="inputPhone" placeholder="Téléphone" value="{{ isset($user->phone) ? $user->phone : '' }}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPassword" class="col-sm-2 control-label">Mot de passe</label>
+                    <label for="inputPassword" class="col-sm-3 control-label">Mot de passe</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                       <input type="password" name="inputPassword" class="form-control" id="inputPassword" placeholder="Mot de passe">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputConfirmPassword" class="col-sm-2 control-label">Confirmez le mot de passe</label>
+                    <label for="inputConfirmPassword" class="col-sm-3 control-label">Confirmez le mot de passe</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                       <input type="password" name="inputConfirmPassword" class="form-control" id="inputConfirmPassword" placeholder="Confirmez le mot de passe">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPhoto" class="col-sm-2 control-label">Photo</label>
+                    <label for="inputPhoto" class="col-sm-3 control-label">Photo</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                       <input type="file" name="inputPhoto" class="form-control" id="inputPhoto">
                     </div>
                   </div>
                   
                   <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-success">Enregistrer</button>
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn pull-right btn-success">Enregistrer</button>
                     </div>
                   </div>
                 </form>
@@ -96,30 +96,5 @@
 @stop
 
 @section('js')
-  <script type="text/javascript">
-    $().ready(function() {
-      $("#form-profil").validate({
-      rules : {
-        inputName : {
-          required : true
-        },
-        inputEmail : {
-          required : true,
-          mail : true
-        },  
-        inputPhone : {
-          required : true
-        }
-      },
-      messages : {
-        inputName : "Veuillez fournir un nom",
-        inputEmail : "L'email est incorrect",
-        inputPhone : "Veuillez fournir un numéro téléphone"
-      },
-      submitHandler: function(form) {
-        form.submit();
-      }
-     });
-    });
-  </script>  
+  {!! Html::script('js/admin/user.js') !!}
 @stop
