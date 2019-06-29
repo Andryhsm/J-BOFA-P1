@@ -24,6 +24,7 @@
                                 <th>Nom et Pr&eacute;nom</th>
                                 <th>Email</th>
                                 <th>Phone</th>
+                                <th>Status</th>
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
@@ -37,9 +38,17 @@
                                         <td>{!! $admin->email !!}</td>
                                         <td>{!! $admin->phone !!}</td>
                                         <td>
+                                            <div class="switch-container position-relative form-group">
+                                                <label class="switch">
+                                                  <input type="checkbox" class="form-check-input" checked>
+                                                  <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
                                             <div class="btn-group">
                                                 <a href="{{ Url('admin/user/'.$admin->id.'/edit/') }}"
-                                                   class="btn btn-default btn-sm btn-success" title="Edit"><i
+                                                   class="btn btn-default btn-sm btn-warning" title="Edit"><i
                                                             class="fa fa-fw fa-edit" style="color:white;"></i></a>
                                                 {!! Form::open(array('url' => route('user.destroy', [$admin->id]), 'class' => 'pull-left')) !!} &nbsp; &nbsp;
                                                 {!! Form::hidden('_method', 'DELETE') !!}

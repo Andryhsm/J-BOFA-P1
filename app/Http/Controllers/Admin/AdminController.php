@@ -29,7 +29,7 @@ class AdminController extends Controller
     {
         //
         $users = $this->user_repository->getAllUser();
-        return view('admin.user.user_list',compact('users'));
+        return view('admin.user.list',compact('users'));
 
     }
 
@@ -41,7 +41,7 @@ class AdminController extends Controller
     public function create()
     {
         $user = false;
-        return view('admin.user.update_profile',compact('user'));
+        return view('admin.user.form',compact('user'));
     }
 
     /**
@@ -96,7 +96,7 @@ class AdminController extends Controller
     {
         //
         $user = $this->user_repository->findUser($id);
-        return view('admin.user.update_profile',compact('user'));
+        return view('admin.user.form',compact('user'));
     }
 
     /**
@@ -141,7 +141,7 @@ class AdminController extends Controller
         $this->user_repository->deleteUser($id);
         toastr()->success('Suppression réussie!');
         $users = $this->user_repository->getAllUser();
-        return view('admin.user.user_list',compact('users'));
+        return view('admin.user.list',compact('users'));
     }
 
     public function uploadImage($request)

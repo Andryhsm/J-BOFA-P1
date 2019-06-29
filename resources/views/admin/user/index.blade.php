@@ -27,7 +27,7 @@
         <div class="col-md-9">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#settings" data-toggle="tab" aria-expanded="true">Modification</a></li>
+              <li class="active" style="width: 100%;"><a href="#settings" data-toggle="tab" aria-expanded="true" style="font-size: 18px; font-weight: bold;">Mes informations</a></li>
             </ul>
             <div class="tab-content">            
 
