@@ -10,12 +10,20 @@ $(document).ready(function() {
         },  
         inputPhone : {
           required : true
+        },
+        inputPassword : {
+          required : true
+        },
+        inputConfirmPassword: {
+            equalTo: "#inputPassword"
         }
       },
       messages : {
         inputName : "Veuillez fournir un nom",
         inputEmail : "L'email est incorrect",
-        inputPhone : "Veuillez fournir un numéro téléphone"
+        inputPhone : "Veuillez fournir un numéro téléphone",
+        inputPassword : "Veuillez renseigner le mot de passe",
+        inputConfirmPassword : "Les deux mots de passe ne sont pas identique"
       },
       submitHandler: function(form) {
         form.submit();
