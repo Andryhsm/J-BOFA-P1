@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\UserRepository;
 use App\Interfaces\UserRepositoryInterface;
 use Illuminate\Support\Facades\Redirect;
-use Yajra\Datatables\Facades\Datatables;
+use Yajra\DataTables\Facades\DataTables;
 use App\Service\UploadService;
 use Illuminate\Support\Facades\Validator;
 
@@ -30,7 +30,39 @@ class AdminController extends Controller
         //
         $users = $this->user_repository->getAllUser();
         return view('admin.user.list',compact('users'));
-        
+        // $data_tables = DataTables::collection($users);
+        // $data_tables->EditColumn('name', function ($user) {
+        //     if(isset($user->name)) 
+        //         return $user->name;
+        // })->EditColumn('email', function ($user) {
+        //     if(isset($user->email))    
+        //         return $user->email;
+        // })->EditColumn('phone', function ($user) {
+        //     if(isset($user->phone)) 
+        //         return $user->phone;
+        // })->EditColumn('status', function ($user) {
+        //     return '';
+        //     // return '<div class="switch-container position-relative form-group">
+        //     //             <label class="switch" data-id="{{$user->id}}">
+        //     //               <input type="checkbox" class="form-check-input" >
+        //     //               <span class="slider round"></span>
+        //     //             </label>
+        //     //         </div>';
+        // })->EditColumn('action', function ($user) {
+        //     //return view("admin.product.action", ['product' => $user]);
+        // });
+        // return $data_tables->rawColumns(['status','action'])
+        // ->setRowClass(function($user) {
+           
+        //     switch ($user->status) {
+        //         case 0:
+        //             return 'darkGrey';
+        //             break;
+        //         case 1:
+        //             return 'backGreen';
+        //             break;
+        //     }
+        // })->make(true);
 
     }
 

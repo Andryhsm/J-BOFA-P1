@@ -29,9 +29,10 @@ $(document).ready(function() {
         form.submit();
       }
      });
+      
+          $last = $('.user-update .profile-username').text();
 
       $('.user-update').on('keyup','#inputName',function(){
-          $last = $('.user-update .profile-username').text();
           if($(this).val()!=""){
             $('.user-update .profile-username').text($(this).val());
           }else{
