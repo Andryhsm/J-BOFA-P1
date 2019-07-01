@@ -49,5 +49,13 @@ $(document).ready(function() {
             reader.readAsDataURL(this.files[0]);
         }
       });
-
+      $('.user-update').on('click','#inputStatus',function(){
+          if($(this).prop('checked')){
+            $(this).siblings().val(1);
+            console.log('on')
+          }else{
+            $(this).siblings().val(0);
+            console.log('off')
+          }
+      });
     });

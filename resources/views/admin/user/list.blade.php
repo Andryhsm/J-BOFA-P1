@@ -39,8 +39,8 @@
                                         <td>{!! $admin->phone !!}</td>
                                         <td>
                                             <div class="switch-container position-relative form-group">
-                                                <label class="switch">
-                                                  <input type="checkbox" class="form-check-input" checked>
+                                                <label class="switch" data-id="{{$admin->id}}">
+                                                  <input type="checkbox" class="form-check-input" {{($admin->status == 1) ? 'checked' : ''}}>
                                                   <span class="slider round"></span>
                                                 </label>
                                             </div>
@@ -82,5 +82,32 @@
                 $form.trigger('submit'); // submit the form
         });
     });
+
+      $('.user-list').on('click','.form-check-input',function(){
+        var user_id = $(this).closest('.switch').data('id');
+        
+        $.ajax({
+            type: "POST",
+            data: {'user_id':user_id},
+            url: base_url + 'admin/user_status',
+            success: function (success) {
+                if (success.status == 1){
+                    toastr.success('Utilisateur activé');
+                }
+                else{
+                    toastr.warning('Utilisateur desactivé');
+                }
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+          // if($(this).find('.form-check-input').prop('checked')){
+          //   var user_id = $(this).data('id');
+          // }else{
+          //   console.log('false');
+          // }
+      });
+      
   </script>  
 @stop

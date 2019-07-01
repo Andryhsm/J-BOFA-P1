@@ -28,6 +28,7 @@ class UserRepository implements UserRepositoryInterface
         if (isset($data['inputPhoto'])) 
             $this->model->photo = $data['inputPhoto'];
         $this->model->password = Hash::make($data['inputPassword']);
+        $this->model->status = $data['inputStatus'];
         $this->model->save();
     }
 
@@ -37,6 +38,7 @@ class UserRepository implements UserRepositoryInterface
         $this->model->name = $data['inputName'];
         $this->model->email = $data['inputEmail'];
         $this->model->phone = $data['inputPhone'];
+        $this->model->status = $data['inputStatus'];
         if (isset($data['inputPhoto'])) 
             $this->model->photo = $data['inputPhoto'];        
         $this->model->password = (!empty($data['inputPassword']))? Hash::make($data['inputPassword']) : $this->model->password;
@@ -49,5 +51,18 @@ class UserRepository implements UserRepositoryInterface
 
     public function deleteUser($user_id){
         return $this->model->where('id', $user_id)->delete();
+    }
+
+    public function changeStatus($user_id){
+        $this->model = $this->model->find($user_id);
+        if ($this->model->status == 1){
+            $this->model->status = 0;
+        }
+        else{
+            $this->model->status = 1;
+        }
+        $this->model->save();
+        $user = $this->findUser($user_id);
+        return $user;
     }
 }

@@ -30,6 +30,7 @@ class AdminController extends Controller
         //
         $users = $this->user_repository->getAllUser();
         return view('admin.user.list',compact('users'));
+        
 
     }
 
@@ -119,6 +120,7 @@ class AdminController extends Controller
             return Redirect::back()->withInput()->withErrors($validator);
         }else{
             try{
+                //$input= $request->all();
                 $input = $this->uploadImage($request); 
                 $users = $this->user_repository->updateUser($id, $input);
             }catch(\Exception $e){
@@ -159,5 +161,12 @@ class AdminController extends Controller
         $input = $request->all();
         $input['inputPhoto'] = $image_name;
         return $input;
+    }
+
+    public function updateStatus(Request $request){
+        $user_id = $request->all()['user_id'];
+        \Log::debug($user_id);
+        $status = $this->user_repository->changeStatus($user_id);
+        return $status;
     }
 }

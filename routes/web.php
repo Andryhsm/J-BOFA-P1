@@ -26,5 +26,6 @@ Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->group(function
     Route::post('/post-profil', 'ProfilController@update')->name('post-profil');
     Route::post('/delete/$id', 'AdminController@destroy')->name('delete');
     Route::post('/update/{id}', 'AdminController@update');
+    Route::post('user_status', 'AdminController@updateStatus')->name('user_status');
     /*end profil*/
 });
