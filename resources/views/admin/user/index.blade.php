@@ -56,6 +56,14 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputStatus" class="col-sm-3 control-label">Status </label>
+
+                    <div class="col-sm-9">
+                      <input type="hidden" name="inputStatus" value="{{($user) ? $user->status : '0'}}">
+                      <input type="checkbox" name="status" class="form-check-input" id="inputStatus" {{ $user ? (($user->status == 1) ? 'checked' : '') : '' }} >
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="inputPassword" class="col-sm-3 control-label">Mot de passe</label>
 
                     <div class="col-sm-9">

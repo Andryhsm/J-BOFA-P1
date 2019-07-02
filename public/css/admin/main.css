@@ -17,9 +17,9 @@
 }
 
 .user-panel>.image>img, .img-profil-list{
-	height: 45px;
+	height: 40px;
     object-fit: cover;
-    width: 45px;
+    width: 40px;
 }
 /*profil image end*/
 
