@@ -163,7 +163,6 @@ class AdminController extends Controller
 
     public function updateStatus(Request $request){
         $user_id = $request->all()['user_id'];
-        \Log::debug($user_id);
         $status = $this->user_repository->changeStatus($user_id);
         return $status;
     }
@@ -213,18 +212,7 @@ class AdminController extends Controller
         })->EditColumn('action', function ($user) {
             return view("admin.user.action", ['admin' => $user]);
         });
-        return $data_tables->rawColumns(['name','status','action'])
-        ->setRowClass(function($user) {
-           
-            switch ($user->status) {
-                case 0:
-                    return 'darkGrey';
-                    break;
-                case 1:
-                    return 'backGreen';
-                    break;
-            }
-        })->make(true);
+        return $data_tables->rawColumns(['name','status','action'])->make(true);
     }
 
     public function getFilterList()
