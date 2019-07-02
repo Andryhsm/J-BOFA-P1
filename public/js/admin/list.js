@@ -20,10 +20,10 @@ jQuery(document).ready(function () {
             "responsive"   : true,
             "bPaginate"    : true,
             "bLengthChange": true,
-            "bFilter"      : true,
+            "bFilter"      : false,
             "bInfo"        : true,
             "bAutoWidth"   : false,
-            "order"        : [[1, "desc"]],
+            //"order"        : [[1, "desc"]],
             "lengthMenu"   : [20, 40, 60, 80, 100],
             "pageLength"   : 20,
             columns        : [

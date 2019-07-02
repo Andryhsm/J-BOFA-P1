@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <section class="user-profil">
+    <section class="user-update">
         <div class="row">
         <div class="col-md-3">
 
@@ -16,7 +16,7 @@
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle img-profil" src="{{ ($user->photo =='' || !isset($user->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.$user->photo.'')}}" alt="User profile picture">
 
-              <h3 class="profile-update text-center">{{ $user->name }}</h3>
+              <h3 class="profile-username text-center">{{ $user->name }}</h3>
             </div>
             <!-- /.box-body -->
           </div>
