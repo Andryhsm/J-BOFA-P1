@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <section class="user-profil">
+    <section class="user-update">
         <div class="row">
         <div class="col-md-3">
 
@@ -16,7 +16,7 @@
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle img-profil" src="{{ ($user->photo =='' || !isset($user->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.$user->photo.'')}}" alt="User profile picture">
 
-              <h3 class="profile-update text-center">{{ $user->name }}</h3>
+              <h3 class="profile-username text-center">{{ $user->name }}</h3>
             </div>
             <!-- /.box-body -->
           </div>
@@ -53,6 +53,14 @@
 
                     <div class="col-sm-9">
                       <input type="text" name="inputPhone" class="form-control" id="inputPhone" placeholder="Téléphone" value="{{ isset($user->phone) ? $user->phone : '' }}">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputStatus" class="col-sm-3 control-label">Status </label>
+
+                    <div class="col-sm-9">
+                      <input type="hidden" name="inputStatus" value="{{($user) ? $user->status : '0'}}">
+                      <input type="checkbox" name="status" class="form-check-input" id="inputStatus" {{ $user ? (($user->status == 1) ? 'checked' : '') : '' }} >
                     </div>
                   </div>
                   <div class="form-group">

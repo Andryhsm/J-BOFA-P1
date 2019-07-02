@@ -38,6 +38,7 @@ $(document).ready(function() {
           }else{
             $('.user-update .profile-username').text($last);
           }
+          console.log($(this).val());
       });
       $('#inputPhoto').on('change', function(){
         if (this.files && this.files[0]) {
@@ -53,10 +54,8 @@ $(document).ready(function() {
       $('.user-update').on('click','#inputStatus',function(){
           if($(this).prop('checked')){
             $(this).siblings().val(1);
-            console.log('on')
           }else{
             $(this).siblings().val(0);
-            console.log('off')
           }
       });
     });

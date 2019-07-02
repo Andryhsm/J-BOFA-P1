@@ -23,6 +23,8 @@ Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->group(function
     /*start profil*/
     Route::resource('user','AdminController');
     Route::get('/edit-profil', 'ProfilController@index')->name('profil');
+    Route::get('/get_user', 'AdminController@getAll')->name('get_user');
+    Route::get('/user/get-filter', 'AdminController@getFilterList')->name('get-filter');
     Route::post('/post-profil', 'ProfilController@update')->name('post-profil');
     Route::post('/delete/$id', 'AdminController@destroy')->name('delete');
     Route::post('/update/{id}', 'AdminController@update');

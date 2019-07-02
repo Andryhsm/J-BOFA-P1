@@ -28,41 +28,7 @@ class AdminController extends Controller
     public function index()
     {
         //
-        $users = $this->user_repository->getAllUser();
-        return view('admin.user.list',compact('users'));
-        // $data_tables = DataTables::collection($users);
-        // $data_tables->EditColumn('name', function ($user) {
-        //     if(isset($user->name)) 
-        //         return $user->name;
-        // })->EditColumn('email', function ($user) {
-        //     if(isset($user->email))    
-        //         return $user->email;
-        // })->EditColumn('phone', function ($user) {
-        //     if(isset($user->phone)) 
-        //         return $user->phone;
-        // })->EditColumn('status', function ($user) {
-        //     return '';
-        //     // return '<div class="switch-container position-relative form-group">
-        //     //             <label class="switch" data-id="{{$user->id}}">
-        //     //               <input type="checkbox" class="form-check-input" >
-        //     //               <span class="slider round"></span>
-        //     //             </label>
-        //     //         </div>';
-        // })->EditColumn('action', function ($user) {
-        //     //return view("admin.product.action", ['product' => $user]);
-        // });
-        // return $data_tables->rawColumns(['status','action'])
-        // ->setRowClass(function($user) {
-           
-        //     switch ($user->status) {
-        //         case 0:
-        //             return 'darkGrey';
-        //             break;
-        //         case 1:
-        //             return 'backGreen';
-        //             break;
-        //     }
-        // })->make(true);
+        return view('admin.user.list');
 
     }
 
@@ -197,8 +163,65 @@ class AdminController extends Controller
 
     public function updateStatus(Request $request){
         $user_id = $request->all()['user_id'];
-        \Log::debug($user_id);
         $status = $this->user_repository->changeStatus($user_id);
         return $status;
+    }
+
+    public function getAll(){
+        $users = $this->user_repository->getAllUser();
+        //$data_tables = collect([]);
+        //return view('admin.user.list',compact('users'));
+        $data_tables = DataTables::collection($users);
+        $data_tables->EditColumn('name', function ($user) {
+            if(isset($user->name))
+            {
+                if(isset($user->photo)){
+                    return '<img class=" img-circle img-profil-list" src="'.url("image/Admin/Profil/".$user->photo."").'" alt="User profile picture">&nbsp;&nbsp;'.$user->name;
+                }else{
+                    return '<img class=" img-circle img-profil-list" src="'.url("image/Admin/Profil/avatar.png").'" alt="User profile picture">&nbsp;&nbsp;'.$user->name;
+                }
+            }
+                
+        })->EditColumn('email', function ($user) {
+            if(isset($user->email))    
+                return $user->email;
+        })->EditColumn('phone', function ($user) {
+            if(isset($user->phone)) 
+                return $user->phone;
+        })->EditColumn('status', function ($user) {
+            switch ($user->status) {
+                 case 0:
+                    return '<div class="switch-container position-relative form-group">
+                                <label class="switch" data-id="'.$user->id.'">
+                                  <input type="checkbox" class="form-check-input" >
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>';
+                    break; 
+                case 1:
+                    return '<div class="switch-container position-relative form-group">
+                                <label class="switch" data-id="'.$user->id.'">
+                                  <input type="checkbox" class="form-check-input" checked>
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>';
+                    break; 
+               
+                
+             }
+        })->EditColumn('action', function ($user) {
+            return view("admin.user.action", ['admin' => $user]);
+        });
+        return $data_tables->rawColumns(['name','status','action'])->make(true);
+    }
+
+    public function getFilterList()
+    {
+        $brand_array = Session::get('brand_array');
+        if(!empty($brand_array)){
+            $brand_array = array_unique($brand_array);
+            asort($brand_array);
+        }
+        return response()->json(['brand_array' => $brand_array]);
     }
 }
