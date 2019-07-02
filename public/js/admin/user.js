@@ -59,4 +59,13 @@ $(document).ready(function() {
             console.log('off')
           }
       });
+      $('.user-profil').on('click','#inputStatus',function(){
+          if($(this).prop('checked')){
+            $(this).siblings().val(1);
+            console.log('on')
+          }else{
+            $(this).siblings().val(0);
+            console.log('off')
+          }
+      });
     });
