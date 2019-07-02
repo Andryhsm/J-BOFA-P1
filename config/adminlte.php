@@ -114,11 +114,11 @@ return [
             'url'         => 'admin/home',
             'icon'        => 'dashboard',
         ],
-        // [
-        //     'text'        => 'Pages',
-        //     'url'         => 'admin/pages',
-        //     'icon'        => 'file',
-        // ],
+        [
+            'text'        => 'Categories',
+            'url'         => 'admin/catalogue',
+            'icon'        => 'sticky-note-o',
+        ],
         [
             'text'        => 'Gestion utilisateurs',
             'url'         => 'admin/user',
