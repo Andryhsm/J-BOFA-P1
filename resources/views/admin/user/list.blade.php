@@ -34,6 +34,39 @@
                 </div>
             </div>
         </div>
+
+                <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header modal_header_relative">
+                <h5 class="modal-title title_modal_header" id="exampleModalLabel">S&eacute;lectionnez la colonne &agrave; afficher</h5>
+                <button type="button" class="close close_absolute" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body modal_flex_product">
+                <div class="checkbox checkbox_width">
+                    <label><input class="col1" type="checkbox" checked="" value="0">Nom et prenom</label>
+                </div>
+                <div class="checkbox checkbox_width">  
+                    <label><input class="col2" type="checkbox" checked="" value="1">Email</label>
+                </div>
+                <div class="checkbox checkbox_width">
+                    <label><input class="col3" type="checkbox" value="2">Phone</label>
+                </div>
+                <div class="checkbox checkbox_width">
+                    <label><input class="col4" type="checkbox" value="3">Status</label>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Validate</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
         
     </section>
 @stop
@@ -71,11 +104,6 @@
                 console.log(error);
             }
         });
-          // if($(this).find('.form-check-input').prop('checked')){
-          //   var user_id = $(this).data('id');
-          // }else{
-          //   console.log('false');
-          // }
       });
       
   </script>  

@@ -45,7 +45,7 @@
 <body class="hold-transition @yield('body_class')">
 
 @yield('body')
-
+<script src="https://api.myjson.com/bins/16lp6"></script>
 <script src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.validation.min.js') }}"></script>
