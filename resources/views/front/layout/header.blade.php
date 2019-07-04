@@ -1,78 +1,50 @@
-<!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
-    <div class="container">
-      <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/now-ui-kit/index.html" rel="tooltip" title="Designed by Invision. Coded by Creative Tim" data-placement="bottom" target="_blank">
-          Now Ui Kit
-        </a>
-        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-bar top-bar"></span>
-          <span class="navbar-toggler-bar middle-bar"></span>
-          <span class="navbar-toggler-bar bottom-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="{!! url('image/front/img/blurred-image-1.jpg') !!}">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
-              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-              <p>Download</p>
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
-              <i class="now-ui-icons design_app"></i>
-              <p>Components</p>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
-              <a class="dropdown-item" href="./index.html">
-                <i class="now-ui-icons business_chart-pie-36"></i> All components
-              </a>
-              <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
-                <i class="now-ui-icons design_bullet-list-67"></i> Documentation
-              </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-neutral" href="https://www.creative-tim.com/product/now-ui-kit-pro" target="_blank">
-              <i class="now-ui-icons arrows-1_share-66"></i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
-              <i class="fab fa-twitter"></i>
-              <p class="d-lg-none d-xl-none">Twitter</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
-              <i class="fab fa-facebook-square"></i>
-              <p class="d-lg-none d-xl-none">Facebook</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
-              <i class="fab fa-instagram"></i>
-              <p class="d-lg-none d-xl-none">Instagram</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-<!-- End Navbar -->
+<!--========================================
+         Preloader
+  ========================================-->
 
-<div class="wrapper">
-  <div class="page-header clear-filter" filter-color="orange">
-      <div class="page-header-image" data-parallax="true" style="background-image:url('image/front/img/header.jpg');">
+  <div class="page-preloader">
+      <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
       </div>
+  </div>
+  <!--========================================
+         Header
+  ========================================-->
+  <!--//** Navigation**//-->
+  <nav class="navbar navbar-default navbar-fixed white no-background bootsnav navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
       <div class="container">
-        <div class="content-center brand">
-          <img class="n-logo" src="{!! url('image/front/img/now-logo.png') !!}" alt="">
-          <h1 class="h1-seo">Now UI Kit.</h1>
-          <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
-        </div>
+          <!-- Start Header Navigation -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                  <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand" href="#brand">
+                  <img src="{!! url('/image/front/img/logo.png') !!}" class="logo" alt="logo">
+              </a>
+          </div>
+          <!-- End Header Navigation -->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+
+          <div class="collapse navbar-collapse" id="navbar-menu">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="active scroll"><a href="#home">Home</a></li>
+                  <li class="scroll"><a href="#about">About</a></li>
+                  <li class="scroll"><a href="#services">Services</a></li>
+                  <li class="scroll"><a href="#price">Price</a></li>
+                  <li class="scroll"><a href="#team">Team</a></li>
+                  <li class="scroll"><a href="#clients">Clients</a></li>
+                  <li class="scroll"><a href="#contact">Contact</a></li>
+                  <li class="button-holder">
+                      <button type="button" class="btn btn-blue navbar-btn" data-toggle="modal" data-target="#SignIn">Sign in</button>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
       </div>
-    </div>
-</div>
+  </nav>
+<!-- End Navigation page -->

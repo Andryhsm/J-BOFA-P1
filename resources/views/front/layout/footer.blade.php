@@ -1,31 +1,21 @@
-<footer class="footer" data-background-color="black">
-    <div class=" container ">
-      <nav>
-        <ul>
-          <li>
-            <a href="https://www.creative-tim.com">
-              Creative Tim
-            </a>
-          </li>
-          <li>
-            <a href="http://presentation.creative-tim.com">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="http://blog.creative-tim.com">
-              Blog
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright" id="copyright">
-        &copy;
-        <script>
-          document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-        </script>, Designed by
-        <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+<!--========================================
+       Footer
+  ========================================-->
+
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="footer-caption">
+                  <img src="{!! url('/image/front/img/logo.png') !!}" class="img-responsive center-block" alt="logo">
+                  <hr>
+                  <h5 class="pull-left">Vortex, &copy;2016 All rights reserved</h5>
+                  <ul class="liste-unstyled pull-right">
+                      <li><a href="#facebook"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#twitter"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#linkedin"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#instagram"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+              </div>
+          </div>
       </div>
-    </div>
   </footer>

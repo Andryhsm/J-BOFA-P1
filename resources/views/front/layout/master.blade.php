@@ -6,39 +6,73 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Landing PAGE Html5 Template">
+      <meta name="keywords" content="landing,startup,flat">
+      <meta name="author" content="Made By GN DESIGNS">
 
+      {!! Html::style('js/front/vendor/bootsnav_files/skins/color.css') !!}
+      {!! Html::style('js/front/vendor/bootsnav_files/css/animate.css') !!}
+      {!! Html::style('js/front/vendor/bootsnav_files/css/bootsnav.css') !!}
+      {!! Html::style('js/front/vendor/bootsnav_files/css/overwrite.css') !!}
+      {!! Html::style('js/front/vendor/owl-carousel/owl.carousel.css') !!}
+      {!! Html::style('js/front/vendor/owl-carousel/owl.theme.css') !!}
+      {!! Html::style('js/front/vendor/owl-carousel/owl.transitions.css') !!}
+      {!! Html::style('js/front/vendor/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css') !!}
+      <!--// ICONS //-->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--// BOOTSTRAP & Main //-->
+    {!! Html::style('css/front/vendor/bootstrap-3.3.7/bootstrap-3.3.7-dist/css/bootstrap.min.css') !!}
+    {!! Html::style('css/main.css') !!}
       <!-- Style CSS -->
-          {!! Html::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') !!}
-          {!! Html::style('css/front/generale/style.css') !!}
-          {!! Html::style('css/front/vendor/now-ui-kit/bootstrap.min.css') !!}
-          {!! Html::style('css/front/vendor/now-ui-kit/bootstrap.min.css.map') !!}
-          {!! Html::style('css/front/vendor/now-ui-kit/now-ui-kit.css.map') !!}
-          {!! Html::style('css/front/vendor/now-ui-kit/now-ui-kit.css') !!}
-          {!! Html::style('css/front/vendor/now-ui-kit/now-ui-kit.min.css') !!}
 
-          <meta name="csrf-token" content="{{ csrf_token() }}">
+      <meta name="csrf-token" content="{{ csrf_token() }}">
           @yield('additional-css')
 
       <!-- End Style CSS -->
   </head>
 
 
-  <body class="index-page sidebar-collapse">
-    <div class="master">
-        <div class="header_page">
+  <body>
           @include('front.layout.header')
-        </div>
-        <div class="container_page">
           @yield('content')
-        </div>
-        <div class="footer_page">
           @include('front.layout.footer')
+
+
+      <!-- Modal -->
+
+        <div class="modal fade" id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" id="myModalLabel">Sign In</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="signup-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="User Name" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Password" required="required">
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-blue btn-block">Log In</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <a href="#">Forgot your password /</a>
+                        <a href="#">Signup</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-
 
 
     <!-- Fin de la page -->
@@ -46,35 +80,16 @@
         // partie réservé au variable
         // end partie réservé au variable
     </script>
-    <script>
-      $(document).ready(function() {
-        // the body of this function is in assets/js/now-ui-kit.js
-        nowuiKit.initSliders();
-      });
-
-      function scrollToDownload() {
-
-        if ($('.section-download').length != 0) {
-          $("html, body").animate({
-            scrollTop: $('.section-download').offset().top
-          }, 1000);
-        }
-      }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Script -->
-    {!! Html::script('js/front/element.js') !!}
-    {!! Html::script('js/front/vendor/now-ui-kit/core/bootstrap.min.js') !!}
-    {!! Html::script('js/front/vendor/now-ui-kit/core/jquery.min.js') !!}
-    {!! Html::script('js/front/vendor/now-ui-kit/core/popper.min.js') !!}
+    {!! Html::script('css/front/vendor/bootstrap-3.3.7/bootstrap-3.3.7-dist/js/bootstrap.min.js') !!}
+    {!! Html::script('js/front/vendor/owl-carousel/owl.carousel.min.js') !!}
+    {!! Html::script('js/front/vendor/bootsnav_files/js/bootsnav.js') !!}
+    {!! Html::script('js/front/vendor/typed.js-master/typed.js-master/dist/typed.min.js') !!}
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
 
-    {!! Html::script('js/front/vendor/now-ui-kit/now-ui-kit.js') !!}
-    {!! Html::script('js/front/vendor/now-ui-kit/now-ui-kit.js.map') !!}
-    {!! Html::script('js/front/vendor/now-ui-kit/now-ui-kit.min.js') !!}
-
-    {!! Html::script('js/front/vendor/now-ui-kit/plugins/bootstrap-datepicker.js') !!}
-    {!! Html::script('js/front/vendor/now-ui-kit/plugins/bootstrap-switch.js') !!}
-    {!! Html::script('js/front/vendor/now-ui-kit/plugins/nouislider.min.js') !!}
-
+    {!! Html::script('js/front/vendor/Magnific-Popup-master/Magnific-Popup-master/dist/jquery.magnific-popup.js') !!}
+    {!! Html::script('js/main.js') !!}
           <!-- ajout script -->
             @yield('additional-script')
           <!-- end ajout script -->
