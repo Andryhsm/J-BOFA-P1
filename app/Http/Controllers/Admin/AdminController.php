@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Yajra\DataTables\Facades\DataTables;
 use App\Service\UploadService;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
