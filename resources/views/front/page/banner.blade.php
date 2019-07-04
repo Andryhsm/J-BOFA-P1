@@ -2,6 +2,7 @@
   <section id="home">
       <div class="container">
           <div class="row">
+            <div id="particles-js"></div>
               <!-- Introduction -->
               <div class="col-md-6 caption">
                   <h1>Welcome To Vortex</h1>

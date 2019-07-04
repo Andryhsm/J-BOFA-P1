@@ -11,6 +11,10 @@
       @include('front.page.service')
       @include('front.page.features')
       @include('front.page.price')
+      @include('front.page.teams')
+      @include('front.page.client')
+      @include('front.page.newsletter')
+      @include('front.page.contactGmap')
     @endsection
 
     @section('additional-script')

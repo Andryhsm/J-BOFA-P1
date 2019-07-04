@@ -45,7 +45,6 @@
 
 
       <!-- Modal -->
-
         <div class="modal fade" id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -89,6 +88,8 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
     {!! Html::script('js/front/vendor/Magnific-Popup-master/Magnific-Popup-master/dist/jquery.magnific-popup.js') !!}
+    {!! Html::script('js/front/vendor/particles.js-master/particles.js-master/particles.min.js') !!}
+    {!! Html::script('js/particales-script.js') !!}
     {!! Html::script('js/main.js') !!}
           <!-- ajout script -->
             @yield('additional-script')
