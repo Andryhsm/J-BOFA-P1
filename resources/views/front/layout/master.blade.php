@@ -9,32 +9,27 @@
       <meta http-equiv="content-type" content="text/html; charset=UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Landing PAGE Html5 Template">
-      <meta name="keywords" content="landing,startup,flat">
-      <meta name="author" content="Made By GN DESIGNS">
+      <meta name="author" content="Colorlib">
+      <meta name="description" content="#">
+      <meta name="keywords" content="#">
 
-      {!! Html::style('js/front/vendor/bootsnav_files/skins/color.css') !!}
-      {!! Html::style('js/front/vendor/bootsnav_files/css/animate.css') !!}
-      {!! Html::style('js/front/vendor/bootsnav_files/css/bootsnav.css') !!}
-      {!! Html::style('js/front/vendor/bootsnav_files/css/overwrite.css') !!}
-      {!! Html::style('js/front/vendor/owl-carousel/owl.carousel.css') !!}
-      {!! Html::style('js/front/vendor/owl-carousel/owl.theme.css') !!}
-      {!! Html::style('js/front/vendor/owl-carousel/owl.transitions.css') !!}
-      {!! Html::style('js/front/vendor/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css') !!}
       <!--// ICONS //-->
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <!--// BOOTSTRAP & Main //-->
-    {!! Html::style('css/front/vendor/bootstrap-3.3.7/bootstrap-3.3.7-dist/css/bootstrap.min.css') !!}
-    {!! Html::style('css/main.css') !!}
-      <!-- Style CSS -->
+    {!! Html::style('css/front/bootstrap.min.css') !!}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    {!! Html::style('css/front/simple-line-icons.css') !!}
+    {!! Html::style('css/front/themify-icons.css') !!}
+    {!! Html::style('css/front/swiper.min.css') !!}
+    {!! Html::style('css/front/magnific-popup.css') !!}
+    {!! Html::style('css/front/set1.css') !!}
+    {!! Html::style('css/front/style.css') !!}
+    <!-- Style CSS -->
 
-      <meta name="csrf-token" content="{{ csrf_token() }}">
-          @yield('additional-css')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @yield('additional-css')
 
-      <!-- End Style CSS -->
+    <!-- End Style CSS -->
   </head>
 
 
@@ -44,56 +39,69 @@
           @include('front.layout.footer')
 
 
-      <!-- Modal -->
-        <div class="modal fade" id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title text-center" id="myModalLabel">Sign In</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form class="signup-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="User Name" required="required">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Password" required="required">
-                            </div>
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn btn-blue btn-block">Log In</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer text-center">
-                        <a href="#">Forgot your password /</a>
-                        <a href="#">Signup</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
-    <!-- Fin de la page -->
-    <script type="text/javascript">
-        // partie réservé au variable
-        // end partie réservé au variable
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Script -->
-    {!! Html::script('css/front/vendor/bootstrap-3.3.7/bootstrap-3.3.7-dist/js/bootstrap.min.js') !!}
-    {!! Html::script('js/front/vendor/owl-carousel/owl.carousel.min.js') !!}
-    {!! Html::script('js/front/vendor/bootsnav_files/js/bootsnav.js') !!}
-    {!! Html::script('js/front/vendor/typed.js-master/typed.js-master/dist/typed.min.js') !!}
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
 
-    {!! Html::script('js/front/vendor/Magnific-Popup-master/Magnific-Popup-master/dist/jquery.magnific-popup.js') !!}
-    {!! Html::script('js/front/vendor/particles.js-master/particles.js-master/particles.min.js') !!}
-    {!! Html::script('js/particales-script.js') !!}
-    {!! Html::script('js/main.js') !!}
+
+
+    {!! Html::script('js/front/jquery-3.2.1.min.js') !!}
+    {!! Html::script('js/front/popper.min.js') !!}
+    {!! Html::script('js/front/bootstrap.min.js') !!}
+    {!! Html::script('js/front/swiper.min.js') !!}
           <!-- ajout script -->
             @yield('additional-script')
           <!-- end ajout script -->
+          <!-- Fin de la page -->
+          <script>
+                $(window).scroll(function() {
+                    // 100 = The point you would like to fade the nav in.
+
+                    if ($(window).scrollTop() > 100) {
+
+                        $('.fixed').addClass('is-sticky');
+
+                    } else {
+
+                        $('.fixed').removeClass('is-sticky');
+
+                    };
+                });
+            </script>
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    loop: true,
+                    loopFillGroupWithBlank: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            </script>
+            <script>
+                if ($('.image-link').length) {
+                    $('.image-link').magnificPopup({
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                }
+                if ($('.image-link2').length) {
+                    $('.image-link2').magnificPopup({
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                }
+            </script>
+          <!-- Script -->
 
     <!-- End Script -->
 
