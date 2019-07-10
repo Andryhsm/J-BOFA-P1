@@ -103,6 +103,11 @@ p {
   color: #fff;
   border-color: #fff; }
 
+.header_search {
+  display: flex;
+  flex: 1;
+}
+
 @media (max-width: 992px) {
   .navbar-nav {
     padding: 7px 20px; } }
