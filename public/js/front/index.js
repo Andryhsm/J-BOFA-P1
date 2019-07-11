@@ -3,15 +3,15 @@ $(document).ready(function(){
 	var currencies=[];
 	$('.slider').on('keyup', '#recherche', function(){
 		currencies = [
-		    'Architecte-permis de construire', 
+		    'Architecte-permis de construire',
 			'Plomberie -sanitaires',
-			'Plomberie -chauffage', 
+			'Plomberie -chauffage',
 			'Panneaux solaires ',
-			'Piscine-abri de piscine', 
+			'Piscine-abri de piscine',
 			'Porte-fenêtre',
-			'Électricité-alarme', 
+			'Électricité-alarme',
 			'Rénovation Intérieure',
-			'Chauffage -climatisation -ventilation', 
+			'Chauffage -climatisation -ventilation',
 			'Construction -grros œuvres',
 			'Cuisine ',
 			'Menuiserie (pvc -Alu-bois)',
@@ -21,10 +21,10 @@ $(document).ready(function(){
 			'Salle de bain-spa' ,
 			'Peinture -décoration ',
 			'Ramonage de cheminée' ,
-			'Jardinage -clôture-portail', 
+			'Jardinage -clôture-portail',
 			'Sol -carrelage -parquet' ,
 			'Véranda' ,
-			'Diagnostic immobilier', 
+			'Diagnostic immobilier',
 			'Entretien et traitement',
 			'Escalier' ,
 			'Énergies renouvelables'
@@ -39,7 +39,7 @@ $(document).ready(function(){
   			var numeroUp = dataUp.indexOf(data);
   			if (numero == 0 || numeroUp == 0 || numeroLow == 0) {
   				position.push(index);
-  				console.log(dataLow)
+  				console.log(dataUp)
   				var dropdown = '<li class="rechercheVal">'+currencies[index]+'</li>';
   				$("#ul").find('li').each(function(){
   						console.log($(this).text())
@@ -62,11 +62,10 @@ $(document).ready(function(){
     });
     $('.slider').on('click', '.rechercheVal', function(){
 		var value = $(this).text();
-		console.log(value);
 		$(this).closest('#ul').siblings('#parent').find('input').val(value);
-		$('#recherche1').css('display', 'none');
+		$('#ul').css('display', 'none');
 
 	});
-  
+
 
 });
