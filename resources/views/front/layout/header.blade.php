@@ -82,7 +82,7 @@
                                         <!-- <input type="text" placeholder="New york" class="btn-group2"> -->
                                         <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>RECHERCHER<i class="pe-7s-angle-right"></i></button>
                                     </div>
-                                    <ul id="ul" class="dropdown" style="background-color: white;"></ul>
+                                    <ul id="ul" class="dropdown dropdown_search"></ul>
                                 </form>
                                 <div class="slider-link">
                                     <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
