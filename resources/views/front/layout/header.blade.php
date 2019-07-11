@@ -77,11 +77,12 @@
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
                                 <form class="form-wrap mt-4">
-                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                    <div class="btn-group" role="group" aria-label="Basic example" id="parent">
                                         <input type="text" placeholder="Rechercher par devis gratuit" id="recherche" class="btn-group1 header_search">
                                         <!-- <input type="text" placeholder="New york" class="btn-group2"> -->
                                         <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>RECHERCHER<i class="pe-7s-angle-right"></i></button>
                                     </div>
+                                    <ul id="ul" class="dropdown" style="background-color: white;"></ul>
                                 </form>
                                 <div class="slider-link">
                                     <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
