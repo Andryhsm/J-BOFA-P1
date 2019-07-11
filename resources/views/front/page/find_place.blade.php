@@ -13,9 +13,9 @@
                     <div class="find-place-img_wrap">
                         <div class="grid">
                             <figure class="effect-ruby">
-                                <img src="{!! url('/image/front/images/find-place1.jpg') !!}" class="img-fluid" alt="img13" />
+                                <img src="{!! url('/image/front/images/fond8.jpg') !!}" class="img-fluid" alt="img13" />
                                 <figcaption>
-                                    <h5>Nightlife </h5>
+                                    <h5>Construction</h5>
                                     <p>385 Listings</p>
                                 </figcaption>
                             </figure>
@@ -28,9 +28,9 @@
                             <div class="find-place-img_wrap">
                                 <div class="grid">
                                     <figure class="effect-ruby">
-                                        <img src="{!! url('/image/front/images/find-place2.jpg') !!}" class="img-fluid" alt="img13" />
+                                        <img src="{!! url('/image/front/images/fond5.jpg') !!}" class="img-fluid" alt="img13" />
                                         <figcaption>
-                                            <h5>Restaurants</h5>
+                                            <h5>Construction</h5>
                                             <p>210 Listings</p>
                                         </figcaption>
                                     </figure>
@@ -43,9 +43,9 @@
                             <div class="find-place-img_wrap">
                                 <div class="grid">
                                     <figure class="effect-ruby">
-                                        <img src="{!! url('/image/front/images/find-place3.jpg') !!}" class="img-fluid" alt="img13" />
+                                        <img src="{!! url('/image/front/images/fond6.jpg') !!}" class="img-fluid" alt="img13" />
                                         <figcaption>
-                                            <h5>Outdoors </h5>
+                                            <h5>Construction </h5>
                                             <p>114 Listings</p>
                                         </figcaption>
                                     </figure>
@@ -60,9 +60,9 @@
                             <div class="find-place-img_wrap">
                                 <div class="grid">
                                     <figure class="effect-ruby">
-                                        <img src="{!! url('/image/front/images/find-place4.jpg') !!}" class="img-fluid" alt="img13" />
+                                        <img src="{!! url('/image/front/images/fond4.jpg') !!}" class="img-fluid" alt="img13" />
                                         <figcaption>
-                                            <h5>Hotels </h5>
+                                            <h5>Construction </h5>
                                             <p>577 Listings</p>
                                         </figcaption>
                                     </figure>
@@ -75,9 +75,9 @@
                             <div class="find-place-img_wrap">
                                 <div class="grid">
                                     <figure class="effect-ruby">
-                                        <img src="{!! url('/image/front/images/find-place5.jpg') !!}" class="img-fluid" alt="img13" />
+                                        <img src="{!! url('/image/front/images/fond2.jpg') !!}" class="img-fluid" alt="img13" />
                                         <figcaption>
-                                            <h5>Art & Culture </h5>
+                                            <h5>Construction</h5>
                                             <p>79 Listings</p>
                                         </figcaption>
                                     </figure>
