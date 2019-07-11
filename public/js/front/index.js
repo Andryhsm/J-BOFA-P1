@@ -39,11 +39,20 @@ $(document).ready(function(){
   			var numeroUp = dataUp.indexOf(data);
   			if (numero == 0 || numeroUp == 0 || numeroLow == 0) {
   				position.push(index);
+  				console.log(dataLow)
   				var dropdown = '<li class="rechercheVal">'+currencies[index]+'</li>';
+  				$("#ul").find('li').each(function(){
+  						console.log($(this).text())
+  					// if(currencies[index]== data ){
+  					// 	console.log('egal')
+  					// }else{
+  					// 	console.log('tsy')
+  						
+  					// }
+  				});
   				$('#ul').append(dropdown);
   				$('#ul').css('display', 'block');
   				$('#ul').css('margin-top', '65px');
-  				console.log(position)
   			}
   			if (data == "") {
   				$('#ul').html("");
