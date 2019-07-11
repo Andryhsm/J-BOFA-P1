@@ -12,6 +12,7 @@
       <meta name="author" content="Colorlib">
       <meta name="description" content="#">
       <meta name="keywords" content="#">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 
       <!--// ICONS //-->
 
