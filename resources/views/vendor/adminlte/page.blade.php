@@ -280,7 +280,7 @@
                 </div>
                 <div class="pull-left info">
                   <p>{{ Auth::user()->name }}</p>
-                  <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                  <a href="#"><i class="fa fa-circle text-success"></i> En ligne</a>
                 </div>
               </div>
                 <!-- Sidebar Menu -->

@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Tableau de bord')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Tableau de bord</h1>
 @stop
 
 @section('content')
@@ -46,7 +46,7 @@
             <div class="inner">
               <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-              <p>Bounce Rate</p>
+              <p>Taux de rebond</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -64,7 +64,7 @@
         <div class="col-lg-8">
         <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Latest Orders</h3>
+              <h3 class="box-title">Dernières commandes</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -81,7 +81,7 @@
                     <th>Order ID</th>
                     <th>Item</th>
                     <th>Status</th>
-                    <th>Popularity</th>
+                    <th>Popularit&eacute;</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -148,8 +148,8 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer clearfix">
-              <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Passer une nouvelle commande</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">Voir tous les commandes</a>
             </div>
             <!-- /.box-footer -->
           </div>
@@ -161,7 +161,7 @@
             <div class="box-header ui-sortable-handle" style="cursor: move;">
               <i class="fa fa-th"></i>
 
-              <h3 class="box-title">Sales Graph</h3>
+              <h3 class="box-title">Graphique de vente</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -182,19 +182,19 @@
                 <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
                   <div style="display:inline;width:60px;height:60px;"><canvas width="60" height="60"></canvas><input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgcolor="#39CCCC" readonly="readonly" style="width: 34px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px; background: none; font: bold 12px Arial; text-align: center; color: rgb(57, 204, 204); padding: 0px; -webkit-appearance: none;"></div>
 
-                  <div class="knob-label">Mail-Orders</div>
+                  <div class="knob-label">Mail commandes</div>
                 </div>
                 <!-- ./col -->
                 <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
                   <div style="display:inline;width:60px;height:60px;"><canvas width="60" height="60"></canvas><input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgcolor="#39CCCC" readonly="readonly" style="width: 34px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px; background: none; font: bold 12px Arial; text-align: center; color: rgb(57, 204, 204); padding: 0px; -webkit-appearance: none;"></div>
 
-                  <div class="knob-label">Online</div>
+                  <div class="knob-label">En ligne</div>
                 </div>
                 <!-- ./col -->
                 <div class="col-xs-4 text-center">
                   <div style="display:inline;width:60px;height:60px;"><canvas width="60" height="60"></canvas><input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgcolor="#39CCCC" readonly="readonly" style="width: 34px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px; background: none; font: bold 12px Arial; text-align: center; color: rgb(57, 204, 204); padding: 0px; -webkit-appearance: none;"></div>
 
-                  <div class="knob-label">In-Store</div>
+                  <div class="knob-label">En magasin</div>
                 </div>
                 <!-- ./col -->
               </div>

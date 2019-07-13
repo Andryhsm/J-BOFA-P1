@@ -110,7 +110,7 @@ return [
     'menu' => [
         'NAVIGATION PRINCIPALE',
         [
-            'text'        => 'Dashboard',
+            'text'        => 'Tableau de bord',
             'url'         => 'admin/home',
             'icon'        => 'dashboard',
         ],
