@@ -50,7 +50,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Blog</a>
                                     </li>
-                                    <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Listing</a></li>  
+                                    <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Listing</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -85,7 +85,7 @@
                                     <ul id="ul" class="dropdown dropdown_search"></ul>
                                 </form>
                                 <div class="slider-link">
-                                    <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
+                                    <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>  
                                 </div>
                             </div>
                         </div>
