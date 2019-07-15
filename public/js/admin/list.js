@@ -62,7 +62,17 @@ jQuery(document).ready(function () {
                 }
              },
              "language": {
-                 "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+                 "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json",
+                 "lengthMenu": "Afficher _MENU_ enregistrements par page",
+                 "sProcessing":    "Traitement encours...",
+                "zeroRecords": "Rien trouvé",
+                "info": "Affichage de l'élement _START_ à _END_ sur _PAGES_ éléments",
+                "infoEmpty": "Aucune donnée disponible dans le tableau",
+                "infoFiltered": "(filtré à partir du _MAX_ total d'enregistrements)",
+                "oPaginate": {
+                    "sNext":    "Suivant",
+                    "sPrevious": "Précédent"
+                }
               },
                 initComplete : function() {
                     $.ajax({
