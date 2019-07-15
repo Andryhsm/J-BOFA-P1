@@ -40,7 +40,7 @@
 //   			if (numero == 0 || numeroUp == 0 || numeroLow == 0) {
 //   				position.push(index);
 //   				//console.log(dataUp)
-  				
+
 //   				var dropdown = '<li class="rechercheVal">'+currencies[index]+'</li>';
 //   				$('#ul').append(dropdown);
 //   				$('#ul').css('display', 'block');
@@ -117,24 +117,24 @@ $(function(){
 	{ value: 'Escalier' },
 	{ value: 'Énergies renouvelables'},
   ];
-  
+
   // setup autocomplete function pulling from currencies[] array
   $('#recherche').autocomplete({
-  	
+
      lookup : currencies,
     onSelect: function (suggestion) {
       var thehtml = '<li> ' + suggestion.value + ' </li> ';
       $('#uli').html(thehtml);
-     
+
     },
-    
+
   });
-  
+
    $('.autocomplete-suggestions').css({
    	"background-color" : "white",
-    "padding" : "2%",
     "overflow-y" : "scroll",
     "position" : "absolute",
-    "width" : "48.31%"});
+    "width" : "48.31%"
+  });
 
 });
