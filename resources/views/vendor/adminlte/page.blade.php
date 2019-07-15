@@ -23,7 +23,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}" class="navbar-brand">
-                            {!! config('adminlte.logo', '<b>Admin</b>LTE') !!}
+                            {!! config('adminlte.logo', '<b>Administration</b>') !!}
                         </a>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                             <i class="fa fa-bars"></i>
@@ -43,7 +43,7 @@
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini">{!! config('adminlte.logo_mini', '<b>A</b>LT') !!}</span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg">{!! config('adminlte.logo', '<b>Admin</b>LTE') !!}</span>
+                <span class="logo-lg">{!! config('adminlte.logo', '<b>Administration</b>') !!}</span>
             </a>
 
             <!-- Header Navbar -->
@@ -87,7 +87,7 @@
               <span class="label label-success">1</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 1 messages</li>
+              <li class="header">Vous avez 1 messages</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
@@ -97,17 +97,17 @@
                         <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
-                        Support Team
+                        &Eacute;quipe de soutien
                         <small><i class="fa fa-clock-o"></i> 5 mins</small>
                       </h4>
-                      <p>Why not buy a new awesome theme?</p>
+                      <p>Pourquoi ne pas acheter un nouveau th&egrave;me g&eacute;nial?</p>
                     </a>
                   </li>
                   <!-- end message -->
                   
                 </ul>
               </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
+              <li class="footer"><a href="#">Voir tous les messages</a></li>
             </ul>
           </li>
           <!-- Notifications: style can be found in dropdown.less -->
@@ -117,39 +117,39 @@
               <span class="label label-warning">10</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
+              <li class="header">Vous avez 10 notifications</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li>
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      <i class="fa fa-users text-aqua"></i>5 nouveaux membres ont rejoint aujourd'hui
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
+                      <i class="fa fa-warning text-yellow"></i> Très longue description ici qui peut ne pas correspondre à la
+                      page et peut causer des problèmes de conception
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
+                      <i class="fa fa-users text-red"></i> 5 nouveaux membres ont rejoint
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                      <i class="fa fa-shopping-cart text-green"></i> 25 ventes r&eacute;alis&eacute;es
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-user text-red"></i> You changed your username
+                      <i class="fa fa-user text-red"></i> Vous avez chang&eacute; votre nom d'utilisateur
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="footer"><a href="#">View all</a></li>
+              <li class="footer"><a href="#">Voir tout</a></li>
             </ul>
           </li>
           <!-- Tasks: style can be found in dropdown.less -->
@@ -159,14 +159,14 @@
               <span class="label label-danger">2</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 2 tasks</li>
+              <li class="header">Vous avez 2 tâches</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li><!-- Task item -->
                     <a href="#">
                       <h3>
-                        Design some buttons
+                        Concevoir des boutons
                         <small class="pull-right">20%</small>
                       </h3>
                       <div class="progress xs">
@@ -180,7 +180,7 @@
                   <li><!-- Task item -->
                     <a href="#">
                       <h3>
-                        Create a nice theme
+                        Cr&eacute;er un joli thème
                         <small class="pull-right">40%</small>
                       </h3>
                       <div class="progress xs">
@@ -196,7 +196,7 @@
                 </ul>
               </li>
               <li class="footer">
-                <a href="#">View all tasks</a>
+                <a href="#">Voir toutes les tâches</a>
               </li>
             </ul>
           </li>
