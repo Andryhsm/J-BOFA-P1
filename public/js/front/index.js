@@ -30,7 +30,7 @@ $(document).ready(function(){
 			'Escalier' ,
 			'Énergies renouvelables'
 		];
-		
+
 		var data = $(this).val();
   			$('#ul').html("");
 		currencies.forEach(function(dataEl, index){
@@ -48,7 +48,7 @@ $(document).ready(function(){
   				var dropdown = '<li class="rechercheVal">'+currencies[index]+'</li>';
   				$('#ul').append(dropdown);
   				$('#ul').css('display', 'block');
-  				$('#ul').css('margin-top', '65px');
+  				$('#ul').css('margin-top', '0.5rem');
   			}
   			if (data == "") {
   				$('#ul').html("");
@@ -65,4 +65,3 @@ $(document).ready(function(){
 
 
 });
-

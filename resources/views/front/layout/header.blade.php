@@ -76,7 +76,7 @@
                         </div>
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
-                                <form class="form-wrap mt-4">
+                                <form class="form-wrap mt-4 position_relative">
                                     <div class="btn-group" role="group" aria-label="Basic example" id="parent">
                                         <input type="text" placeholder="Rechercher par devis gratuit" id="recherche" class="btn-group1 header_search">
                                         <!-- <input type="text" placeholder="New york" class="btn-group2"> -->
@@ -85,7 +85,7 @@
                                     <ul id="ul" class="dropdown dropdown_search"></ul>
                                 </form>
                                 <div class="slider-link">
-                                    <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>  
+                                    <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
                                 </div>
                             </div>
                         </div>
