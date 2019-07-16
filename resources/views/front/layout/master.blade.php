@@ -12,6 +12,7 @@
       <meta name="author" content="Colorlib">
       <meta name="description" content="#">
       <meta name="keywords" content="#">
+      {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 
       <!--// ICONS //-->

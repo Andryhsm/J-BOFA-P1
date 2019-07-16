@@ -30,4 +30,13 @@ Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->group(function
     Route::post('/update/{id}', 'AdminController@update');
     Route::post('user_status', 'AdminController@updateStatus')->name('user_status');
     /*end profil*/
+    /*Login*/
+
+    /*End Login*/
 });
+
+/*start front router*/
+Route::namespace('Front')->group(function () {
+    Route::get('signin','LoginController@index')->name('signin');
+});
+/*end front router*/

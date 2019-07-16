@@ -5,6 +5,7 @@
     @endsection
 
     @section('content')
+      @include('front.page.slider')
       @include('front.page.find_place')
       @include('front.page.features')
       @include('front.page.categories')
