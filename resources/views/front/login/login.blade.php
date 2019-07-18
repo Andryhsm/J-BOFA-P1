@@ -23,34 +23,18 @@
   					</span>
 
   					<span class="login100-form-title p-b-34 p-t-27">
-  						S'inscrire
+  						Se connecter
   					</span>
-            <div class="wrap-input100 validate-input" data-validate = "Entrez votre nom">
-              <input class="input100" type="text" name="name" placeholder="Nom">
-              <span class="focus-input100" data-placeholder="&#xf207;"></span>
-            </div>
-            <div class="wrap-input100 validate-input" data-validate = "Entrez votre prenom">
-              <input class="input100" type="text" name="firstname" placeholder="Prenom">
-              <span class="focus-input100" data-placeholder="&#xf207;"></span>
-            </div>
-  					<div class="wrap-input100 validate-input" data-validate = "Entrez votre e-mail">
+
+  					<div class="wrap-input100 validate-input" data-validate = "Entrez votre email">
   						<input class="input100" type="text" name="username" placeholder="Email">
   						<span class="focus-input100" data-placeholder="&#xf207;"></span>
   					</div>
 
-  					<div class="wrap-input100 validate-input" data-validate = "Entrez votre numero téléphone">
-              <input class="input100" type="text" name="phone" placeholder="Tel">
-              <span class="focus-input100" data-placeholder="&#xf207;"></span>
-            </div>
-            <div class="wrap-input100 validate-input" data-validate="Entrez le mot de passe">
-              <input class="input100" type="password" name="password" placeholder="Mot de passe">
-              <span class="focus-input100" data-placeholder="&#xf191;"></span>
-            </div>
-
-            <div class="wrap-input100 validate-input" data-validate="Confirmez le mot de passe">
-              <input class="input100" type="password" name="confirm" placeholder="Confirmez le mot de passe">
-              <span class="focus-input100" data-placeholder="&#xf191;"></span>
-            </div>
+  					<div class="wrap-input100 validate-input" data-validate="Entrez votre mot de passe">
+  						<input class="input100" type="password" name="pass" placeholder="Mot de passe">
+  						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+  					</div>
 
   					<div class="contact100-form-checkbox">
   						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
@@ -61,14 +45,18 @@
 
   					<div class="container-login100-form-btn">
   						<button class="login100-form-btn">
-  							Valider
+  							Se connecter
   						</button>
   					</div>
 
   					<div class="text-center p-t-90">
-  						<a class="txt1" href="#">
+  						<!-- <a class="txt1" href="#">
   							Mot de Passe oubliez?
-  						</a>
+  						</a> -->
+
+              <a class="txt1" href="{{route('signin')}}">
+                S'inscrire?
+              </a>
   					</div>
   				</form>
   			</div>
