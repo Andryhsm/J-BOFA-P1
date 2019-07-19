@@ -50,7 +50,7 @@ jQuery(document).ready(function () {
             "lengthMenu"   : [20, 40, 60, 80, 100],
             "pageLength"   : 20,
             columns        : [
-                {data: 'name', name:'name',searchable: true, sortable: true},
+                {data: 'cat_name', name:'cat_name',searchable: true, sortable: true},
                 {data: 'user', name:'created',searchable: true, sortable: true},
                 {data: 'created', name:'date',searchable: true, sortable:true},
                 {data: 'status', name:'status',searchable: true, sortable: false},

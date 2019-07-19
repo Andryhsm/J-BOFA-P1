@@ -54,6 +54,6 @@ class CategoryRepository {
     }
 
     public function getCategory(){
-        return $this->model->get();
+        return $this->model->where('status',1)->get();
     }
 }

@@ -116,7 +116,6 @@ class CategoryController extends Controller
         //
         $this->category_repository->deleteCategory($id);
         toastr()->success('Suppression réussie!');
-        $categories = $this->category_repository->getAll();
         return view('admin.category.index');
     }
 
@@ -127,7 +126,7 @@ class CategoryController extends Controller
         }else{
             $data_tables = collect([]);
         }
-        $data_tables->EditColumn('name', function ($category) {
+        $data_tables->EditColumn('cat_name', function ($category) {
             if(isset($category->name))
             {
                 return $category->name;
