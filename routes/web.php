@@ -29,15 +29,19 @@ Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->group(function
     Route::post('/delete/$id', 'AdminController@destroy')->name('delete');
     Route::post('/update/{id}', 'AdminController@update');
     Route::post('user_status', 'AdminController@updateStatus')->name('user_status');
-    /*end profil*/
-    /*Login*/
 
-    /*End Login*/
+    /*end profil*/
+    /*category*/
+    Route::resource('category','CategoryController');
+    Route::get('get_all','CategoryController@getAll');
+    Route::post('/category_status','CategoryController@updateStatus');
+    /*End category*/
 });
 
 /*start front router*/
 Route::namespace('Front')->group(function () {
-    Route::get('login','LoginController@index')->name('login');
+    Route::get('log','LoginController@index')->name('log');
     Route::get('signin','LoginController@inscription')->name('signin');
+    Route::get('category','LoginController@front');
 });
 /*end front router*/

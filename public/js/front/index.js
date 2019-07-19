@@ -2,34 +2,47 @@
 $(document).ready(function(){
 	var currencies=[];
 	var position= [];
+	$.ajax({
+            type: "GET",
+            url: base_url + 'category',
+            success: function (success) {
+                for (var i = 0; i < success.length; i++) {
+                	currencies.push(success[i].name);
+                }
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
 	$('.slider').on('keyup', '#recherche', function(){
-		currencies = [
-		    'Architecte-permis de construire',
-			'Plomberie -sanitaires',
-			'Plomberie -chauffage',
-			'Panneaux solaires ',
-			'Piscine-abri de piscine',
-			'Porte-fenêtre',
-			'Électricité-alarme',
-			'Rénovation Intérieure',
-			'Chauffage -climatisation -ventilation',
-			'Construction -grros œuvres',
-			'Cuisine ',
-			'Menuiserie (pvc -Alu-bois)',
-			'Maçonnerie -démolition' ,
-			'Isolation intérieure /extérieure',
-			'Couverture -toiture -charpente' ,
-			'Salle de bain-spa' ,
-			'Peinture -décoration ',
-			'Ramonage de cheminée' ,
-			'Jardinage -clôture-portail',
-			'Sol -carrelage -parquet' ,
-			'Véranda' ,
-			'Diagnostic immobilier',
-			'Entretien et traitement',
-			'Escalier' ,
-			'Énergies renouvelables'
-		];
+		// currencies = [
+		//     'Architecte-permis de construire',
+		// 	'Plomberie -sanitaires',
+		// 	'Plomberie -chauffage',
+		// 	'Panneaux solaires ',
+		// 	'Piscine-abri de piscine',
+		// 	'Porte-fenêtre',
+		// 	'Électricité-alarme',
+		// 	'Rénovation Intérieure',
+		// 	'Chauffage -climatisation -ventilation',
+		// 	'Construction -grros œuvres',
+		// 	'Cuisine ',
+		// 	'Menuiserie (pvc -Alu-bois)',
+		// 	'Maçonnerie -démolition' ,
+		// 	'Isolation intérieure /extérieure',
+		// 	'Couverture -toiture -charpente' ,
+		// 	'Salle de bain-spa' ,
+		// 	'Peinture -décoration ',
+		// 	'Ramonage de cheminée' ,
+		// 	'Jardinage -clôture-portail',
+		// 	'Sol -carrelage -parquet' ,
+		// 	'Véranda' ,
+		// 	'Diagnostic immobilier',
+		// 	'Entretien et traitement',
+		// 	'Escalier' ,
+		// 	'Énergies renouvelables'
+		// ];
+		
 
 		var data = $(this).val();
   			$('#ul').html("");

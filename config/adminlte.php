@@ -115,9 +115,10 @@ return [
             'icon'        => 'dashboard',
         ],
         [
-            'text'        => 'Categories',
-            'url'         => 'admin/catalogue',
-            'icon'        => 'sticky-note-o',
+            'text'        => 'Gestion des catégories',
+            'url'         => 'admin/category',
+            // 'icon'        => 'sticky-note-o',
+            'icon'        => 'fa fa-list-alt',
         ],
         [
             'text'        => 'Gestion utilisateurs',

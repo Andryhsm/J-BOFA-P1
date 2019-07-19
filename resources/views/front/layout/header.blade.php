@@ -51,7 +51,7 @@
                                         <a class="nav-link" href="#">Blog</a>
                                     </li>
                                     <!-- <span class="ti-plus"> -->
-                                    <li><a href="{{ route('login') }}" class="btn btn-outline-light top-btn"></span> Se connecter</a></li>
+                                    <li><a href="{{ route('log') }}" class="btn btn-outline-light top-btn"></span> Se connecter</a></li>
                                 </ul>
                             </div>
                         </nav>
