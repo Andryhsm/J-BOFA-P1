@@ -8,8 +8,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="slider-content_wrap">
-                                <h1>Discover great places in New york</h1>
-                                <h5>Let's uncover the best places to eat, drink, and shop nearest to you.</h5>
+                                <h1 style="font-size: 48px;">SELECTIONNEZ LE MEILLEUR ARTISAN LOCAL POUR VOS TRAVAUX</h1>
+                                <h5 style="color: white;">Recevez jusqu’à 5 devis en 48h, gratuitement et sans engagement!</h5>
                             </div>
                         </div>
                     </div>
@@ -17,7 +17,7 @@
                         <div class="col-md-10">
                             <form class="form-wrap mt-4 position_relative">
                                 <div class="btn-group" role="group" aria-label="Basic example" id="parent">
-                                    <input type="text" placeholder="Rechercher par devis gratuit" id="recherche" class="btn-group1 header_search">
+                                    <input type="text" placeholder="Ex: Plomberie, Maçonnerie" id="recherche" class="btn-group1 header_search">
                                     <!-- <input type="text" placeholder="New york" class="btn-group2"> -->
                                     <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>RECHERCHER<i class="pe-7s-angle-right"></i></button>
                                 </div>
