@@ -45,3 +45,6 @@ Route::namespace('Front')->group(function () {
     Route::get('category','LoginController@front');
 });
 /*end front router*/
+Route::get('artisan/accueil', function () {
+    return view('front.login.index');
+});
