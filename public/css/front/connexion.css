@@ -96,13 +96,13 @@ label {
   padding: 0 10% 2% 10%;
 }
 .content_page .pages {
-  padding: 0 8%;
+  padding: 0 6%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.page .navbar_j {
+.pages .navbar_j {
   width: 31%;
   display: flex;
   flex-direction: column;
@@ -111,6 +111,7 @@ label {
   width: 100%;
   border: 1px solid #cecece;
   padding: 12% 6%;
+  background-color: #fff;
 }
 .description_user {
   width: 100%;
@@ -118,8 +119,8 @@ label {
   flex-wrap: nowrap;
 }
 .description_user .image_user {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 1rem;
@@ -162,12 +163,19 @@ label {
 .user_description .evaluation .number_star {
   margin-left: 1rem;
   font-size: 1.2rem;
+  white-space: nowrap;
 }
 
 .liste_project {
-  width: 67%;
+  width: 65%;
   border: 1px solid #cecece;
   padding: 2%;
+  background-color: #fff;
+}
+.liste_star {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .project_item {
   width: 100%;
@@ -192,11 +200,12 @@ label {
   flex: 1;
   justify-content: space-between;
   border-bottom: 2px dotted #cecece;
+  margin-bottom: 1rem;
 }
 .item_project .calendar {
   position: relative;
 }
-.calendar .img {
+.calendar img {
   width: 50px;
   height: 50px;
 }
@@ -247,4 +256,58 @@ label {
   background-clip: padding-box;
   padding: 10px;
   cursor: pointer;
+}
+
+.padding_new {
+  position: relative;
+  padding-top: 3rem;
+}
+.new_label {
+  font-size: 15px;
+  color: #FFF;
+  background: #ff580c;
+  position: absolute;
+  top: -0.5rem;
+  padding: 0 7px;
+}
+
+.btn_foot_list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.btn_view_more_list {
+  padding: 10px 24px;
+  font-size: 15px;
+  border: 1px solid #ff580c;
+  border-radius: 5px;
+  color: #ff580c;
+  background-color: #fff;
+}
+.btn_view_more_list:hover {
+  color: #fff;
+  background-color: #ff580c;
+}
+
+@media (max-width:1630px) {
+  .nav_menu {
+    padding: 2% 10%;
+  }
+  .content_page {
+    padding: 0 3% 2% 3%;
+  }
+  .description_user .image_user {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media (max-width:1300px) {
+  .content_page .pages {
+    padding: 0 0%;
+  }
+  .nav_menu {
+    padding: 2% 5%;
+  }
 }
