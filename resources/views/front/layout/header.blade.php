@@ -77,6 +77,7 @@
                   </div>
                 </div>
                 <div class="compte_artisan">
+                  <button type="button" name="button" class="btn_artisan login_artisan">S'inscrire</button>
                   <button type="button" name="button" class="btn_artisan">Compte Artisan</button>
                 </div>
               </div>

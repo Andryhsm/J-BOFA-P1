@@ -227,6 +227,8 @@ p {
   width: 50%;
   display: flex;
   justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .btn_artisan {
@@ -238,7 +240,9 @@ p {
   border-radius: 5px;
   color: #fff;
 }
-
+.login_artisan {
+  margin-bottom: 0.5rem;
+}
 .btn_artisan:hover {
   border: 1px solid #ff3a6d;
   color: #ff3a6d;
