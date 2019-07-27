@@ -1,21 +1,21 @@
 <!--============================= HEADER =============================-->
     <div class="nav-menu">
         <div class="bg transition">
+            
             <div class="container-fluid fixed">
-
                 <div class="login_foat">
-                  <div class="row">
-                    <div class="item_form">
-                      <label for="" class="email">loremipsum@dolorethasmany.com</label>
-                      <label for="" class="email">&nbsp;/&nbsp;</label>
-                      <label for="" class="email">+2618845528494894512</label>
-                    </div>
-                    <div class="compte_artisan">
-                      <button type="button" name="button" class="btn_artisan login_artisan">Se connecter</button>
-                      <button type="button" name="button" class="btn_artisan">S'inscrire</button>
-                    </div>
+                <div class="row">
+                  <div class="item_form">
+                    <label for="" class="email">loremipsum@dolorethasmany.com</label>
+                    <label for="" class="email">&nbsp;/&nbsp;</label>
+                    <label for="" class="email">+261 88 42 455 28</label>
+                  </div>
+                  <div class="compte_artisan">
+                    <a href="{{ route('login') }}" class="btn_artisan login_artisan">Se connecter</a>
+                    <a href="#" class="btn_artisan">S'inscrire</a>
                   </div>
                 </div>
+              </div>   
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
@@ -68,8 +68,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Blog</a>
                                     </li>
-                                    <!-- <span class="ti-plus"> -->
-                                    <li><a href="{{ route('login') }}" class="btn btn-outline-light top-btn"></span> Se connecter</a></li>
+                                    
                                 </ul>
                             </div>
                         </nav>
