@@ -1,7 +1,7 @@
 <!--============================= HEADER =============================-->
     <div class="nav-menu">
         <div class="bg transition">
-            
+
             <div class="container-fluid fixed">
                 <div class="login_foat">
                 <div class="row">
@@ -15,7 +15,7 @@
                     <a href="#" class="btn_artisan">S'inscrire</a>
                   </div>
                 </div>
-              </div>   
+              </div>
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
@@ -68,7 +68,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Blog</a>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </nav>

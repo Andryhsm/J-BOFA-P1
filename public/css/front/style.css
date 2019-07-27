@@ -58,7 +58,14 @@ p {
   background: #f3f4f7; }
 
 .dark-bg {
-  background: #252a33; }
+  background: #0062ae; }
+  /* #252a33 */
+.header_nav_bofa {
+  background: #0062ae;
+}
+.btn_research_bofa {
+  background: #0062ae;
+}
 
 /* ==============================================================
    HEADER
@@ -221,21 +228,49 @@ p {
   font-size: 14px;
   width: 25%;
   padding: 10px 13px;
-  background-color: #0162af;
+  background-color: #0062ae;
   border: 0;
   border-radius: 5px;
   color: #fff;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
 }
 .login_artisan {
   margin-right: 0.5rem;
 }
 .btn_artisan:hover {
-  border: 1px solid #0162af;
-  color: #0162af;
+  border: 1px solid #0062ae;
+  color: #0062ae;
   background-color: #fff;
+  text-decoration: none;
+  outline: none;
 }
 
 /* End Login Header */
+
+@media (max-width:900px) {
+  .btn_artisan {
+    width: 35%;
+  }
+}
+
+@media (max-width: 745px) {
+  .login_foat .item_form {
+    width: 100%;
+    justify-content: center;
+  }
+  .compte_artisan {
+    width: 100%;
+    justify-content: center;
+  }
+  .login_foat {
+    height: 7rem;
+  }
+  .btn_artisan {
+    width: 145px;
+  }
+}
 
 @media (max-width: 992px) {
   .navbar-nav {
@@ -252,7 +287,7 @@ p {
   height: 70px; }
 
 .is-sticky {
-  background: #252a33;
+  background: #0062ae;
   opacity: 1; }
 
 .transition {
@@ -375,7 +410,8 @@ p {
   font-size: 18px;
   padding: 17px;
   width: 27%;
-  background: #ff3a6d;
+  /* background: #ff3a6d; */
+  background-color: #0062ae;
   color: #ffffff;
   border: none;
   border-top-right-radius: 3px;
@@ -430,7 +466,8 @@ p {
       content: "";
       width: 60px;
       height: 3px;
-      background: #ff3a6d;
+      /* background: #ff3a6d; */
+      background: #0062ae;
       bottom: 0;
       left: 50%;
       -webkit-transform: translateX(-50%);

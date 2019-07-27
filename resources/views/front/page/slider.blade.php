@@ -19,7 +19,7 @@
                                 <div class="btn-group" role="group" aria-label="Basic example" id="parent">
                                     <input type="text" placeholder="Ex: Plomberie, Maçonnerie" id="recherche" class="btn-group1 header_search">
                                     <!-- <input type="text" placeholder="New york" class="btn-group2"> -->
-                                    <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>RECHERCHER<i class="pe-7s-angle-right"></i></button>
+                                    <button type="submit" class="btn-form btn_research_bofa"><span class="icon-magnifier search-icon"></span>RECHERCHER<i class="pe-7s-angle-right"></i></button>
                                 </div>
                                 <ul id="ul" class="dropdown dropdown_search"></ul>
                             </form>
