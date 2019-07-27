@@ -2,6 +2,20 @@
     <div class="nav-menu">
         <div class="bg transition">
             <div class="container-fluid fixed">
+
+                <div class="login_foat">
+                  <div class="row">
+                    <div class="item_form">
+                      <label for="" class="email">loremipsum@dolorethasmany.com</label>
+                      <label for="" class="email">&nbsp;/&nbsp;</label>
+                      <label for="" class="email">+2618845528494894512</label>
+                    </div>
+                    <div class="compte_artisan">
+                      <button type="button" name="button" class="btn_artisan login_artisan">Se connecter</button>
+                      <button type="button" name="button" class="btn_artisan">S'inscrire</button>
+                    </div>
+                  </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
@@ -61,26 +75,6 @@
                         </nav>
                     </div>
                 </div>
-            </div>
-
-            <div class="login_foat">
-              <div class="row">
-                <div class="item_form">
-                  <div class="input_litle">
-                    <input type="text" name="" value="" placeholder="Email">
-                  </div>
-                  <div class="input_litle">
-                    <input type="password" name="" value="" placeholder="Mot de passe">
-                  </div>
-                  <div class="btn_litle">
-                    <button type="button" name="button" class="btn_connexion">Se Connecter</button>
-                  </div>
-                </div>
-                <div class="compte_artisan">
-                  <button type="button" name="button" class="btn_artisan login_artisan">S'inscrire</button>
-                  <button type="button" name="button" class="btn_artisan">Compte Artisan</button>
-                </div>
-              </div>
             </div>
         </div>
     </div>
