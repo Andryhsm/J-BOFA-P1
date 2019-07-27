@@ -163,6 +163,90 @@ p {
   background-color: #ffffff;
 }
 
+.image_bofa_logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.img_logo_bofa {
+  width: 100%;
+  height: 100%;
+}
+/** Login header */
+.login_foat {
+  margin-top: 5.5rem;
+}
+.login_foat .row {
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.login_foat .item_form {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+.input_litle {
+  width: 175px;
+  margin-right: 1rem;
+}
+.input_litle input {
+  width: 100%;
+  color: #006aa4;
+  border-radius: 5px;
+  border: 1px solid #006aa4;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.input_litle input:focus {
+  border: 1px solid #ff3a6d;
+  color: #ff3a6d;
+}
+.input_litle input:hover {
+  border: 1px solid #ff3a6d;
+  color: #ff3a6d;
+}
+
+.btn_litle {
+  width: 120px;
+}
+.btn_litle .btn_connexion {
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px 0;
+}
+.btn_litle .btn_connexion:hover {
+    background-color: #fff;
+    color: #000;
+}
+.compte_artisan {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_artisan {
+  font-size: 12px;
+  width: 25%;
+  padding: 5px 13px;
+  background-color: #ff3a6d;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.btn_artisan:hover {
+  border: 1px solid #ff3a6d;
+  color: #ff3a6d;
+  background-color: #fff;
+}
+
+/* End Login Header */
+
 @media (max-width: 992px) {
   .navbar-nav {
     padding: 7px 20px; } }

@@ -5,7 +5,11 @@
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="{{ url('/') }}">Listing</a>
+                            <a class="navbar-brand" href="{{ url('/') }}">
+                              <div class="image_bofa_logo">
+                                <img src="{!! url('/image/front/icones/logo_bofa.jpg') !!}" class="img_logo_bofa" alt="logo" />
+                              </div>
+                            </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                               <span class="icon-menu"></span>
                             </button>
@@ -57,6 +61,25 @@
                         </nav>
                     </div>
                 </div>
+            </div>
+
+            <div class="login_foat">
+              <div class="row">
+                <div class="item_form">
+                  <div class="input_litle">
+                    <input type="text" name="" value="" placeholder="Email">
+                  </div>
+                  <div class="input_litle">
+                    <input type="password" name="" value="" placeholder="Mot de passe">
+                  </div>
+                  <div class="btn_litle">
+                    <button type="button" name="button" class="btn_connexion">Se Connecter</button>
+                  </div>
+                </div>
+                <div class="compte_artisan">
+                  <button type="button" name="button" class="btn_artisan">Compte Artisan</button>
+                </div>
+              </div>
             </div>
         </div>
     </div>
