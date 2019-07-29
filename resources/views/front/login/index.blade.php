@@ -20,7 +20,7 @@
               </div>
 
               <div class="nav_menu">
-                <div class="menus">
+                <div class="menus active">
                   <div class="item_menu">
                     <label for="">Accueil</label>
                   </div>

@@ -21,7 +21,7 @@
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <a class="navbar-brand" href="{{ url('/') }}">
                               <div class="image_bofa_logo">
-                                <img src="{!! url('/image/front/icones/logo_bofa.jpg') !!}" class="img_logo_bofa" alt="logo" />
+                                <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
                               </div>
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

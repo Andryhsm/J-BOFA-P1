@@ -42,7 +42,7 @@ $(document).ready(function(){
 		// 	'Escalier' ,
 		// 	'Énergies renouvelables'
 		// ];
-		
+
 
 		var data = $(this).val();
   			$('#ul').html("");
@@ -77,4 +77,18 @@ $(document).ready(function(){
 	});
 
 
+});
+
+// $(document).onScroll('.login_foat', function(){
+// 	console.log("scrokll page");
+// 	$(this).css('display', 'none');
+// });
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 100) {
+    $('.login_foat').css('display', 'none');
+	 }
+	 else {
+	 	$('.login_foat').css('display', 'block');
+	 }
 });

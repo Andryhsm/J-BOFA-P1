@@ -41,14 +41,16 @@
   background-color: #fff;
   color: #474747;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .menus:hover {
-  background-color: #28a3b2;
+  /* background-color: #28a3b2; */
+  background-color: #00adf1;
   color: #fff;
 }
 
 .menus.active {
-  background-color: #28a3b2;
+  background-color: #00adf1;
   color: #fff;
 }
 
@@ -65,7 +67,8 @@ label {
 .menus .item_menu .notification {
   width: 25px;
   height: 25px;
-  background-color: #ff580c;
+  /* background-color: #ff580c; */
+  background-color: #0062ae;
   text-align: center;
   color: #fff;
   border-radius: 50%;
@@ -78,10 +81,10 @@ label {
 
 .menus:hover .item_menu .notification {
   background-color: #fff;
-  color: #28a3b2;
+  color: #00adf1;
 }
 .menus .item_menu .add_service {
-  color: #ff580c;
+  color: #00adf1;
   margin-left: 0.5rem;
 }
 .menus:hover .item_menu .add_service {
@@ -232,6 +235,7 @@ label {
 
 .project_desc .title {
   color: #28a3b2;
+  /* color: #0062ae; */
   text-transform: capitalize;
   margin-bottom: 3px;
 }
@@ -250,8 +254,9 @@ label {
 }
 .btn_action_item .btn_action {
   color: #fff;
-  border: 1px solid #ff580c;
-  background-color: #ff580c;
+  border: 1px solid #0062ae;
+  /* background-color: #ff580c; */
+  background-color: #0062ae;
   border-radius: 3px;
   background-clip: padding-box;
   padding: 10px;
@@ -281,16 +286,16 @@ label {
 .btn_view_more_list {
   padding: 10px 24px;
   font-size: 15px;
-  border: 1px solid #ff580c;
+  border: 1px solid #00adf1;
   border-radius: 5px;
-  color: #ff580c;
+  /* color: #ff580c; */
+  color: #00adf1;
   background-color: #fff;
 }
 .btn_view_more_list:hover {
   color: #fff;
-  background-color: #ff580c;
+  background-color: #00adf1;
 }
-
 @media (max-width:1630px) {
   .nav_menu {
     padding: 2% 10%;
