@@ -296,6 +296,10 @@ label {
   color: #fff;
   background-color: #00adf1;
 }
+
+.menus .item_menu label {
+  cursor: pointer;
+}
 @media (max-width:1630px) {
   .nav_menu {
     padding: 2% 10%;
