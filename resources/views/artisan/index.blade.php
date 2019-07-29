@@ -1,4 +1,4 @@
-@extends('front.layout.master')
+@extends('artisan.master')
 
     @section('additional-css')
     {!! Html::style('css/front/connexion.css') !!}
@@ -61,7 +61,7 @@
 
             <!-- Content Page -->
             <div class="content_page">
-              @include('front.page.connexion_content')
+              @include('artisan.accueil')
             </div>
 
             <!-- End Content Page -->
