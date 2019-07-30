@@ -46,5 +46,5 @@ Route::namespace('Front')->group(function () {
 });
 /*end front router*/
 Route::get('artisan/accueil', function () {
-    return view('artisan.index');
+    return view('artisan.page.index');
 });

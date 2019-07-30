@@ -1,0 +1,61 @@
+.header_page {
+    width: 100%;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.44);
+}
+
+.item_header {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7rem 0 9rem;
+  align-items: center;
+}
+.logo_header {
+  width: 57px;
+  height: 50px;
+}
+.logo_header a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.image_bofa_logo {
+  width: 100%;
+  height: 100%;
+}
+.image_bofa_logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.user_status {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+.user_icones, .user_deconnexion {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user_icones .user, .user_deconnexion .userdeco {
+  font-size: 25px;
+  color: #0062ae;
+  margin-right: 1rem;
+}
+.user_icones .description_user {
+  margin-right: 2rem;
+}
+
+.description_user .name_user {
+  color: #0062ae;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+.separated_items {
+  height: 27px;
+  border: 1px solid #707070;
+  margin-right: 2rem;
+}

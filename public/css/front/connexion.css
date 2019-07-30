@@ -115,6 +115,7 @@ label {
   border: 1px solid #cecece;
   padding: 12% 6%;
   background-color: #fff;
+  margin-bottom: 2rem;
 }
 .description_user {
   width: 100%;
@@ -300,6 +301,37 @@ label {
 .menus .item_menu label {
   cursor: pointer;
 }
+
+/**Zone maps */
+.nav_maps {
+  width: 100%;
+}
+.title_maps {
+  font-size: 20px;
+  color: #00adf1;
+  margin-bottom: 1rem;
+}
+.localisation {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bold_localise {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+.bold_localise_to {
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+.maps_location {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.maps_location img {
+  width: 100%;
+}
+/** End Zone Maps */
 @media (max-width:1630px) {
   .nav_menu {
     padding: 2% 10%;
