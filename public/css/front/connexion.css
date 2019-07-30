@@ -83,6 +83,10 @@ label {
   background-color: #fff;
   color: #00adf1;
 }
+.menus.active .item_menu .notification {
+  background-color: #fff;
+  color: #00adf1;
+}
 .menus .item_menu .add_service {
   color: #00adf1;
   margin-left: 0.5rem;

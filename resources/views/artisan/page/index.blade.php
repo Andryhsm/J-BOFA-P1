@@ -65,9 +65,6 @@
               <div class="accueil">
                 @include('artisan.page.accueil')
               </div>
-              <div class="project_available" style="display: none;">
-                @include('artisan.page.project_available')
-              </div>
             </div>
 
             <!-- End Content Page -->

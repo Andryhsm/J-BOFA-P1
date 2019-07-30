@@ -48,3 +48,6 @@ Route::namespace('Front')->group(function () {
 Route::get('artisan/accueil', function () {
     return view('artisan.page.index');
 });
+Route::get('artisan/available', function () {
+    return view('artisan.page.project_available');
+});

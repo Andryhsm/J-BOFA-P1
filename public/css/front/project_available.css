@@ -1,0 +1,57 @@
+.title_pa {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title_pa .item_title {
+  font-family: 'Open Sans Condensed',sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: #474747;
+  float: left;
+}
+.title_pa .call_title {
+  font-size: 11px;
+  color: #ff580c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px;
+}
+.description_candidates {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name_candidates {
+  font-size: 20px;
+  font-family: 'Open Sans Condensed',sans-serif;
+  color: #474747;
+  /* margin-bottom: 0.5rem; */
+  margin-top: 1rem;
+}
+.number_candidates {
+  font-weight: 700;
+  color: #28a3b2;
+  font-size: 25px;
+  padding: 10px;
+}
+.disponibility_candidates {
+  color: #474747;
+  font-size: 14px;
+}
+
+.description_candidates small {
+  color: #474747;
+  font-size: 10px;
+}
+.email_candidates {
+  color: #ff580c;
+  font-size: 17px;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
