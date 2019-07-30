@@ -62,10 +62,10 @@
 
             <!-- Content Page -->
             <div class="content_page">
-              <div class="accueil" style="display: none;">
+              <div class="accueil">
                 @include('artisan.page.accueil')
               </div>
-              <div class="project_available">
+              <div class="project_available" style="display: none;">
                 @include('artisan.page.project_available')
               </div>
             </div>
