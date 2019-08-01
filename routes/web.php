@@ -40,8 +40,8 @@ Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->group(function
 
 /*start front router*/
 Route::namespace('Front')->group(function () {
-    Route::get('log','LoginController@index')->name('log');
-    Route::get('signin','LoginController@inscription')->name('signin');
+    Route::get('connection','LoginController@index')->name('connection');
+    Route::get('inscription','LoginController@inscription')->name('inscription');
     Route::get('category','LoginController@front');
 });
 /*end front router*/

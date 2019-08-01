@@ -2,89 +2,81 @@
 
     @section('additional-css')
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
-    {!! Html::style('image/front/fonts/font-awesome-4.7.0/css/font-awesome.min.css') !!}
-    {!! Html::style('image/front/fonts/iconic/css/material-design-iconic-font.min.css') !!}
-    {!! Html::style('css/front/vendor/animate/animate.css') !!}
-    {!! Html::style('css/front/vendor/css-hamburgers/hamburgers.min.css') !!}
-    {!! Html::style('css/front/vendor/animsition/css/animsition.min.css') !!}
-    {!! Html::style('css/front/vendor/select2/select2.min.css') !!}
-    {!! Html::style('css/front/vendor/daterangepicker/daterangepicker.css') !!}
-    {!! Html::style('css/front/login.css') !!}
-    {!! Html::style('css/front/main_login.css') !!}
+    {!! Html::style('css/front/register.css') !!}
+
     @endsection
 
     @section('content')
-    <div class="limiter">
-  		<div class="container-login100" style="background-image: url('/image/front/images/fond5.jpg');">
-  			<div class="wrap-login100">
-  				<form class="login100-form validate-form">
-  					<span class="login100-form-logo">
-  						<i class="zmdi zmdi-landscape"></i>
-  					</span>
-
-  					<span class="login100-form-title p-b-34 p-t-27">
-  						S'inscrire
-  					</span>
-            <div class="wrap-input100 validate-input" data-validate = "Entrez votre nom">
-              <input class="input100" type="text" name="name" placeholder="Nom">
-              <span class="focus-input100" data-placeholder="&#xf207;"></span>
-            </div>
-            <div class="wrap-input100 validate-input" data-validate = "Entrez votre prenom">
-              <input class="input100" type="text" name="firstname" placeholder="Prenom">
-              <span class="focus-input100" data-placeholder="&#xf207;"></span>
-            </div>
-  					<div class="wrap-input100 validate-input" data-validate = "Entrez votre e-mail">
-  						<input class="input100" type="text" name="username" placeholder="Email">
-  						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-  					</div>
-
-  					<div class="wrap-input100 validate-input" data-validate = "Entrez votre numero téléphone">
-              <input class="input100" type="text" name="phone" placeholder="Tel">
-              <span class="focus-input100" data-placeholder="&#xf207;"></span>
-            </div>
-            <div class="wrap-input100 validate-input" data-validate="Entrez le mot de passe">
-              <input class="input100" type="password" name="password" placeholder="Mot de passe">
-              <span class="focus-input100" data-placeholder="&#xf191;"></span>
+    <section class="header_page">
+      <div class="image_header">
+        <img src="{!! url('/image/front/images/fond14.jpg') !!}" class="img_fond" alt="" />
+        <div class="description_header">
+          <div class="text_header">
+              <h2>S'INSCRIRE GRATUITEMENT</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="inscription">
+      <div class="content_register">
+        <div class="bloc_description">
+          <div class="background_image_bande">
+            <div class="title_inscritpion">
+              <label for="" class="title">Professionnels du bâtiment,</label>
+              <label for="" class="title">accélérez votre activité commerciale !</label>
             </div>
 
-            <div class="wrap-input100 validate-input" data-validate="Confirmez le mot de passe">
-              <input class="input100" type="password" name="confirm" placeholder="Confirmez le mot de passe">
-              <span class="focus-input100" data-placeholder="&#xf191;"></span>
+            <div class="citation_inscription">
+              <ul>
+                <li>Recevez des opportunités de chantiers ciblées selon votre activité et zone d'intervention</li>
+                <li>Gardez le contrôle de votre budget prospection et payez au réel de votre consommation</li>
+                <li>Remplissez simplement et rapidement votre carnet de commandes</li>
+              </ul>
+            </div>
+            <img src="{!! url('/image/front/images/fond3.jpg') !!}" class="img_fond_formulaire" alt="" />
+          </div>
+          <div class="item_publication">
+
+          </div>
+
+        </div>
+        <div class="bloc_form">
+          <div class="item_formulaire">
+            <label for="" class="title_inscription">Inscription Gratuite pour les Professionnels</label>
+            <div class="sparated_form_title">
+              <div class="separate"></div>
             </div>
 
-  					<div class="contact100-form-checkbox">
-  						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-  						<label class="label-checkbox100" for="ckb1">
-  							Se souvenir de moi
-  						</label>
-  					</div>
+            <div class="formular_item">
+              <label for="" class="label_form">Nom</label>
+              <input type="text" class="input_form" name="" value="" placeholder="Nom">
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Prénom</label>
+              <input type="text" class="input_form" name="" value="" placeholder="Prénom">
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Email*</label>
+              <input type="text" class="input_form" name="" value="" placeholder="Email">
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Mot de passe*</label>
+              <input type="password" class="input_form" name="" value="" placeholder="Mot de passe">
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Confirmer votre mot de passe*</label>
+              <input type="password" class="input_form" name="" value="" placeholder="Confirmer votre mot de passe">
+            </div>
 
-  					<div class="container-login100-form-btn">
-  						<button class="login100-form-btn">
-  							Valider
-  						</button>
-  					</div>
-
-  					<div class="text-center p-t-90">
-  						<a class="txt1" href="#">
-  							Mot de Passe oubliez?
-  						</a>
-  					</div>
-  				</form>
-  			</div>
-  		</div>
-  	</div>
-
-
-  	<div id="dropDownSelect1"></div>
+            <div class="btn_form">
+              <button type="button" name="button" class="formular_button btn_artisan">ENREGISTRER</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     @endsection
 
     @section('additional-script')
-      {!! Html::script('css/front/vendor/animsition/js/animsition.min.js') !!}
-      {!! Html::script('css/front/vendor/bootstrap/js/popper.js') !!}
-      {!! Html::script('css/front/vendor/bootstrap/js/bootstrap.min.js') !!}
-      {!! Html::script('css/front/vendor/select2/select2.min.js') !!}
-      {!! Html::script('css/front/vendor/daterangepicker/moment.min.js') !!}
-      {!! Html::script('css/front/vendor/daterangepicker/daterangepicker.js') !!}
-      {!! Html::script('css/front/vendor/countdowntime/countdowntime.js') !!}
+
     @endsection

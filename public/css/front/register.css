@@ -1,0 +1,106 @@
+.header_page {
+  width: 100%;
+}
+.image_header {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image_header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.description_header {
+  position: absolute;
+  color: #fff;
+  top: 12rem;
+}
+.inscription {
+  width: 100%;
+}
+.content_register {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bloc_description {
+  width: 60%;
+  /* margin-right: 1rem; */
+  padding: 2%;
+}
+.background_image_bande {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.title_inscritpion {
+  padding: 6%;
+  font-size: 25px;
+  color: #0062ae;
+}
+.citation_inscription {
+  padding: 3%;
+  background-color: #cdcdcd;
+  margin: 3%;
+  color: #000;
+}
+.img_fond_formulaire {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.bloc_form {
+  display: flex;
+  flex: 1;
+  padding: 2%;
+}
+.item_formulaire {
+  width: 100%;
+  border: 1px solid #4ac8f6;
+  border-radius: 5px;
+}
+.title_inscription {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.sparated_form_title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sparated_form_title .separate {
+  width: 100px;
+  border: 2px solid #0062ae;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.formular_item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 10%;
+}
+
+.formular_item .input_form {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #0062ae;
+  color: #0062ae;
+}
+
+.btn_form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7% 0;
+}
