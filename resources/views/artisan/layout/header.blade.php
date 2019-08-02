@@ -13,7 +13,7 @@
           <i class="fa fa-user user"></i>
           <div class="description_user">
             <label for="">Bonjour</label>
-            <label for="" class="name_user">Mr Azoum</label>
+            <label for="" class="name_user">{{Auth::guard('artisan')->user()->first_name.' '.Auth::guard('artisan')->user()->last_name}}</label>
           </div>
         </div>
         <div class="separated_items"></div>

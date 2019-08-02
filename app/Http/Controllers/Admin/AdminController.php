@@ -24,6 +24,7 @@ class AdminController extends Controller
     public function __construct(UserRepository $user_repository ,UploadService $upload){
         $this->user_repository = $user_repository;
         $this->upload_service = $upload;
+        $this->middleware('auth');
     }
 
     public function index()

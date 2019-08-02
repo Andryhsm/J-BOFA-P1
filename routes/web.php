@@ -17,25 +17,30 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware(['auth'])->namespace('Admin')->prefix('admin')->group(function () {
-    Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/home', 'Admin\HomeController@index')->name('home');
 
     /*start profil*/
-    Route::resource('user','AdminController');
-    Route::get('/edit-profil', 'ProfilController@index')->name('profil');
-    Route::get('/get_user', 'AdminController@getAll')->name('get_user');
-    Route::get('/user/get-filter', 'AdminController@getFilterList')->name('get-filter');
-    Route::post('/post-profil', 'ProfilController@update')->name('post-profil');
-    Route::post('/delete/$id', 'AdminController@destroy')->name('delete');
-    Route::post('/update/{id}', 'AdminController@update');
-    Route::post('user_status', 'AdminController@updateStatus')->name('user_status');
+    Route::resource('user','Admin\AdminController');
+    Route::get('/edit-profil', 'Admin\ProfilController@index')->name('profil');
+    Route::get('/get_user', 'Admin\AdminController@getAll')->name('get_user');
+    Route::get('/user/get-filter', 'Admin\AdminController@getFilterList')->name('get-filter');
+    Route::post('/post-profil', 'Admin\ProfilController@update')->name('post-profil');
+    Route::post('/delete/$id', 'Admin\AdminController@destroy')->name('delete');
+    Route::post('/update/{id}', 'Admin\AdminController@update');
+    Route::post('user_status', 'Admin\AdminController@updateStatus')->name('user_status');
 
     /*end profil*/
     /*category*/
-    Route::resource('category','CategoryController');
-    Route::get('get_all','CategoryController@getAll');
-    Route::post('/category_status','CategoryController@updateStatus');
+    Route::resource('category','Admin\CategoryController');
+    Route::get('get_all','Admin\CategoryController@getAll');
+    Route::post('/category_status','Admin\CategoryController@updateStatus');
     /*End category*/
+
+    /* Admin auth*/
+    Route::get('artisan_login','Auth\ArtisanLoginController@showLogin')->name('artisanlogin');
+    Route::post('loginartisan','Auth\ArtisanLoginController@loginAdmin')->name('artisan_auth');
+    /* End Admin auth*/
 });
 
 /*start front router*/

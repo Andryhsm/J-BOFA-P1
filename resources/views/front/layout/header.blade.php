@@ -12,7 +12,7 @@
                   </div>
                   <div class="compte_artisan">
                     <a href="{{ route('login') }}" class="btn_artisan login_artisan">Se connecter</a>
-                    <a href="#" class="btn_artisan">S'inscrire</a>
+                    <a href="{{route('artisanlogin')}}" class="btn_artisan">S'inscrire</a>
                   </div>
                 </div>
               </div>
