@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::prefix('admin')->group(function () {
     Route::get('/home', 'Admin\HomeController@index')->name('home');
 
     /*start profil*/
@@ -36,12 +36,13 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('get_all','Admin\CategoryController@getAll');
     Route::post('/category_status','Admin\CategoryController@updateStatus');
     /*End category*/
-
-    /* Admin auth*/
+    /* artisan auth*/
     Route::get('artisan_login','Auth\ArtisanLoginController@showLogin')->name('artisanlogin');
     Route::post('loginartisan','Auth\ArtisanLoginController@loginAdmin')->name('artisan_auth');
-    /* End Admin auth*/
+    /* End artisan auth*/
+   
 });
+ 
 
 /*start front router*/
 Route::namespace('Front')->group(function () {
