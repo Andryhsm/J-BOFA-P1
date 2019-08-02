@@ -237,6 +237,7 @@ p {
   text-align: center;
   text-decoration: none;
   outline: none;
+  border: 1px solid #0062ae;
 }
 .login_artisan {
   margin-right: 0.5rem;
