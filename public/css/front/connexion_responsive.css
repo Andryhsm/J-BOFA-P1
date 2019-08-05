@@ -1,0 +1,20 @@
+@media screen and (max-width: 1160px) {
+  .pages .navbar_j {
+      width: 33%;
+  }
+  .liste_project {
+      padding: 1%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pages .navbar_j {
+      width: 100%;
+  }
+  .liste_project {
+    width: 100%;
+  }
+  .responsive_menus {
+    display: block;
+  }
+}

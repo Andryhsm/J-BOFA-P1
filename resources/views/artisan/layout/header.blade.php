@@ -13,13 +13,18 @@
           <i class="fa fa-user user"></i>
           <div class="description_user">
             <label for="">Bonjour</label>
-            <label for="" class="name_user">{{Auth::guard('artisan')->user()->first_name.' '.Auth::guard('artisan')->user()->last_name}}</label>
+            <label for="" class="name_user"></label>
           </div>
         </div>
         <div class="separated_items"></div>
         <div class="user_deconnexion">
           <i class="fa fa-sign-out userdeco"></i>
           <label for="" class="deconnection" style="display: none;">Déconnection</label>
+        </div>
+        <div class="responsive_menus">
+          <span class="resp_menus"></span>
+          <span class="resp_menus"></span>
+          <span class="resp_menus"></span>
         </div>
       </div>
     </div>
