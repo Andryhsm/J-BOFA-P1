@@ -24,6 +24,8 @@ Route::prefix('admin')->group(function () {
     Route::resource('user','Admin\AdminController');
     Route::get('/edit-profil', 'Admin\ProfilController@index')->name('profil');
     Route::get('/get_user', 'Admin\AdminController@getAll')->name('get_user');
+    Route::get('/artisan', 'Admin\AdminController@listArtisan')->name('artisan');
+    Route::get('/get_artisan', 'Admin\AdminController@getArtisan')->name('get_artisan');
     Route::get('/user/get-filter', 'Admin\AdminController@getFilterList')->name('get-filter');
     Route::post('/post-profil', 'Admin\ProfilController@update')->name('post-profil');
     Route::post('/delete/$id', 'Admin\AdminController@destroy')->name('delete');
@@ -39,6 +41,7 @@ Route::prefix('admin')->group(function () {
     /* artisan auth*/
     Route::get('artisan_login','Auth\ArtisanLoginController@showLogin')->name('artisanlogin');
     Route::post('loginartisan','Auth\ArtisanLoginController@loginAdmin')->name('artisan_auth');
+    //Route::post('save_artisan','Auth\AdminLoginController@createArtisan')->name('post_artisan');
     /* End artisan auth*/
    
 });
@@ -48,6 +51,7 @@ Route::prefix('admin')->group(function () {
 Route::namespace('Front')->group(function () {
     Route::get('connection','LoginController@index')->name('connection');
     Route::get('inscription','LoginController@inscription')->name('inscription');
+    Route::post('save_artisan','LoginController@createArtisan')->name('post_artisan');
     Route::get('category','LoginController@front');
 });
 /*end front router*/

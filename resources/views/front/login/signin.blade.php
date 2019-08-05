@@ -40,6 +40,7 @@
           </div>
 
         </div>
+        {!! Form::open(array('url' =>  route('post_artisan'),'files' => true,'class'=>'form-horizontal','id'=>'form-artisan','method'=>'POST')) !!}
         <div class="bloc_form">
           <div class="item_formulaire">
             <label for="" class="title_inscription">Inscription Gratuite pour les Professionnels</label>
@@ -49,34 +50,39 @@
 
             <div class="formular_item">
               <label for="" class="label_form">Nom</label>
-              <input type="text" class="input_form" name="" value="" placeholder="Nom">
+              <input type="text" class="input_form" name="name" value="" placeholder="Nom">
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Prénom</label>
-              <input type="text" class="input_form" name="" value="" placeholder="Prénom">
+              <input type="text" class="input_form" name="first_name" value="" placeholder="Prénom">
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Email*</label>
-              <input type="text" class="input_form" name="" value="" placeholder="Email">
+              <input type="text" class="input_form" name="email" value="" placeholder="Email">
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Téléphone</label>
+              <input type="text" class="input_form" name="phone" value="" placeholder="Téléphone">
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Mot de passe*</label>
-              <input type="password" class="input_form" name="" value="" placeholder="Mot de passe">
+              <input type="password" class="input_form" name="password" value="" placeholder="Mot de passe">
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Confirmer votre mot de passe*</label>
-              <input type="password" class="input_form" name="" value="" placeholder="Confirmer votre mot de passe">
+              <input type="password" class="input_form" name="confirmPassword" value="" placeholder="Confirmer votre mot de passe">
             </div>
 
             <div class="btn_form">
-              <button type="button" name="button" class="formular_button btn_artisan">ENREGISTRER</button>
+              <button type="submit" name="button" class="formular_button btn_artisan" value="ENREGISTRER">ENREGISTRER</button>
             </div>
           </div>
         </div>
+      </form>
       </div>
     </section>
     @endsection
 
     @section('additional-script')
-
+      {!! Html::script('js/front/artisan.js') !!}
     @endsection

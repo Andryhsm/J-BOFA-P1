@@ -4,15 +4,18 @@ namespace App\Repositories;
 
 use App\Interfaces\UserRepositoryInterface;
 Use App\User;
+Use App\Models\Artisan;
 use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
 {
-	protected $model;
+    protected $model;
+	protected $artisan;
 
-	public function __construct(User $user)
+	public function __construct(User $user, Artisan $artisan)
     {
         $this->model = $user;
+        $this->artisan = $artisan;
     }
 
     public function findUser($user_id)
@@ -64,5 +67,10 @@ class UserRepository implements UserRepositoryInterface
         $this->model->save();
         $user = $this->findUser($user_id);
         return $user;
+    }
+
+    public function getArtisans(){
+        $artisans = $this->artisan->get();
+        return $artisans;
     }
 }

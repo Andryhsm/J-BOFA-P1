@@ -226,4 +226,27 @@ class AdminController extends Controller
         }
         return response()->json(['brand_array' => $brand_array]);
     }
+
+    public function listArtisan(){
+      return view('admin.artisan.list');
+    }
+
+    public function getArtisan(){
+      $artisans = $this->user_repository->getArtisans();
+        $data_tables = DataTables::collection($artisans);
+        $data_tables->EditColumn('last_name', function ($artisan) {
+            if(isset($artisan->last_name))
+            {
+                return $artisan->first_name.' '.$artisan->last_name;
+            }
+                
+        })->EditColumn('email', function ($artisan) {
+            if(isset($artisan->email))    
+                return $artisan->email;
+        })->EditColumn('phone', function ($artisan) {
+            if(isset($artisan->phone)) 
+                return $artisan->phone;
+        });
+        return $data_tables->rawColumns(['name'])->make(true);
+    }
 }

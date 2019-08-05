@@ -11,8 +11,8 @@
                     <label for="" class="email">+261 88 42 455 28</label>
                   </div>
                   <div class="compte_artisan">
-                    <a href="{{ route('login') }}" class="btn_artisan login_artisan">Se connecter</a>
-                    <a href="{{route('artisanlogin')}}" class="btn_artisan">S'inscrire</a>
+                    <!-- login --><a href="{{ route('artisanlogin') }}" class="btn_artisan login_artisan">Se connecter</a>
+                    <!-- artisanlogin --><a href="{{route('inscription')}}" class="btn_artisan">S'inscrire</a>
                   </div>
                 </div>
               </div>

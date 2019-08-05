@@ -125,6 +125,11 @@ return [
             'url'         => 'admin/user',
             'icon'        => 'user',
         ],
+        [
+            'text'        => 'Gestion des artisans',
+            'url'         => 'admin/artisan',
+            'icon'        => 'user',
+        ],
         // [
         //     'text'    => 'Multilevel',
         //     'icon'    => 'share',
