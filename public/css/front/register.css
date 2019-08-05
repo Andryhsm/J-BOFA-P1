@@ -104,3 +104,19 @@
   align-items: center;
   margin: 7% 0;
 }
+
+.btn_form button {
+  width: 50%;
+}
+.form-horizontal {
+  display: flex;
+  flex: 1;
+  padding: 1.3% 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .bloc_description {
+    width: 100%;
+  }
+}
