@@ -1,3 +1,6 @@
+.responsive_menus {
+  display: none;
+}
 .nav-menu {
     position: relative !important;
     background-color: #252a33;

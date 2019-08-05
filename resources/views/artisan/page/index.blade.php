@@ -2,6 +2,7 @@
 
     @section('additional-css')
       {!! Html::style('css/front/connexion.css') !!}
+      {!! Html::style('css/front/connexion_responsive.css') !!}
       {!! Html::style('css/front/project_available.css') !!}
     @endsection
 
