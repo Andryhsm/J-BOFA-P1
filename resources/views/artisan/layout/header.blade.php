@@ -25,6 +25,16 @@
           <span class="resp_menus"></span>
           <span class="resp_menus"></span>
           <span class="resp_menus"></span>
+
+          <ul class="dropdown_menus_resp">
+            <li> Accueil</li>
+            <li> Projets Disponibles <label for="" class="number_project_resp">8</label></li>
+            <li> Projets accéptés</li>
+            <li> Evaluations</li>
+            <li> Mon Profil</li>
+            <li> Factures</li>
+            <li> Services</li>
+          </ul>
         </div>
       </div>
     </div>

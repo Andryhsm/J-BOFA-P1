@@ -10,6 +10,7 @@
   justify-content: space-between;
   padding: 0 7rem 0 9rem;
   align-items: center;
+  position: relative;
 }
 .logo_header {
   width: 57px;
@@ -58,4 +59,90 @@
   height: 27px;
   border: 1px solid #707070;
   margin-right: 2rem;
+}
+.dropdown_menus_resp {
+  display: none;
+}
+
+@media screen and (max-width: 750px){
+  .item_header {
+    padding: 0 4rem 0 1rem;
+  }
+  .user_icones .user, .user_deconnexion .userdeco {
+      font-size: 20px;
+  }
+  .user_icones .description_user {
+    font-size: 12px;
+  }
+  .logo_header a {
+    width: auto;
+    height: auto;
+  }
+  .logo_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image_bofa_logo {
+    width: 43px !important;
+    height: 37px !important;
+  }
+}
+@media screen and (max-width: 515px) {
+  .responsive_menus {
+    display: block;
+    width: 27px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+    right: 1rem;
+    justify-content: space-between;
+  }
+  .responsive_menus.active .resp_menus {
+        border: 1px solid #0062ae;
+  }
+  .user_status {
+    justify-content: center;
+  }
+  .resp_menus {
+    width: 100%;
+    border: 1px solid #707070;
+  }
+  .dropdown_menus_resp.active {
+    display: block;
+  }
+  .dropdown_menus_resp {
+    position: absolute;
+    right: -0.9rem;
+    z-index: 9;
+    top: 2.8rem;
+    background-color: #fff;
+    border: 1px solid #0062ae;
+    border-radius: 5px;
+    width: 245px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .dropdown_menus_resp li {
+      border-radius: 5px;
+      padding: 4% 9%;
+  }
+  .dropdown_menus_resp li:nth-child(2n) {
+    background-color: #e9e9f0;
+  }
+  .dropdown_menus_resp li.active {
+      background-color: #00adf1;
+      color: #fff;
+  }
+  .number_project_resp {
+    width: 23px;
+    height: 23px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    color: #0062ae;
+  }
 }
