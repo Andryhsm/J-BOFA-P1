@@ -43,9 +43,9 @@ Route::prefix('admin')->group(function () {
     Route::post('loginartisan','Auth\ArtisanLoginController@loginAdmin')->name('artisan_auth');
     //Route::post('save_artisan','Auth\AdminLoginController@createArtisan')->name('post_artisan');
     /* End artisan auth*/
-   
+
 });
- 
+
 
 /*start front router*/
 Route::namespace('Front')->group(function () {
@@ -60,4 +60,8 @@ Route::get('artisan/accueil', function () {
 });
 Route::get('artisan/available', function () {
     return view('artisan.page.project_available');
+});
+
+Route::get('how_work', function () {
+    return view('front.page.how_work');
 });
