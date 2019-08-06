@@ -48,6 +48,7 @@
     {!! Html::script('js/front/bootstrap.min.js') !!}
     {!! Html::script('js/front/swiper.min.js') !!}
     {!! Html::script('js/front/index.js') !!}
+    {!! Html::script('js/artisan/header.js') !!}
           <!-- ajout script -->
             @yield('additional-script')
           <!-- end ajout script -->

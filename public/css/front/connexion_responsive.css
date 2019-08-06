@@ -1,3 +1,25 @@
+@media (max-width:1630px) {
+  .nav_menu {
+    padding: 2% 10%;
+  }
+  .content_page {
+    padding: 0 3% 2% 3%;
+  }
+  .description_user .image_user {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media (max-width:1300px) {
+  .content_page .pages {
+    padding: 0 0%;
+  }
+  .nav_menu {
+    padding: 2% 5%;
+  }
+}
+
+
 @media screen and (max-width: 1160px) {
   .pages .navbar_j {
       width: 33%;
@@ -14,7 +36,7 @@
   .liste_project {
     width: 100%;
   }
-  .responsive_menus {
-    display: block;
-  }
+}
+@media screen and (max-width: 515px) {
+
 }
