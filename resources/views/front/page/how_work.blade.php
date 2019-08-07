@@ -17,8 +17,14 @@
       </div>
     </div>
   </section>
-  <section class="coontent_page">
-
+  <section class="content_page_how_work">
+    <div class="item_liste_how_work">
+      <div class="how_work_item">
+        <div class="image_liste_work">
+          <img src="{!! url('/image/front/how_work/how1.jpg') !!}" class="" alt="" />
+        </div>
+      </div>
+    </div>
   </section>
   @endsection
   @section('additional-script')
