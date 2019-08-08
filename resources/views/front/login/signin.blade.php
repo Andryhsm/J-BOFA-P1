@@ -20,7 +20,7 @@
     <section class="inscription">
       <div class="content_register">
         <div class="bloc_description">
-          <div class="background_image_bande">
+          <!-- <div class="background_image_bande">
             <div class="title_inscritpion">
               <label for="" class="title">Professionnels du bâtiment,</label>
               <label for="" class="title">accélérez votre activité commerciale !</label>
@@ -37,7 +37,56 @@
           </div>
           <div class="item_publication">
 
-          </div>
+          </div> -->
+
+          <section class="content_avantages">
+            <label for="" class="title_content">Quels avantages ?</label>
+            <div class="item_avantages">
+              <div class="description_avantages">
+                <div class="title_avantages">
+                  <label for="" class="number_avantages">1</label>
+                  <label for="" class="text_title_avt">Des chantiers qualifiés</label>
+                </div>
+                <ul class="list_avantages">
+                  <li>Trouvez de vrais chantiers, <strong>validés par notre Service Clients</strong> </li>
+                  <li><strong>Un commercial dédié </strong> vous aidera à concrétiser vos projets  </li>
+                </ul>
+              </div>
+              <div class="images_avantages">
+                <img src="{!! url('/image/front/images/fond1.jpg') !!}" class="" alt="" />
+              </div>
+            </div>
+            <div class="item_avantages row_reverse_item">
+              <div class="description_avantages">
+                <div class="title_avantages">
+                  <label for="" class="number_avantages">2</label>
+                  <label for="" class="text_title_avt">Une présence sur Internet</label>
+                </div>
+                <ul class="list_avantages">
+                  <li>Améliorez <strong>votre visibilité sur Internet </strong> et votre réputation grâce aux avis clients</li>
+                  <li>Accédez à une nouvelle clientèle et <strong> développez votre réseau </strong></li>
+                </ul>
+              </div>
+              <div class="images_avantages">
+                <img src="{!! url('/image/front/how_work/how4.jpg') !!}" class="" alt="" />
+              </div>
+            </div>
+            <div class="item_avantages">
+              <div class="description_avantages">
+                <div class="title_avantages">
+                  <label for="" class="number_avantages">3</label>
+                  <label for="" class="text_title_avt">Un suivi des projets</label>
+                </div>
+                <ul class="list_avantages">
+                  <li>Suivez <strong> l’avancement des projets</strong> dans votre espace personnel</li>
+                  <li>Utilisez <strong> l’application mobile</strong> pour gérer vos projets quand vous êtes sur un chantier  </li>
+                </ul>
+              </div>
+              <div class="images_avantages">
+                <img src="{!! url('/image/front/how_work/how5.jpg') !!}" class="" alt="" />
+              </div>
+            </div>
+          </section>
 
         </div>
         {!! Form::open(array('url' =>  route('post_artisan'),'files' => true,'class'=>'form-horizontal','id'=>'form-artisan','method'=>'POST')) !!}
