@@ -71,6 +71,7 @@
   font-size: 30px;
   text-align: center;
   margin-top: 1rem;
+  font-weight: 600;
 }
 .sparated_form_title {
   width: 100%;
@@ -114,6 +115,19 @@
   padding: 1.3% 0;
 }
 
+.images_avantages {
+  width: 180px !important;
+  height: 180px !important;
+}
+.item_avantages {
+  padding: 5% 0% !important;
+}
+.content_avantages {
+  padding: 0 5% !important;
+}
+.description_avantages {
+  width: 60% !important;
+}
 
 @media screen and (max-width: 1024px) {
   .bloc_description {
