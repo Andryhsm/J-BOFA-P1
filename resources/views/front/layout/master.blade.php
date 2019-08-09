@@ -28,6 +28,7 @@
     {!! Html::style('css/front/set1.css') !!}
     {!! Html::style('css/front/style.css') !!}
     {!! Html::style('css/front/how_work.css') !!}
+    {!! Html::style('css/front/how_work_responsive.css') !!}
     <!-- Style CSS -->
 
     <meta name="csrf-token" content="{{ csrf_token() }}">

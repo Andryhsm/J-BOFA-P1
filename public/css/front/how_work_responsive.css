@@ -1,0 +1,41 @@
+@media screen and (max-width: 800px) {
+  .how_work_item {
+    width: 100%;
+  }
+  .separator_item {
+    display: none;
+  }
+
+  .item_avantages {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .description_avantages {
+    width: 100% !important;
+  }
+  .contact_footer {
+    flex-direction: column;
+    line-height: 11px;
+    align-items: center;
+  }
+  .contact_footer p {
+    margin-bottom: inherit !important;
+  }
+  .contact_footer label {
+    margin-bottom: inherit !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .item_avantages {
+    padding: 5% 0%;
+  }
+  .number_avantages {
+    width: 40px;
+    height: 40px;
+  }
+  .images_avantages {
+    width: 200px;
+    height: 200px;
+  }
+}

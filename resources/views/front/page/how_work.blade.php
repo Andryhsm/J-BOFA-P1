@@ -3,6 +3,7 @@
   @section('additional-css')
       {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
       {!! Html::style('css/front/how_work.css') !!}
+      {!! Html::style('css/front/how_work_responsive.css') !!}
   @endsection
 
   @section('content')
@@ -22,11 +23,11 @@
     <div class="item_liste_how_work">
       <div class="how_work_item">
         <div class="image_liste_work">
-          <img src="{!! url('/image/front/how_work/how1.jpg') !!}" class="" alt="" />
+          <img src="{!! url('/image/front/how_work/Image1.png') !!}" class="" alt="" />
         </div>
         <div class="text_how_work">
-          <label for="" class="title_how_work">Créez votre compte</label>
-          <label for="" class="text_descr">Sélectionnez vos métiers et votre zone géographique</label>
+          <label for="" class="title_how_work">Je decris mon projet </label>
+          <label for="" class="text_descr">Vous recevrez jusqu'à 5 devis</label>
         </div>
       </div>
       <div class="separator_item">
@@ -34,11 +35,12 @@
       </div>
       <div class="how_work_item">
         <div class="image_liste_work">
-          <img src="{!! url('/image/front/how_work/how3.jpg') !!}" class="" alt="" />
+          <img src="{!! url('/image/front/how_work/Image2.png') !!}" class="" alt="" />
         </div>
         <div class="text_how_work">
-          <label for="" class="title_how_work">Consultez les chantiers</label>
-          <label for="" class="text_descr">Accédez à toutes les demandes détaillées</label>
+          <label for="" class="title_how_work">Nos professionnels qualifiés vous contacte</label>
+          <label for="" class="text_descr"></label>
+          <!-- Accédez à toutes les demandes détaillées -->
         </div>
       </div>
       <div class="separator_item">
@@ -46,11 +48,11 @@
       </div>
       <div class="how_work_item">
         <div class="image_liste_work">
-          <img src="{!! url('/image/front/how_work/how2.jpg') !!}" class="" alt="" />
+          <img src="{!! url('/image/front/how_work/Image3.png') !!}" class="" alt="" />
         </div>
         <div class="text_how_work">
-          <label for="" class="title_how_work">Contactez et signez </label>
-          <label for="" class="text_descr">Nos professionnels signent 1 à 2 projets sur 5</label>
+          <label for="" class="title_how_work">Choisissez votre artisans </label>
+          <label for="" class="text_descr">Selon la qualité prix </label>
         </div>
       </div>
 
@@ -63,7 +65,7 @@
       <div class="description_avantages">
         <div class="title_avantages">
           <label for="" class="number_avantages">1</label>
-          <label for="" class="text_title_avt">Des chantiers qualifiés</label>
+          <label for="" class="text_title_avt">je decri mon projet</label>
         </div>
         <ul class="list_avantages">
           <li>Trouvez de vrais chantiers, <strong>validés par notre Service Clients</strong> </li>

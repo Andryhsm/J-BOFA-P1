@@ -129,6 +129,12 @@
   width: 60% !important;
 }
 
+@media screen and (max-width: 800px) {
+  .description_avantages {
+    width: 100% !important;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .bloc_description {
     width: 100%;
