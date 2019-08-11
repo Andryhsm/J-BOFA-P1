@@ -21,7 +21,7 @@
               </div>
               <div class="item_project_plus">
                 <div class="image_projectplus">
-                  <img src="{!! url('/image/projects/Maçonnerie.jpg') !!}" class="img_fond" alt="" />
+                  <img src="{!! url('/image/projects/Maconnerie.jpg') !!}" class="img_fond" alt="" />
                 </div>
                 <div class="description_project_plus">
                   <label for="" class="title_projetct_plus">Maçonnerie - démolition</label>
@@ -39,7 +39,7 @@
               </div>
               <div class="item_project_plus">
                 <div class="image_projectplus">
-                  <img src="{!! url('/image/projects/Électricité_alarme.jpg') !!}" class="img_fond" alt="" />
+                  <img src="{!! url('/image/projects/electricite_alarme.jpg') !!}" class="img_fond" alt="" />
                 </div>
                 <div class="description_project_plus">
                   <label for="" class="title_projetct_plus">Électricité alarme</label>
@@ -66,7 +66,7 @@
               </div>
               <div class="item_project_plus">
                 <div class="image_projectplus">
-                  <img src="{!! url('/image/projects/Véranda.jpeg') !!}" class="img_fond" alt="" />
+                  <img src="{!! url('/image/projects/Veranda.jpeg') !!}" class="img_fond" alt="" />
                 </div>
                 <div class="description_project_plus">
                   <label for="" class="title_projetct_plus">Véranda</label>
@@ -75,7 +75,7 @@
               </div>
               <div class="item_project_plus">
                 <div class="image_projectplus">
-                  <img src="{!! url('/image/projects/rénovation_intérieure.jpg') !!}" class="img_fond" alt="" />
+                  <img src="{!! url('/image/projects/renovation_interieure.jpg') !!}" class="img_fond" alt="" />
                 </div>
                 <div class="description_project_plus">
                   <label for="" class="title_projetct_plus">Rénovation intérieure</label>
