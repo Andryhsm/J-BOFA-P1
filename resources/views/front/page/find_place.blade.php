@@ -2,90 +2,96 @@
     <section class="main-block">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-5">
+                <div class="col-md-5 no_maxwidth">
                     <div class="styled-heading">
-                        <h3>What do you need to find?</h3>
+                        <h3>Les devis les plus demandés</h3>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="find-place-img_wrap">
-                        <div class="grid">
-                            <figure class="effect-ruby">
-                                <img src="{!! url('/image/front/images/fond8.jpg') !!}" class="img-fluid" alt="img13" />
-                                <figcaption>
-                                    <h5>Construction</h5>
-                                    <p>385 Listings</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
+            <div class="row container_row">
+
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/salle_de_bain.png') !!}" class="img_fond" alt="" />
                 </div>
-                <div class="col-md-4">
-                    <div class="row find-img-align">
-                        <div class="col-md-12">
-                            <div class="find-place-img_wrap">
-                                <div class="grid">
-                                    <figure class="effect-ruby">
-                                        <img src="{!! url('/image/front/images/fond5.jpg') !!}" class="img-fluid" alt="img13" />
-                                        <figcaption>
-                                            <h5>Construction</h5>
-                                            <p>210 Listings</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="find-place-img_wrap">
-                                <div class="grid">
-                                    <figure class="effect-ruby">
-                                        <img src="{!! url('/image/front/images/fond6.jpg') !!}" class="img-fluid" alt="img13" />
-                                        <figcaption>
-                                            <h5>Construction </h5>
-                                            <p>114 Listings</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Salle de bain</label>
+                  <label for="" class="description_plus">Créaction rénovation</label>
                 </div>
-                <div class="col-md-4">
-                    <div class="row find-img-align">
-                        <div class="col-md-12">
-                            <div class="find-place-img_wrap">
-                                <div class="grid">
-                                    <figure class="effect-ruby">
-                                        <img src="{!! url('/image/front/images/fond4.jpg') !!}" class="img-fluid" alt="img13" />
-                                        <figcaption>
-                                            <h5>Construction </h5>
-                                            <p>577 Listings</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="find-place-img_wrap">
-                                <div class="grid">
-                                    <figure class="effect-ruby">
-                                        <img src="{!! url('/image/front/images/fond2.jpg') !!}" class="img-fluid" alt="img13" />
-                                        <figcaption>
-                                            <h5>Construction</h5>
-                                            <p>79 Listings</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/Maçonnerie.jpg') !!}" class="img_fond" alt="" />
                 </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Maçonnerie - démolition</label>
+                  <label for="" class="description_plus"></label>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/Plomberie_sanitaires.png') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Plomberie sanitaires</label>
+                  <label for="" class="description_plus"></label>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/Électricité_alarme.jpg') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Électricité alarme</label>
+                  <label for="" class="description_plus"></label>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/Sol-carrelage-parquet.png') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Sol - carrelage - parquet</label>
+                  <label for="" class="description_plus"></label>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/Menuiserie-pvc-aluminium-bois.jpg') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Menuiserie - pvc - aluminium - bois</label>
+                  <label for="" class="description_plus"></label>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/Véranda.jpeg') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Véranda</label>
+                  <label for="" class="description_plus"></label>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/rénovation_intérieure.jpg') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Rénovation intérieure</label>
+                  <label for="" class="description_plus"></label>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/Toiture-couverture-charpente.jpg') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Toiture- couverture -charpente</label>
+                  <label for="" class="description_plus"></label>
+                </div>
+              </div>
+
             </div>
         </div>
     </section>

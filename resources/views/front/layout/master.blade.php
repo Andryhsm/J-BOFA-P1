@@ -45,10 +45,6 @@
 
 
 
-
-
-
-
     {!! Html::script('js/front/jquery-3.2.1.min.js') !!}
     {!! Html::script('js/front/popper.min.js') !!}
     {!! Html::script('js/front/bootstrap.min.js') !!}
