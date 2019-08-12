@@ -289,24 +289,54 @@ p {
   height: 100%;
   top: 0;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
   color: #fff;
   flex-direction: column;
+  padding: 20% 0;
 }
 .title_projetct_plus {
   font-size: 26px;
   font-weight: 600;
   width: 100%;
   text-align: center;
+  padding: 0 10px;
 }
 .description_plus {
   font-size: 15px;
   width: 100%;
   text-align: center;
 }
+.link_project_plus {
+  /* display: none; */
+  text-decoration: none;
+  background-color: transparent;
+  padding: 7px 13%;
+  border-radius: 5px;
+  border: 1px solid #02c4b3;
+  color: #02c4b3;
+  font-weight: 600;
+}
+.item_project_plus:hover .link_project_plus {
+  /* display: block !important; */
+  text-decoration: none;
+  background-color: #02c4b3;
+  border: 1px solid transparent;
+  color: #fff;
+  transition-duration: 1s;
+  /* transition: background-color 0.5s ease-out; */
+}
 /** Find place page */
 
+/**Quit feature page*/
+.height_message {
+    height: 250px;
+}
+.feature_container {
+  
+}
+/**End Quit feature page*/
 /* End Login Header */
 @media screen and (max-width: 995px) {
   .item_project_plus {

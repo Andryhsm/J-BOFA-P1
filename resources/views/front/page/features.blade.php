@@ -9,36 +9,23 @@
               </div>
           </div>
           <div class="row">
-              <div class="col-md-4 featured-responsive">
+              <div class="col-md-4 featured-responsive feature_container">
                   <div class="featured-place-wrap">
-                      <a href="detail.html">
-                          <img src="{!! url('/image/front/images/featured1.jpg') !!}" class="img-fluid" alt="#">
-                          <span class="featured-rating-orange">6.5</span>
+                      <a href="detail.html" class="height_message">
+                          <span class="featured-rating-orange"><i class="fa fa-quote-left"></i></span>
                           <div class="featured-title-box">
                               <h6>Burger & Lobster</h6>
-                              <p>Restaurant </p> <span>• </span>
-                              <p>3 Reviews</p> <span> • </span>
-                              <p><span>$$$</span>$$</p>
-                              <ul>
-                                  <li><span class="icon-location-pin"></span>
-                                      <p>1301 Avenue, Brooklyn, NY 11230</p>
-                                  </li>
-                                  <li><span class="icon-screen-smartphone"></span>
-                                      <p>+44 20 7336 8898</p>
-                                  </li>
-                                  <li><span class="icon-link"></span>
-                                      <p>https://burgerandlobster.com</p>
-                                  </li>
-
-                              </ul>
-                              <div class="bottom-icons">
-                                  <div class="closed-now">CLOSED NOW</div>
-                                  <span class="ti-heart"></span>
-                                  <span class="ti-bookmark"></span>
-                              </div>
+                              <p>Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.</p>
                           </div>
                       </a>
+
+
                   </div>
+                  <div class="description_feature_candidates">
+                    <label for="" class="name_candidates_feature">J. Carter</label>
+                    <label for="" class="jobs_candidates">Electricité (77)</label>
+                  </div>
+
               </div>
               <div class="col-md-4 featured-responsive">
                   <div class="featured-place-wrap">
