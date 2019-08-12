@@ -45,6 +45,16 @@
                   <img src="{!! url('/image/projects/electricite_alarme.jpg') !!}" class="img_fond" alt="" />
                 </div>
                 <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Plomberie chauffage</label>
+                  <label for="" class="description_plus"></label>
+                  <a href="#" class="link_project_plus">Débuter votre projet</a>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/electricite.jpg') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
                   <label for="" class="title_projetct_plus">Électricité alarme</label>
                   <label for="" class="description_plus"></label>
                   <a href="#" class="link_project_plus">Débuter votre projet</a>
@@ -75,7 +85,7 @@
                   <img src="{!! url('/image/projects/Veranda.jpeg') !!}" class="img_fond" alt="" />
                 </div>
                 <div class="description_project_plus">
-                  <label for="" class="title_projetct_plus">Véranda</label>
+                  <label for="" class="title_projetct_plus">Isolation intérieure - extérieure</label>
                   <label for="" class="description_plus"></label>
                   <a href="#" class="link_project_plus">Débuter votre projet</a>
                 </div>
@@ -95,12 +105,35 @@
                   <img src="{!! url('/image/projects/Toiture-couverture-charpente.jpg') !!}" class="img_fond" alt="" />
                 </div>
                 <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Panneaux photo voltaïque</label>
+                  <label for="" class="description_plus"></label>
+                  <a href="#" class="link_project_plus">Débuter votre projet</a>
+                </div>
+              </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/toiture-couverture.jpg') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
                   <label for="" class="title_projetct_plus">Toiture- couverture -charpente</label>
                   <label for="" class="description_plus"></label>
                   <a href="#" class="link_project_plus">Débuter votre projet</a>
                 </div>
               </div>
+              <div class="item_project_plus">
+                <div class="image_projectplus">
+                  <img src="{!! url('/image/projects/plomberie_chauffage.jpg') !!}" class="img_fond" alt="" />
+                </div>
+                <div class="description_project_plus">
+                  <label for="" class="title_projetct_plus">Plomberie chauffage</label>
+                  <label for="" class="description_plus"></label>
+                  <a href="#" class="link_project_plus">Débuter votre projet</a>
+                </div>
+              </div>
 
+              <div class="btn_footer_project_plus">
+                <a href="#" class="find_project_plus">Débuter un nouveau projet</a>
+              </div>
             </div>
         </div>
     </section>

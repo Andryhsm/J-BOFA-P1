@@ -23,7 +23,7 @@
     <div class="item_liste_how_work">
       <div class="how_work_item">
         <div class="image_liste_work">
-          <img src="{!! url('/image/front/how_work/Image1.png') !!}" class="" alt="" />
+          <img src="{!! url('/image/front/how_work/how2.jpg') !!}" class="" alt="" />
         </div>
         <div class="text_how_work">
           <label for="" class="title_how_work">Je decris mon projet </label>
@@ -35,7 +35,7 @@
       </div>
       <div class="how_work_item">
         <div class="image_liste_work">
-          <img src="{!! url('/image/front/how_work/Image2.png') !!}" class="" alt="" />
+          <img src="{!! url('/image/front/how_work/how3.jpg') !!}" class="" alt="" />
         </div>
         <div class="text_how_work">
           <label for="" class="title_how_work">Nos professionnels qualifiés vous contacte</label>
@@ -48,7 +48,7 @@
       </div>
       <div class="how_work_item">
         <div class="image_liste_work">
-          <img src="{!! url('/image/front/how_work/Image3.png') !!}" class="" alt="" />
+          <img src="{!! url('/image/front/how_work/how1.jpg') !!}" class="" alt="" />
         </div>
         <div class="text_how_work">
           <label for="" class="title_how_work">Choisissez votre artisans </label>

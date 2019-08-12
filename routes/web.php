@@ -33,7 +33,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::post('/update/{id}', 'AdminController@update');
     Route::post('user_status', 'AdminController@updateStatus')->name('user_status');
     /*end profil*/
-    
+
     /*category*/
     Route::resource('category','CategoryController');
     Route::get('get_all','CategoryController@getAll');
@@ -74,6 +74,9 @@ Route::namespace('Auth')->group(function () {
 
     Route::get('how_work', function () {
         return view('front.page.how_work');
+    });
+    Route::get('view_project', function () {
+        return view('front.page.view_project');
     });
 //});
 // end Auth route

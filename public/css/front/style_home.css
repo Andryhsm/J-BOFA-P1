@@ -1,12 +1,12 @@
 /** item presentation custom */
 .content_page_how_work {
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
 }
 .title_content {
-  color: #212529 !important;
+  /* color: #212529 !important; */
 }
 .image_liste_work:hover {
-  border: 4px solid #212529 !important;
+  /* border: 4px solid #212529 !important; */
 }
 
 /** end item presentation custom */

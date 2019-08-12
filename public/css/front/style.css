@@ -312,7 +312,8 @@ p {
   /* display: none; */
   text-decoration: none;
   background-color: transparent;
-  padding: 7px 13%;
+  /* padding: 7px 13%; */
+  padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #02c4b3;
   color: #02c4b3;
@@ -327,14 +328,40 @@ p {
   transition-duration: 1s;
   /* transition: background-color 0.5s ease-out; */
 }
+.btn_footer_project_plus {
+  width: 100%;
+  padding: 5% 5% 0% 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.find_project_plus {
+  padding: 15px 45px;
+  background-color: #00adf1;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.find_project_plus:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.button_icones_plus {
+  padding: 0px 20px 20px 20px !important;
+}
+.col_heading {
+  margin-bottom: 3rem;
+}
 /** Find place page */
 
 /**Quit feature page*/
 .height_message {
-    height: 250px;
+    height: 300px;
+    overflow: auto;
 }
 .feature_container {
-  
+
 }
 /**End Quit feature page*/
 /* End Login Header */

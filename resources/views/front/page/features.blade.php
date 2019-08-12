@@ -2,9 +2,10 @@
   <section class="main-block light-bg">
       <div class="container">
           <div class="row justify-content-center">
-              <div class="col-md-5">
+              <div class="col_heading">
                   <div class="styled-heading">
-                      <h3>Featured Places</h3>
+                      <h3>Les particuliers parlent de nous</h3>
+                      <p>Chaque mois, plus de 15 000 personnes nous confient les travaux de leur maison en demandant des devis à notre réseau d'experts. En ferez-vous partie ?</p>
                   </div>
               </div>
           </div>
@@ -15,85 +16,57 @@
                           <span class="featured-rating-orange"><i class="fa fa-quote-left"></i></span>
                           <div class="featured-title-box">
                               <h6>Burger & Lobster</h6>
-                              <p>Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.</p>
+                              <p>Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.
+                              Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.</p>
+
                           </div>
                       </a>
-
-
-                  </div>
-                  <div class="description_feature_candidates">
-                    <label for="" class="name_candidates_feature">J. Carter</label>
-                    <label for="" class="jobs_candidates">Electricité (77)</label>
+                      <div class="bottom-icons button_icones_plus">
+                          <div class="closed-now">J. Carter</div>
+                          <span class="ti-bookmark">Electricité (77)</span>
+                      </div>
                   </div>
 
               </div>
               <div class="col-md-4 featured-responsive">
-                  <div class="featured-place-wrap">
-                      <a href="detail.html">
-                          <img src="{!! url('/image/front/images/featured2.jpg') !!}" class="img-fluid" alt="#">
-                          <span class="featured-rating-green">9.5</span>
-                          <div class="featured-title-box">
-                              <h6>Joe’s Shanghai</h6>
-                              <p>Restaurant </p> <span>• </span>
-                              <p>3 Reviews</p> <span> • </span>
-                              <p><span>$$$</span>$$</p>
-                              <ul>
-                                  <li><span class="icon-location-pin"></span>
-                                      <p>1301 Avenue, Brooklyn, NY 11230</p>
-                                  </li>
-                                  <li><span class="icon-screen-smartphone"></span>
-                                      <p>+44 20 7336 8898</p>
-                                  </li>
-                                  <li><span class="icon-link"></span>
-                                      <p>https://burgerandlobster.com</p>
-                                  </li>
+                <div class="featured-place-wrap">
+                    <a href="detail.html" class="height_message">
+                        <span class="featured-rating-green"><i class="fa fa-quote-left"></i></span>
+                        <div class="featured-title-box">
+                            <h6>Burger & Lobster</h6>
+                            <p>Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.
+                            Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.</p>
 
-                              </ul>
-                              <div class="bottom-icons">
-                                  <div class="closed-now">CLOSED NOW</div>
-                                  <span class="ti-heart"></span>
-                                  <span class="ti-bookmark"></span>
-                              </div>
-                          </div>
-                      </a>
-                  </div>
+                        </div>
+                    </a>
+                    <div class="bottom-icons button_icones_plus">
+                        <div class="closed-now">J. Carter</div>
+                        <span class="ti-bookmark">Electricité (77)</span>
+                    </div>
+                </div>
               </div>
               <div class="col-md-4 featured-responsive">
-                  <div class="featured-place-wrap">
-                      <a href="detail.html">
-                          <img src="{!! url('/image/front/images/featured3.jpg') !!}" class="img-fluid" alt="#">
-                          <span class="featured-rating">3.2</span>
-                          <div class="featured-title-box">
-                              <h6>Tasty Hand-Pulled Noodles</h6>
-                              <p>Restaurant </p> <span>• </span>
-                              <p>3 Reviews</p> <span> • </span>
-                              <p><span>$$$</span>$$</p>
-                              <ul>
-                                  <li><span class="icon-location-pin"></span>
-                                      <p>1301 Avenue, Brooklyn, NY 11230</p>
-                                  </li>
-                                  <li><span class="icon-screen-smartphone"></span>
-                                      <p>+44 20 7336 8898</p>
-                                  </li>
-                                  <li><span class="icon-link"></span>
-                                      <p>https://burgerandlobster.com</p>
-                                  </li>
+                <div class="featured-place-wrap">
+                    <a href="detail.html" class="height_message">
+                        <span class="featured-rating"><i class="fa fa-quote-left"></i></span>
+                        <div class="featured-title-box">
+                            <h6>Burger & Lobster</h6>
+                            <p>Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.
+                            Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.</p>
 
-                              </ul>
-                              <div class="bottom-icons">
-                                  <div class="open-now">OPEN NOW</div>
-                                  <span class="ti-heart"></span>
-                                  <span class="ti-bookmark"></span>
-                              </div>
-                          </div>
-                      </a>
-                  </div>
+                        </div>
+                    </a>
+                    <div class="bottom-icons button_icones_plus">
+                        <div class="closed-now">J. Carter</div>
+                        <span class="ti-bookmark">Electricité (77)</span>
+                    </div>
+                </div>
               </div>
           </div>
-          <div class="row justify-content-center">
+          <div class="row justify-content-center" style="margin-top: 3rem;">
               <div class="col-md-4">
                   <div class="featured-btn-wrap">
-                      <a href="#" class="btn btn-danger">VIEW ALL</a>
+                      <a href="#" class="btn btn-danger">Consulter tous les témoignages</a>
                   </div>
               </div>
           </div>
