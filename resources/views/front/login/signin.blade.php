@@ -89,7 +89,7 @@
           </section>
 
         </div>
-        {!! Form::open(array('url' =>  route('post_artisan'),'files' => true,'class'=>'form-horizontal','id'=>'form-artisan','method'=>'POST')) !!}
+        {!! Form::open(array('url' =>  route('register'),'files' => true,'class'=>'form-horizontal','id'=>'form-artisan','method'=>'POST')) !!}
         <div class="bloc_form">
           <div class="item_formulaire">
             <label for="" class="title_inscription">Inscription Gratuite pour les Professionnels</label>

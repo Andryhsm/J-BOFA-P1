@@ -2,20 +2,20 @@
 
 namespace App\Repositories;
 
-Use App\Models\Artisan;
+Use App\Models\Admin;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 
-class ArtisanRepository {
+class AdminRepository {
 	protected $model;
 
-	public function __construct(Artisan $artisan)
+	public function __construct(Admin $Admin)
     {
-        $this->model = $artisan;
+        $this->model = $Admin;
     }
 
-    public function createArtisan($data){
+    public function createAdmin($data){
     	$this->model->last_name = $data['name'];
     	$this->model->first_name = $data['first_name'];
         $this->model->email = $data['email'];
@@ -27,7 +27,7 @@ class ArtisanRepository {
         $this->model->status = 1;
     	$this->model->save();
     }
-    public function findArtisan($id)
+    public function findAdmin($id)
     {
         return $this->model->find($id);
     }
@@ -36,7 +36,7 @@ class ArtisanRepository {
         return $data;
     }
 
-    public function updateArtisan($id,$data){
+    public function updateAdmin($id,$data){
         $this->model = $this->model->find($id);
         $this->model->last_name = $data['name'];
         $this->model->first_name = $data['first_name'];

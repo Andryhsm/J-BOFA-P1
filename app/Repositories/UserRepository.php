@@ -68,9 +68,4 @@ class UserRepository implements UserRepositoryInterface
         $user = $this->findUser($user_id);
         return $user;
     }
-
-    public function getArtisans(){
-        $artisans = $this->artisan->get();
-        return $artisans;
-    }
 }

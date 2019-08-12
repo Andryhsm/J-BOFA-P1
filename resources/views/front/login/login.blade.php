@@ -42,7 +42,7 @@
 
         </div>
         <div class="bloc_form">
-          <form class="form-horizontal" role="form" method="POST" action="{{ route('artisan_auth')}}">
+          <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
             {!! csrf_field() !!}
           <div class="item_formulaire">
             <label for="" class="title_inscription">Se connecter en tant que Professionnels</label>
@@ -52,11 +52,11 @@
 
             <div class="formular_item">
               <label for="" class="label_form">Email*</label>
-              <input type="email" class="input_form" name="email" value="" placeholder="Email">
+              <input type="email" class="input_form" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Mot de passe*</label>
-              <input type="password" class="input_form" name="password" value="" placeholder="Mot de passe">
+              <input type="password" class="input_form" name="password" required autocomplete="current-password">
             </div>
 
             <div class="btn_form">
