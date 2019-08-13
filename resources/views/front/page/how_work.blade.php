@@ -10,7 +10,7 @@
 
   <section class="header_page">
     <div class="image_header">
-      <img src="{!! url('/image/front/images/fond15.jpg') !!}" class="img_fond" alt="" />
+      <img src="{!! url('/image/front/images/fond18.jpg') !!}" class="img_fond" alt="" />
       <div class="description_header">
         <div class="text_header">
             <h2>Comment ça marche ?</h2>

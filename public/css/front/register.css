@@ -128,6 +128,9 @@
 .description_avantages {
   width: 60% !important;
 }
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.7rem + 2px);
+}
 
 @media screen and (max-width: 800px) {
   .description_avantages {

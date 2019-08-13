@@ -9,7 +9,7 @@
   @endsection
 
   @section('content')
-  <section class="container_view_project" style="background-image:url({!! url('/image/front/images/fond16.jpg') !!})">
+  <section class="container_view_project" style="background-image:url({!! url('/image/front/images/fond19.jpg') !!})">
     <div class="form_item_project">
       <div class="desc_view_project">
         <label for="" class="title_view_project">5 devis travaux gratuits en 48h</label>
@@ -128,7 +128,6 @@
                     J'accepte les
                     <a href="#" class="lien-underline" target="_blank" title="Conditions générales d'utilisation">Conditions Générales d'Utilisation</a>
                     et la <a href="#" target="_blank">Charte sur la protection des données personnelles</a>
-
                 </div>
                 <div class="fa fa_footer_icones"><i class="fa fa-info-circle green" aria-hidden="true"></i></div>
                 <div class="text text_footer_icones">Tous les champs sont obligatoires et seront communiqués à un maximum de 5 professionnels qui vous établiront un devis

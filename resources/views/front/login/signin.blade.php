@@ -96,7 +96,60 @@
             <div class="sparated_form_title">
               <div class="separate"></div>
             </div>
-            
+            <div class="formular_item">
+              <label for="" class="label_form">Activité principal *</label>
+              <select required="required" tabindex="1" class="form-control input_form">
+                  <option value="selectionnez"> Sélectionnez une catégorie ...</option>
+                  <option value="Chauffage-climatisation">Chauffage-climatisation</option>
+                  <option value="Fenetre-porte">Fenetre-porte</option>
+                  <option value="Entretient-traitement">Entretient-traitement</option>
+                  <option value="Cuisine">Cuisine</option>
+                  <option value="Salle de bain">Salle de bain</option>
+                  <option value="Sols intérieurs">Sols intérieurs</option>
+                  <option value="Véranda">Véranda</option>
+                  <option value="Energie Renouvelable ">Energie Renouvelable </option>
+                  <option value="Electricité-Alarme">Electricité-Alarme</option>
+                  <option value="Isolation thermique et accoustique">Isolation thermique et accoustique</option>
+                  <option value="Rénovation intérieur">Rénovation intérieur</option>
+                  <option value="Architecture">Architecture</option>
+                  <option value="Construction">Construction</option>
+                  <option value="Maçonnerie-démolition">Maçonnerie-démolition</option>
+                  <option value="Couverture-Toiture-Charpente">Couverture-Toiture-Charpente</option>
+                  <option value="Salle de bain-Spa">Salle de bain-Spa</option>
+                  <option value="Peinture-Décoration">Peinture-Décoration</option>
+                  <option value="Cheminée">Cheminée</option>
+                  <option value="Sol - Carrelage - Parquet">Sol - Carrelage - Parquet</option>
+                  <option value="Véranda">Véranda</option>
+                  <option value="Diagnostics">Diagnostics</option>
+                  <option value="Salle de bains">Salle de bains</option>
+                  <option value="Peinture - Décorations">Peinture - Décorations</option>
+                  <option value="Piscine -  abri de piscine ">Piscine -  abri de piscine </option>
+                  <option value="Jardin - Clotûre - Portail">Jardin - Clotûre - Portail</option>
+                  <option value="Véranda">Véranda</option>
+                  <option value="Sols - Carrelage - Parquet">Sols - Carrelage - Parquet</option>
+                  <option value="Architecture">Architecture</option>
+                  <option value="Piscine -  abri de piscine ">Piscine -  abri de piscine </option>
+                  <option value="Gros oeuvres">Gros oeuvres</option>
+                  <option value="Maçonnerie-démolitions">Maçonnerie-démolitions</option>
+                  <option value="Couverture-Toiture-Charpentes">Couverture-Toiture-Charpentes</option>
+                  <option value="Salle de bain">Salle de bain</option>
+                  <option value="Sol - Carrelage - Parquets">Sol - Carrelage - Parquets</option>
+              </select>
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Code Postal *</label>
+              <input type="text" class="input_form" name="code_postal" value="" placeholder="Code Postal">
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Ville *</label>
+              <select required="required" tabindex="1" class="form-control input_form">
+                <option value="selectionnez"> Sélectionnez une ville ...</option>
+              </select>
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Raison Sociale</label>
+              <input type="text" class="input_form" name="name_society" value="" placeholder="Nom de votre société">
+            </div>
             <div class="formular_item">
               <label for="" class="label_form">Nom</label>
               <input type="text" class="input_form" name="name" value="" placeholder="Nom">
@@ -106,12 +159,12 @@
               <input type="text" class="input_form" name="first_name" value="" placeholder="Prénom">
             </div>
             <div class="formular_item">
-              <label for="" class="label_form">Email*</label>
-              <input type="text" class="input_form" name="email" value="" placeholder="Email">
-            </div>
-            <div class="formular_item">
               <label for="" class="label_form">Téléphone</label>
               <input type="text" class="input_form" name="phone" value="" placeholder="Téléphone">
+            </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Email*</label>
+              <input type="text" class="input_form" name="email" value="" placeholder="Email">
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Mot de passe*</label>
