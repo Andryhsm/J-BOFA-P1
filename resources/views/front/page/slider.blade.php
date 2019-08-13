@@ -23,9 +23,9 @@
                                 </div>
                                 <ul id="ul" class="dropdown dropdown_search"></ul>
                             </form>
-                            <div class="slider-link">
+                            <!-- <div class="slider-link">
                                 <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

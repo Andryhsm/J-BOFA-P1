@@ -358,7 +358,7 @@ p {
 /**Quit feature page*/
 .height_message {
     height: 300px;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 .feature_container {
 
@@ -650,7 +650,7 @@ p {
   background: #46cd38 !important; }
 
 .featured-title-box {
-  padding: 22px 20px; }
+  padding: 22px 20px; height: 100%; }
   @media (max-width: 480px) {
     .featured-title-box {
       padding: 22px 14px; } }
@@ -662,8 +662,12 @@ p {
     margin-bottom: 5px; }
   .featured-title-box p {
     color: #9fa9b9;
-    display: inline-block;
-    margin: 0; }
+    /*display: inline-block;*/
+    margin: 0; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    }
     @media (max-width: 320px) {
       .featured-title-box p {
         font-size: 13px; } }

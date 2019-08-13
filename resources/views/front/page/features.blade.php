@@ -16,8 +16,7 @@
                           <span class="featured-rating-orange"><i class="fa fa-quote-left"></i></span>
                           <div class="featured-title-box">
                               <h6>Burger & Lobster</h6>
-                              <p>Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.
-                              Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus voluptate minus ipsa placeat quibusdam dolore aut numquam autem corporis laborum asperiores perspiciatis magnam cupiditate amet, quos nisi totam neque id.</p>
 
                           </div>
                       </a>
@@ -34,8 +33,7 @@
                         <span class="featured-rating-green"><i class="fa fa-quote-left"></i></span>
                         <div class="featured-title-box">
                             <h6>Burger & Lobster</h6>
-                            <p>Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.
-                            Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus voluptate minus ipsa placeat quibusdam dolore aut numquam autem corporis laborum asperiores perspiciatis magnam cupiditate amet, quos nisi totam neque id.</p>
 
                         </div>
                     </a>
@@ -51,8 +49,7 @@
                         <span class="featured-rating"><i class="fa fa-quote-left"></i></span>
                         <div class="featured-title-box">
                             <h6>Burger & Lobster</h6>
-                            <p>Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.
-                            Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga Restaurant lorem impsum dolor set testeraga.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus voluptate minus ipsa placeat quibusdam dolore aut numquam autem corporis laborum asperiores perspiciatis magnam cupiditate amet, quos nisi totam neque id.</p>
 
                         </div>
                     </a>
