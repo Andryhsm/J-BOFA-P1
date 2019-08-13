@@ -17,10 +17,13 @@
           </div>
         </div>
         <div class="separated_items"></div>
-        <div class="user_deconnexion">
+        <a class="user_deconnexion" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
           <i class="fa fa-sign-out userdeco"></i>
           <label for="" class="deconnection" style="display: none;">Déconnection</label>
-        </div>
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
         <div class="responsive_menus">
           <span class="resp_menus"></span>
           <span class="resp_menus"></span>

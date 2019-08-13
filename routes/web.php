@@ -50,6 +50,13 @@ Route::namespace('Front')->group(function () {
 
     //get all catégorie
     Route::get('category','CategoryController@getAllCategories')->name('catégory_list');
+
+    Route::get('how_work', function () {
+        return view('front.page.how_work');
+    });
+    Route::get('view_project', function () {
+        return view('front.page.view_project');
+    });
 });
 /*end front router*/
 
@@ -63,20 +70,8 @@ Route::namespace('Auth')->group(function () {
 // end Auth route
 
 // start Auth route
-//Route::namespace('Artisan')->group(function () {
-
-    Route::get('Artisan/accueil', function () {
-        return view('Artisan.page.index');
-    });
-    Route::get('artisan/available', function () {
-        return view('Artisan.page.project_available');
-    });
-
-    Route::get('how_work', function () {
-        return view('front.page.how_work');
-    });
-    Route::get('view_project', function () {
-        return view('front.page.view_project');
-    });
-//});
+Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(function () {
+    Route::get('accueil','ArtisanController@index')->name('artisan_home');
+    Route::get('disponnible','ArtisanController@showAvailablePage')->name('artisan_available');
+});
 // end Auth route
