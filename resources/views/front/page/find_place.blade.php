@@ -125,7 +125,7 @@
                   <img src="{!! url('/image/projects/plomberie_chauffage.jpg') !!}" class="img_fond" alt="" />
                 </div>
                 <div class="description_project_plus">
-                  <label for="" class="title_projetct_plus">Plomberie chauffage</label>
+                  <label for="" class="title_projetct_plus">Plomberie</label>
                   <label for="" class="description_plus"></label>
                   <a href="#" class="link_project_plus">Débuter votre projet</a>
                 </div>
