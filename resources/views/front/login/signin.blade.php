@@ -96,7 +96,7 @@
             <div class="sparated_form_title">
               <div class="separate"></div>
             </div>
-
+            
             <div class="formular_item">
               <label for="" class="label_form">Nom</label>
               <input type="text" class="input_form" name="name" value="" placeholder="Nom">
