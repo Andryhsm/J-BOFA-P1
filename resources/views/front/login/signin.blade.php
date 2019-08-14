@@ -136,7 +136,7 @@
                   <option value="Sol - Carrelage - Parquets">Sol - Carrelage - Parquets</option>
               </select>
             </div>
-            <div class="formular_item">
+            <div class="formular_item formular_item_responsive">
               <label for="" class="label_form">Code Postal *</label>
               <input type="text" class="input_form" name="code_postal" value="" placeholder="Code Postal">
             </div>
