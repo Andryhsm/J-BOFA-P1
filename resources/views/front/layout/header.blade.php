@@ -35,6 +35,9 @@
                                          </a>
 
                                     </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{ url('tarif') }}">Tarifs</a>
+                                    </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                           Listing
@@ -57,9 +60,7 @@
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
                                     </li>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">About</a>
-                                    </li>
+
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Blog</a>
                                     </li>
