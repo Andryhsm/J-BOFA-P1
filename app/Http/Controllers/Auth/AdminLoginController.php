@@ -5,57 +5,81 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use App\Repositories\AdminRepository;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Session;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+ 
 
 class AdminLoginController extends Controller
 {
+
     /*
+
     |--------------------------------------------------------------------------
+
     | Login Controller
+
     |--------------------------------------------------------------------------
+
     |
+
     | This controller handles authenticating users for the application and
+
     | redirecting them to your home screen. The controller uses a trait
+
     | to conveniently provide its functionality to your applications.
+
     |
-    */
+
+    */ 
+
+    use AuthenticatesUsers; 
+
+    protected $guard = 'admin'; 
 
     /**
+
      * Where to redirect users after login.
+
      *
+
      * @var string
+
      */
-    protected $admin_repository;
-    protected $upload_service;
+    protected $redirectTo = 'admin/home';
 
     /**
+
      * Create a new controller instance.
+
      *
+
      * @return void
+
      */
-    public function __construct(AdminRepository $admin_repository,UploadService $upload)
+    public function __construct()
+
     {
-        $this->admin_repository = $admin_repository;
-        $this->upload_service = $upload;
+        $this->middleware('guest')->except(['logout','logoutAdmin']);
+    } 
+
+    public function showLoginForm()
+    {
+        return view('vendor.adminlte.login');
+    }
+ 
+
+    public function login(Request $request)
+    {
+        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            //dd(auth()->guard('admin')->user());
+            return redirect()->route('home');
+        } 
+
+        return back()->withErrors(['email' => 'Combinaison email et mot de passe incorect.']);
     }
 
-    public function showLogin(){        
-        return view('front.login.login');        
-    }
-
-    public function loginAdmin(Request $request){
-        $this->validate($request,[
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
-
-        if(Auth::guard('Admin')->attempt(['email' => $request->email,'password'=> $request->password],$request->remember)){
-            return redirect('Admin/home');
-        }
-
-        return redirect()->back()->withInput($request->only('email','remember'));
+    public function logoutAdmin()
+    {
+        Auth::logout();
     }
 }

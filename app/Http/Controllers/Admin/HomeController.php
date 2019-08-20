@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //dd('ici');
         return view('admin.dashboard.index');
     }
 }

@@ -46,14 +46,9 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
-        'artisan' => [
+        'admin' => [
             'driver' => 'session',
-            'provider' => 'artisans',
-        ],
-        'artisan-api' => [
-            'driver' => 'token',
-            'provider' => 'artisans',
-            'hash' => false,
+            'provider' => 'admins',
         ],
     ],
 
@@ -79,15 +74,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-        'artisans' => [
+        'admins' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Artisan::class,
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+            'model' => App\Models\Admin::class,
+        ]
     ],
 
     /*
@@ -111,8 +101,8 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
-        'artisans' => [
-            'provider' => 'artisans',
+        'admins' => [
+            'provider' => 'admins',
             'table' => 'password_resets',
             'expire' => 60,
         ],

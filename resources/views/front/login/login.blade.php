@@ -43,7 +43,7 @@
         </div>
         <div class="bloc_form">
           <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
-            {!! csrf_field() !!}
+          {{ csrf_field() }}
           <div class="item_formulaire">
             <label for="" class="title_inscription">Se connecter en tant que Professionnels</label>
             <div class="sparated_form_title">
@@ -53,10 +53,20 @@
             <div class="formular_item">
               <label for="" class="label_form">Email*</label>
               <input type="email" class="input_form" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+              @if ($errors->has('email'))
+                  <span class="help-block">
+                      <strong>{{ $errors->first('email') }}</strong>
+                  </span>
+              @endif
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Mot de passe*</label>
               <input type="password" class="input_form" name="password" required autocomplete="current-password">
+              @if ($errors->has('password'))
+                  <span class="help-block">
+                      <strong>{{ $errors->first('password') }}</strong>
+                  </span>
+              @endif
             </div>
 
             <div class="btn_form">

@@ -63,8 +63,8 @@ Route::namespace('Front')->group(function () {
 // start Auth route
 Route::namespace('Auth')->group(function () {
     /* start admin auth*/
-    Route::get('admin','AdminLoginController@showLogin')->name('admin_form');
-    Route::post('admin_login','AdminLoginController@loginAdmin')->name('admin_login');
+    Route::get('admin','AdminLoginController@showLoginForm')->name('admin_form');
+    Route::post('admin_login',['as'=>'admin_login','uses'=>'AdminLoginController@login']);
     /* End admin auth*/
 });
 // end Auth route
