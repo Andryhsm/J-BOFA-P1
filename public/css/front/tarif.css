@@ -1,0 +1,107 @@
+.header_page {
+  width: 100%;
+}
+.nav-menu .container-fluid {
+      background-color: #333;
+}
+.tarifs {
+  background-size: 100% 100%;
+  padding: 20%;
+  width: 100%;
+}
+.content_tarif {
+  border: 4px solid #cefbfd;
+  background-color: #fff;
+  padding: 5% 10%;
+  width: 100%;
+}
+.item_tarif {
+  width: 100%;
+}
+.title_bold_tarif {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Open Sans Condensed',sans-serif;
+  color: #28a3b2;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.tarif_citation {
+  width: 100%;
+  margin-top: 3rem;
+}
+.title_liste_tarif {
+  font-family: 'Open Sans Condensed',sans-serif;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: #474747;
+  font-size: 20px;
+}
+.tarif_citation ul {
+  color: #474747;
+  font-size: 15px;
+  line-height: 2.5rem;
+  list-style: circle;
+}
+.tarif_example {
+  width: 100%;
+  margin-top: 3rem;
+}
+.title_example_tarif {
+  color: #28a3b2;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 4rem;
+}
+.text_example {
+  font-family: 'Open Sans',sans-serif;
+  color: #474747;
+  font-size: 15px;
+}
+.btn_example_tarif {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_tarif_example {
+  text-decoration: none;
+  padding: 12px 12%;
+  background-color: #0062ae;
+  border: 1px solid #0062ae;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 17px;
+  margin-top: 3rem;
+}
+.btn_tarif_example:hover {
+  background-color: #fff;
+  color: #0062ae;
+  text-decoration: none;
+}
+.estimation_free {
+  width: 100%;
+}
+.content_estimation_free {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+  background: #11404d;
+  padding: 20px 0;
+  color: #fff;
+}
+.title_simple_estimation {
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-size: 17px;
+}
+.text_simple_estimation {
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}

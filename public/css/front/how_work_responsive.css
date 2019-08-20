@@ -18,6 +18,9 @@
     line-height: 11px;
     align-items: center;
   }
+  .contact_footer_responsive {
+    width: 100% !important;
+  }
   .contact_footer p {
     margin-bottom: inherit !important;
   }
