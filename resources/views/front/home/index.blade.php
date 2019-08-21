@@ -9,9 +9,6 @@
       @include('front.page.item_presentation')
       @include('front.page.find_place')
       @include('front.page.features')
-      @include('front.page.categories')
-      @include('front.page.listing')
-      <!-- ************** -->
     @endsection
 
     @section('additional-script')

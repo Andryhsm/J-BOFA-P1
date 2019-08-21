@@ -54,6 +54,9 @@ Route::namespace('Front')->group(function () {
     Route::get('how_work', function () {
         return view('front.page.how_work');
     });
+    Route::get('faq', function () {
+        return view('front.page.faq');
+    });
     Route::get('tarif', function () {
         return view('front.page.tarif');
     });
