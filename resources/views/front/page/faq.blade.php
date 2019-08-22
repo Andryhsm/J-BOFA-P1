@@ -36,86 +36,87 @@
     </div>
 
     <div class="content_faq">
-      <div class="faq_contact">
+          <div class="faq_contact">
+            <div class="title_contact">
+              <label for="">Questions générales</label>
+            </div>
+            <div class="response_contact">
+              <div class="item_response">
+                <button class="accordion">Section 1</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <button class="accordion">Section 2</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <button class="accordion">Section 3</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+              </div>
+          </div>
+        </div>
+          <div class="faq_contact">
+            <div class="title_contact">
+              <label for="">Demande de devis</label>
+            </div>
+            <div class="response_contact">
+              <div class="item_response">
+                <button class="accordion">Section 1</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <button class="accordion">Section 2</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <button class="accordion">Section 3</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+              </div>
+          </div>
+        </div>
+        <div class="faq_contact">
+          <div class="title_contact">
+            <label for="">Après la demande de devis</label>
+          </div>
+          <div class="response_contact">
+            <div class="item_response">
+              <button class="accordion">Section 1</button>
+              <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+
+              <button class="accordion">Section 2</button>
+              <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+
+              <button class="accordion">Section 3</button>
+              <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+
+            </div>
+        </div>
+      </div>
+      <div class="limite_faq"></div>
+      <div class="question_area">
         <div class="title_contact">
-          <label for="">Questions générales</label>
+          <label for="">Vous avez encore des questions?</label>
         </div>
-        <div class="response_contact">
-          <div class="item_response">
-            <button class="accordion">Section 1</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion">Section 2</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion">Section 3</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-          </div>
+        <a href="#" class="boutton_question">CONTACTEZ NOUS</a>
       </div>
     </div>
-      <div class="faq_contact">
-        <div class="title_contact">
-          <label for="">Demande de devis</label>
-        </div>
-        <div class="response_contact">
-          <div class="item_response">
-            <button class="accordion">Section 1</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion">Section 2</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion">Section 3</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-          </div>
-      </div>
-    </div>
-    <div class="faq_contact">
-      <div class="title_contact">
-        <label for="">Après la demande de devis</label>
-      </div>
-      <div class="response_contact">
-        <div class="item_response">
-          <button class="accordion">Section 1</button>
-          <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-
-          <button class="accordion">Section 2</button>
-          <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-
-          <button class="accordion">Section 3</button>
-          <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-
-        </div>
-    </div>
-  </div>
-  <div class="limite_faq"></div>
-  <div class="question_area">
-    <div class="title_contact">
-      <label for="">Vous avez encore des questions?</label>
-    </div>
-    <a href="#" class="boutton_question">CONTACTEZ NOUS</a>
-  </div>
-  </section>
+  </section>  
   @endsection
   @section('additional-script')
   <script>
