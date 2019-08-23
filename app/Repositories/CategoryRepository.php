@@ -3,11 +3,12 @@
 namespace App\Repositories;
 
 Use App\Models\Category;
+use App\Interfaces\CategoryRepositoryInterface;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 
-class CategoryRepository {
+class CategoryRepository implements  CategoryRepositoryInterface{
 	protected $model;
 
 	public function __construct(Category $category)

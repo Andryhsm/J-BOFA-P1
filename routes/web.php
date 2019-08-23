@@ -47,6 +47,7 @@ Route::namespace('Front')->group(function () {
     //Auth route Artisan
     Route::get('connexion','LoginController@index')->name('connexion');
     Route::get('inscription','LoginController@inscription')->name('inscription');
+    Route::get('cities','CityController@getCity');
 
     //get all catégorie
     Route::get('category','CategoryController@getAllCategories')->name('catégory_list');

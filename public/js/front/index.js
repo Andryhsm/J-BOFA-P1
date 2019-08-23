@@ -3,17 +3,17 @@ $(document).ready(function(){
 	var currencies=[];
 	var position= [];
 	$.ajax({
-            type: "GET",
-            url: base_url + 'category',
-            success: function (success) {
-                for (var i = 0; i < success.length; i++) {
-                	currencies.push(success[i].name);
-                }
-            },
-            error: function (error) {
-                console.log(error);
+        type: "GET",
+        url: base_url + 'category',
+        success: function (success) {
+            for (var i = 0; i < success.length; i++) {
+            	currencies.push(success[i].name);
             }
-        });
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
 	$('.slider').on('keyup', '#recherche', function(){
 		// currencies = [
 		//     'Architecte-permis de construire',
@@ -42,10 +42,11 @@ $(document).ready(function(){
 		// 	'Escalier' ,
 		// 	'Énergies renouvelables'
 		// ];
-
+		//console.log(currencies);
 
 		var data = $(this).val();
-  			$('#ul').html("");
+		$('#ul').html("");
+  		var trie = [];
 		currencies.forEach(function(dataEl, index){
   			var numero = dataEl.indexOf(data);
   			var dataLow = dataEl.toLowerCase();
@@ -57,17 +58,23 @@ $(document).ready(function(){
   			var value_dataUp = new RegExp(data.toLowerCase);
   			if(value_data.test(currencies[index]) || value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
   				position.push(index);
-
   				var dropdown = '<li class="rechercheVal">'+currencies[index]+'</li>';
-  				$('#ul').append(dropdown);
+  				trie.push(dropdown);
+  			}
+  			
+  		});
+  		if(trie.length>0){
+  			for(var k=0;k<trie.sort().length;k++){
+  				$('#ul').append(trie[k]);
   				$('#ul').css('display', 'block');
   				$('#ul').css('margin-top', '0.5rem');
   			}
-  			if (data == "") {
+  		}
+  		if (data == "") {
   				$('#ul').html("");
   				$('#ul').css('display', 'none');
   			}
-  		});
+  		console.log(trie.reverse())
     });
     $('.slider').on('click', '.rechercheVal', function(){
 		var value = $(this).text();
