@@ -33,4 +33,9 @@ class LoginController extends Controller
     public function getCity(Request $request){
         return $this->city_repo->getCity($request->all());
     }
+
+    public function viewProject(){
+        $categories = $this->category_repo->getCategory();
+        return view('front.page.view_project',compact("categories"));
+    }
 }

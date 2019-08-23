@@ -14,7 +14,7 @@ class CityController extends Controller
     	$this->city_repo = $city_repo;
     }
 
-    public function getCity($request){
-    	return $this->city_repo->getCity($request);
+    public function getCity(Request $request){
+    	return $this->city_repo->getCity($request->get('code_postal'));
     }
 }

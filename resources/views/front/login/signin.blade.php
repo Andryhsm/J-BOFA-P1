@@ -147,7 +147,7 @@
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Ville *</label>
-              <select required="required" tabindex="1" class="form-control input_form">
+              <select required="required" tabindex="1" class="form-control input_form" id="ville" disabled>
                 <option value="selectionnez"> Sélectionnez une ville ...</option>
               </select>
             </div>

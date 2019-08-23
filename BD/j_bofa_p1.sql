@@ -28,23 +28,23 @@ SET time_zone = "+00:00";
 -- Structure de la table `artisans`
 --
 
-DROP TABLE IF EXISTS `artisans`;
-CREATE TABLE IF NOT EXISTS `artisans` (
-  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `last_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `first_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` tinyint(1) NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `artisans_email_unique` (`email`),
-  UNIQUE KEY `artisans_phone_unique` (`phone`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- DROP TABLE IF EXISTS `artisans`;
+-- CREATE TABLE IF NOT EXISTS `artisans` (
+--   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+--   `last_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+--   `first_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+--   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+--   `phone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+--   `photo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+--   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+--   `status` tinyint(1) NOT NULL,
+--   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+--   `created_at` timestamp NULL DEFAULT NULL,
+--   `updated_at` timestamp NULL DEFAULT NULL,
+--   PRIMARY KEY (`id`),
+--   UNIQUE KEY `artisans_email_unique` (`email`),
+--   UNIQUE KEY `artisans_phone_unique` (`phone`)
+-- ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 

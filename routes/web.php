@@ -61,9 +61,7 @@ Route::namespace('Front')->group(function () {
     Route::get('tarif', function () {
         return view('front.page.tarif');
     });
-    Route::get('view_project', function () {
-        return view('front.page.view_project');
-    });
+    Route::get('view_project','LoginController@viewProject');
 });
 /*end front router*/
 

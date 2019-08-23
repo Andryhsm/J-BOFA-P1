@@ -30,6 +30,12 @@
           <div class="form_item_view_projetct">
             <select required="required" tabindex="1" class="form-control">
               <option value="">Quel est le type de travaux à réaliser ?</option>
+              @if(isset($categories))
+                @foreach($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+              @endif
+              <!-- <option value="">Quel est le type de travaux à réaliser ?</option>
               <option value="">Aménagement intérieur</option>
               <option value="">Architecture - Expertise</option>
               <option value="">Assainissement - Terrassement</option>
@@ -51,7 +57,7 @@
               <option value="">Sol Intérieur</option>
               <option value="">Terrasse</option>
               <option value="">Toiture - Couverture - Charpente</option>
-              <option value="">Véranda - Pergola</option>
+              <option value="">Véranda - Pergola</option> -->
             </select>
           </div>
           <div class="form_item_view_projetct">
@@ -108,14 +114,17 @@
             <div class="col-xs-12 col-sm-6 pr-0 position_relative_form">
               <i class="fa fa-map-marker green coordinates icones_connexions" aria-hidden="true"></i>
               <div class="form-group ">
-                <input type="text" required="required" placeholder="Code Postal" class="form-height form-control form-input form-control name_candidates" data-toggle="" data-original-title="" list="" tabindex="4" autocomplete="code-postal">
+                <input type="text" required="required" placeholder="Code Postal" id="postal_code" class="form-height form-control form-input form-control name_candidates" data-toggle="" data-original-title="" list="" tabindex="4" autocomplete="code-postal">
               </div>
             </div>
 
             <div class="col-xs-12 col-sm-6 pr-0 position_relative_form">
               <i class="fa fa-map-marker green coordinates icones_connexions" aria-hidden="true"></i>
               <div class="form-group ">
-                <input type="text" required="required" placeholder="Ville" class="form-height form-control form-input form-control name_candidates" data-toggle="" data-original-title="" list="" tabindex="5" autocomplete="city">
+                <!-- <input type="text" required="required" placeholder="Ville" class="form-height form-control form-input form-control name_candidates" data-toggle="" data-original-title="" list="" tabindex="5" autocomplete="city"> -->
+                <select required="required" tabindex="1" class="form-control input_form" id="ville" disabled>
+                <option value="selectionnez"> Sélectionnez une ville ...</option>
+              </select>
               </div>
             </div>
           </div>

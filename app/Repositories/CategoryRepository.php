@@ -55,6 +55,6 @@ class CategoryRepository implements  CategoryRepositoryInterface{
     }
 
     public function getCategory(){
-        return $this->model->where('status',1)->get();
+        return $this->model->where('status',1)->orderBy('name','asc')->get();
     }
 }

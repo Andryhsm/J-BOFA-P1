@@ -83,6 +83,26 @@ $(document).ready(function(){
 
 	});
 
+    $('.inscription').on('keyup','#postal_code',function(data){
+	     data = $(this).val();
+	     if(data!=""){
+	      getVille(data);
+	    }
+	    else{
+	      $('#ville').html("");
+	      $('#ville').prop('disabled',true);
+	    }
+    });
+    $('.form_item_project').on('keyup','#postal_code',function(data){
+	     data = $(this).val();
+	     if(data!=""){
+	      getVille(data);
+	    }
+	    else{
+	      $('#ville').html("");
+	      $('#ville').prop('disabled',true);
+	    }
+    });
 
 });
 
@@ -99,3 +119,25 @@ $(window).scroll(function () {
 	 	$('.login_foat').css('display', 'block');
 	 }
 });
+
+function getVille(data){
+	$.ajax({
+          type: "GET",
+          url: base_url + 'cities',
+          data: {'code_postal':data},
+          success: function (success) {
+              $('#ville').html("");
+              $('#ville').prop("selected",true);
+              $('#ville').removeAttr("disabled");
+              for (var i = 0; i < success.length; i++) {
+                //console.log(data)
+                var dropdown = '<option value="'+success[i].ville_nom+'" >'+success[i].ville_nom+'</option>';
+                $('#ville').append(dropdown);
+                //console.log('postal_code',success[i].ville_code_postal);
+              }
+          },
+          error: function (error) {
+              console.log(error);
+          }
+      });
+}

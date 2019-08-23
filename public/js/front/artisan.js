@@ -1,23 +1,6 @@
 $(document).ready(function() {
   
-  $('.inscription').on('keyup','#postal_code',function(data){
-     data = $(this).val();
-    $.ajax({
-        type: "GET",
-        url: base_url + 'cities',
-        data: data,
-        success: function (success) {
-          console.log('success',success)
-            for (var i = 0; i < success.length; i++) {
-              console.log(data)
-              console.log('postal_code',success[i].ville_code_postal);
-            }
-        },
-        error: function (error) {
-            console.log(error);
-        }
-    });
-  });
+  
 
   // $("#form-artisan").validate({
   //   rules : {
