@@ -116,13 +116,13 @@
         <a href="#" class="boutton_question">CONTACTEZ NOUS</a>
       </div>
     </div>
-  </section>  
+  </section>
   @endsection
   @section('additional-script')
   <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
-    
+
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");

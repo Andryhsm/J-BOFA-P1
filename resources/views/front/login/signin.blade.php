@@ -100,7 +100,12 @@
               <label for="" class="label_form">Activité principal *</label>
               <select required="required" tabindex="1" class="form-control input_form">
                   <option value="selectionnez"> Sélectionnez une catégorie ...</option>
-                  <option value="Chauffage-climatisation">Chauffage-climatisation</option>
+                  @if(isset($categories))
+                    @foreach($categories as $category)
+                      <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                  @endif
+                  <!-- <option value="Chauffage-climatisation">Chauffage-climatisation</option>
                   <option value="Fenetre-porte">Fenetre-porte</option>
                   <option value="Entretient-traitement">Entretient-traitement</option>
                   <option value="Cuisine">Cuisine</option>
@@ -133,16 +138,16 @@
                   <option value="Maçonnerie-démolitions">Maçonnerie-démolitions</option>
                   <option value="Couverture-Toiture-Charpentes">Couverture-Toiture-Charpentes</option>
                   <option value="Salle de bain">Salle de bain</option>
-                  <option value="Sol - Carrelage - Parquets">Sol - Carrelage - Parquets</option>
+                  <option value="Sol - Carrelage - Parquets">Sol - Carrelage - Parquets</option> -->
               </select>
             </div>
             <div class="formular_item formular_item_responsive">
               <label for="" class="label_form">Code Postal *</label>
-              <input type="text" class="input_form" name="code_postal" value="" placeholder="Code Postal">
+              <input type="text" class="input_form" id="postal_code" name="code_postal" value="" placeholder="Code Postal">
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Ville *</label>
-              <select required="required" tabindex="1" class="form-control input_form">
+              <select required="required" tabindex="1" class="form-control input_form" id="ville" disabled>
                 <option value="selectionnez"> Sélectionnez une ville ...</option>
               </select>
             </div>
