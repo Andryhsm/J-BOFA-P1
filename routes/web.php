@@ -47,6 +47,7 @@ Route::namespace('Front')->group(function () {
     //Auth route Artisan
     Route::get('connexion','LoginController@index')->name('connexion');
     Route::get('inscription','LoginController@inscription')->name('inscription');
+    Route::get('cities','CityController@getCity');
 
     //get all catégorie
     Route::get('category','CategoryController@getAllCategories')->name('catégory_list');
@@ -60,9 +61,7 @@ Route::namespace('Front')->group(function () {
     Route::get('tarif', function () {
         return view('front.page.tarif');
     });
-    Route::get('view_project', function () {
-        return view('front.page.view_project');
-    });
+    Route::get('view_project','LoginController@viewProject');
 });
 /*end front router*/
 

@@ -3,17 +3,17 @@ $(document).ready(function(){
 	var currencies=[];
 	var position= [];
 	$.ajax({
-            type: "GET",
-            url: base_url + 'category',
-            success: function (success) {
-                for (var i = 0; i < success.length; i++) {
-                	currencies.push(success[i].name);
-                }
-            },
-            error: function (error) {
-                console.log(error);
+        type: "GET",
+        url: base_url + 'category',
+        success: function (success) {
+            for (var i = 0; i < success.length; i++) {
+            	currencies.push(success[i].name);
             }
-        });
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
 	$('.slider').on('keyup', '#recherche', function(){
 		// currencies = [
 		//     'Architecte-permis de construire',
@@ -42,10 +42,11 @@ $(document).ready(function(){
 		// 	'Escalier' ,
 		// 	'Énergies renouvelables'
 		// ];
-
+		//console.log(currencies);
 
 		var data = $(this).val();
-  			$('#ul').html("");
+		$('#ul').html("");
+  		var trie = [];
 		currencies.forEach(function(dataEl, index){
   			var numero = dataEl.indexOf(data);
   			var dataLow = dataEl.toLowerCase();
@@ -57,17 +58,23 @@ $(document).ready(function(){
   			var value_dataUp = new RegExp(data.toLowerCase);
   			if(value_data.test(currencies[index]) || value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
   				position.push(index);
-
   				var dropdown = '<li class="rechercheVal">'+currencies[index]+'</li>';
-  				$('#ul').append(dropdown);
+  				trie.push(dropdown);
+  			}
+  			
+  		});
+  		if(trie.length>0){
+  			for(var k=0;k<trie.sort().length;k++){
+  				$('#ul').append(trie[k]);
   				$('#ul').css('display', 'block');
   				$('#ul').css('margin-top', '0.5rem');
   			}
-  			if (data == "") {
+  		}
+  		if (data == "") {
   				$('#ul').html("");
   				$('#ul').css('display', 'none');
   			}
-  		});
+  		console.log(trie.reverse())
     });
     $('.slider').on('click', '.rechercheVal', function(){
 		var value = $(this).text();
@@ -76,6 +83,26 @@ $(document).ready(function(){
 
 	});
 
+    $('.inscription').on('keyup','#postal_code',function(data){
+	     data = $(this).val();
+	     if(data!=""){
+	      getVille(data);
+	    }
+	    else{
+	      $('#ville').html("");
+	      $('#ville').prop('disabled',true);
+	    }
+    });
+    $('.form_item_project').on('keyup','#postal_code',function(data){
+	     data = $(this).val();
+	     if(data!=""){
+	      getVille(data);
+	    }
+	    else{
+	      $('#ville').html("");
+	      $('#ville').prop('disabled',true);
+	    }
+    });
 
 });
 
@@ -92,3 +119,25 @@ $(window).scroll(function () {
 	 	$('.login_foat').css('display', 'block');
 	 }
 });
+
+function getVille(data){
+	$.ajax({
+          type: "GET",
+          url: base_url + 'cities',
+          data: {'code_postal':data},
+          success: function (success) {
+              $('#ville').html("");
+              $('#ville').prop("selected",true);
+              $('#ville').removeAttr("disabled");
+              for (var i = 0; i < success.length; i++) {
+                //console.log(data)
+                var dropdown = '<option value="'+success[i].ville_nom+'" >'+success[i].ville_nom+'</option>';
+                $('#ville').append(dropdown);
+                //console.log('postal_code',success[i].ville_code_postal);
+              }
+          },
+          error: function (error) {
+              console.log(error);
+          }
+      });
+}

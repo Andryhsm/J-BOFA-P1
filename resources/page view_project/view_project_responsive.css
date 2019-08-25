@@ -1,0 +1,12 @@
+@media screen (max-width: 920px) {
+  .form_item_project {
+      flex-direction: column;
+  }
+  .desc_view_project {
+      width: 100%;
+  }
+  .formulaire_view_project {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}

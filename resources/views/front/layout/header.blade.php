@@ -35,21 +35,21 @@
                                          </a>
 
                                     </li>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="{{ url('tarif') }}">Tarifs</a>
-                                    </li>
+                                    <!-- <li class="nav-item active">
+                                        <a class="nav-link" href="{{-- url('tarif') --}}">Tarifs</a>
+                                    </li> -->
                                     <li class="nav-item active">
                                         <a class="nav-link" href="{{ url('faq') }}">FAQ</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          Pages
+                                          Guide Travaux
                                           <span class="icon-arrow-down"></span>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <a class="dropdown-item" href="#">Construction & Rénovation</a>
+                                            <a class="dropdown-item" href="#">Intérieur</a>
+                                            <a class="dropdown-item" href="#">Economie d'energie  </a>
                                         </div>
                                     </li>
 

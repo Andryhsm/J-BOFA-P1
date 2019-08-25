@@ -3,11 +3,12 @@
 namespace App\Repositories;
 
 Use App\Models\Category;
+use App\Interfaces\CategoryRepositoryInterface;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 
-class CategoryRepository {
+class CategoryRepository implements  CategoryRepositoryInterface{
 	protected $model;
 
 	public function __construct(Category $category)
@@ -54,6 +55,6 @@ class CategoryRepository {
     }
 
     public function getCategory(){
-        return $this->model->where('status',1)->get();
+        return $this->model->where('status',1)->orderBy('name','asc')->get();
     }
 }
