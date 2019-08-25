@@ -1275,4 +1275,8 @@ footer {
   height: 100%;
   width: 100%; }
 
+.flex_one {
+  flex: 1;
+}
+
 /*# sourceMappingURL=style.css.map */

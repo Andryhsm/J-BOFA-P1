@@ -23,6 +23,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
     {!! Html::style('css/front/header_footer_page.css') !!}
     {!! Html::style('css/front/style.css') !!}
+    {!! Html::style('css/front/connexion.css') !!}
+    {!! Html::style('css/front/connexion_responsive.css') !!}
     <!-- Style CSS -->
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -33,15 +35,20 @@
 
 
   <body>
-          @include('artisan.layout.header')
+    @include('artisan.layout.header')
+    @yield('banner')
+    @include('artisan.layout.menu')
+    <div class="content_page">
+      <div class="pages">
+        <div class="navbar_j">
+          @yield('side_nav')
+        </div>
+        <div class="flex_one">
           @yield('content')
-          @include('front.layout.footer')
-
-
-
-
-
-
+        </div>        
+      </div>
+    </div>
+    @include('front.layout.footer')
 
     {!! Html::script('js/front/jquery-3.2.1.min.js') !!}
     {!! Html::script('js/front/popper.min.js') !!}

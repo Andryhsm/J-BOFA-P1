@@ -79,5 +79,6 @@ Route::namespace('Auth')->group(function () {
 Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(function () {
     Route::get('accueil','ArtisanController@index')->name('artisan_home');
     Route::get('disponnible','ArtisanController@showAvailablePage')->name('artisan_available');
+    Route::get('project','ArtisanController@showProjectDetails')->name('project_details');
 });
 // end Auth route

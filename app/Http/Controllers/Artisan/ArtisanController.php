@@ -17,4 +17,8 @@ class ArtisanController extends Controller
         return view('artisan.page.project_available');
     }
 
+    public function showProjectDetails() {
+    	return view('artisan.page.project_details');
+    }
+
 }

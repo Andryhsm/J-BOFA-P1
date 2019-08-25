@@ -1,0 +1,32 @@
+.project_list {
+
+}
+
+.detail_item {
+	width: 100%;
+    border: 1px solid #cecece;
+    padding: 6%;
+    background-color: #fff;
+
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+	.centered_label_info {
+		width: 100%;
+
+		span {
+			width: 50%;
+		}
+
+		.label {
+			text-align: right;
+			font-weight: bold;
+		}
+
+		.info {
+			text-align: left;
+			margin-left: 30px;
+		}
+	}
+}

@@ -1,29 +1,33 @@
-
 /*btn header css*/
+/* line 3, ../../sass/admin/main.scss */
 .header-button {
-    position: absolute;
-    right: 15px;
-    top: 10px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
 }
 
 /*profil image start*/
+/* line 10, ../../sass/admin/main.scss */
 .img-profil {
-	height: 100px;
-    object-fit: cover;
+  height: 100px;
+  object-fit: cover;
 }
 
-.navbar-nav>.user-menu>.dropdown-menu>li.user-header>img, .navbar-nav>.user-menu .user-image{
-	object-fit: cover;
+/* line 15, ../../sass/admin/main.scss */
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header > img, .navbar-nav > .user-menu .user-image {
+  object-fit: cover;
 }
 
-.user-panel>.image>img, .img-profil-list{
-	height: 40px;
-    object-fit: cover;
-    width: 40px;
+/* line 19, ../../sass/admin/main.scss */
+.user-panel > .image > img, .img-profil-list {
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
 }
+
 /*profil image end*/
-
 /*btn onn/off start*/
+/* line 27, ../../sass/admin/main.scss */
 .switch {
   position: relative;
   display: inline-block;
@@ -32,10 +36,12 @@
   margin: 0;
 }
 
-.switch input { 
+/* line 35, ../../sass/admin/main.scss */
+.switch input {
   display: none;
 }
 
+/* line 39, ../../sass/admin/main.scss */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -47,6 +53,7 @@
   transition: 0.4s;
 }
 
+/* line 50, ../../sass/admin/main.scss */
 .slider::before {
   position: absolute;
   content: "";
@@ -58,23 +65,29 @@
   transition: 0.4s;
 }
 
+/* line 61, ../../sass/admin/main.scss */
 input:checked + .slider {
   background-color: #4caf50;
 }
 
+/* line 65, ../../sass/admin/main.scss */
 input:focus + .slider {
   box-shadow: 0 0 1px #4caf50;
 }
 
+/* line 69, ../../sass/admin/main.scss */
 input:checked + .slider::before {
   transform: translateX(23px);
 }
 
+/* line 73, ../../sass/admin/main.scss */
 .slider.round {
   border-radius: 25px;
 }
 
+/* line 77, ../../sass/admin/main.scss */
 .slider.round::before {
   border-radius: 50%;
 }
+
 /*btn onn/off end*/
