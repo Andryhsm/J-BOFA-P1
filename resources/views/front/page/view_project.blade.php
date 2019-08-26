@@ -84,7 +84,7 @@
           <div class="image_step_project">
             <img class="img_step1" src="{!! url('/image/projects/chauffe_eau.jpg') !!}" alt="">
           </div>
-            
+
           <div class="text_desc_step1">
             <label for="">Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans.</label>
           </div>
@@ -105,12 +105,12 @@
                          checked>
                   <label for="remplacement">Remplacement</label>
                 </div>
-                
+
                 <div class="item_radio_step1">
                   <input type="radio" id="installation" name="work" value="installation">
                   <label for="installation">Installation neuve</label>
                 </div>
-                
+
                 <div class="item_radio_step1">
                   <input type="radio" id="reparation" name="work" value="reparation">
                   <label for="reparation">Réparation neuve</label>
@@ -121,19 +121,60 @@
                 </div>
             </div>
             <div class="item_form_step1">
-                <label for="" class="title_item title_radio">Prestation souhaitée</label>
-                <div class="item_radio_step1">
+                  <label for="" class="title_item title_radio">Prestation souhaitée</label>
+                  <div class="item_radio_step1">
                     <input type="radio" id="pose" name="work" value="pose"
                            checked>
                     <label for="pose">Pose uniquement</label>
                   </div>
-                  
+
                   <div class="item_radio_step1">
                     <input type="radio" id="fourniture" name="work" value="fourniture">
                     <label for="fourniture">Fourniture uniquement</label>
                   </div>
               </div>
+              <div class="item_form_step1">
+                <label for="" class="title_item title_radio">Type de bâtiment</label>
+                <div class="select_item_form">
+                  <select class="form_select_step" name="batiment_type" id="batiment_type">
+                    <option value="Choisissez...">Choisissez... </option>
+                    <option value="Maison" individuelle="">Maison Individuelle</option>
+                    <option value="Appartement">Appartement</option>
+                    <option value="Bureau">Bureau</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Immeuble">Immeuble</option>
+                  </select>
+                </div>
+              </div>
+              <div class="item_form_step1">
+                  <label for="" class="title_item title_radio">Y a-t-il un chauffe-eau à désinstaller ?</label>
+                  <div class="item_radio_step1">
+                    <input type="radio" id="oui" name="work" value="oui"
+                           checked>
+                    <label for="oui">Oui</label>
+                  </div>
+                  <div class="item_radio_step1">
+                    <input type="radio" id="non" name="work" value="non">
+                    <label for="non">Non</label>
+                  </div>
+              </div>
+              <div class="item_form_step1">
+                <label for="" class="title_item title_radio">Type d'énergie</label>
+                <div class="select_item_form">
+                  <select class="form_select_step" name="energie_type" id="energie_type">
+                    <option value="Choisissez...">Choisissez... </option>
+                    <option value="Electricite">Electricite</option>
+                    <option value="Gaz">Gaz</option>
+                    <option value="Fioul">Fioul</option>
+                    <option value="Solaire">Solaire</option>
+                    <option value="Geothermique/aerothermique">Geothermique/aerothermique</option>
+                  </select>
+                </div>
+              </div>
           </div>
+        </div>
+        <div class="btn_next_page">
+          <button type="button" name="button" class="btn_next_form">SUIVANT <i class="fa fa-long-arrow-right"></i></button>
         </div>
       </div>
       <div class="" id="step-2">
