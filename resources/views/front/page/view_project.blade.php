@@ -74,8 +74,20 @@
           </div>
         </div>
       </div>
-      <div class="active" id="step-1">
-
+      <div class="step_nav active" id="step-1">
+        <div class="title_step">
+          <label for="" class="simple_text">Titre du projet: </label>
+          <label for="" class="texte_title_step">Chauffe eau</label>
+        </div>
+        <div class="description_projet">
+          <div class="image_step_project">
+            <img class="img_step1" src="{!! url('/image/projects/chauffe_eau.jpg') !!}" alt="">
+          </div>
+            
+          <div class="text_desc_step1">
+            <label for="">Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans.</label>
+          </div>
+        </div>
       </div>
       <div class="" id="step-2">
 
