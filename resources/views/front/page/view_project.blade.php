@@ -74,6 +74,7 @@
           </div>
         </div>
       </div>
+
       <div class="step_nav active" id="step-1">
         <div class="title_step">
           <label for="" class="simple_text">Titre du projet: </label>
@@ -86,6 +87,39 @@
             
           <div class="text_desc_step1">
             <label for="">Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans.</label>
+          </div>
+        </div>
+        <div class="info_step1">
+          <div class="title_info">
+            <label for="" class="text_title_step1">Les informations à remplir</label>
+          </div>
+          <div class="form_info_step1">
+            <div class="item_form_step1">
+              <label for="" class="title_item ">Code Postal *</label>
+              <input type="text" name="" id="" class="input_form_step1" placeholder="Votre code postal">
+            </div>
+            <div class="item_form_step1">
+              <label for="" class="title_item title_radio">Type de travaux</label>
+              <div class="item_radio_step1">
+                  <input type="radio" id="remplacement" name="work" value="remplacement"
+                         checked>
+                  <label for="remplacement">Remplacement</label>
+                </div>
+                
+                <div class="item_radio_step1">
+                  <input type="radio" id="installation" name="work" value="installation">
+                  <label for="installation">Installation neuve</label>
+                </div>
+                
+                <div class="item_radio_step1">
+                  <input type="radio" id="reparation" name="work" value="reparation">
+                  <label for="reparation">Réparation neuve</label>
+                </div>
+                <div class="item_radio_step1">
+                  <input type="radio" id="entretient" name="work  " value="entretient">
+                  <label for="entretient">Entretient/Maintenance</label>
+                </div>
+            </div>
           </div>
         </div>
       </div>
