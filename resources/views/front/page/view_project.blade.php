@@ -120,6 +120,19 @@
                   <label for="entretient">Entretient/Maintenance</label>
                 </div>
             </div>
+            <div class="item_form_step1">
+                <label for="" class="title_item title_radio">Prestation souhaitée</label>
+                <div class="item_radio_step1">
+                    <input type="radio" id="pose" name="work" value="pose"
+                           checked>
+                    <label for="pose">Pose uniquement</label>
+                  </div>
+                  
+                  <div class="item_radio_step1">
+                    <input type="radio" id="fourniture" name="work" value="fourniture">
+                    <label for="fourniture">Fourniture uniquement</label>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
