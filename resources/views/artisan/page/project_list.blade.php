@@ -27,7 +27,9 @@
           </div>
         </div>
         <div class="btn_action_item">
-          <a href="{{ route('project_details') }}" name="" class="btn_action">Voir le project</a>
+          <a href="{{ route('project_details') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+            <span>Voir le project</span>
+          </a>
         </div>
         <div class="border_bottom border_dashed"></div>
       </div>
@@ -54,7 +56,9 @@
           </div>
         </div>
         <div class="btn_action_item">
-          <a href="{{ route('project_details') }}"  name="" class="btn_action">Voir le project</a>
+          <a href="{{ route('project_details') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+            <span>Voir le project</span>
+          </a>
         </div>
         <div class="border_bottom border_dashed"></div>
       </div>
@@ -81,7 +85,9 @@
           </div>
         </div>
         <div class="btn_action_item">
-          <a href="{{ route('project_details') }}"  name="" class="btn_action">Voir le project</a>
+          <a href="{{ route('project_details') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+            <span>Voir le project</span>
+          </a>
         </div>
         <div class="border_bottom border_dashed"></div>
       </div>
