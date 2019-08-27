@@ -2,3 +2,11 @@
 .project_list_page .btn_action:hover {
   text-decoration: none;
 }
+/* line 7, ../../sass/admin/home.scss */
+.project_list_page .project_desc {
+  padding: 0 30px;
+}
+/* line 11, ../../sass/admin/home.scss */
+.project_list_page .item_project {
+  border-bottom: none;
+}

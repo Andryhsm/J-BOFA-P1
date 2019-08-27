@@ -6,7 +6,7 @@
         <label for="" class="title_project_item">PROJETS DISPONIBLES SUR MON SECTEUR</label>
       </div>
 
-      <div class="item_project">
+      <div class="item_project d-flex flex-wrap">
         <div class="calendar">
           <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
           <div class="liste_dates">
@@ -29,9 +29,10 @@
         <div class="btn_action_item">
           <a href="{{ route('project_details') }}" name="" class="btn_action">Voir le project</a>
         </div>
+        <div class="border_bottom border_dashed"></div>
       </div>
 
-      <div class="item_project padding_new">
+      <div class="item_project padding_new  d-flex flex-wrap">
         <label class="new_label">Nouveau</label>
         <div class="calendar">
           <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
@@ -55,10 +56,11 @@
         <div class="btn_action_item">
           <a href="{{ route('project_details') }}"  name="" class="btn_action">Voir le project</a>
         </div>
+        <div class="border_bottom border_dashed"></div>
       </div>
 
       
-      <div class="item_project">
+      <div class="item_project  d-flex flex-wrap">
         <div class="calendar">
           <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
           <div class="liste_dates">
@@ -81,6 +83,7 @@
         <div class="btn_action_item">
           <a href="{{ route('project_details') }}"  name="" class="btn_action">Voir le project</a>
         </div>
+        <div class="border_bottom border_dashed"></div>
       </div>
 
       <div class="btn_foot_list">

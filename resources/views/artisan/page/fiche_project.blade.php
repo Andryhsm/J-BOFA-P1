@@ -1,16 +1,16 @@
 <div class="detail_item">
-	<h2 class="title">Chauffage Electrique</h2>
+	<h5 class="title">Chauffage Electrique</h5>
 	<p class="d-flex">
 		<span>Date de la demande: </span>
 		<span>24/08/2019 </span>
 	</p>
 	<div class="description_item">
-	    <p for="" class="description_project">Je souhaite réaliser un désembouage pour un radiateurs électrique.</p>
+	    <p for="" class="description_project d-flex justify-content-center">Je souhaite réaliser un désembouage pour un radiateurs électrique.</p>
 	  </div>
 </div>
 
 <div class="detail_item">
-	<h2 class="title">Informations pratiques</h2>
+	<h5 class="title d-flex justify-content-center">Informations pratiques</h5>
 	<p class="centered_label_info d-flex">
 		<span class="label">Référence:</span>
 		<span class="info">J365488</span>
@@ -34,7 +34,7 @@
 </div>
 
 <div class="detail_item">
-	<h2 class="title">Informations géographique</h2>
+	<h5 class="title d-flex justify-content-center">Informations géographique</h5>
 	<p class="centered_label_info d-flex">
 		<span class="label">Référence:</span>
 		<span class="info">J365488</span>
