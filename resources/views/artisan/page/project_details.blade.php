@@ -11,7 +11,7 @@
           <label for="" class="title_project_item">PROJETS DISPONIBLES</label>
         </div>
 
-        <div class="item_project">
+        <div class="item_project d-flex flex-wrap">
           <div class="calendar">
             <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
             <div class="liste_dates">
@@ -31,9 +31,10 @@
           <div class="btn_action_item">
             <button><i class="fa fa-arrow-right"></i></button>
           </div>
+          <div class="border_bottom border_dashed"></div>
         </div>
 
-        <div class="item_project padding_new">
+        <div class="item_project padding_new d-flex flex-wrap">
           <label class="new_label">Nouveau</label>
           <div class="calendar">
             <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
@@ -54,10 +55,11 @@
           <div class="btn_action_item">
             <button><i class="fa fa-arrow-right"></i></button>
           </div>
+          <div class="border_bottom border_dashed"></div>
         </div>
 
         
-        <div class="item_project">
+        <div class="item_project d-flex flex-wrap">
           <div class="calendar">
             <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
             <div class="liste_dates">
@@ -77,6 +79,7 @@
           <div class="btn_action_item">
             <button><i class="fa fa-arrow-right"></i></button>
           </div>
+          <div class="border_bottom border_dashed"></div>
         </div>
 
         <div class="btn_foot_list">

@@ -23,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
     {!! Html::style('css/front/header_footer_page.css') !!}
     {!! Html::style('css/front/style.css') !!}
+    {!! Html::style('css/admin/main.css') !!}
     {!! Html::style('css/front/connexion.css') !!}
     {!! Html::style('css/front/connexion_responsive.css') !!}
     <!-- Style CSS -->

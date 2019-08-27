@@ -1,5 +1,11 @@
 .project_list {
+	.item_project {
+		border-bottom: none;
+	}
 
+	.project_desc {
+	    padding: 0 15px;
+	}
 }
 
 .detail_item {
@@ -12,8 +18,13 @@
 		margin-bottom: 30px;
 	}
 
+	.title {
+		margin-bottom: 1rem;
+	}
+
 	.centered_label_info {
 		width: 100%;
+		margin-bottom: 8px;
 
 		span {
 			width: 50%;
