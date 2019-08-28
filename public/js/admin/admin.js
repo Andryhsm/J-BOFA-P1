@@ -5,14 +5,14 @@ jQuery(document).ready(function () {
 
     var table;
 
-    if (jQuery('#artisan').length > 0) {
-        table = jQuery('#artisan').on('preXhr.dt', function ( e, settings, data ) {
+    if (jQuery('#admin').length > 0) {
+        table = jQuery('#admin').on('preXhr.dt', function ( e, settings, data ) {
             } )
             .dataTable({
             "processing": true,
             "serverSide": true,
             "ajax": {   
-                "url": base_url+"admin/get_artisan",
+                "url": base_url+"admin/get_Admin",
                 "type": "GET"
             },
             "responsive"   : true,
@@ -27,7 +27,9 @@ jQuery(document).ready(function () {
             columns        : [
                 {data: 'last_name', name:'last_name',searchable: true, sortable: true},
                 {data: 'email', name:'email',searchable: true, sortable: true},
-                {data: 'phone', name:'phone',searchable: true, sortable:true}
+                {data: 'phone', name:'phone',searchable: true, sortable:true},
+                {data: 'status', name:'status',searchable: true, sortable: false},
+                {data: 'action', name:'action',searchable: false, sortable: false}
             ],
             fnDrawCallback : function () {
                 var $paginate = this.siblings('.dataTables_paginate');
@@ -60,4 +62,34 @@ jQuery(document).ready(function () {
     if (jQuery('.dataTables_filter').length > 0) {
         jQuery('.dataTables_filter').find('input').addClass('form-control')
     }
+
+    $('#admin').on('click','.form-check-input',function(){
+        var admin_id = $(this).closest('.switch').data('id');
+        
+        $.ajax({
+            type: "POST",
+            data: {'admin_id':admin_id},
+            url: base_url + 'admin/admin_status',
+            success: function (success) {
+                if (success.status == 1){
+                    toastr.success('Utilisateur activé');
+                }
+                else{
+                    toastr.warning('Utilisateur desactivé');
+                }
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+    });
+
+    $(document).on('click', '.delete-btn', function(event) {
+        event.preventDefault();
+        var $form = jQuery(this).closest('form');
+        $('#confirm').modal({backdrop: 'static', keyboard: false})
+                .one('click', '#delete', function () {
+                $form.trigger('submit'); // submit the form
+        });
+    });
 });

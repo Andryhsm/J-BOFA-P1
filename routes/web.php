@@ -23,6 +23,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
 
     /*start profil*/
     Route::resource('user','AdminController');
+    Route::resource('artisan','UserController');
     Route::get('/edit-profil', 'ProfilController@index')->name('profil');
     Route::get('/get_user', 'AdminController@getAll')->name('get_user');
     Route::get('/Admin', 'AdminController@listAdmin')->name('Admin');
@@ -32,6 +33,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::post('/delete/$id', 'AdminController@destroy')->name('delete');
     Route::post('/update/{id}', 'AdminController@update');
     Route::post('user_status', 'AdminController@updateStatus')->name('user_status');
+    Route::post('admin_status', 'AdminController@adminStatus')->name('admin_status');
     /*end profil*/
 
     /*category*/

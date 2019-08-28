@@ -83,6 +83,6 @@ class AdminLoginController extends Controller
         Auth::guard('admin')->logout();
     }
      protected function guard(){
-        return Auth::guard('admin');
+        return Auth::guard($this->guard);
     }
 }

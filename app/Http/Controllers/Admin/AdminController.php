@@ -9,6 +9,7 @@ use App\Interfaces\UserRepositoryInterface;
 use Illuminate\Support\Facades\Redirect;
 use Yajra\DataTables\Facades\DataTables;
 use App\Service\UploadService;
+use App\Repositories\AdminRepository;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 
@@ -20,9 +21,11 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     protected $user_repository;
+    protected $admin_repository;
     protected $upload_service;
-    public function __construct(UserRepository $user_repository ,UploadService $upload){
+    public function __construct(UserRepository $user_repository ,UploadService $upload, AdminRepository $admin){
         $this->user_repository = $user_repository;
+        $this->admin_repository = $admin;
         $this->upload_service = $upload;
         $this->middleware('auth:admin');
     }
@@ -42,7 +45,7 @@ class AdminController extends Controller
     public function create()
     {
         $user = false;
-        return view('admin.user.form',compact('user'));
+        return view('admin.form',compact('user'));
     }
 
     /**
@@ -55,6 +58,7 @@ class AdminController extends Controller
     {
         $rules = array(    
             'inputName' => 'required',        
+            'first_name' => 'required',        
             'inputPhone' => 'required',
             'inputEmail' => 'required',
             'inputPassword' => 'required'
@@ -66,12 +70,12 @@ class AdminController extends Controller
         }else{
             try{
                 $input = $this->uploadImage($request); 
-                $users = $this->user_repository->createUser($input);
+                $users = $this->admin_repository->createAdmin($input);
             }catch(\Exception $e){
                 return Redirect::back()->withInput()->withErrors($e->getMessage());
             }
             toastr()->success('Ajout utilisateur réussie!');
-            return redirect()->route('user.index');
+            return redirect()->route('Admin');
         }
     }
 
@@ -96,8 +100,8 @@ class AdminController extends Controller
     public function edit($id)
     {
         //
-        $user = $this->user_repository->findUser($id);
-        return view('admin.user.form',compact('user'));
+        $user = $this->admin_repository->findAdmin($id);
+        return view('admin.form',compact('user'));
     }
 
     /**
@@ -112,6 +116,7 @@ class AdminController extends Controller
         //
         $rules = array(    
             'inputName' => 'required',        
+            'first_name' => 'required',        
             'inputPhone' => 'required',
             'inputEmail' => 'required'
         );        
@@ -122,12 +127,12 @@ class AdminController extends Controller
             try{
                 //$input= $request->all();
                 $input = $this->uploadImage($request); 
-                $users = $this->user_repository->updateUser($id, $input);
+                $users = $this->admin_repository->updateAdmin($id, $input);
             }catch(\Exception $e){
                 return Redirect::back()->withInput()->withErrors($e->getMessage());
             }
             toastr()->success('Modification réussie!');
-            return redirect()->route('user.index');
+            return redirect()->route('Admin');
         }
     }
 
@@ -140,10 +145,9 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
-        $this->user_repository->deleteUser($id);
+        $this->admin_repository->deleteAdmin($id);
         toastr()->success('Suppression réussie!');
-        $users = $this->user_repository->getAllUser();
-        return view('admin.user.list',compact('users'));
+        return view('admin.list');
     }
 
     public function uploadImage($request)
@@ -166,6 +170,12 @@ class AdminController extends Controller
     public function updateStatus(Request $request){
         $user_id = $request->all()['user_id'];
         $status = $this->user_repository->changeStatus($user_id);
+        return $status;
+    }
+
+    public function adminStatus(Request $request){
+        $admin_id = $request->all()['admin_id'];
+        $status = $this->admin_repository->changeStatus($admin_id);
         return $status;
     }
 
@@ -212,7 +222,7 @@ class AdminController extends Controller
                 
              }
         })->EditColumn('action', function ($user) {
-            return view("admin.user.action", ['admin' => $user]);
+            return view("admin.user.action", ['user' => $user]);
         });
         return $data_tables->rawColumns(['name','status','action'])->make(true);
     }
@@ -227,26 +237,50 @@ class AdminController extends Controller
         return response()->json(['brand_array' => $brand_array]);
     }
 
-    public function listArtisan(){
-      return view('admin.artisan.list');
+    public function listAdmin(){
+      return view('admin.list');
     }
 
-    public function getArtisan(){
-      $artisans = $this->user_repository->getArtisans();
-        $data_tables = DataTables::collection($artisans);
-        $data_tables->EditColumn('last_name', function ($artisan) {
-            if(isset($artisan->last_name))
-            {
-                return $artisan->first_name.' '.$artisan->last_name;
+    public function getAdmin(){
+      $admins = $this->admin_repository->getAll();
+        $data_tables = DataTables::collection($admins);
+        $data_tables->EditColumn('last_name', function ($admin) {
+            if(isset($admin->photo)){
+                return '<img class=" img-circle img-profil-list" src="'.url("image/Admin/Profil/".$admin->photo."").'" alt="User profile picture">&nbsp;&nbsp;'.$admin->first_name.' '.$admin->last_name;
+            }else{
+                return '<img class=" img-circle img-profil-list" src="'.url("image/Admin/Profil/avatar.png").'" alt="User profile picture">&nbsp;&nbsp;'.$admin->first_name.' '.$admin->last_name;
             }
                 
-        })->EditColumn('email', function ($artisan) {
-            if(isset($artisan->email))    
-                return $artisan->email;
-        })->EditColumn('phone', function ($artisan) {
-            if(isset($artisan->phone)) 
-                return $artisan->phone;
+        })->EditColumn('email', function ($admin) {
+            if(isset($admin->email))    
+                return $admin->email;
+        })->EditColumn('phone', function ($admin) {
+            if(isset($admin->phone)) 
+                return $admin->phone;
+        })->EditColumn('status', function ($admin) {
+            switch ($admin->status) {
+                 case 0:
+                    return '<div class="switch-container position-relative form-group">
+                                <label class="switch" data-id="'.$admin->id.'">
+                                  <input type="checkbox" class="form-check-input" >
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>';
+                    break; 
+                case 1:
+                    return '<div class="switch-container position-relative form-group">
+                                <label class="switch" data-id="'.$admin->id.'">
+                                  <input type="checkbox" class="form-check-input" checked>
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>';
+                    break; 
+               
+                
+             }
+        })->EditColumn('action', function ($admin) {
+            return view("admin.action", ['admin' => $admin]);
         });
-        return $data_tables->rawColumns(['name'])->make(true);
+        return $data_tables->rawColumns(['last_name','status','action'])->make(true);
     }
 }
