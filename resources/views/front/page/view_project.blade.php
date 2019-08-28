@@ -174,14 +174,143 @@
           </div>
         </div>
         <div class="btn_next_page">
-          <button type="button" name="button" class="btn_next_form">SUIVANT <i class="fa fa-long-arrow-right"></i></button>
+          <button type="button" name="button" class="btn_next_form" id="btn-step-1">SUIVANT <i class="fa fa-long-arrow-right"></i></button>
         </div>
       </div>
-      <div class="" id="step-2">
+      <div class="step_nav" id="step-2">
+        <div class="info_step1">
+          <div class="title_info">
+            <label for="" class="text_title_step1">Les informations à remplir</label>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Lieux des travaux : </label>
+              </div>
+              <div class="champ_item_step2 select_item_form_step2">
+                <select class="form_select_step" id="selectville">
+                  <option value="selectionnez"> Sélectionnez une ville ...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Votre civilitè : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex">
+                <div class="item_radio_step2">
+                  <input type="radio" id="mr" name="work" value="mr">
+                  <label for="mr">Monsieur</label>
+                </div>
+                <div class="item_radio_step2">
+                  <input type="radio" id="mme" name="work" value="mme">
+                  <label for="mme">Madame</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Nom : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <div class="item_input_step2">
+                  <input type="text" name="" id="" class="input_form_step1" placeholder="Votre Nom">
+                </div>
+                <div class="item_input_step2">
+                  <input type="text" name="" id="" class="input_form_step1" placeholder="Votre prénom">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Vous êtes : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <div class="item_input_step2 select_item_form_step2">
+                  <select class="form_select_step" id="sel1">
+                    <option value="selectionnez"> Sélectionnez une catégorie ...</option>
+                    <option>Particulier</option>
+                    <option>Societe</option>
+                    <option>Commercant</option>
+                    <option>Industriel</option>
+                    <option>Profession Liberale</option>
+                    <option>Syndic de copropriete</option>
+                    <option>Promoteur-constructeur</option>
+                    <option>Administration</option>
+                    <option>Association</option>
+                    <option>Architecte</option>
+                    <option>Agence immobiliere</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+                <div class="item_input_step2 select_item_form_step2">
+                  <select class="form_select_step" id="sel2">
+                    <option value="selectionnez"> Sélectionnez une catégorie ...</option>
+                    <option>Locataire</option>
+                    <option>Proprietaire occupant</option>
+                    <option>Proprietaire bailleur</option>
+                    <option>Futur proprietaire</option>
+                    <option>Futur locataire</option>
+                    <option>Administrateur</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Télèphone : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <input type="number" name="" id="" class="input_form_step1" placeholder="Votre numéro de Téléphone">
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >E-mail : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <input type="email" name="" id="" class="input_form_step1" placeholder="Votre E-mail">
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Horaires pour vous joindre : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name select_item_form_step2">
+                <select class="form_select_step" id="horaire">
+                  <option value="selectionnez"> -- : -- </option>
+                  <option>08 : 00 - 12 : 00</option>
+                  <option>12 : 00 - 14 : 00</option>
+                  <option>14 : 00 - 17 : 00</option>
+                  <option>17 : 00 - 18 : 00</option>
+                  <option>18 : 00 - 20 : 00</option>
+                </select>
+              </div>
+            </div>
+          </div>
 
+        </div>
+        <div class="btn_next_page">
+          <button type="button" name="button" class="btn_next_form" id="btn-step-2">SUIVANT <i class="fa fa-long-arrow-right"></i></button>
+        </div>
       </div>
-      <div class="" id="step-3">
-
+      <div class="step_nav" id="step-3">
+        <div class="">
+          on est dans l'etape 3
+        </div>
       </div>
     </section>
 
@@ -190,5 +319,5 @@
 
 
   @section('additional-script')
-
+    {!! Html::script('js/front/view_project.js') !!}
   @endsection
