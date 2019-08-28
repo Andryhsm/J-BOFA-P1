@@ -3,8 +3,7 @@
 @section('title', 'Profil')
 
 @section('content_header')
-    <h1>Liste des utilisateurs</h1>
-    <a class="btn btn-primary header-button" href="{{ route('user.create') }}"> <i class="fa fa-plus"></i> Ajout</a>
+    <h1>Liste des artisans</h1>
 @stop
 
 @section('css')

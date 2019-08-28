@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -31,7 +31,6 @@ class UserController extends Controller
     {
         //
         return view('user.user.list');
-
     }
 
     /**
@@ -143,7 +142,7 @@ class UserController extends Controller
         $this->user_repository->deleteUser($id);
         toastr()->success('Suppression réussie!');
         $users = $this->user_repository->getAllUser();
-        return view('User.user.list',compact('users'));
+        return view('admin.user.list',compact('users'));
     }
 
     public function uploadImage($request)

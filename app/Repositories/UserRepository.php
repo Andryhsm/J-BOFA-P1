@@ -4,18 +4,15 @@ namespace App\Repositories;
 
 use App\Interfaces\UserRepositoryInterface;
 Use App\User;
-Use App\Models\Artisan;
 use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
 {
     protected $model;
-	protected $artisan;
 
-	public function __construct(User $user, Artisan $artisan)
+	public function __construct(User $user)
     {
         $this->model = $user;
-        $this->artisan = $artisan;
     }
 
     public function findUser($user_id)

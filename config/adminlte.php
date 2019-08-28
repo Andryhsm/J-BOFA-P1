@@ -121,13 +121,13 @@ return [
             'icon'        => 'fa fa-list-alt',
         ],
         [
-            'text'        => 'Gestion utilisateurs',
-            'url'         => 'admin/user',
+            'text'        => 'Gestion admin',
+            'url'         => 'admin/Admin',
             'icon'        => 'user',
         ],
         [
-            'text'        => 'Gestion des artisans',
-            'url'         => 'admin/artisan',
+            'text'        => 'Gestion des utilisateurs',
+            'url'         => 'admin/user',
             'icon'        => 'user',
         ],
         // [
