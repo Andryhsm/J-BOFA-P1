@@ -310,7 +310,7 @@
   width: 100%;
 }
 
-.select_item_form select {
+.select_item_form select, .select_item_form_step2 select {
   width: 100%;
   padding: 10px 20px;
   border-radius: 5px;
@@ -333,6 +333,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 1rem;
+  width: 100%;
 }
 .btn_next_form {
   width: 16%;
@@ -349,4 +350,73 @@
   background-color: #fff;
   color: #00adf1;
   border: 1px solid #00adf1;
+}
+.form_info_step2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.title_item_step2 {
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+.title_item_step2 label {
+  margin: 0;
+}
+.title_item_step2 label {
+  white-space: nowrap;
+}
+.champ_item_step2 {
+  flex: 1;
+}
+.champ_item_step2 input {
+  width: 100%;
+}
+.champ_item_flex {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+.item_radio_step2 {
+  margin-right: 5rem;
+  color: #707070;
+}
+.item_radio_step2 label {
+  margin: 0;
+}
+
+.champ_item_flex_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.item_input_step2 {
+  width: 45%;
+}
+.item_input_step2 input {
+  width: 100%;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+	-o-appearance: none;
+	margin:0
 }

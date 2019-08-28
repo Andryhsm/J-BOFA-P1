@@ -94,7 +94,7 @@ input:checked + .slider::before {
 /* line 82, ../../sass/admin/main.scss */
 .border_bottom {
   width: 100%;
-  height: 1.2px;
+  height: 2px;
 }
 
 /* line 87, ../../sass/admin/main.scss */
