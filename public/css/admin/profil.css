@@ -1,0 +1,13 @@
+/* line 2, ../../sass/admin/profil.scss */
+.profil_page .coordonate_item {
+  width: 50%;
+  text-align: left;
+}
+/* line 6, ../../sass/admin/profil.scss */
+.profil_page .coordonate_item p {
+  margin-bottom: 8px;
+}
+/* line 10, ../../sass/admin/profil.scss */
+.profil_page .coordonate_item .label {
+  font-weight: bold;
+}
