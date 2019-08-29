@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Service\UploadService;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
-
+use Auth;
 class LoginController extends Controller
 {
     protected $upload_service;
@@ -22,11 +22,17 @@ class LoginController extends Controller
         $this->city_repo = $city;
     }
     public function index() {
+        if(Auth::user()){
+            return redirect('artisan/accueil');
+        }
       return view("front.login.login");
     }
 
     public function inscription(){
         $categories = $this->category_repo->getCategory();
+        if(Auth::user()){
+            return redirect('artisan/accueil');
+        }
     	return view("front.login.signin",compact("categories"));
     }
 

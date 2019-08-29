@@ -56,6 +56,7 @@ $(document).ready(function(){
 	});
 
     $('.inscription').on('keyup','#postal_code',function(data){
+      $('#ville').trigger('change');
 	     data = $(this).val();
 	     if(data!=""){
 	      getVille(data);
@@ -103,7 +104,7 @@ function getVille(data){
         $('#ville').removeAttr("disabled");
         for (var i = 0; i < success.length; i++) {
           //console.log(data)
-          var dropdown = '<option value="'+success[i].ville_nom+'" >'+success[i].ville_nom+'</option>';
+          var dropdown = '<option value="'+success[i].ville_id+'" >'+success[i].ville_nom+'</option>';
           $('#ville').append(dropdown);
           //console.log('postal_code',success[i].ville_code_postal);
         }

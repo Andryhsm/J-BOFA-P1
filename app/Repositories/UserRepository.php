@@ -22,14 +22,19 @@ class UserRepository implements UserRepositoryInterface
 
     public function createUser($data)
     {
-        $this->model->name = $data['inputName'];
-        $this->model->email = $data['inputEmail'];
-        $this->model->phone = $data['inputPhone'];
-        if (isset($data['inputPhoto'])) 
-            $this->model->photo = $data['inputPhoto'];
-        $this->model->password = Hash::make($data['inputPassword']);
-        $this->model->status = $data['inputStatus'];
+        $this->model->name = $data['name'];
+        $this->model->first_name = $data['first_name'];
+        $this->model->enterprise = $data['enterprise'];
+        $this->model->city_id = $data['ville'];
+        $this->model->category_id = $data['category'];
+        $this->model->email = $data['email'];
+        $this->model->phone = $data['phone'];
+        if (isset($data['photo'])) 
+            $this->model->photo = $data['photo'];
+        $this->model->password = Hash::make($data['password']);
+        $this->model->status = 1;
         $this->model->save();
+        return $this->model;
     }
 
     public function updateUser($user_id, $data)

@@ -89,7 +89,9 @@
           </section>
 
         </div>
+        <!-- route('register') -->
         {!! Form::open(array('url' =>  route('register'),'files' => true,'class'=>'form-horizontal','id'=>'form-artisan','method'=>'POST')) !!}
+        {!! csrf_field() !!}
         <div class="bloc_form">
           <div class="item_formulaire">
             <label for="" class="title_inscription">Inscription Gratuite pour les Professionnels</label>
@@ -98,7 +100,7 @@
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Activité principal *</label>
-              <select required="required" tabindex="1" class="form-control input_form">
+              <select required="required" tabindex="1" class="form-control input_form" name="category">
                   <option value="selectionnez"> Sélectionnez une catégorie ...</option>
                   @if(isset($categories))
                     @foreach($categories as $category)
@@ -147,13 +149,13 @@
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Ville *</label>
-              <select required="required" tabindex="1" class="form-control input_form" id="ville" disabled>
+              <select required="required" tabindex="1" class="form-control input_form" name="ville" id="ville" disabled>
                 <option value="selectionnez"> Sélectionnez une ville ...</option>
               </select>
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Raison Sociale</label>
-              <input type="text" class="input_form" name="name_society" value="" placeholder="Nom de votre société">
+              <input type="text" class="input_form" name="enterprise" value="" placeholder="Nom de votre société">
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Nom</label>
