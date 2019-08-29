@@ -48,6 +48,7 @@
   /* background-color: #28a3b2; */
   background-color: #00adf1;
   color: #fff;
+  text-decoration: none;
 }
 
 .menus.active {

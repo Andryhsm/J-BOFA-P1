@@ -29,13 +29,15 @@
             </div>
           </div>
           <div class="btn_action_item">
-            <button><i class="fa fa-arrow-right"></i></button>
+            <button><i class="fa fa-angle-right"></i></button>
           </div>
           <div class="border_bottom border_dashed"></div>
         </div>
 
         <div class="item_project padding_new d-flex flex-wrap">
-          <label class="new_label">Nouveau</label>
+          <label class="new_label">
+            <img src="{!! url('/image/artisan/notification.svg') !!}" class="" alt="" />Nouveau
+          </label>
           <div class="calendar">
             <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
             <div class="liste_dates">
@@ -53,7 +55,7 @@
             </div>
           </div>
           <div class="btn_action_item">
-            <button><i class="fa fa-arrow-right"></i></button>
+            <button><i class="fa fa-angle-right"></i></button>
           </div>
           <div class="border_bottom border_dashed"></div>
         </div>
@@ -77,7 +79,7 @@
             </div>
           </div>
           <div class="btn_action_item">
-            <button><i class="fa fa-arrow-right"></i></button>
+            <button><i class="fa fa-angle-right"></i></button>
           </div>
           <div class="border_bottom border_dashed"></div>
         </div>

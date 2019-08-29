@@ -21,4 +21,8 @@ class ArtisanController extends Controller
     	return view('artisan.page.project_details');
     }
 
+    public function showProfil() {
+        return view('artisan.page.profil');
+    }
+
 }
