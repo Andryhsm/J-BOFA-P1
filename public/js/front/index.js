@@ -77,6 +77,7 @@ $(document).ready(function(){
 	    }
     });
 
+    
 });
 
 // $(document).onScroll('.login_foat', function(){

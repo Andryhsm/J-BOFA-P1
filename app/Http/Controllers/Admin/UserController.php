@@ -25,6 +25,7 @@ class UserController extends Controller
         $this->user_repository = $user_repository;
         $this->upload_service = $upload;
         $this->middleware('auth');
+        $this->middleware('auth:admin');
     }
 
     public function index()
@@ -189,6 +190,9 @@ class UserController extends Controller
         })->EditColumn('phone', function ($user) {
             if(isset($user->phone)) 
                 return $user->phone;
+        })->EditColumn('category', function ($user) {
+            if(isset($user->category_id)) 
+                return $user->category->name;
         })->EditColumn('status', function ($user) {
             switch ($user->status) {
                  case 0:

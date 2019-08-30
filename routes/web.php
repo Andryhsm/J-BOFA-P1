@@ -50,6 +50,7 @@ Route::namespace('Front')->group(function () {
     Route::get('connexion','LoginController@index')->name('connexion');
     Route::get('inscription','LoginController@inscription')->name('inscription');
     Route::get('cities','CityController@getCity');
+    Route::get('get_email','LoginController@getEmail');
 
     //get all catégorie
     Route::get('category','CategoryController@getAllCategories')->name('catégory_list');

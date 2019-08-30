@@ -183,6 +183,7 @@ class AdminController extends Controller
         $users = $this->user_repository->getAllUser();
         //$data_tables = collect([]);
         //return view('admin.user.list',compact('users'));
+        \Log::debug($users);
         $data_tables = DataTables::collection($users);
         $data_tables->EditColumn('name', function ($user) {
             if(isset($user->name))
@@ -200,6 +201,16 @@ class AdminController extends Controller
         })->EditColumn('phone', function ($user) {
             if(isset($user->phone)) 
                 return $user->phone;
+        })->EditColumn('enterprise', function ($user) {
+            if(isset($user->enterprise)) 
+                return $user->enterprise;
+        })->EditColumn('category', function ($user) {
+            if(isset($user->category_id)) {
+                return $user->category->name;
+            }
+        })->EditColumn('ville', function ($user) {
+            if(isset($user->city_id)) 
+                return $user->city->ville_nom;
         })->EditColumn('status', function ($user) {
             switch ($user->status) {
                  case 0:

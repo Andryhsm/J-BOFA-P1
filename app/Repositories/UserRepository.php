@@ -39,7 +39,7 @@ class UserRepository implements UserRepositoryInterface
 
     public function updateUser($user_id, $data)
     {
-        $this->model = $this->model->find($user_id);
+        $this->model = $this->model->with('category')->with('city')->find($user_id);
         $this->model->name = $data['inputName'];
         $this->model->email = $data['inputEmail'];
         $this->model->phone = $data['inputPhone'];
@@ -51,7 +51,7 @@ class UserRepository implements UserRepositoryInterface
     }
 
     public function getAllUser(){
-        return $this->model->orderBy('id','desc')->get();
+        return $this->model->with('category')->with('city')->orderBy('id','desc')->get();
     }
 
     public function deleteUser($user_id){
@@ -59,7 +59,7 @@ class UserRepository implements UserRepositoryInterface
     }
 
     public function changeStatus($user_id){
-        $this->model = $this->model->find($user_id);
+        $this->model = $this->model->with('category')->with('city')->find($user_id);
         if ($this->model->status == 1){
             $this->model->status = 0;
         }
@@ -69,5 +69,9 @@ class UserRepository implements UserRepositoryInterface
         $this->model->save();
         $user = $this->findUser($user_id);
         return $user;
+    }
+
+    public function getMail($email){
+        return $this->model->select('email')->where('email',$email)->get();
     }
 }

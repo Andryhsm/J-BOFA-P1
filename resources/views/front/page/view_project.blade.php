@@ -96,7 +96,7 @@
           <div class="form_info_step1">
             <div class="item_form_step1">
               <label for="" class="title_item ">Code Postal *</label>
-              <input type="text" name="" id="" class="input_form_step1" placeholder="Votre code postal">
+              <input type="text" name="" id="postal_code" class="input_form_step1" placeholder="Votre code postal">
             </div>
             <div class="item_form_step1">
               <label for="" class="title_item title_radio">Type de travaux</label>

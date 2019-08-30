@@ -134,7 +134,7 @@ class CategoryController extends Controller
                 
         })->EditColumn('user', function ($category) {
             if(isset($category->created_by)){    
-                return $category->admin->name;
+                return $category->admin->first_name.' '.$category->admin->last_name;
             }
         })->EditColumn('created', function ($category) {
             if(isset($category->created_at)) 

@@ -23,6 +23,9 @@
                                 <th>Nom et Pr&eacute;nom</th>
                                 <th>Email</th>
                                 <th>Phone</th>
+                                <th>Entreprise</th>
+                                <th>Catégory</th>
+                                <th>Ville</th>
                                 <th>Status</th>
                                 <th class="no-sort">Action</th>
                             </tr>
