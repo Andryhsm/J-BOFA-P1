@@ -73,6 +73,7 @@ Route::namespace('Auth')->group(function () {
     /* start admin auth*/
     Route::get('admin','AdminLoginController@showLoginForm')->name('admin_form');
     Route::post('admin_login',['as'=>'admin_login','uses'=>'AdminLoginController@login']);
+    Route::post('logout_admin',['as'=>'logout_admin','uses'=>'AdminLoginController@logoutAdmin']);
     /* End admin auth*/
 
     Route::post('register','RegisterController@create')->name('register');

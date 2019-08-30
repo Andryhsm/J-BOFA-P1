@@ -188,7 +188,7 @@
                 <label for="" >Lieux des travaux : </label>
               </div>
               <div class="champ_item_step2 select_item_form_step2">
-                <select class="form_select_step" id="selectville">
+                <select class="form_select_step" id="ville">
                   <option value="selectionnez"> Sélectionnez une ville ...</option>
                 </select>
               </div>
