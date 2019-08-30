@@ -308,8 +308,79 @@
         </div>
       </div>
       <div class="step_nav" id="step-3">
-        <div class="">
-          on est dans l'etape 3
+        <div class="content_step3">
+          <div class="title_step3">
+            <label for="" class="title_parent">Merci ! Votre demande de devis a bien été enregistrée.</label>
+          </div>
+          <div class="item_step3">
+            <div class="title_item3">
+              <label for="">Quelles sont les prochaines étapes ?</label>
+            </div>
+            <div class="list_item_step3">
+                <div class="element_item">
+                  <div class="image_element">
+                    <img class="img_nav_bar" src="{!! url('/image/front/icones/operateur.png') !!}" alt="">
+                    <div class="number_element">1</div>
+                  </div>
+                  <div class="text_element">
+                    <label for="">Votre demande est en cours de validation par nos conseillers. Ils pourront vous contacter pour compléter votre demande.</label>
+                  </div>
+                </div>
+                <div class="element_item">
+                  <div class="image_element">
+                    <img class="img_nav_bar" src="{!! url('/image/front/icones/mail.png') !!}" alt="">
+                    <div class="number_element">2</div>
+                  </div>
+                  <div class="text_element">
+                    <label for="">Dès validation, vous recevrez les coordonnées des professionnels sélectionnés.</label>
+                  </div>
+                </div>
+                <div class="element_item">
+                  <div class="image_element">
+                    <img class="img_nav_bar" src="{!! url('/image/front/icones/pro.png') !!}" alt="">
+                    <div class="number_element">3</div>
+                  </div>
+                  <div class="text_element">
+                    <label for="">Les professionnels disponibles vous contacteront dans les plus brefs délais.</label>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="item_step3">
+            <div class="title_item3">
+              <label for="">Demandes de devis associées</label>
+            </div>
+            <div class="list_item_step3">
+                <div class="product_item">
+                  <div class="image_product">
+                    <img class="" src="{!! url('/image/projects/chauffe_eau.jpg') !!}" alt="">
+                  </div>
+                  <label for="" class="title_product">Chauffe Eau</label>
+                  <div class="btn_action">
+                    <button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="image_product">
+                    <img class="" src="{!! url('/image/projects/Plomberie_sanitaires.png') !!}" alt="">
+                  </div>
+                  <label for="" class="title_product">Plomberie sanitaires</label>
+                  <div class="btn_action">
+                    <button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="image_product">
+                    <img class="" src="{!! url('/image/projects/salle_de_bain.png') !!}" alt="">
+                  </div>
+                  <label for="" class="title_product">Salle de bain</label>
+                  <div class="btn_action">
+                    <button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
