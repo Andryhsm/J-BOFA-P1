@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+    .liste_menu {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 380px) {
+    .liste_menu {
+        padding: 3% 0%;
+    }
+    .item_response {
+        width: 100%;
+    }
+}
