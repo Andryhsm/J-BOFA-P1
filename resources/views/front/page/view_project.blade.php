@@ -190,5 +190,5 @@
 
 
   @section('additional-script')
-
+    {!! Html::script('js/front/view_project.js') !!}
   @endsection
