@@ -58,7 +58,8 @@
   margin-bottom: 3%;
   font-size: 30px;
   font-weight: 600;
-  color: #044651;
+  /*color: #044651;*/
+  color: #0062ae;
 }
 .title_contact label {
   border-bottom: 2px solid;
@@ -130,3 +131,71 @@
   border: 4px solid #65bb9f;
   text-decoration: none;
 }
+
+/** Page recrutement */
+.title_recutement {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+.simple_title_recrutement {
+    width: 100%;
+    text-align: center;
+    padding: 0 5%;
+    color: #474747;
+    font-weight: 600;
+    font-size: 25px;
+}
+.bold_title_recrutement {
+    width: 45%;
+    text-align: center;
+    color: #0062ae;
+    font-weight: 600;
+    font-size: 35px;
+    padding: 1rem;
+    border-top: 1px solid #0062ae;
+    border-bottom: 1px solid #0062ae;
+    margin: 3rem 0;
+}
+.description_recrutement {
+    text-align: justify;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    padding: 20px;
+    font-family: 'Open Sans',sans-serif;
+    color: #474747;
+    line-height: 30px;
+    margin: 0 8rem;
+}
+.description_recrutement p {
+  font-size: 17px;
+}
+.btn_recrutement {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+.see_offre {
+    width: 25%;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062ae;
+    border: 1px solid #0062ae;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.see_offre:hover {
+  cursor: pointer;
+  color: #0062ae;
+  background-color: #fff;
+  border: 1px solid #0062ae;
+}
+/* End page recrutement */

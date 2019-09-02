@@ -40,7 +40,17 @@
       page about
     </div>
     <div class="content_faq" id="tab-3">
-      page recrutement
+      <div class="title_recutement">
+        <label class="simple_title_recrutement">Vous êtes plein d’enthousiasme et souhaitez rejoindre une équipe dynamique ? Vous souhaitez bouleverser l’univers des travaux ? </label>
+        <label class="bold_title_recrutement">Bienvenue à Tous !</label>
+      </div>
+      <div class="description_recrutement">
+        <p>Le site Habitatpresto appartient au groupe MybestPro depuis 2013. Situé en plein coeur de Paris, le groupe MyBestPro regroupe 250 salariés, découvrez nos offres d'emploi.</p>
+      </div>
+
+      <div class="btn_recrutement">
+        <button class="see_offre">Voir les offres</button>
+      </div>  
     </div>
     <div class="content_faq" id="tab-2">
       page temoignages
