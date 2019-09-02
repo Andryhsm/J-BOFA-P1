@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Admin;
 use App\User;
 
 class Category extends Model
@@ -16,6 +17,10 @@ class Category extends Model
     ];
 
     public function admin(){
-    	return $this->hasOne(User::class,'id','created_by');
+    	return $this->hasOne(Admin::class,'id','created_by');
+    }
+
+    public function user(){
+        return $this->hasMany(User::class,'category_id','id');
     }
 }

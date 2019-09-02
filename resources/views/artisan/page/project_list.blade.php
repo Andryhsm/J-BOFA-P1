@@ -27,13 +27,18 @@
           </div>
         </div>
         <div class="btn_action_item">
-          <a href="{{ route('project_details') }}" name="" class="btn_action">Voir le project</a>
+          <a href="{{ route('project_details') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+            <span>Voir le project</span>
+          </a>
         </div>
         <div class="border_bottom border_dashed"></div>
       </div>
 
       <div class="item_project padding_new  d-flex flex-wrap">
-        <label class="new_label">Nouveau</label>
+        <label class="new_label">
+          <img src="{!! url('/image/artisan/notification.svg') !!}" class="" alt="" />
+          Nouveau
+        </label>
         <div class="calendar">
           <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
           <div class="liste_dates">
@@ -54,7 +59,9 @@
           </div>
         </div>
         <div class="btn_action_item">
-          <a href="{{ route('project_details') }}"  name="" class="btn_action">Voir le project</a>
+          <a href="{{ route('project_details') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+            <span>Voir le project</span>
+          </a>
         </div>
         <div class="border_bottom border_dashed"></div>
       </div>
@@ -81,7 +88,9 @@
           </div>
         </div>
         <div class="btn_action_item">
-          <a href="{{ route('project_details') }}"  name="" class="btn_action">Voir le project</a>
+          <a href="{{ route('project_details') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+            <span>Voir le project</span>
+          </a>
         </div>
         <div class="border_bottom border_dashed"></div>
       </div>

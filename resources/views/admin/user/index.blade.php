@@ -16,7 +16,7 @@
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle img-profil" src="{{ ($user->photo =='' || !isset($user->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.$user->photo.'')}}" alt="User profile picture">
 
-              <h3 class="profile-username text-center">{{ $user->name }}</h3>
+              <h3 class="profile-username text-center">{{ $user->first_name }} {{ $user->last_name }}</h3>
             </div>
             <!-- /.box-body -->
           </div>
@@ -38,7 +38,13 @@
                     <label for="inputName" class="col-sm-3 control-label">Nom et Pr&eacute;nom</label>
                     <input type="hidden" name="id" value="{{$user->id}}">
                     <div class="col-sm-9">
-                      <input type="text" name="inputName" class="form-control" id="inputName" placeholder="Nom" value="{{ isset($user->name) ? $user->name : '' }}">
+                      <input type="text" name="inputName" class="form-control" id="inputName" placeholder="Nom" value="{{ isset($user->last_name) ? $user->last_name : '' }}">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-3 control-label">Pr&eacute;nom</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Nom" value="{{ isset($user->first_name) ? $user->first_name : '' }}">
                     </div>
                   </div>
                   <div class="form-group">
@@ -104,5 +110,5 @@
 @stop
 
 @section('js')
-  {!! Html::script('js/admin/user.js') !!}
+  <!-- {!! Html::script('js/admin/user.js') !!} -->
 @stop

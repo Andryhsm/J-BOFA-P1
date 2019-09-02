@@ -18,7 +18,7 @@
                     {!! Form::open(array('url' => ($category) ? route('category.update', ['category' => $category->id]) :route('category.store'),'files' => true,'class'=>'','id'=>'form-category','method'=>($category) ? 'PATCH' : 'POST')) !!}
                     <div class="box-body">
                         <div class="form-group">
-                          <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                          <input type="hidden" name="user_id" value="{{Auth::guard('admin')->user()->id}}">
                           <label for="inputName" class="col-sm-3 control-label">Nom cat&eacute;gorie</label>
                           <input type="hidden" name="id" value="{{ $category ? (isset($category->id) ? $category->id : '') : '' }}">
                           <div class="col-sm-9">

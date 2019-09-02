@@ -15,34 +15,6 @@ $(document).ready(function(){
         }
     });
 	$('.slider').on('keyup', '#recherche', function(){
-		// currencies = [
-		//     'Architecte-permis de construire',
-		// 	'Plomberie -sanitaires',
-		// 	'Plomberie -chauffage',
-		// 	'Panneaux solaires ',
-		// 	'Piscine-abri de piscine',
-		// 	'Porte-fenêtre',
-		// 	'Électricité-alarme',
-		// 	'Rénovation Intérieure',
-		// 	'Chauffage -climatisation -ventilation',
-		// 	'Construction -grros œuvres',
-		// 	'Cuisine ',
-		// 	'Menuiserie (pvc -Alu-bois)',
-		// 	'Maçonnerie -démolition' ,
-		// 	'Isolation intérieure /extérieure',
-		// 	'Couverture -toiture -charpente' ,
-		// 	'Salle de bain-spa' ,
-		// 	'Peinture -décoration ',
-		// 	'Ramonage de cheminée' ,
-		// 	'Jardinage -clôture-portail',
-		// 	'Sol -carrelage -parquet' ,
-		// 	'Véranda' ,
-		// 	'Diagnostic immobilier',
-		// 	'Entretien et traitement',
-		// 	'Escalier' ,
-		// 	'Énergies renouvelables'
-		// ];
-		//console.log(currencies);
 
 		var data = $(this).val();
 		$('#ul').html("");
@@ -56,7 +28,7 @@ $(document).ready(function(){
   			var value_data = new RegExp(data);
   			var value_dataLow = new RegExp(data.toLowerCase);
   			var value_dataUp = new RegExp(data.toLowerCase);
-  			if(value_data.test(currencies[index]) || value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
+  			if( value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
   				position.push(index);
   				var dropdown = '<li class="rechercheVal">'+currencies[index]+'</li>';
   				trie.push(dropdown);
@@ -74,7 +46,7 @@ $(document).ready(function(){
   				$('#ul').html("");
   				$('#ul').css('display', 'none');
   			}
-  		console.log(trie.reverse())
+  		//console.log(trie.reverse())
     });
     $('.slider').on('click', '.rechercheVal', function(){
 		var value = $(this).text();
@@ -84,6 +56,7 @@ $(document).ready(function(){
 	});
 
     $('.inscription').on('keyup','#postal_code',function(data){
+      $('#ville').trigger('change');
 	     data = $(this).val();
 	     if(data!=""){
 	      getVille(data);
@@ -94,6 +67,16 @@ $(document).ready(function(){
 	    }
     });
     $('.form_item_project').on('keyup','#postal_code',function(data){
+       data = $(this).val();
+       if(data!=""){
+        getVille(data);
+      }
+      else{
+        $('#ville').html("");
+        $('#ville').prop('disabled',true);
+      }
+    });
+    $('.container_view_project').on('keyup','#postal_code',function(data){
 	     data = $(this).val();
 	     if(data!=""){
 	      getVille(data);
@@ -104,6 +87,7 @@ $(document).ready(function(){
 	    }
     });
 
+    
 });
 
 // $(document).onScroll('.login_foat', function(){
@@ -122,22 +106,22 @@ $(window).scroll(function () {
 
 function getVille(data){
 	$.ajax({
-          type: "GET",
-          url: base_url + 'cities',
-          data: {'code_postal':data},
-          success: function (success) {
-              $('#ville').html("");
-              $('#ville').prop("selected",true);
-              $('#ville').removeAttr("disabled");
-              for (var i = 0; i < success.length; i++) {
-                //console.log(data)
-                var dropdown = '<option value="'+success[i].ville_nom+'" >'+success[i].ville_nom+'</option>';
-                $('#ville').append(dropdown);
-                //console.log('postal_code',success[i].ville_code_postal);
-              }
-          },
-          error: function (error) {
-              console.log(error);
-          }
-      });
+    type: "GET",
+    url: base_url + 'cities',
+    data: {'code_postal':data},
+    success: function (success) {
+        $('#ville').html("");
+        $('#ville').prop("selected",true);
+        $('#ville').removeAttr("disabled");
+        for (var i = 0; i < success.length; i++) {
+          //console.log(data)
+          var dropdown = '<option value="'+success[i].ville_id+'" >'+success[i].ville_nom+'</option>';
+          $('#ville').append(dropdown);
+          //console.log('postal_code',success[i].ville_nom);
+        }
+    },
+    error: function (error) {
+        console.log(error);
+    }
+  });
 }

@@ -10,3 +10,49 @@
 .project_list_page .item_project {
   border-bottom: none;
 }
+/* line 14, ../../sass/admin/home.scss */
+.project_list_page .item_project .new_label img {
+  width: 15px;
+  margin-right: 8px;
+}
+/* line 20, ../../sass/admin/home.scss */
+.project_list_page .btn_view_project_detail {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  display: block;
+  margin: 20px auto;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #0062ae;
+  color: #fff;
+}
+/* line 36, ../../sass/admin/home.scss */
+.project_list_page .btn_view_project_detail span {
+  position: relative;
+  transition: 0.5s;
+}
+/* line 40, ../../sass/admin/home.scss */
+.project_list_page .btn_view_project_detail span:after {
+  content: "\f178";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  font-family: fontAwesome;
+}
+/* line 51, ../../sass/admin/home.scss */
+.project_list_page .btn_view_project_detail:hover span {
+  padding-right: 25px;
+}
+/* line 55, ../../sass/admin/home.scss */
+.project_list_page .btn_view_project_detail:hover span:after {
+  opacity: 1;
+  right: 0;
+}

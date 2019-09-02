@@ -42,6 +42,8 @@
 
         </div>
         <div class="bloc_form">
+          <!-- {{ route('login') }} -->
+          <!-- url(config('adminlte.login_url', 'login')) -->
           <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
           {{ csrf_field() }}
           <div class="item_formulaire">

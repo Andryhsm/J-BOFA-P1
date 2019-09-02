@@ -6,37 +6,53 @@
 .project_list .project_desc {
   padding: 0 15px;
 }
+/* line 10, ../../sass/admin/project_details.scss */
+.project_list .btn_action_item button {
+  background: transparent;
+  border: none;
+}
+/* line 14, ../../sass/admin/project_details.scss */
+.project_list .btn_action_item button i {
+  color: gray;
+  font-weight: 700;
+  font-size: 20px;
+}
+/* line 21, ../../sass/admin/project_details.scss */
+.project_list .new_label img {
+  width: 15px;
+  margin-right: 8px;
+}
 
-/* line 11, ../../sass/admin/project_details.scss */
+/* line 27, ../../sass/admin/project_details.scss */
 .detail_item {
   width: 100%;
   border: 1px solid #cecece;
   padding: 6%;
   background-color: #fff;
 }
-/* line 17, ../../sass/admin/project_details.scss */
+/* line 33, ../../sass/admin/project_details.scss */
 .detail_item:not(:last-child) {
   margin-bottom: 30px;
 }
-/* line 21, ../../sass/admin/project_details.scss */
+/* line 37, ../../sass/admin/project_details.scss */
 .detail_item .title {
   margin-bottom: 1rem;
 }
-/* line 25, ../../sass/admin/project_details.scss */
+/* line 41, ../../sass/admin/project_details.scss */
 .detail_item .centered_label_info {
   width: 100%;
   margin-bottom: 8px;
 }
-/* line 29, ../../sass/admin/project_details.scss */
+/* line 45, ../../sass/admin/project_details.scss */
 .detail_item .centered_label_info span {
   width: 50%;
 }
-/* line 33, ../../sass/admin/project_details.scss */
+/* line 49, ../../sass/admin/project_details.scss */
 .detail_item .centered_label_info .label {
   text-align: right;
   font-weight: bold;
 }
-/* line 38, ../../sass/admin/project_details.scss */
+/* line 54, ../../sass/admin/project_details.scss */
 .detail_item .centered_label_info .info {
   text-align: left;
   margin-left: 30px;

@@ -49,6 +49,7 @@
     {!! Html::script('js/front/popper.min.js') !!}
     {!! Html::script('js/front/bootstrap.min.js') !!}
     {!! Html::script('js/front/swiper.min.js') !!}
+    {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js') !!}
     {!! Html::script('js/front/index.js') !!}
           <!-- ajout script -->
             @yield('additional-script')

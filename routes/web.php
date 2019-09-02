@@ -23,6 +23,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
 
     /*start profil*/
     Route::resource('user','AdminController');
+    Route::resource('artisan','UserController');
     Route::get('/edit-profil', 'ProfilController@index')->name('profil');
     Route::get('/get_user', 'AdminController@getAll')->name('get_user');
     Route::get('/Admin', 'AdminController@listAdmin')->name('Admin');
@@ -32,6 +33,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::post('/delete/$id', 'AdminController@destroy')->name('delete');
     Route::post('/update/{id}', 'AdminController@update');
     Route::post('user_status', 'AdminController@updateStatus')->name('user_status');
+    Route::post('admin_status', 'AdminController@adminStatus')->name('admin_status');
     /*end profil*/
 
     /*category*/
@@ -48,6 +50,7 @@ Route::namespace('Front')->group(function () {
     Route::get('connexion','LoginController@index')->name('connexion');
     Route::get('inscription','LoginController@inscription')->name('inscription');
     Route::get('cities','CityController@getCity');
+    Route::get('get_email','LoginController@getEmail');
 
     //get all catégorie
     Route::get('category','CategoryController@getAllCategories')->name('catégory_list');
@@ -70,7 +73,10 @@ Route::namespace('Auth')->group(function () {
     /* start admin auth*/
     Route::get('admin','AdminLoginController@showLoginForm')->name('admin_form');
     Route::post('admin_login',['as'=>'admin_login','uses'=>'AdminLoginController@login']);
+    Route::post('logout_admin',['as'=>'logout_admin','uses'=>'AdminLoginController@logoutAdmin']);
     /* End admin auth*/
+
+    Route::post('register','RegisterController@create')->name('register');
 });
 // end Auth route
 
@@ -79,5 +85,6 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::get('accueil','ArtisanController@index')->name('artisan_home');
     Route::get('disponnible','ArtisanController@showAvailablePage')->name('artisan_available');
     Route::get('project','ArtisanController@showProjectDetails')->name('project_details');
+    Route::get('profil','ArtisanController@showProfil')->name('artisan_profil');
 });
-// end Auth route
+// end Auth route 

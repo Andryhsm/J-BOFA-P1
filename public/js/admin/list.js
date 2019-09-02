@@ -48,6 +48,9 @@ jQuery(document).ready(function () {
                 {data: 'name', name:'name',searchable: true, sortable: true},
                 {data: 'email', name:'email',searchable: true, sortable: true},
                 {data: 'phone', name:'phone',searchable: true, sortable:true},
+                {data: 'enterprise', name:'enterprise',searchable: true, sortable:true},
+                {data: 'category', name:'category',searchable: true, sortable:true},
+                {data: 'ville', name:'ville',searchable: true, sortable:true},
                 {data: 'status', name:'status',searchable: true, sortable: false},
                 {data: 'action', name:'action',searchable: false, sortable: false}
             ],
@@ -60,8 +63,8 @@ jQuery(document).ready(function () {
                 else {
                     $paginate.show();
                 }
-             },
-             "language": {
+            },
+            "language": {
                  "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json",
                  "lengthMenu": "Afficher _MENU_ enregistrements par page",
                  "sProcessing":    "Traitement encours...",
@@ -73,41 +76,7 @@ jQuery(document).ready(function () {
                     "sNext":    "Suivant",
                     "sPrevious": "Précédent"
                 }
-              },
-                initComplete : function() {
-                    $.ajax({
-                        url: base_url + 'admin/user/get-filter',
-                        type: 'GET',
-                        dataType: 'json',
-                        success: function(success){
-                            console.log('success');
-                        },
-                        error : function(error){
-                            console.log(error);
-                        }
-                    })
-                    .done(function(data) {
-                        var elements = [];
-                        var brand_array = data.brand_array;
-                        brand_array = sortProperties(brand_array);
-                        for (var i = 0; i < brand_array.length ; i++) {
-                            var brand = brand_array[i];
-                            $('#brand').append("<option value='"+ brand[0]+ "'>"+ brand[1] + "</option>");
-                        }
-
-                        /*$('#brand').append("<option class='brand_all' value='all_'>All</option>");*/
-
-                        $('#example2_length').append('<div class="btn btn-small">'+
-                                '<div class="btn-group" data-toggle="modal" data-target="#exampleModal">'+
-                                  '<a href="#" class="btn btn-default">Selectionner colonne à afficher</a>'+
-                                  '<a href="#" class="btn btn-default"><span class="caret"></span></a>'+
-                                '</div>'+
-                            '</div>');
-
-                    })
-                    .fail(function() {
-                    });
-                }    
+            }    
         });
     }
     $('.select-brand, .select-product-status, .select-product-manager').popover({

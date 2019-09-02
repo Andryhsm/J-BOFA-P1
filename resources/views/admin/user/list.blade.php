@@ -3,8 +3,7 @@
 @section('title', 'Profil')
 
 @section('content_header')
-    <h1>Liste des utilisateurs</h1>
-    <a class="btn btn-primary header-button" href="{{ route('user.create') }}"> <i class="fa fa-plus"></i> Ajout</a>
+    <h1>Liste des artisans</h1>
 @stop
 
 @section('css')
@@ -24,6 +23,9 @@
                                 <th>Nom et Pr&eacute;nom</th>
                                 <th>Email</th>
                                 <th>Phone</th>
+                                <th>Entreprise</th>
+                                <th>Catégory</th>
+                                <th>Ville</th>
                                 <th>Status</th>
                                 <th class="no-sort">Action</th>
                             </tr>

@@ -96,7 +96,7 @@
           <div class="form_info_step1">
             <div class="item_form_step1">
               <label for="" class="title_item ">Code Postal *</label>
-              <input type="text" name="" id="" class="input_form_step1" placeholder="Votre code postal">
+              <input type="text" name="" id="postal_code" class="input_form_step1" placeholder="Votre code postal">
             </div>
             <div class="item_form_step1">
               <label for="" class="title_item title_radio">Type de travaux</label>
@@ -174,14 +174,214 @@
           </div>
         </div>
         <div class="btn_next_page">
-          <button type="button" name="button" class="btn_next_form">SUIVANT <i class="fa fa-long-arrow-right"></i></button>
+          <button type="button" name="button" class="btn_next_form" id="btn-step-1">SUIVANT <i class="fa fa-long-arrow-right"></i></button>
         </div>
       </div>
-      <div class="" id="step-2">
+      <div class="step_nav" id="step-2">
+        <div class="info_step1">
+          <div class="title_info">
+            <label for="" class="text_title_step1">Les informations à remplir</label>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Lieux des travaux : </label>
+              </div>
+              <div class="champ_item_step2 select_item_form_step2">
+                <select class="form_select_step" id="ville">
+                  <option value="selectionnez"> Sélectionnez une ville ...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Votre civilitè : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex">
+                <div class="item_radio_step2">
+                  <input type="radio" id="mr" name="work" value="mr">
+                  <label for="mr">Monsieur</label>
+                </div>
+                <div class="item_radio_step2">
+                  <input type="radio" id="mme" name="work" value="mme">
+                  <label for="mme">Madame</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Nom : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <div class="item_input_step2">
+                  <input type="text" name="" id="" class="input_form_step1" placeholder="Votre Nom">
+                </div>
+                <div class="item_input_step2">
+                  <input type="text" name="" id="" class="input_form_step1" placeholder="Votre prénom">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Vous êtes : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <div class="item_input_step2 select_item_form_step2">
+                  <select class="form_select_step" id="sel1">
+                    <option value="selectionnez"> Sélectionnez une catégorie ...</option>
+                    <option>Particulier</option>
+                    <option>Societe</option>
+                    <option>Commercant</option>
+                    <option>Industriel</option>
+                    <option>Profession Liberale</option>
+                    <option>Syndic de copropriete</option>
+                    <option>Promoteur-constructeur</option>
+                    <option>Administration</option>
+                    <option>Association</option>
+                    <option>Architecte</option>
+                    <option>Agence immobiliere</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+                <div class="item_input_step2 select_item_form_step2">
+                  <select class="form_select_step" id="sel2">
+                    <option value="selectionnez"> Sélectionnez une catégorie ...</option>
+                    <option>Locataire</option>
+                    <option>Proprietaire occupant</option>
+                    <option>Proprietaire bailleur</option>
+                    <option>Futur proprietaire</option>
+                    <option>Futur locataire</option>
+                    <option>Administrateur</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Télèphone : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <input type="number" name="" id="" class="input_form_step1" placeholder="Votre numéro de Téléphone">
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >E-mail : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <input type="email" name="" id="" class="input_form_step1" placeholder="Votre E-mail">
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Horaires pour vous joindre : </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name select_item_form_step2">
+                <select class="form_select_step" id="horaire">
+                  <option value="selectionnez"> -- : -- </option>
+                  <option>08 : 00 - 12 : 00</option>
+                  <option>12 : 00 - 14 : 00</option>
+                  <option>14 : 00 - 17 : 00</option>
+                  <option>17 : 00 - 18 : 00</option>
+                  <option>18 : 00 - 20 : 00</option>
+                </select>
+              </div>
+            </div>
+          </div>
 
+        </div>
+        <div class="btn_next_page">
+          <button type="button" name="button" class="btn_next_form" id="btn-step-2">SUIVANT <i class="fa fa-long-arrow-right"></i></button>
+        </div>
       </div>
-      <div class="" id="step-3">
+      <div class="step_nav" id="step-3">
+        <div class="content_step3">
+          <div class="title_step3">
+            <label for="" class="title_parent">Merci ! Votre demande de devis a bien été enregistrée.</label>
+          </div>
+          <div class="item_step3">
+            <div class="title_item3">
+              <label for="">Quelles sont les prochaines étapes ?</label>
+            </div>
+            <div class="list_item_step3">
+                <div class="element_item">
+                  <div class="image_element">
+                    <img class="img_nav_bar" src="{!! url('/image/front/icones/operateur.png') !!}" alt="">
+                    <div class="number_element">1</div>
+                  </div>
+                  <div class="text_element">
+                    <label for="">Votre demande est en cours de validation par nos conseillers. Ils pourront vous contacter pour compléter votre demande.</label>
+                  </div>
+                </div>
+                <div class="element_item">
+                  <div class="image_element">
+                    <img class="img_nav_bar" src="{!! url('/image/front/icones/mail.png') !!}" alt="">
+                    <div class="number_element">2</div>
+                  </div>
+                  <div class="text_element">
+                    <label for="">Dès validation, vous recevrez les coordonnées des professionnels sélectionnés.</label>
+                  </div>
+                </div>
+                <div class="element_item">
+                  <div class="image_element">
+                    <img class="img_nav_bar" src="{!! url('/image/front/icones/pro.png') !!}" alt="">
+                    <div class="number_element">3</div>
+                  </div>
+                  <div class="text_element">
+                    <label for="">Les professionnels disponibles vous contacteront dans les plus brefs délais.</label>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="item_step3">
+            <div class="title_item3">
+              <label for="">Demandes de devis associées</label>
+            </div>
+            <div class="list_item_step3">
+                <div class="product_item">
+                  <div class="image_product">
+                    <img class="" src="{!! url('/image/projects/chauffe_eau.jpg') !!}" alt="">
+                  </div>
+                  <label for="" class="title_product">Chauffe Eau</label>
+                  <div class="btn_action">
+                    <button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="image_product">
+                    <img class="" src="{!! url('/image/projects/Plomberie_sanitaires.png') !!}" alt="">
+                  </div>
+                  <label for="" class="title_product">Plomberie sanitaires</label>
+                  <div class="btn_action">
+                    <button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button>
+                  </div>
+                </div>
+                <div class="product_item">
+                  <div class="image_product">
+                    <img class="" src="{!! url('/image/projects/salle_de_bain.png') !!}" alt="">
+                  </div>
+                  <label for="" class="title_product">Salle de bain</label>
+                  <div class="btn_action">
+                    <button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button>
+                  </div>
+                </div>
+            </div>
+          </div>
 
+        </div>
       </div>
     </section>
 

@@ -9,22 +9,25 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use App\Interfaces\UserRepositoryInterface;
+use App\Repositories\AdminRepository;
 //use App\Repository\UserRepository;
 
 class ProfilController extends Controller
 {
 
     protected $user_repository;
+    protected $admin_repository;
 	protected $upload_service;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(UserRepositoryInterface $user_repository,UploadService $upload)
+    public function __construct(UserRepositoryInterface $user_repository,UploadService $upload , AdminRepository $admin_repo)
     {
-        $this->middleware('auth');
+        $this->middleware('auth:admin');
         $this->user_repository = $user_repository;
+        $this->admin_repository = $admin_repo;
         $this->upload_service = $upload;
     }
 
@@ -48,6 +51,7 @@ class ProfilController extends Controller
         );        
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
+
             return Redirect::back()->withInput()->withErrors($validator);
         }else{
             try{
@@ -61,10 +65,11 @@ class ProfilController extends Controller
                         return Redirect::back();
                     }
                 }
+                
                 $input = $request->all();
                 $input['inputPhoto'] = $image_name;
                 $id= $request['id'];
-                $users = $this->user_repository->updateUser($id,$input);
+                $users = $this->admin_repository->updateAdmin($id,$input);
             }catch(\Exception $e){
                 return Redirect::back()->withInput()->withErrors($e->getMessage());
             }

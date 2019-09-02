@@ -203,16 +203,16 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ (Auth::user()->photo =='' || !isset(Auth::user()->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::user()->photo.'') }}" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{ Auth::user()->name }}</span>
+              <img src="{{ (Auth::guard('admin')->user()->photo =='' || !isset(Auth::guard('admin')->user()->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::guard('admin')->user()->photo.'') }}" class="user-image" alt="User Image">
+              <span class="hidden-xs">{{ Auth::guard('admin')->user()->first_name }} {{ Auth::guard('admin')->user()->last_name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header" style="background-color: #f9fafc;">
-                <img src="{{ (Auth::user()->photo =='' || !isset(Auth::user()->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::user()->photo.'') }}" class="img-circle" alt="User Image">
+                <img src="{{ (Auth::guard('admin')->user()->photo =='' || !isset(Auth::guard('admin')->user()->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::guard('admin')->user()->photo.'') }}" class="img-circle" alt="User Image">
 
                 <p style="color: #666666;">
-                  {{ Auth::user()->name }}
+                  {{ Auth::guard('admin')->user()->first_name }} {{ Auth::guard('admin')->user()->last_name }}
                 </p>
               </li>
               <!-- Menu Body -->
@@ -236,7 +236,8 @@
                 </div>
                 <div class="pull-right">
                     @if(config('adminlte.logout_method') == 'GET' || !config('adminlte.logout_method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
-                        <a href="{{ url(config('adminlte.logout_url', 'auth/logout')) }}"  class="btn btn-default btn-flat">
+                    <!-- url(config('adminlte.logout_url', 'auth/logout')) -->
+                        <a href="{{ route('logout_admin') }}"  class="btn btn-default btn-flat">
                             <i class="fa fa-fw fa-power-off"></i> {{ trans('adminlte::adminlte.log_out') }}
                         </a>
                     @else
@@ -245,7 +246,7 @@
                         >
                             <i class="fa fa-fw fa-power-off"></i> {{ trans('adminlte::adminlte.log_out') }}
                         </a>
-                        <form id="logout-form" action="{{ url(config('adminlte.logout_url', 'auth/logout')) }}" method="POST" style="display: none;">
+                        <form id="logout-form" action="{{ route('logout_admin') }}" method="POST" style="display: none;">
                             @if(config('adminlte.logout_method'))
                                 {{ method_field(config('adminlte.logout_method')) }}
                             @endif
@@ -276,10 +277,10 @@
             <section class="sidebar">
                 <div class="user-panel">
                 <div class="pull-left image">
-                  <img src="{{ (Auth::user()->photo =='' || !isset(Auth::user()->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::user()->photo.'') }}" class="img-circle" alt="User Image">
+                  <img src="{{ (Auth::guard('admin')->user()->photo =='' || !isset(Auth::guard('admin')->user()->photo)) ? url('image/Admin/Profil/avatar.png') : url('image/Admin/Profil/'.Auth::guard('admin')->user()->photo.'') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                  <p>{{ Auth::user()->name }}</p>
+                  <p>{{ Auth::guard('admin')->user()->first_name }} {{ Auth::guard('admin')->user()->last_name }}</p>
                   <a href="#"><i class="fa fa-circle text-success"></i> En ligne</a>
                 </div>
               </div>
