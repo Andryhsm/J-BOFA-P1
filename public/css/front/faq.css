@@ -10,6 +10,7 @@
   padding: 3% 10%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .item_menu {
   /* width: 18%; */
@@ -26,16 +27,22 @@
 .item_menu:hover {
   background-color: #044651;
   color: #fff;
+  text-align: center;
 }
-.item_menu.active {
+.item_menu.current {
   background-color: #044651;
   color: #fff;
+  text-align: center;
+}
+.current {
+  display: block !important;
 }
 .title_menu {
   margin: 0;
 }
 .content_faq {
   width: 100%;
+  display: none;
 }
 .faq_contact {
   padding: 0% 0 3% 0;
@@ -87,7 +94,7 @@
   overflow: hidden;
 }
 .item_response {
-  width: 50%;
+  width: 80%;
 }
 .item_response .panel {
   border: 1px solid #65bb9f;
