@@ -7,21 +7,22 @@ use App\Intefaces\AdminRepositoryInterface;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
-use App\Models\Faqs;
+use App\Models\Temoignage;
 
-class FaqRepository {
+class TemoigneRepository {
 	protected $model;
 
-	public function __construct(Faqs $faq)
+	public function __construct(Temoignage $temoin)
     {
-        $this->model = $faq;
+        $this->model = $temoin;
     }
 
-    public function createFaq($data){
-        $this->model->name = $data['groupe'];
-    	$this->model->created_by = $data['admin_id'];
-    	$this->model->question = $data['content'];
-    	$this->model->respone = $data['response'];
+    public function createTemoin($data){
+        $this->model->name = $data['name'];
+    	$this->model->titre = $data['titre'];
+    	$this->model->description = $data['description'];
+        $this->model->name = $data['name'];
+    	$this->model->category_id = $data['category'];
     	$this->model->created_at = \Carbon\Carbon::now();
     	$this->model->status = 1;
 
@@ -29,22 +30,24 @@ class FaqRepository {
     }
 
     public function getAll(){
-        return $this->model->all();
+        return $this->model->with('categorie')->get();
     }
 
     public function deleteFaq($id){
         return $this->model->where('id',$id)->delete();
     }
 
-    public function findFaq($id){
+    public function findTemoin($id){
         return $this->model->find($id);
     }
 
-    public function updateFaq($id,$data){
+    public function updateTemoin($id,$data){
         $this->model = $this->model->find($id);
-        $this->model->name = $data['groupe'];
-        $this->model->question = $data['content'];
-        $this->model->respone = $data['response'];
+        $this->model->name = $data['name'];
+        $this->model->titre = $data['titre'];
+        $this->model->description = $data['description'];
+        $this->model->name = $data['name'];
+        $this->model->category_id = $data['category'];
         $this->model->updated_at = \Carbon\Carbon::now();
         $this->model->status = $data['inputStatus'];
         $this->model->save();
@@ -63,7 +66,8 @@ class FaqRepository {
         return $faq;
     }
 
-    public function getFaq(){
-        return $this->model->where('status',1)->get();
+    public function getTemoins(){
+        return $this->model->with('categorie')->where('status',1)->limit(3)->get();
     }
+
 }

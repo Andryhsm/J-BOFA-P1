@@ -11,34 +11,34 @@
 @stop
 
 @section('content')
-    <section class="category-update">
+    <section class="faq">
       <div class="row">
             <div class="col-md-12">
                 <div class="box box-primary">
-                    {!! Form::open(array('url' => ($question) ? route('faq.update', ['question' => $question->id]) :route('faq.store'),'files' => true,'class'=>'','id'=>'form-category','method'=>($question) ? 'PATCH' : 'POST')) !!}
+                    {!! Form::open(array('url' => ($question) ? route('faq.update', ['question' => $question->id]) :route('faq.store'),'files' => true,'class'=>'','id'=>'form-faq','method'=>($question) ? 'PATCH' : 'POST')) !!}
                     <div class="box-body">
                         <div class="form-group">
                           <label for="gorupe" class="col-sm-3 control-label">Groupe</label>
                           <div class="col-sm-9">
                             <select class="form-control" name="groupe">
-                              <option value="1">Question générales</option>
-                              <option value="2">Demande de devis</option>
-                              <option value="3">Après la demande de devis</option>
+                              <option value="Question générales" {{ ($question && $question->name == "Question générales") ? 'selected' : '' }}>Question générales</option>
+                              <option value="Demande de devis" {{ ($question && $question->name == "Demande de devis") ? 'selected' : '' }}>Demande de devis</option>
+                              <option value="Après la demande de devis" {{ ($question && $question->name == "Après la demande de devis") ? 'selected' : '' }}>Après la demande de devis</option>
                             </select>
                           </div>
                         </div>
                         <div class="form-group">
-                          <input type="hidden" name="user_id" value="{{Auth::guard('admin')->user()->id}}">
+                          <input type="hidden" name="admin_id" value="{{Auth::guard('admin')->user()->id}}">
                           <label for="inputName" class="col-sm-3 control-label">Contenue</label>
                           <input type="hidden" name="id" value="{{ $question ? (isset($question->id) ? $question->id : '') : '' }}">
                           <div class="col-sm-9">
-                            <input type="text" name="content" class="form-control"  placeholder="Question" value="{{ $question ? (isset($question->content) ? $question->content : '') : '' }}">
+                            <input type="text" name="content" class="form-control"  placeholder="Question" value="{{ $question ? (isset($question->question) ? $question->question : '') : '' }}">
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="inputName" class="col-sm-3 control-label">Reponse</label>
                           <div class="col-sm-9">
-                            <input type="text" name="response" class="form-control"  placeholder="Reponse" value="{{ $question ? (isset($question->response) ? $question->response : '') : '' }}">
+                            <input type="text" name="response" class="form-control"  placeholder="Reponse" value="{{ $question ? (isset($question->respone) ? $question->respone : '') : '' }}">
                           </div>
                         </div>
                         <div class="form-group">
@@ -63,5 +63,5 @@
 @stop
 
 @section('js')
-  {!! Html::script('js/admin/category.js') !!}
+  {!! Html::script('js/admin/faq.js') !!}
 @stop

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.home.index');
-});
+Route::get('/', 'Front\LoginController@getIndex');
 
 Auth::routes();
 
@@ -44,7 +42,15 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
 
     /*start faq */
     Route::resource('faq','FaqController');
+    Route::get('get_faq','FaqController@getAll');
+    Route::post('faq_status', 'FaqController@updateStatus');
     /*end faq */
+
+    /* start temoignage */
+    Route::resource('temoignage','TemoinController');
+    Route::get('get_temoin','TemoinController@getAll');
+    Route::post('temoin_status', 'TemoinController@updateStatus');
+    /* end temoignage */
 });
 
 
@@ -62,9 +68,7 @@ Route::namespace('Front')->group(function () {
     Route::get('how_work', function () {
         return view('front.page.how_work');
     });
-    Route::get('faq', function () {
-        return view('front.page.faq');
-    });
+    Route::get('faq','CityController@getFaq');
     Route::get('tarif', function () {
         return view('front.page.tarif');
     });

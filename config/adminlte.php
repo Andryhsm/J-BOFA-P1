@@ -132,7 +132,12 @@ return [
         ],
         [
             'text'        =>'Gestion des FAQS',
-            'url'        =>'admin/faq/create',
+            'url'        =>'admin/faq',
+            'icon'        =>'fa fa-bandcamp',
+        ],
+        [
+            'text'        =>'Gestion des témoignages',
+            'url'        =>'admin/temoignage',
             'icon'        =>'fa fa-bandcamp',
         ],
         // [

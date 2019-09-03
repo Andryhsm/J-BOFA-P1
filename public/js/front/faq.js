@@ -10,4 +10,10 @@ $(document).ready(function(){
 		$("#"+tab_id).addClass('current');
 	});
 
+	$.ajax({
+		url: base_url+'get_faq',
+		type: 'GET',
+		
+	});
+
 });

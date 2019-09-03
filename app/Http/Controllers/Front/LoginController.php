@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\CategoryRepository;
 use App\Repositories\CityRepository;
 use App\Repositories\UserRepository;
+use App\Repositories\TemoigneRepository;
 use Illuminate\Support\Facades\Redirect;
 use App\Service\UploadService;
 use Illuminate\Support\Facades\Validator;
@@ -17,12 +18,14 @@ class LoginController extends Controller
     protected $upload_service;
     protected $category_repo;
     protected $user_repo;
+    protected $temoin_repo;
     protected $city_repo;
-    public function __construct(UploadService $upload, CategoryRepository $category_repo, CityRepository $city,UserRepository $user_repo){
+    public function __construct(UploadService $upload, CategoryRepository $category_repo, CityRepository $city,UserRepository $user_repo,TemoigneRepository $temoin_repo){
         $this->upload_service = $upload;
         $this->category_repo = $category_repo;
         $this->city_repo = $city;
         $this->user_repo = $user_repo;
+        $this->temoin_repo = $temoin_repo;
     }
     public function index() {
         if(Auth::user()){
@@ -51,4 +54,12 @@ class LoginController extends Controller
     public function getEmail(Request $request){
         return $this->user_repo->getMail($request->all());
     }
+
+    public function getIndex()
+    {
+        $temoins = $this->temoin_repo->getTemoins();
+        return view('front.home.index', compact('temoins'));
+    }
 }
+
+

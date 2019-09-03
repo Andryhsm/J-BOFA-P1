@@ -4,27 +4,30 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Repositories\FaqRepository;
+use App\Repositories\TemoigneRepository;
+use App\Repositories\CategoryRepository;
 use Illuminate\Support\Facades\Redirect;
 use Yajra\DataTables\Facades\DataTables;
 
-class FaqController extends Controller
+class TemoinController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    protected $faq_repo;
+    protected $temoin_repo;
+    protected $category_repo;
 
-    public function __construct(FaqRepository $faq_repo){
-        $this->faq_repo = $faq_repo;
+    public function __construct(TemoigneRepository $temoin_repo, CategoryRepository $category){
+        $this->temoin_repo = $temoin_repo;
+        $this->category_repo = $category;
     }
 
     public function index()
     {
         //
-        return view('admin.faq.list');
+        return view('admin.temoignage.list');
     }
 
     /**
@@ -35,8 +38,9 @@ class FaqController extends Controller
     public function create()
     {
         //
-        $question = false;
-        return view('admin.faq.form',compact('question'));
+        $categories = $this->category_repo->getCategory();
+        $temoin = false;
+        return view('admin.temoignage.form',compact('temoin','categories'));
     }
 
     /**
@@ -48,8 +52,8 @@ class FaqController extends Controller
     public function store(Request $request)
     {
         //
-        $this->faq_repo->createFaq($request->all());
-        return redirect('admin/faq/create');
+        $this->temoin_repo->createTemoin($request->all());
+        return redirect('admin/temoignage');
     }
 
     /**
@@ -72,8 +76,9 @@ class FaqController extends Controller
     public function edit($id)
     {
         //
-        $question = $this->faq_repo->findFaq($id);
-        return view('admin.faq.form',compact('question'));
+        $categories = $this->category_repo->getCategory();
+         $temoin = $this->temoin_repo->findTemoin($id);
+        return view('admin.temoignage.form',compact('temoin','categories'));
     }
 
     /**
@@ -86,8 +91,6 @@ class FaqController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $this->faq_repo->updateFaq($id,$request->all());
-        return view('admin.faq.list');
     }
 
     /**
@@ -99,33 +102,31 @@ class FaqController extends Controller
     public function destroy($id)
     {
         //
-        $this->faq_repo->deleteFaq($id);
-        return redirect('admin/faq');
     }
 
     public function getAll(){
-        $faqs = $this->faq_repo->getAll();
-        $data_tables = DataTables::collection($faqs);
-        $data_tables->EditColumn('name', function ($faq) {
-            if(isset($faq->name))
+        $temoins = $this->temoin_repo->getAll();
+        $data_tables = DataTables::collection($temoins);
+        $data_tables->EditColumn('category', function ($temoin) {
+            if(isset($temoin->category_id))
             {
-                return $faq->name;
+                return $temoin->categorie->name;
             }
                 
-        })->EditColumn('question', function ($faq) {
-            if(isset($faq->question))    
-                return $faq->question;
-        })->EditColumn('response', function ($faq) {
-            if(isset($faq->respone)) 
-                return $faq->respone;
-        })->EditColumn('created_at', function ($faq) {
-            if(isset($faq->created_at)) 
-                return $faq->created_at;
-        })->EditColumn('status', function ($faq) {
-            switch ($faq->status) {
+        })->EditColumn('titre', function ($temoin) {
+            if(isset($temoin->titre))    
+                return $temoin->titre;
+        })->EditColumn('description', function ($temoin) {
+            if(isset($temoin->description)) 
+                return $temoin->description;
+        })->EditColumn('name', function ($temoin) {
+            if(isset($temoin->name)) 
+                return $temoin->name;
+        })->EditColumn('status', function ($temoin) {
+            switch ($temoin->status) {
                  case 0:
                     return '<div class="switch-container position-relative form-group">
-                                <label class="switch" data-id="'.$faq->id.'">
+                                <label class="switch" data-id="'.$temoin->id.'">
                                   <input type="checkbox" class="form-check-input" >
                                   <span class="slider round"></span>
                                 </label>
@@ -133,7 +134,7 @@ class FaqController extends Controller
                     break; 
                 case 1:
                     return '<div class="switch-container position-relative form-group">
-                                <label class="switch" data-id="'.$faq->id.'">
+                                <label class="switch" data-id="'.$temoin->id.'">
                                   <input type="checkbox" class="form-check-input" checked>
                                   <span class="slider round"></span>
                                 </label>
@@ -142,15 +143,15 @@ class FaqController extends Controller
                
                 
              }
-        })->EditColumn('action', function ($faq) {
-            return view("admin.faq.action", ['faq' => $faq]);
+        })->EditColumn('action', function ($temoin) {
+            return view("admin.temoignage.action", ['temoin' => $temoin]);
         });
         return $data_tables->rawColumns(['status','action'])->make(true);
     }
 
     public function updateStatus(Request $request){
-        $id = $request->all()['faq_id'];
-        $status = $this->faq_repo->changeStatus($id);
+        $id = $request->all()['temoin_id'];
+        $status = $this->temoin_repo->changeStatus($id);
         return $status;
     }
 }
