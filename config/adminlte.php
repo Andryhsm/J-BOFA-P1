@@ -130,6 +130,11 @@ return [
             'url'         => 'admin/user',
             'icon'        => 'user',
         ],
+        [
+            'text'        =>'Gestion des FAQS',
+            'url'        =>'admin/faq/create',
+            'icon'        =>'fa fa-bandcamp',
+        ],
         // [
         //     'text'    => 'Multilevel',
         //     'icon'    => 'share',

@@ -14,10 +14,11 @@
           <a href="#" class="menus_project">ACCEUIL</a> /
           <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">Chauffe eau</label></a>
         </div>
-        <div class="chearch_project">
-          <input type="text" name="" value="" class="research_project" placeholder="Ex: Plomberie, Maçonnerie">
+        <div class="chearch_project" id="parent">
+          <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
           <button type="button" name="button" class="btn_chearch_project">DEVIS GRATUIT</button>
         </div>
+        <ul id="ul" class="dropdown dropdown_search"></ul>
       </div>
     </section>
     <section class="tab_project">

@@ -12,7 +12,7 @@ use App\Service\UploadService;
 use App\Repositories\AdminRepository;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
-
+use Auth;
 class AdminController extends Controller
 {
     /**
@@ -269,28 +269,34 @@ class AdminController extends Controller
             if(isset($admin->phone)) 
                 return $admin->phone;
         })->EditColumn('status', function ($admin) {
-            switch ($admin->status) {
-                 case 0:
-                    return '<div class="switch-container position-relative form-group">
-                                <label class="switch" data-id="'.$admin->id.'">
-                                  <input type="checkbox" class="form-check-input" >
-                                  <span class="slider round"></span>
-                                </label>
-                            </div>';
-                    break; 
-                case 1:
-                    return '<div class="switch-container position-relative form-group">
-                                <label class="switch" data-id="'.$admin->id.'">
-                                  <input type="checkbox" class="form-check-input" checked>
-                                  <span class="slider round"></span>
-                                </label>
-                            </div>';
-                    break; 
-               
-                
+            if($admin->email==Auth::guard('admin')->user()->email){
+                return '<i class="fa fa-circle text-success"> En ligne</i>';
+            }else{
+                switch ($admin->status) {
+                     case 0:
+                        return '<div class="switch-container position-relative form-group">
+                                    <label class="switch" data-id="'.$admin->id.'">
+                                      <input type="checkbox" class="form-check-input" >
+                                      <span class="slider round"></span>
+                                    </label>
+                                </div>';
+                        break; 
+                    case 1:
+                        return '<div class="switch-container position-relative form-group">
+                                    <label class="switch" data-id="'.$admin->id.'">
+                                      <input type="checkbox" class="form-check-input" checked>
+                                      <span class="slider round"></span>
+                                    </label>
+                                </div>';
+                        break; 
+                 }
              }
         })->EditColumn('action', function ($admin) {
-            return view("admin.action", ['admin' => $admin]);
+            if($admin->email == Auth::guard('admin')->user()->email){
+                return 'Admin connecté';
+            }else{
+                return view("admin.action", ['admin' => $admin]);
+            }
         });
         return $data_tables->rawColumns(['last_name','status','action'])->make(true);
     }

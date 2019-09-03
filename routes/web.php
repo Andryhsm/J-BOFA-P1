@@ -41,6 +41,10 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::get('get_all','CategoryController@getAll');
     Route::post('/category_status','CategoryController@updateStatus');
     /*End category*/
+
+    /*start faq */
+    Route::resource('faq','FaqController');
+    /*end faq */
 });
 
 
