@@ -36,9 +36,12 @@
       </div>
     </div>
 
+    <!-- page qui nous sommes -->
     <div class="content_faq" id="tab-4">
       page about
     </div>
+
+    <!-- Page Recrutements -->
     <div class="content_faq" id="tab-3">
       <div class="title_recutement">
         <label class="simple_title_recrutement">Vous êtes plein d’enthousiasme et souhaitez rejoindre une équipe dynamique ? Vous souhaitez bouleverser l’univers des travaux ? </label>
@@ -52,9 +55,25 @@
         <button class="see_offre">Voir les offres</button>
       </div>  
     </div>
+
+    <!-- Page Temoignages -->
     <div class="content_faq" id="tab-2">
-      page temoignages
+      <div class="test_tem">
+        <p>Chaque jour notre équipe reçoit des témoignagnes de satisfaction et des remerciements envoyés par nos utilisateurs. Nous en avons sélectionné quelques-uns pour vous.</p>
+      </div>
+      <div class="content_tem">
+        <div class="item_tem">
+          <div class="image">
+            
+          </div>
+          <div class="text_tem">
+            
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Page Contact -->
     <div class="content_faq current" id="tab-1">
         <div class="faq_contact">
             <div class="title_contact">
