@@ -6,9 +6,13 @@
                 <div class="login_foat">
                 <div class="row">
                   <div class="item_form">
-                    <label for="" class="email">loremipsum@dolorethasmany.com</label>
-                    <label for="" class="email">&nbsp;/&nbsp;</label>
-                    <label for="" class="email">+261 88 42 455 28</label>
+                    <label for="" class="email item_box_header">
+                        <div class="icones_headers"> <i class="fa fa-envelope-o"></i></div> loremipsum@dolorethasmany.com
+                    </label>
+                    
+                    <label for="" class="email item_box_header">
+                        <div class="icones_headers"><i class="fa fa-phone"></i></div> +261 88 42 455 28
+                    </label>
                   </div>
                   <div class="compte_artisan">
                     <!-- login --><a href="{{ route('connexion') }}" class="btn_artisan login_artisan">Se connecter</a>
@@ -47,9 +51,10 @@
                                           <span class="icon-arrow-down"></span>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="#">Construction & Rénovation</a>
-                                            <a class="dropdown-item" href="#">Intérieur</a>
-                                            <a class="dropdown-item" href="#">Economie d'energie  </a>
+                                            <a class="dropdown-item" href="#">Construction&Rénovation</a>
+                                            <a class="dropdown-item" href="#">Nos Tarifs</a>
+                                            <a class="dropdown-item" href="#">Subventions</a>
+                                            <a class="dropdown-item" href="{{ url('ch_eau') }}">Chauffe eau</a>
                                         </div>
                                     </li>
 
