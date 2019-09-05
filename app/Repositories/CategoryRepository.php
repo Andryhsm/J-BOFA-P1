@@ -17,8 +17,13 @@ class CategoryRepository implements  CategoryRepositoryInterface{
     }
 
     public function createCategory($data){
-    	$this->model->name = $data['name'];
+        $this->model->name = $data['name'];
+    	$this->model->description = $data['description'];
     	$this->model->created_by = $data['user_id'];
+        $this->model->ispopular = $data['isPopular'];
+        if (isset($data['inputPhoto'])) {
+            $this->model->image = $data['inputPhoto'];
+        }
     	$this->model->created_at = \Carbon\Carbon::now();
     	$this->model->save();
     }
@@ -50,7 +55,12 @@ class CategoryRepository implements  CategoryRepositoryInterface{
     public function updateCategory($id,$data){
         $this->model = $this->model->find($id);
         $this->model->name = $data['name'];
+        $this->model->description = $data['description'];
         $this->model->status = $data['inputStatus'];
+        $this->model->ispopular = $data['isPopular'];
+        if (isset($data['inputPhoto'])) {
+            $this->model->image = $data['inputPhoto'];
+        }
         $this->model->save();
     }
 
