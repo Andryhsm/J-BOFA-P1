@@ -202,6 +202,7 @@ p {
   flex-wrap: wrap;
   color: #0162af;
   font-size: 14px;
+  padding-left: 5px;
 }
 
 .btn_litle {
@@ -1280,3 +1281,29 @@ footer {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Customisation header */
+.item_box_header {
+  margin: 0;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.icones_headers {
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    height: 100%;
+    background-color: #00adf1;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* End Customisation header */

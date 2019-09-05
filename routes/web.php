@@ -46,6 +46,8 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::post('faq_status', 'FaqController@updateStatus');
     /*end faq */
 
+    
+
     /* start temoignage */
     Route::resource('temoignage','TemoinController');
     Route::get('get_temoin','TemoinController@getAll');
@@ -73,6 +75,11 @@ Route::namespace('Front')->group(function () {
         return view('front.page.tarif');
     });
     Route::get('view_project','LoginController@viewProject');
+    /** DEvis and presentation catégories */
+    Route::get('ch_eau', function () {
+        return view('front.categories.categories');
+    });
+    /* End Devis and presentation catégories*/
 });
 /*end front router*/
 

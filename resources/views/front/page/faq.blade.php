@@ -62,7 +62,7 @@
         <p>Chaque jour notre équipe reçoit des témoignagnes de satisfaction et des remerciements envoyés par nos utilisateurs. Nous en avons sélectionné quelques-uns pour vous.</p>
       </div>
       <div class="content_tem">
-        <div class="item_tem">
+        <div class="item_tem">  
           <div class="image">
             
           </div>
