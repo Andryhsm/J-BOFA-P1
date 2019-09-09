@@ -34,6 +34,10 @@
 				 	</div>
 				 </div>
 			</div>
+			<button class="btn_view_devis">
+				<i class="fa fa-chevron-circle-right"></i>
+				Voir devis
+			</button>
 		</div>	
 		<div class="item_categories_form">
 			<div class="title_item_cg">
@@ -58,6 +62,10 @@
 				 	</div>
 				 </div>
 			</div>
+			<button class="btn_view_devis">
+				<i class="fa fa-chevron-circle-right"></i>
+				Voir devis
+			</button>
 		</div>	
 		<div class="item_categories_form">
 			<div class="title_item_cg">
@@ -82,6 +90,10 @@
 				 	</div>
 				 </div>
 			</div>
+			<button class="btn_view_devis">
+				<i class="fa fa-chevron-circle-right"></i>
+				Voir devis
+			</button>
 		</div>	
 	</div>
 </section>
