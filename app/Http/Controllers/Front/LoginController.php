@@ -58,7 +58,8 @@ class LoginController extends Controller
     public function getIndex()
     {
         $temoins = $this->temoin_repo->getTemoins();
-        return view('front.home.index', compact('temoins'));
+        $categories = $this->category_repo->getPopular();
+        return view('front.home.index', compact('temoins','categories'));
     }
 }
 

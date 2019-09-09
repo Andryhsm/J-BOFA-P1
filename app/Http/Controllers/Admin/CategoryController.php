@@ -109,7 +109,6 @@ class CategoryController extends Controller
         //
         $rules = array(    
             'name' => 'required',
-            'inputPhoto' => 'required'
         );        
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
