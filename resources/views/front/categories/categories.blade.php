@@ -19,7 +19,13 @@
 			<div class="item_description">
 				 <div class="desc_row desc_column">
 				 	<div class="image_desc_row">
-				 		<img src="{!! url('/image/categories/fond2.jpg') !!}" class="img_cg" alt="" />
+						 <img src="{!! url('/image/categories/fond2.jpg') !!}" class="img_cg" alt="" />
+						 <a class="link_project" href="#">
+							<div class="icons_link_project">
+								<i class="fa fa-tags"></i>
+							</div>
+							<label for="" class="title_link_project">Rénover sa salle de bain</label>
+						</a>
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
@@ -37,7 +43,13 @@
 			<div class="item_description">
 				 <div class="desc_row desc_column_reverse">
 				 	<div class="image_desc_row">
-				 		<img src="{!! url('/image/categories/fond2.jpg') !!}" class="img_cg" alt="" />
+						 <img src="{!! url('/image/categories/fond2.jpg') !!}" class="img_cg" alt="" />
+						 <a class="link_project" href="#">
+							<div class="icons_link_project">
+								<i class="fa fa-tags"></i>
+							</div>
+							<label for="" class="title_link_project">Rénover sa salle de bain</label>
+						</a>
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
@@ -55,7 +67,13 @@
 			<div class="item_description">
 				 <div class="desc_row desc_column">
 				 	<div class="image_desc_row">
-				 		<img src="{!! url('/image/categories/fond2.jpg') !!}" class="img_cg" alt="" />
+						 <img src="{!! url('/image/categories/fond2.jpg') !!}" class="img_cg" alt="" />
+						 <a class="link_project" href="#">
+							<div class="icons_link_project">
+								<i class="fa fa-tags"></i>
+							</div>
+							<label for="" class="title_link_project">Rénover sa salle de bain</label>
+						</a>
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
