@@ -10,17 +10,21 @@
             </div>
             <div class="row container_row">
 
-              <div class="item_project_plus">
-                <div class="image_projectplus">
-                  <img src="{!! url('/image/projects/salle_de_bain.png') !!}" class="img_fond" alt="" />
-                </div>
-                <div class="description_project_plus">
-                  <label for="" class="title_projetct_plus">Salle de bain</label>
-                  <label for="" class="description_plus"></label>
-                  <a href="#" class="link_project_plus">Débuter votre projet</a>
-                </div>
-              </div>
-              <div class="item_project_plus">
+              @if(isset($categories))
+                @foreach($categories as $categorie)
+                  <div class="item_project_plus">
+                    <div class="image_projectplus">
+                      <img src="{!! (isset($categorie->image)) ? url('/image/Category/'.$categorie->image) : url('/image/projects/salle_de_bain.png') !!}" class="img_fond" alt="" />
+                    </div>
+                    <div class="description_project_plus">
+                      <label for="" class="title_projetct_plus">{{$categorie->name}}</label>
+                      <label for="" class="description_plus"></label>
+                      <a href="#" class="link_project_plus">Débuter votre projet</a>
+                    </div>
+                  </div>
+                @endforeach
+              @endif
+              <!-- <div class="item_project_plus">
                 <div class="image_projectplus">
                   <img src="{!! url('/image/projects/Maconnerie.jpg') !!}" class="img_fond" alt="" />
                 </div>
@@ -129,7 +133,7 @@
                   <label for="" class="description_plus"></label>
                   <a href="#" class="link_project_plus">Débuter votre projet</a>
                 </div>
-              </div>
+              </div> -->
 
               <div class="btn_footer_project_plus">
                 <a href="{{ url('view_project') }}" class="find_project_plus">Débuter un nouveau projet</a>
