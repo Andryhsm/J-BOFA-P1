@@ -9,12 +9,15 @@ use Illuminate\Support\Facades\Redirect;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
+use App\Service\UploadService;
 
 class CategoryController extends Controller
 {
     protected $category_repository;
-    public function __construct(CategoryRepository $category_repository){
+    protected $upload_service;
+    public function __construct(CategoryRepository $category_repository, UploadService $upload){
         $this->category_repository = $category_repository;
+        $this->upload_service = $upload;
     }
 
     /**
@@ -49,8 +52,25 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-        $category = $this->category_repository->createCategory($request->all());
-        return view('admin.category.index');
+        $rules = array(    
+            'name' => 'required'
+        );        
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            return Redirect::back()->withInput()->withErrors($validator);
+        }else{
+            try{
+                //$input = $request->all();
+                $input = $this->uploadImage($request); 
+                $categories = $this->category_repository->createCategory($input);
+            }catch(\Exception $e){
+                return Redirect::back()->withInput()->withErrors($e->getMessage());
+            }
+            toastr()->success('Ajout catégorie réussie!');
+            return redirect()->route('category.index');
+        }
+        // $category = $this->category_repository->createCategory($request->all());
+        // return view('admin.category.index');
     }
 
     /**
@@ -88,14 +108,17 @@ class CategoryController extends Controller
     {
         //
         $rules = array(    
-            'name' => 'required'
+            'name' => 'required',
+            'inputPhoto' => 'required'
         );        
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
         }else{
             try{
-                $input = $request->all(); 
+                //$input = $request->all();
+                $input = $this->uploadImage($request); 
+
                 $categories = $this->category_repository->updateCategory($id, $input);
             }catch(\Exception $e){
                 return Redirect::back()->withInput()->withErrors($e->getMessage());
@@ -169,5 +192,22 @@ class CategoryController extends Controller
         $id = $request->all()['category_id'];
         $status = $this->category_repository->changeStatus($id);
         return $status;
+    }
+
+    public function uploadImage($request)
+    {
+        $image_name = null;
+        if ($request->hasFile('inputPhoto')) {
+            $file = $request->file('inputPhoto');
+            try {
+                $image_name = $this->upload_service->upload($file, 'image/Category');
+            } catch (\Exception $e) {
+                flash()->error($e->getMessage());
+                return Redirect::back();
+            }
+        }
+        $input = $request->all();
+        $input['inputPhoto'] = $image_name;
+        return $input;
     }
 }

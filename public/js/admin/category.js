@@ -5,10 +5,18 @@ jQuery(document).ready(function () {
       rules : {
         name : {
           required : true
+        },
+        // inputPhoto : {
+        //   required : true
+        // },
+        description : {
+          required : true
         }
       },
       messages : {
-        name : "Veuillez fournir un nom de catégorie"
+        name : "Veuillez fournir un nom de catégorie",
+        inputPhoto : "Veuillez séléctionner une image",
+        description : "Veuillez completer la description"
       },
       submitHandler: function(form) {
         form.submit();
@@ -20,6 +28,24 @@ jQuery(document).ready(function () {
           }else{
             $(this).siblings().val(0);
           }
+      });
+    $('.category-update').on('click','#inputPopular',function(){
+          if($(this).prop('checked')){
+            $(this).siblings().val(1);
+          }else{
+            $(this).siblings().val(0);
+          }
+      });
+    $('.category-update').on('change','#inputPhoto', function(){
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            console.log('image',this.files[0].name)
+            reader.onload = function (e) {
+                $('.category-update .img-category').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(this.files[0]);
+        }
       });
 
     var table;
