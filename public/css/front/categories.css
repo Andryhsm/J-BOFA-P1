@@ -20,14 +20,15 @@
 }
 .item_categories_form {
 	width: 100%;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border: 1px solid #707070;
     border-radius: 5px;
     margin-bottom: 1rem;
+    position: relative;
 }
 .title_item_cg {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 1rem;
     display: flex;
     align-items: center;
 }
@@ -87,7 +88,7 @@
     bottom: 0;
     line-height: 23px;
     font-size: 25px;
-    padding: 4rem;
+    padding: 10%;
     color: #fff;
     transition: padding-bottom 0.5s;
 }
@@ -96,8 +97,27 @@
 }
 
 .image_desc_row:hover .link_project {
-    padding-bottom: 8rem;
+    padding-bottom: 20%;
     text-decoration: none;
     color: #fff;
     transition: padding-bottom 0.5s;
+}
+.btn_view_devis {
+	position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    background: rgba(18,67,149,0.8);
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    transition: all 0.5s ease 0s;
+}
+.btn_view_devis:hover {
+	padding: 0.5rem 2rem;
+	background: #0062ae;
+	transition: all 0.5s ease 0s;
 }
