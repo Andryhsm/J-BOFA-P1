@@ -12,7 +12,7 @@
       <div class="content_header_project" style="background-image:url({!! url('/image/front/images/fond14.jpg') !!})">
         <div class="menus_header_project">
           <a href="#" class="menus_project">ACCEUIL</a> /
-          <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">Chauffe eau</label></a>
+          <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">@if(isset($details)) {{$details->name}} @endif</label></a>
         </div>
         <div class="chearch_project" id="parent">
           <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
