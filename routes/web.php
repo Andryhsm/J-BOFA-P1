@@ -76,7 +76,7 @@ Route::namespace('Front')->group(function () {
     });
     Route::get('view_project','LoginController@viewProject');
     /** DEvis and presentation catégories */
-    Route::get('ch_eau', function () {
+    Route::get('renovation', function () {
         return view('front.categories.categories');
     });
     /* End Devis and presentation catégories*/
