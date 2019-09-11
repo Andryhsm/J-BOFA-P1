@@ -76,7 +76,13 @@ Route::namespace('Front')->group(function () {
     });
     Route::get('view_project/{id}','LoginController@viewProject');
     /** DEvis and presentation catégories */
-    Route::get('renovation', function () {
+    Route::get('tarif_hour', function () {
+        return view('front.categories.tarif_hour');
+    });
+    Route::get('help_me', function () {
+        return view('front.categories.help_me');
+    });
+     Route::get('renovation', function () {
         return view('front.categories.categories');
     });
     /* End Devis and presentation catégories*/

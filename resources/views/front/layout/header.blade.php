@@ -52,8 +52,8 @@
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <a class="dropdown-item" href="{{ url('renovation') }}">Rénovation de maison</a>
-                                            <a class="dropdown-item" href="#">Tarif Horaire des artisans</a>
-                                            <a class="dropdown-item" href="#">Aides&Subventions</a>
+                                            <a class="dropdown-item" href="{{ url('tarif_hour') }}">Tarif Horaire des artisans</a>
+                                            <a class="dropdown-item" href="{{ url('help_me') }}">Aides&Subventions</a>
                                             
                                         </div>
                                     </li>
