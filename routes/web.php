@@ -74,7 +74,7 @@ Route::namespace('Front')->group(function () {
     Route::get('tarif', function () {
         return view('front.page.tarif');
     });
-    Route::get('view_project','LoginController@viewProject');
+    Route::get('view_project/{id}','LoginController@viewProject');
     /** DEvis and presentation catégories */
     Route::get('renovation', function () {
         return view('front.categories.categories');

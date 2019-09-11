@@ -14,11 +14,11 @@ class DropColumnUser extends Migration
     public function up()
     {
         //
-        Schema::table('users',function(Blueprint $table){
-            $table->dropColumn('category');
-            $table->dropColumn('ville');
-            $table->dropColumn('postal_code');
-        });
+        // Schema::table('users',function(Blueprint $table){
+        //     $table->dropColumn('category');
+        //     $table->dropColumn('ville');
+        //     $table->dropColumn('postal_code');
+        // });
     }
 
     /**

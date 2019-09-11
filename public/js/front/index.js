@@ -1,13 +1,16 @@
 
 $(document).ready(function(){
 	var currencies=[];
+  var ids =[];
 	var position= [];
 	$.ajax({
         type: "GET",
         url: base_url + 'category',
         success: function (success) {
+          console.log(success[0])
             for (var i = 0; i < success.length; i++) {
             	currencies.push(success[i].name);
+              ids.push(success[i].id);
             }
         },
         error: function (error) {
@@ -30,7 +33,7 @@ $(document).ready(function(){
   			var value_dataUp = new RegExp(data.toLowerCase);
   			if( value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
   				position.push(index);
-  				var dropdown = '<li class="rechercheVal">'+currencies[index]+'</li>';
+  				var dropdown = '<li class="rechercheVal" data-id="'+ids[index]+'">'+currencies[index]+'</li>';
   				trie.push(dropdown);
   			}
   			
