@@ -9,6 +9,7 @@
   @section('content')
   @if(isset($details))
   <div class="container_view_project">
+    <form action="" type="POST">
     <section class="header_project">
       <div class="content_header_project" style="background-image:url({!! url('/image/front/images/fond14.jpg') !!})">
         <div class="menus_header_project">
@@ -81,6 +82,7 @@
         <div class="title_step">
           <label for="" class="simple_text">Titre du projet: </label>
           <label for="" class="texte_title_step">{{$details->name}}</label>
+          <input type="hidden" name="id_category" value="{{$details->id}}"> 
         </div>
         <div class="description_projet">
           <div class="image_step_project">
@@ -98,7 +100,7 @@
           <div class="form_info_step1">
             <div class="item_form_step1">
               <label for="" class="title_item ">Code Postal *</label>
-              <input type="text" name="" id="postal_code" class="input_form_step1" placeholder="Votre code postal">
+              <input type="text" name="" id="postal_code" class="input_form_step1" placeholder="Votre code postal" required="">
             </div>
             <div class="item_form_step1">
               <label for="" class="title_item title_radio">Type de travaux</label>
@@ -190,7 +192,7 @@
                 <label for="" >Lieux des travaux : </label>
               </div>
               <div class="champ_item_step2 select_item_form_step2">
-                <select class="form_select_step" id="ville">
+                <select class="form_select_step" id="ville" name="ville">
                   <option value="selectionnez"> Sélectionnez une ville ...</option>
                 </select>
               </div>
@@ -220,10 +222,10 @@
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
                 <div class="item_input_step2">
-                  <input type="text" name="" id="" class="input_form_step1" placeholder="Votre Nom">
+                  <input type="text" name="last_name" id="last_name" class="input_form_step1" placeholder="Votre Nom">
                 </div>
                 <div class="item_input_step2">
-                  <input type="text" name="" id="" class="input_form_step1" placeholder="Votre prénom">
+                  <input type="text" name="first_name" id="first_name" class="input_form_step1" placeholder="Votre prénom">
                 </div>
               </div>
             </div>
@@ -272,7 +274,7 @@
                 <label for="" >Télèphone : </label>
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
-                <input type="number" name="" id="" class="input_form_step1" placeholder="Votre numéro de Téléphone">
+                <input type="number" name="phone" id="phone" class="input_form_step1" placeholder="Votre numéro de Téléphone">
               </div>
             </div>
           </div>
@@ -282,7 +284,7 @@
                 <label for="" >E-mail : </label>
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
-                <input type="email" name="" id="" class="input_form_step1" placeholder="Votre E-mail">
+                <input type="email" name="email" id="email" class="input_form_step1" placeholder="Votre E-mail">
               </div>
             </div>
           </div>
@@ -384,9 +386,13 @@
           </div>
 
         </div>
+        <div class="btn_next_page">
+          <input type="submit" style="display: none;" id="valide" name="">
+          <button type="button" name="button" class="btn_next_form" id="btn-step-3">TERMINER</button>
+        </div>
       </div>
     </section>
-
+    </form>
   </div>
   @endif
   @endsection
