@@ -12,7 +12,7 @@
       <div class="content_header_project" style="background-image:url({!! url('/image/front/images/fond14.jpg') !!})">
         <div class="menus_header_project">
           <a href="#" class="menus_project">ACCEUIL</a> /
-          <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">Chauffe eau</label></a>
+          <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">@if(isset($details)) {{$details->name}} @endif</label></a>
         </div>
         <div class="chearch_project" id="parent">
           <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
@@ -70,7 +70,7 @@
             <label for="" class="title_nav_bar">Trouvez un professionnel près de chez vous !</label>
             <div class="text_image_nav_bar">
               <label for="" class="text_nav_bar">Vos coordonnées sont protégées et ne seront jamais publiées sur Internet.</label>
-              <img class="img_nav_bar" src="{!! url('/image/front/icones/carte_project.png') !!}" alt="">
+              <img class="img_nav_bar" src="{!! (isset($details->image)) ? url('/image/Category/'.$details->image): url('/image/front/icones/carte_project.png') !!}" alt="">
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
       <div class="step_nav active" id="step-1">
         <div class="title_step">
           <label for="" class="simple_text">Titre du projet: </label>
-          <label for="" class="texte_title_step">Chauffe eau</label>
+          <label for="" class="texte_title_step">@if(isset($details)) {{$details->name}} @endif</label>
         </div>
         <div class="description_projet">
           <div class="image_step_project">
@@ -87,7 +87,7 @@
           </div>
 
           <div class="text_desc_step1">
-            <label for="">Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans.</label>
+            <label for="">@if(isset($details)){{ ($details->description) ? $details->description : "Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans." }} @endif</label>
           </div>
         </div>
         <div class="info_step1">

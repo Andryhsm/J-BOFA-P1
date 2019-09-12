@@ -19,7 +19,7 @@
                     <div class="description_project_plus">
                       <label for="" class="title_projetct_plus">{{$categorie->name}}</label>
                       <label for="" class="description_plus"></label>
-                      <a href="#" class="link_project_plus">Débuter votre projet</a>
+                      <a href="{{ Url('/view_project/'.$categorie->id.'') }}" class="link_project_plus">Débuter votre projet</a>
                     </div>
                   </div>
                 @endforeach

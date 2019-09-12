@@ -51,10 +51,10 @@
                                           <span class="icon-arrow-down"></span>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="#">Construction&Rénovation</a>
-                                            <a class="dropdown-item" href="#">Nos Tarifs</a>
-                                            <a class="dropdown-item" href="#">Subventions</a>
-                                            <a class="dropdown-item" href="{{ url('ch_eau') }}">Chauffe eau</a>
+                                            <a class="dropdown-item" href="{{ url('renovation') }}">Rénovation de maison</a>
+                                            <a class="dropdown-item" href="{{ url('tarif_hour') }}">Tarif Horaire des artisans</a>
+                                            <a class="dropdown-item" href="{{ url('help_me') }}">Aides&Subventions</a>
+                                            
                                         </div>
                                     </li>
 
