@@ -7,12 +7,13 @@
   @endsection
 
   @section('content')
+  @if(isset($details))
   <div class="container_view_project">
     <section class="header_project">
       <div class="content_header_project" style="background-image:url({!! url('/image/front/images/fond14.jpg') !!})">
         <div class="menus_header_project">
           <a href="#" class="menus_project">ACCEUIL</a> /
-          <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">@if(isset($details)) {{$details->name}} @endif</label></a>
+          <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">{{$details->name}}</label></a>
         </div>
         <div class="chearch_project" id="parent">
           <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
@@ -79,7 +80,7 @@
       <div class="step_nav active" id="step-1">
         <div class="title_step">
           <label for="" class="simple_text">Titre du projet: </label>
-          <label for="" class="texte_title_step">@if(isset($details)) {{$details->name}} @endif</label>
+          <label for="" class="texte_title_step">{{$details->name}}</label>
         </div>
         <div class="description_projet">
           <div class="image_step_project">
@@ -87,7 +88,7 @@
           </div>
 
           <div class="text_desc_step1">
-            <label for="">@if(isset($details)){{ ($details->description) ? $details->description : "Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans." }} @endif</label>
+            <label for="">{{ ($details->description) ? $details->description : "Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans." }} </label>
           </div>
         </div>
         <div class="info_step1">
@@ -387,6 +388,7 @@
     </section>
 
   </div>
+  @endif
   @endsection
 
 
