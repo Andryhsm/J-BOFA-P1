@@ -102,30 +102,32 @@
               <label for="" class="title_item ">Code Postal *</label>
               <input type="text" name="" id="postal_code" class="input_form_step1" placeholder="Votre code postal" required="">
             </div>
-            <div class="item_form_step1">
+            <div class="item_form_step1" id="travaux_type">
               <label for="" class="title_item title_radio">Type de travaux</label>
+              <input type="hidden" name="travaux">
               <div class="item_radio_step1">
-                  <input type="radio" id="remplacement" name="work" value="remplacement"
-                         checked>
-                  <label for="remplacement">Remplacement</label>
-                </div>
+                <input type="radio" id="remplacement" name="work" value="remplacement"
+                       checked>
+                <label for="remplacement">Remplacement</label>
+              </div>
 
-                <div class="item_radio_step1">
-                  <input type="radio" id="installation" name="work" value="installation">
-                  <label for="installation">Installation neuve</label>
-                </div>
+              <div class="item_radio_step1">
+                <input type="radio" id="installation" name="work" value="installation">
+                <label for="installation">Installation neuve</label>
+              </div>
 
-                <div class="item_radio_step1">
-                  <input type="radio" id="reparation" name="work" value="reparation">
-                  <label for="reparation">Réparation neuve</label>
-                </div>
-                <div class="item_radio_step1">
-                  <input type="radio" id="entretient" name="work  " value="entretient">
-                  <label for="entretient">Entretient/Maintenance</label>
-                </div>
+              <div class="item_radio_step1">
+                <input type="radio" id="reparation" name="work" value="reparation">
+                <label for="reparation">Réparation neuve</label>
+              </div>
+              <div class="item_radio_step1">
+                <input type="radio" id="entretient" name="work  " value="entretient">
+                <label for="entretient">Entretient/Maintenance</label>
+              </div>
             </div>
-            <div class="item_form_step1">
+            <div class="item_form_step1" id="prestation">
                   <label for="" class="title_item title_radio">Prestation souhaitée</label>
+                  <input type="hidden" name="prestation">
                   <div class="item_radio_step1">
                     <input type="radio" id="pose" name="work" value="pose"
                            checked>
@@ -150,8 +152,9 @@
                   </select>
                 </div>
               </div>
-              <div class="item_form_step1">
+              <div class="item_form_step1" id="chauffeau">
                   <label for="" class="title_item title_radio">Y a-t-il un chauffe-eau à désinstaller ?</label>
+                  <input type="hidden" name="chaffeau">
                   <div class="item_radio_step1">
                     <input type="radio" id="oui" name="work" value="oui"
                            checked>

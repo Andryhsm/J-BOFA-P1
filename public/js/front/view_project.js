@@ -80,7 +80,25 @@ $(document).ready(function(){
     
   });
 
+  $('.container_view_project').find('#travaux_type .item_radio_step1').on('click','input',function(){
+    var value = $(this).siblings('label').text();
+    console.log(value)
+    $(this).closest('.item_radio_step1').siblings('input').val(value);
+  });
+  $('.container_view_project').find('#chauffeau .item_radio_step1').on('click','input',function(){
+    var value = $(this).siblings('label').text();
+    console.log(value)
+    $(this).closest('.item_radio_step1').siblings('input').val(value);
+  });
+  $('.container_view_project').find('#prestation .item_radio_step1').on('click','input',function(){
+    var value = $(this).siblings('label').text();
+    console.log(value)
+    $(this).closest('.item_radio_step1').siblings('input').val(value);
+  });
+
   $('.btn_next_page').on('click', '#btn-step-3', function() {
     $(this).siblings('#valide').trigger('click');
   });
+
+
 });
