@@ -77,8 +77,9 @@ jQuery(document).ready(function () {
             "pageLength"   : 20,
             columns        : [
                 {data: 'cat_name', name:'cat_name',searchable: true, sortable: true},
-                {data: 'user', name:'created',searchable: true, sortable: true},
-                {data: 'created', name:'date',searchable: true, sortable:true},
+                {data: 'popular', name:'popular',searchable: true, sortable: true},
+                {data: 'user', name:'user',searchable: true, sortable: true},
+                {data: 'created', name:'created',searchable: true, sortable:true},
                 {data: 'status', name:'status',searchable: true, sortable: false},
                 {data: 'action', name:'action',searchable: false, sortable: false}
             ],
@@ -112,4 +113,25 @@ jQuery(document).ready(function () {
     if (jQuery('.dataTables_filter').length > 0) {
         jQuery('.dataTables_filter').find('input').addClass('form-control')
     }
+    
+    $('.category-list').on('click','.status',function(){
+      var category_id = $(this).closest('.switch').data('id');
+      
+      $.ajax({
+          type: "POST",
+          data: {'category_id':category_id},
+          url: base_url + 'admin/category_status',
+          success: function (success) {
+              if (success.status == 1){
+                  toastr.success('Catégory activé');
+              }
+              else{
+                  toastr.warning('Catégory desactivé');
+              }
+          },
+          error: function (error) {
+              console.log(error);
+          }
+      });
+    });
 });

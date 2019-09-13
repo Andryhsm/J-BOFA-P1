@@ -9,7 +9,8 @@
   @section('content')
   @if(isset($details))
   <div class="container_view_project">
-    <form action="" type="POST">
+    <form action="{{route('create_devis')}}" method="POST">
+      {!! csrf_field() !!}
     <section class="header_project">
       <div class="content_header_project" style="background-image:url({!! url('/image/front/images/fond14.jpg') !!})">
         <div class="menus_header_project">
@@ -154,7 +155,7 @@
               </div>
               <div class="item_form_step1" id="chauffeau">
                   <label for="" class="title_item title_radio">Y a-t-il un chauffe-eau à désinstaller ?</label>
-                  <input type="hidden" name="chaffeau">
+                  <input type="hidden" name="chauffeau" value="0">
                   <div class="item_radio_step1">
                     <input type="radio" id="oui" name="work" value="oui"
                            checked>
@@ -206,7 +207,8 @@
               <div class="title_item_step2">
                 <label for="" >Votre civilitè : </label>
               </div>
-              <div class="champ_item_step2 champ_item_flex">
+              <input type="hidden" name="gender">
+              <div class="champ_item_step2 champ_item_flex" id="gender">
                 <div class="item_radio_step2">
                   <input type="radio" id="mr" name="work" value="mr">
                   <label for="mr">Monsieur</label>
@@ -240,32 +242,32 @@
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
                 <div class="item_input_step2 select_item_form_step2">
-                  <select class="form_select_step" id="sel1">
+                  <select class="form_select_step" id="sel1" name="category1">
                     <option value="selectionnez"> Sélectionnez une catégorie ...</option>
-                    <option>Particulier</option>
-                    <option>Societe</option>
-                    <option>Commercant</option>
-                    <option>Industriel</option>
-                    <option>Profession Liberale</option>
-                    <option>Syndic de copropriete</option>
-                    <option>Promoteur-constructeur</option>
-                    <option>Administration</option>
-                    <option>Association</option>
-                    <option>Architecte</option>
-                    <option>Agence immobiliere</option>
-                    <option>Autre</option>
+                    <option value="Particulier">Particulier</option>
+                    <option value="Societe">Societe</option>
+                    <option value="Commercant">Commercant</option>
+                    <option value="Industriel">Industriel</option>
+                    <option value="Profession Liberale">Profession Liberale</option>
+                    <option value="Syndic de copropriete">Syndic de copropriete</option>
+                    <option value="Promoteur-constructeur">Promoteur-constructeur</option>
+                    <option value="Administration">Administration</option>
+                    <option value="Association">Association</option>
+                    <option value="Architecte">Architecte</option>
+                    <option value="Agence immobiliere">Agence immobiliere</option>
+                    <option value="Autre">Autre</option>
                   </select>
                 </div>
                 <div class="item_input_step2 select_item_form_step2">
-                  <select class="form_select_step" id="sel2">
+                  <select class="form_select_step" id="sel2" name="category2">
                     <option value="selectionnez"> Sélectionnez une catégorie ...</option>
-                    <option>Locataire</option>
-                    <option>Proprietaire occupant</option>
-                    <option>Proprietaire bailleur</option>
-                    <option>Futur proprietaire</option>
-                    <option>Futur locataire</option>
-                    <option>Administrateur</option>
-                    <option>Autre</option>
+                    <option value="Locataire">Locataire</option>
+                    <option value="Proprietaire occupant">Proprietaire occupant</option>
+                    <option value="Proprietaire bailleur">Proprietaire bailleur</option>
+                    <option value="Futur proprietaire">Futur proprietaire</option>
+                    <option value="Futur locataire">Futur locataire</option>
+                    <option value="Administrateur">Administrateur</option>
+                    <option value="Autre">Autre</option>
                   </select>
                 </div>
               </div>
@@ -297,13 +299,13 @@
                 <label for="" >Horaires pour vous joindre : </label>
               </div>
               <div class="champ_item_step2 champ_item_flex_name select_item_form_step2">
-                <select class="form_select_step" id="horaire">
+                <select class="form_select_step" id="horaire" name="hour">
                   <option value="selectionnez"> -- : -- </option>
-                  <option>08 : 00 - 12 : 00</option>
-                  <option>12 : 00 - 14 : 00</option>
-                  <option>14 : 00 - 17 : 00</option>
-                  <option>17 : 00 - 18 : 00</option>
-                  <option>18 : 00 - 20 : 00</option>
+                  <option value="08 : 00 - 12 : 00">08 : 00 - 12 : 00</option>
+                  <option value="12 : 00 - 14 : 00">12 : 00 - 14 : 00</option>
+                  <option value="14 : 00 - 17 : 00">14 : 00 - 17 : 00</option>
+                  <option value="17 : 00 - 18 : 00">17 : 00 - 18 : 00</option>
+                  <option value="18 : 00 - 20 : 00">18 : 00 - 20 : 00</option>
                 </select>
               </div>
             </div>

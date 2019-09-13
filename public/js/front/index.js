@@ -33,7 +33,7 @@ $(document).ready(function(){
   			var value_dataUp = new RegExp(data.toLowerCase);
   			if( value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
   				position.push(index);
-  				var dropdown = '<li class="rechercheVal" data-id="'+ids[index]+'"><a href="'+base_url+'/view_project/'+ids[index]+'">'+currencies[index]+'</a></li>';
+  				var dropdown = '<a href="'+base_url+'view_project/'+ids[index]+'"><li class="rechercheVal" data-id="'+ids[index]+'">'+currencies[index]+'</li></a>';
   				trie.push(dropdown);
   			}
   			

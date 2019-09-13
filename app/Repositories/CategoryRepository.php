@@ -44,8 +44,21 @@ class CategoryRepository implements  CategoryRepositoryInterface{
             $this->model->status = 1;
         }
         $this->model->save();
-        $user = $this->findCategory($id);
-        return $user;
+        $status = $this->findCategory($id);
+        return $status;
+    }
+
+    public function changePopular($id){
+        $this->model = $this->model->find($id);
+        if ($this->model->ispopular == 1){
+            $this->model->ispopular = 0;
+        }
+        else{
+            $this->model->ispopular = 1;
+        }
+        $this->model->save();
+        $popular = $this->findCategory($id);
+        return $popular;
     }
 
     public function deleteCategory($id){
