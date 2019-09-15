@@ -5,6 +5,7 @@
       {!! Html::style('css/front/faq.css') !!}
       {!! Html::style('css/front/faq_responsive.css') !!}
       {!! Html::style('css/front/how_work.css') !!}
+      {!! Html::style('css/front/how_work_responsive.css') !!}
   @endsection
 
   @section('content')
@@ -38,7 +39,78 @@
 
     <!-- page qui nous sommes -->
     <div class="content_faq" id="tab-4">
-      page about
+      <div class="about_chiffrage">
+        <label class="titre_chiffrage">Les chiffres de nos oeuvres</label>
+        <div class="content_chiffrage">
+          <div class="item_chiffrage">
+            <label class="numbre_chiffrage">20 000</label>
+            <label class="name_chiffrage">PROFESSIONNELS</label>
+          </div>
+          <div class="item_chiffrage">
+            <label class="numbre_chiffrage">30 000</label>
+            <label class="name_chiffrage">AVIS CLIENTS</label>
+          </div>
+          <div class="item_chiffrage">
+            <label class="numbre_chiffrage">10 ANS</label>
+            <label class="name_chiffrage">D’EXPERTISE</label>
+          </div>
+        </div>
+        <div class="separate_about"></div>
+      </div>
+
+      <div class="about_history">
+        <div class="row_history">
+          <img src="{!! url('/image/faq/renover-carrelage-1.jpg') !!}" class="image_histoyr" alt="" />
+          <dir class="row_text_history">
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+            <img src="{!! url('/image/faq/img_doublequote_before.png') !!}" class="guillemets" alt="" />
+          </dir>
+        </div>
+        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+
+        <!-- <div class="separate_about"></div> -->
+      </div>
+      <section class="content_page_how_work">
+        <label for="" class="title_content">COMMENT ÇA MARCHE ?</label>
+        <div class="item_liste_how_work">
+          <div class="how_work_item">
+            <div class="image_liste_work">
+              <img src="{!! url('/image/front/how_work/how2.jpg') !!}" class="" alt="" />
+            </div>
+            <div class="text_how_work">
+              <label for="" class="title_how_work">Je decris mon projet </label>
+              <label for="" class="text_descr">Vous recevrez jusqu'à 5 devis</label>
+            </div>
+          </div>
+
+          <div class="separator_item">
+            <i class="fa fa-long-arrow-right"></i>
+          </div>
+          <div class="how_work_item">
+            <div class="image_liste_work">
+              <img src="{!! url('/image/front/how_work/how3.jpg') !!}" class="" alt="" />
+            </div>
+            <div class="text_how_work">
+              <label for="" class="title_how_work">Nos professionnels qualifiés vous contacte</label>
+              <label for="" class="text_descr"></label>
+            </div>
+          </div>
+          <div class="separator_item">
+            <i class="fa fa-long-arrow-right"></i>
+          </div>
+          <div class="how_work_item">
+            <div class="image_liste_work">
+              <img src="{!! url('/image/front/how_work/how1.jpg') !!}" class="" alt="" />
+            </div>
+            <div class="text_how_work">
+              <label for="" class="title_how_work">Choisissez votre artisans </label>
+              <label for="" class="text_descr">Selon la qualité prix </label>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </div>
 
     <!-- Page Recrutements -->
