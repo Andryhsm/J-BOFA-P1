@@ -86,9 +86,7 @@ Route::namespace('Front')->group(function () {
     Route::get('help_me', function () {
         return view('front.categories.help_me');
     });
-     Route::get('renovation', function () {
-        return view('front.categories.categories');
-    });
+     Route::get('renovation','CategoryController@renovation');
     /* End Devis and presentation catégories*/
 });
 /*end front router*/

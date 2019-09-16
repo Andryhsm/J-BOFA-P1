@@ -87,7 +87,7 @@
         </div>
         <div class="description_projet">
           <div class="image_step_project">
-            <img class="img_step1" src="{!! url('/image/projects/chauffe_eau.jpg') !!}" alt="">
+            <img class="img_step1" src="{!! (isset($details->image)) ? url('/image/Category/'.$details->image): url('/image/front/icones/carte_project.png') !!}" alt="">
           </div>
 
           <div class="text_desc_step1">
