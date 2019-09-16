@@ -38,6 +38,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::resource('category','CategoryController');
     Route::get('get_all','CategoryController@getAll');
     Route::post('/category_status','CategoryController@updateStatus');
+    Route::post('/category_popular','CategoryController@updatePopular');
     /*End category*/
 
     /*start faq */
@@ -74,7 +75,10 @@ Route::namespace('Front')->group(function () {
     Route::get('tarif', function () {
         return view('front.page.tarif');
     });
+    /**** Devis  ****/
     Route::get('view_project/{id}','LoginController@viewProject');
+    Route::post('create_devis','DevisController@createDevis')->name('create_devis');
+    /**** End Devis ****/
     /** DEvis and presentation catégories */
     Route::get('tarif_hour', function () {
         return view('front.categories.tarif_hour');
@@ -82,9 +86,7 @@ Route::namespace('Front')->group(function () {
     Route::get('help_me', function () {
         return view('front.categories.help_me');
     });
-     Route::get('renovation', function () {
-        return view('front.categories.categories');
-    });
+     Route::get('renovation','CategoryController@renovation');
     /* End Devis and presentation catégories*/
 });
 /*end front router*/

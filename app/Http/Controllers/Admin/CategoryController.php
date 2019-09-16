@@ -154,6 +154,25 @@ class CategoryController extends Controller
                 return $category->name;
             }
                 
+        })->EditColumn('popular', function ($category) {
+            switch ($category->ispopular) {
+              case 0:
+                return '<div class="switch-container position-relative form-group">
+                            <label class="switch" data-id="'.$category->id.'">
+                              <input type="checkbox" class="form-check-input popular" >
+                              <span class="slider round"></span>
+                            </label>
+                        </div>';
+                break; 
+              case 1:
+                return '<div class="switch-container position-relative form-group">
+                            <label class="switch" data-id="'.$category->id.'">
+                              <input type="checkbox" class="form-check-input popular" checked>
+                              <span class="slider round"></span>
+                            </label>
+                        </div>';
+                break;  
+             }
         })->EditColumn('user', function ($category) {
             if(isset($category->created_by)){    
                 return $category->admin->first_name.' '.$category->admin->last_name;
@@ -166,7 +185,7 @@ class CategoryController extends Controller
                  case 0:
                     return '<div class="switch-container position-relative form-group">
                                 <label class="switch" data-id="'.$category->id.'">
-                                  <input type="checkbox" class="form-check-input" >
+                                  <input type="checkbox" class="form-check-input status" >
                                   <span class="slider round"></span>
                                 </label>
                             </div>';
@@ -174,7 +193,7 @@ class CategoryController extends Controller
                 case 1:
                     return '<div class="switch-container position-relative form-group">
                                 <label class="switch" data-id="'.$category->id.'">
-                                  <input type="checkbox" class="form-check-input" checked>
+                                  <input type="checkbox" class="form-check-input status" checked>
                                   <span class="slider round"></span>
                                 </label>
                             </div>';
@@ -185,12 +204,17 @@ class CategoryController extends Controller
         })->EditColumn('action', function ($category) {
             return view("admin.category.action", ['category' => $category]);
         });
-        return $data_tables->rawColumns(['status','action'])->make(true);
+        return $data_tables->rawColumns(['status','action','popular'])->make(true);
     }
     public function updateStatus(Request $request){
         $id = $request->all()['category_id'];
         $status = $this->category_repository->changeStatus($id);
         return $status;
+    }
+    public function updatePopular(Request $request){
+        $id = $request->all()['category_id'];
+        $popular = $this->category_repository->changePopular($id);
+        return $popular;
     }
 
     public function uploadImage($request)

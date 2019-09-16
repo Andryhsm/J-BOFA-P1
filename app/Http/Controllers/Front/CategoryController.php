@@ -26,4 +26,9 @@ class CategoryController extends Controller
         }
         return $values;
     }
+
+    public function renovation(){
+        $categories = $this->category_repository->getCategory();
+        return view('front.categories.categories',compact('categories'));
+    }
 }

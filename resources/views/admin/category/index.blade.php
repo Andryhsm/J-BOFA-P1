@@ -22,6 +22,7 @@
                             <thead>
                             <tr>
                                 <th>Nom cat&eacute;gories</th>
+                                <th>Populaire</th>
                                 <th>Cr&eacute;e par</th>
                                 <th>Cr&eacute;e le</th>
                                 <th>Status</th>
@@ -85,19 +86,19 @@
         });
     });
 
-      $('.category-list').on('click','.form-check-input',function(){
+      $('.category-list').on('click','.popular',function(){
         var category_id = $(this).closest('.switch').data('id');
         
         $.ajax({
             type: "POST",
             data: {'category_id':category_id},
-            url: base_url + 'admin/category_status',
+            url: base_url + 'admin/category_popular',
             success: function (success) {
-                if (success.status == 1){
-                    toastr.success('Catégory activé');
+                if (success.ispopular == 1){
+                    toastr.success('Popularité activé');
                 }
                 else{
-                    toastr.warning('Catégory desactivé');
+                    toastr.warning('Popularité desactivé');
                 }
             },
             error: function (error) {

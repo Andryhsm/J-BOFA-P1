@@ -199,3 +199,161 @@
   border: 1px solid #0062ae;
 }
 /* End page recrutement */
+
+/** Page About "Qui nous sommes "*/
+.about_chiffrage, .about_history {
+    width: 100%;
+    padding: 5% 10%;
+    background-color: #efefed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.separate_about {
+    width: 45%;
+    border-bottom: 1px solid #044651;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.44);
+    position: absolute;
+    bottom: 0;
+}
+.titre_chiffrage {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    color: #0062ae;
+}
+.content_chiffrage {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 5%;
+}
+.item_chiffrage {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: 10px solid #0062ae;
+}
+.numbre_chiffrage {
+  font-size: 40px;
+  font-weight: 600;
+  color: #65bb9f;
+  margin: 0;
+}
+.name_chiffrage {
+  text-transform: uppercase;
+  color: #0062ae;
+  text-decoration: underline;
+}
+.row_history {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row_history .image_histoyr {
+  width: 48%;
+  height: 100%;
+  object-fit: cover;
+}
+.row_text_history {
+  flex: 1;
+  position: relative;
+}
+.row_text_history p, .about_history p {
+  font-size: 17px;
+  margin-top: 2rem;
+  text-align: justify;
+}
+.guillemets {
+  position: absolute;
+  top: -2rem;
+  opacity: 0.5;
+}
+/** End Page About "Qui nous sommes "*/
+
+/** PAge Temoignage */
+.about_temoin {
+    width: 100%;
+    padding: 5% 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titre_temoin {
+    width: 100%;
+    margin-bottom: 5%;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 5%;
+}
+.title_content_temoin {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #0062ae;
+    margin-bottom: 4%;
+}
+.text_content_temoin {
+  font-size: 17px;
+  padding: 0 10%;
+}
+
+.text_content_temoin strong {
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.content_tem {
+  width: 100%;
+}
+.item_tem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid #707070;
+  padding: 0 1rem 0 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+.image_icon_tem {
+  width: 160px;
+  height: 160px;
+  margin-right: 2rem;
+  background-color: #efefed;
+}
+.image_icon_tem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text_tem {
+    flex: 1;
+    max-height: 160px;
+    overflow: auto;
+}
+.text_tem p{
+    margin: 0;
+    width: 100%;
+    text-align: justify;
+}
+.item_tem:hover {
+  border: 2px solid #0062ae;
+  transition: all 0.5s ease 0s;
+}
+.item_tem:hover .image_icon_tem{
+  background-color: #0062ae;
+  transition: all 0.5s ease 0s;
+}
+/** End page Temoignage*/
+

@@ -7,12 +7,15 @@
   @endsection
 
   @section('content')
+  @if(isset($details))
   <div class="container_view_project">
+    <form action="{{route('create_devis')}}" method="POST">
+      {!! csrf_field() !!}
     <section class="header_project">
       <div class="content_header_project" style="background-image:url({!! url('/image/front/images/fond14.jpg') !!})">
         <div class="menus_header_project">
           <a href="#" class="menus_project">ACCEUIL</a> /
-          <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">@if(isset($details)) {{$details->name}} @endif</label></a>
+          <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">{{$details->name}}</label></a>
         </div>
         <div class="chearch_project" id="parent">
           <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
@@ -79,15 +82,16 @@
       <div class="step_nav active" id="step-1">
         <div class="title_step">
           <label for="" class="simple_text">Titre du projet: </label>
-          <label for="" class="texte_title_step">@if(isset($details)) {{$details->name}} @endif</label>
+          <label for="" class="texte_title_step">{{$details->name}}</label>
+          <input type="hidden" name="id_category" value="{{$details->id}}"> 
         </div>
         <div class="description_projet">
           <div class="image_step_project">
-            <img class="img_step1" src="{!! url('/image/projects/chauffe_eau.jpg') !!}" alt="">
+            <img class="img_step1" src="{!! (isset($details->image)) ? url('/image/Category/'.$details->image): url('/image/front/icones/carte_project.png') !!}" alt="">
           </div>
 
           <div class="text_desc_step1">
-            <label for="">@if(isset($details)){{ ($details->description) ? $details->description : "Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans." }} @endif</label>
+            <label for="">{{ ($details->description) ? $details->description : "Le choix est vaste pour un chauffe-eau : électrique, à gaz, ou solaire. Il est important de choisir un modèle adapté aux besoins du logement et de ses occupants. Pour y parvenir, il est préférable d'être conseillé par un professionnel. L'achat et l'installation seront alors soumis à une TVA à taux réduit si le logement a plus de cinq ans." }} </label>
           </div>
         </div>
         <div class="info_step1">
@@ -97,32 +101,34 @@
           <div class="form_info_step1">
             <div class="item_form_step1">
               <label for="" class="title_item ">Code Postal *</label>
-              <input type="text" name="" id="postal_code" class="input_form_step1" placeholder="Votre code postal">
+              <input type="text" name="" id="postal_code" class="input_form_step1" placeholder="Votre code postal" required="">
             </div>
-            <div class="item_form_step1">
+            <div class="item_form_step1" id="travaux_type">
               <label for="" class="title_item title_radio">Type de travaux</label>
+              <input type="hidden" name="travaux">
               <div class="item_radio_step1">
-                  <input type="radio" id="remplacement" name="work" value="remplacement"
-                         checked>
-                  <label for="remplacement">Remplacement</label>
-                </div>
+                <input type="radio" id="remplacement" name="work" value="remplacement"
+                       checked>
+                <label for="remplacement">Remplacement</label>
+              </div>
 
-                <div class="item_radio_step1">
-                  <input type="radio" id="installation" name="work" value="installation">
-                  <label for="installation">Installation neuve</label>
-                </div>
+              <div class="item_radio_step1">
+                <input type="radio" id="installation" name="work" value="installation">
+                <label for="installation">Installation neuve</label>
+              </div>
 
-                <div class="item_radio_step1">
-                  <input type="radio" id="reparation" name="work" value="reparation">
-                  <label for="reparation">Réparation neuve</label>
-                </div>
-                <div class="item_radio_step1">
-                  <input type="radio" id="entretient" name="work  " value="entretient">
-                  <label for="entretient">Entretient/Maintenance</label>
-                </div>
+              <div class="item_radio_step1">
+                <input type="radio" id="reparation" name="work" value="reparation">
+                <label for="reparation">Réparation neuve</label>
+              </div>
+              <div class="item_radio_step1">
+                <input type="radio" id="entretient" name="work  " value="entretient">
+                <label for="entretient">Entretient/Maintenance</label>
+              </div>
             </div>
-            <div class="item_form_step1">
+            <div class="item_form_step1" id="prestation">
                   <label for="" class="title_item title_radio">Prestation souhaitée</label>
+                  <input type="hidden" name="prestation">
                   <div class="item_radio_step1">
                     <input type="radio" id="pose" name="work" value="pose"
                            checked>
@@ -147,8 +153,9 @@
                   </select>
                 </div>
               </div>
-              <div class="item_form_step1">
+              <div class="item_form_step1" id="chauffeau">
                   <label for="" class="title_item title_radio">Y a-t-il un chauffe-eau à désinstaller ?</label>
+                  <input type="hidden" name="chauffeau" value="0">
                   <div class="item_radio_step1">
                     <input type="radio" id="oui" name="work" value="oui"
                            checked>
@@ -189,7 +196,7 @@
                 <label for="" >Lieux des travaux : </label>
               </div>
               <div class="champ_item_step2 select_item_form_step2">
-                <select class="form_select_step" id="ville">
+                <select class="form_select_step" id="ville" name="ville">
                   <option value="selectionnez"> Sélectionnez une ville ...</option>
                 </select>
               </div>
@@ -200,7 +207,8 @@
               <div class="title_item_step2">
                 <label for="" >Votre civilitè : </label>
               </div>
-              <div class="champ_item_step2 champ_item_flex">
+              <input type="hidden" name="gender">
+              <div class="champ_item_step2 champ_item_flex" id="gender">
                 <div class="item_radio_step2">
                   <input type="radio" id="mr" name="work" value="mr">
                   <label for="mr">Monsieur</label>
@@ -219,10 +227,10 @@
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
                 <div class="item_input_step2">
-                  <input type="text" name="" id="" class="input_form_step1" placeholder="Votre Nom">
+                  <input type="text" name="last_name" id="last_name" class="input_form_step1" placeholder="Votre Nom">
                 </div>
                 <div class="item_input_step2">
-                  <input type="text" name="" id="" class="input_form_step1" placeholder="Votre prénom">
+                  <input type="text" name="first_name" id="first_name" class="input_form_step1" placeholder="Votre prénom">
                 </div>
               </div>
             </div>
@@ -234,32 +242,32 @@
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
                 <div class="item_input_step2 select_item_form_step2">
-                  <select class="form_select_step" id="sel1">
+                  <select class="form_select_step" id="sel1" name="category1">
                     <option value="selectionnez"> Sélectionnez une catégorie ...</option>
-                    <option>Particulier</option>
-                    <option>Societe</option>
-                    <option>Commercant</option>
-                    <option>Industriel</option>
-                    <option>Profession Liberale</option>
-                    <option>Syndic de copropriete</option>
-                    <option>Promoteur-constructeur</option>
-                    <option>Administration</option>
-                    <option>Association</option>
-                    <option>Architecte</option>
-                    <option>Agence immobiliere</option>
-                    <option>Autre</option>
+                    <option value="Particulier">Particulier</option>
+                    <option value="Societe">Societe</option>
+                    <option value="Commercant">Commercant</option>
+                    <option value="Industriel">Industriel</option>
+                    <option value="Profession Liberale">Profession Liberale</option>
+                    <option value="Syndic de copropriete">Syndic de copropriete</option>
+                    <option value="Promoteur-constructeur">Promoteur-constructeur</option>
+                    <option value="Administration">Administration</option>
+                    <option value="Association">Association</option>
+                    <option value="Architecte">Architecte</option>
+                    <option value="Agence immobiliere">Agence immobiliere</option>
+                    <option value="Autre">Autre</option>
                   </select>
                 </div>
                 <div class="item_input_step2 select_item_form_step2">
-                  <select class="form_select_step" id="sel2">
+                  <select class="form_select_step" id="sel2" name="category2">
                     <option value="selectionnez"> Sélectionnez une catégorie ...</option>
-                    <option>Locataire</option>
-                    <option>Proprietaire occupant</option>
-                    <option>Proprietaire bailleur</option>
-                    <option>Futur proprietaire</option>
-                    <option>Futur locataire</option>
-                    <option>Administrateur</option>
-                    <option>Autre</option>
+                    <option value="Locataire">Locataire</option>
+                    <option value="Proprietaire occupant">Proprietaire occupant</option>
+                    <option value="Proprietaire bailleur">Proprietaire bailleur</option>
+                    <option value="Futur proprietaire">Futur proprietaire</option>
+                    <option value="Futur locataire">Futur locataire</option>
+                    <option value="Administrateur">Administrateur</option>
+                    <option value="Autre">Autre</option>
                   </select>
                 </div>
               </div>
@@ -271,7 +279,7 @@
                 <label for="" >Télèphone : </label>
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
-                <input type="number" name="" id="" class="input_form_step1" placeholder="Votre numéro de Téléphone">
+                <input type="number" name="phone" id="phone" class="input_form_step1" placeholder="Votre numéro de Téléphone">
               </div>
             </div>
           </div>
@@ -281,7 +289,7 @@
                 <label for="" >E-mail : </label>
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
-                <input type="email" name="" id="" class="input_form_step1" placeholder="Votre E-mail">
+                <input type="email" name="email" id="email" class="input_form_step1" placeholder="Votre E-mail">
               </div>
             </div>
           </div>
@@ -291,13 +299,13 @@
                 <label for="" >Horaires pour vous joindre : </label>
               </div>
               <div class="champ_item_step2 champ_item_flex_name select_item_form_step2">
-                <select class="form_select_step" id="horaire">
+                <select class="form_select_step" id="horaire" name="hour">
                   <option value="selectionnez"> -- : -- </option>
-                  <option>08 : 00 - 12 : 00</option>
-                  <option>12 : 00 - 14 : 00</option>
-                  <option>14 : 00 - 17 : 00</option>
-                  <option>17 : 00 - 18 : 00</option>
-                  <option>18 : 00 - 20 : 00</option>
+                  <option value="08 : 00 - 12 : 00">08 : 00 - 12 : 00</option>
+                  <option value="12 : 00 - 14 : 00">12 : 00 - 14 : 00</option>
+                  <option value="14 : 00 - 17 : 00">14 : 00 - 17 : 00</option>
+                  <option value="17 : 00 - 18 : 00">17 : 00 - 18 : 00</option>
+                  <option value="18 : 00 - 20 : 00">18 : 00 - 20 : 00</option>
                 </select>
               </div>
             </div>
@@ -383,10 +391,15 @@
           </div>
 
         </div>
+        <div class="btn_next_page">
+          <input type="submit" style="display: none;" id="valide" name="">
+          <button type="button" name="button" class="btn_next_form" id="btn-step-3">TERMINER</button>
+        </div>
       </div>
     </section>
-
+    </form>
   </div>
+  @endif
   @endsection
 
 

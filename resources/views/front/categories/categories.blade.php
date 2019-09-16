@@ -27,39 +27,43 @@
 			
 		</div>
 		<div class="title_item_cg">
-				<img src="{!! url('/image/front/icones/star.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation par pièce de la maison</label>
-			</div>
-		<div class="item_categories_form">
-			<div class="title_item_cg">
-				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation d’une salle de bain</label>
-			</div>
-			<div class="item_description">
-				 <div class="desc_row desc_column">
-				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/renover-salle-bain-1.jpg') !!}" class="img_cg" alt="" />
-						 <a class="link_project" href="#">
-							<div class="icons_link_project">
-								<i class="fa fa-tags"></i>
-							</div>
-							<label for="" class="title_link_project">Rénover sa salle de bain</label>
-						</a>
-				 	</div>
-				 	<div class="content_desc_row">
-				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Pour répondre à des utilisations très différentes, mais devant toutes êtres au top, la salle de bain doit être rafraîchie régulièrement.</p>
-				 		<p>On pourra effectuer des réparations au niveau des revêtements et des équipements, mais on pourra également modifier l’implantation totale de la pièce.</p>
-				 		<p>Pour vous aider dans cette rénovation qui peut être compliquée et intimidante, nous vous proposons un dossier complet consacré à la salle de bain sous toutes ses formes.</p>
-				 	</div>
-				 </div>
-			</div>
-			<button class="btn_view_devis">
-				<i class="fa fa-chevron-circle-right"></i>
-				Voir devis
-			</button>
-		</div>	
-		<div class="item_categories_form">
+			<img src="{!! url('/image/front/icones/star.svg') !!}" class="img_title_cg" alt="" />
+			<label class="title_cg">Rénovation par pièce de la maison</label>
+		</div>
+		@if(isset($categories))
+			@foreach($categories as $categorie)
+				<div class="item_categories_form">
+					<div class="title_item_cg">
+						<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
+						<label class="title_cg">{{$categorie->name}}</label>
+					</div>
+					<div class="item_description">
+						 <div class="desc_row desc_column">
+						 	<div class="image_desc_row">
+								 <img src="{!! (isset($categorie->image)) ? url('/image/Category/'.$categorie->image): url('/image/categories/renover-salle-bain-1.jpg') !!}" class="img_cg" alt="" />
+								 <a class="link_project" href="{{ Url('/view_project/'.$categorie->id.'') }}">
+									<div class="icons_link_project">
+										<i class="fa fa-tags"></i>
+									</div>
+									<label for="" class="title_link_project">Rénover sa {{$categorie->name}}</label>
+								</a>
+						 	</div>
+						 	<div class="content_desc_row">
+						 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
+						 		<p>Pour répondre à des utilisations très différentes, mais devant toutes êtres au top, la salle de bain doit être rafraîchie régulièrement.</p>
+						 		<p>On pourra effectuer des réparations au niveau des revêtements et des équipements, mais on pourra également modifier l’implantation totale de la pièce.</p>
+						 		<p>Pour vous aider dans cette rénovation qui peut être compliquée et intimidante, nous vous proposons un dossier complet consacré à la salle de bain sous toutes ses formes.</p>
+						 	</div>
+						 </div>
+					</div>
+					<a class="" href="{{ Url('/view_project/'.$categorie->id.'') }}"><button class="btn_view_devis">
+						<i class="fa fa-chevron-circle-right"></i>
+						Voir devis
+					</button></a>
+				</div>
+			@endforeach	
+		@endif
+		<!-- <div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
 				<label class="title_cg">Rénovation d’une cuisine</label>
@@ -202,7 +206,7 @@
 				<i class="fa fa-chevron-circle-right"></i>
 				Voir devis
 			</button>
-		</div>	
+		</div> -->	
 	</div>
 </section>
  @endsection

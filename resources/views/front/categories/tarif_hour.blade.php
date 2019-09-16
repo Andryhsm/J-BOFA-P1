@@ -64,15 +64,16 @@
 				Voir devis
 			</button>
 		</div>	
+		
 		<div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
 				<label class="title_cg">Tarif d’un géomètre</label>
 			</div>
 			<div class="item_description">
-				 <div class="desc_row desc_column_reverse">
+				 <div class="desc_row desc_column">
 				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/tarifs/tarif-geometre-1.jpg) !!}" class="img_cg" alt="" />
+						 <img src="{!! url('/image/categories/tarifs/tarif-geometre-1.jpg') !!}" class="img_cg" alt="" />
 						 <a class="link_project" href="#">
 							<div class="icons_link_project">
 								<i class="fa fa-tags"></i>
@@ -82,8 +83,8 @@
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Le géomètre intervient le plus souvent lorsqu’une parcelle est mise en vente ou lorsqu’il existe un litige sur le bornage d’un terrain ou l’implantation d’une maison.
-						Le géomètre est en effet un spécialiste des mesures de grandes distances sur des surfaces sauvages. Ce professionnel sait non seulement effectuer des mesures très précises de manière à vérifier l’implantation d’un bâtiment, mais surtout matérialiser sur le terrain, les indications du cadastre.</p>
+				 		<p>Le géomètre intervient le plus souvent lorsqu’une parcelle est mise en vente ou lorsqu’il existe un litige sur le bornage d’un terrain ou l’implantation d’une maison.</p>
+				 		<p>Le géomètre est en effet un spécialiste des mesures de grandes distances sur des surfaces sauvages. Ce professionnel sait non seulement effectuer des mesures très précises de manière à vérifier l’implantation d’un bâtiment, mais surtout matérialiser sur le terrain, les indications du cadastre.</p>
 				 		<p>Nous vous proposons quelques indications supplémentaires sur ce professionnel très discret, mais très important.</p>
 				 	</div>
 				 </div>
@@ -93,6 +94,7 @@
 				Voir devis
 			</button>
 		</div>	
+
 		<div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
@@ -122,6 +124,8 @@
 				Voir devis
 			</button>
 		</div>	
+
+
 		<div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
@@ -130,7 +134,7 @@
 			<div class="item_description">
 				 <div class="desc_row desc_column">
 				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/tarifs/prix-decorateur-interieur-1.jpg) !!}" class="img_cg" alt="" />
+						 <img src="{!! url('/image/categories/tarifs/prix-decorateur-interieur-1.jpg') !!}" class="img_cg" alt="" />
 						 <a class="link_project" href="#">
 							<div class="icons_link_project">
 								<i class="fa fa-tags"></i>
@@ -140,9 +144,8 @@
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Le décorateur d’intérieur s’apparente à un architecte, mais n’en est généralement pas un, proposant ainsi des frais moins élevés.Sa mission est généralement de proposer une planification esthétique et fonctionnelle d’un intérieur.</p>
+				 		<p>Le décorateur d’intérieur s’apparente à un architecte, mais n’en est généralement pas un, proposant ainsi des frais moins élevés. Sa mission est généralement de proposer une planification esthétique et fonctionnelle d’un intérieur.</p>
 				 		<p>Si vous désirez disposer d’un intérieur design et de qualité, sans pour autant devoir payer le prix élevé d’un architecte, le décorateur d’intérieur sera sans doute votre solution de choix.</p>
-				 		
 				 	</div>
 				 </div>
 			</div>
@@ -151,6 +154,8 @@
 				Voir devis
 			</button>
 		</div>	
+
+
 		<div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
@@ -169,7 +174,8 @@
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Le maître d’œuvre est le seul professionnel en mesure de vous proposer des services clés en main, du début à la fin. Il dispose généralement d’une équipe de professionnels et d’artisans qui est chargée de mettre en œuvre les décisions que vous prenez en amont.</p>
+				 		<p>Le maître d’œuvre est le seul professionnel en mesure de vous proposer des services clés en main, du début à la fin.</p>
+				 		<p>Il dispose généralement d’une équipe de professionnels et d’artisans qui est chargée de mettre en œuvre les décisions que vous prenez en amont.</p>
 				 		<p>Engager un maître d’œuvre est indispensable si vous désirez avoir une expérience construction ou rénovation simple, transparente et bien exécutée. Il faudra donc bien entendu ajouter ses honoraires à l’estimation du tarif horaire des artisans qui interviendront.</p>
 				 	</div>
 				 </div>
@@ -179,6 +185,7 @@
 				Voir devis
 			</button>
 		</div>	
+			
 		
 	</div>
 </section>

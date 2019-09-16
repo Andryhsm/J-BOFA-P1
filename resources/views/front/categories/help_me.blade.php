@@ -8,118 +8,86 @@
   @section('content')
 <section class="categories">
 	<div class="title_categories">
-		<h2>Rénover sa maison</h2>
+		<h2>Aides aux travaux : Guide complet des subventions</h2>
 	</div>
 	<div class="content_category">
 		<div class="item_categories_form">
 			<div class="item_description">
 				 <div class="desc_row desc_column">
 				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/renover-maison-1.jpg') !!}" class="img_cg" alt="" />
+						 <img src="{!! url('/image/categories/help_me/aides-travaux-quelles-possibilites-subvention.jpg') !!}" class="img_cg" alt="" />
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Les travaux du bâtiment ne sont pas toujours aisés. Si certains sont faciles d’accès, il est indubitable que d’autres sont très complexes et demandent une planification minutieuse. La rénovation d’une maison, qu’elle soit très ancienne ou simplement vieillotte, implique de recourir à divers travaux qui peuvent s’étaler du très simple au très compliqué.</p>
-				 		<p>Pour réduire les problèmes et les mauvaises surprises, il est donc important de préparer ses travaux à l’avance et de bien comprendre comment chaque étape de votre rénovation de maison peut se dérouler et s’articuler avec la suivante. Nous vous apportons donc un peu d’aide en mettant en lumière des points très précis que la très grande majorité des particuliers rencontrent lors d’une rénovation de maison.	</p>
+				 		<p>Réaliser des travaux de rénovation est très souvent un moment délicat que l’on doit négocier en souplesse. La partie technique des travaux peut créer des difficultés certaines, mais c’est en amont que la plupart des particuliers connaissent les plus gros obstacles. Toute rénovation demande en effet la préparation d’un budget qui peut parfois très vite enfler vers des sommes importantes. Les équipements sont onéreux et si l’on désire faire installer des solutions performantes, les montants peuvent créer un mur infranchissable.</p>
+				 		<p>C’est pour cette raison que les pouvoirs publics ont décidé de s’atteler au problème de la rénovation énergétique du parc immobilier français. Les équipements liés à l’énergie sont en effet les plus onéreux et sont ceux pour lesquels les particuliers les plus modestes ont le plus besoin d’aide.</p>
+				 		<p>Dans cette période de transition énergétique les objectifs internationaux sont évidemment centrés sur l’économie d’énergie. Il est donc du ressort des pouvoirs publics de pousser les particuliers, en difficulté ou non, à installer des équipements modernes et plus économiques. Les aides aux travaux énergétiques sont donc de plus en plus nombreuses et permettent vraiment de faire la différence. Voici notre dossier spécial consacré aux aides travaux en tous genres.</p>
 				 	</div>
 				 </div>
 			</div>
 			
 		</div>
-		<div class="title_item_cg">
-				<img src="{!! url('/image/front/icones/star.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation par pièce de la maison</label>
-			</div>
 		<div class="item_categories_form">
 			<div class="title_item_cg">
-				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation d’une salle de bain</label>
+				<img src="{!! url('/image/front/icones/star.svg') !!}" class="img_title_cg" alt="" />
+				<label class="title_cg">ANAH : Les aides travaux pour les plus modestes</label>
 			</div>
 			<div class="item_description">
 				 <div class="desc_row desc_column">
 				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/renover-salle-bain-1.jpg') !!}" class="img_cg" alt="" />
+						 <img src="{!! url('/image/categories/help_me/aides-anah-dossier-special-1.jpg') !!}" class="img_cg" alt="" />
 						 <a class="link_project" href="#">
 							<div class="icons_link_project">
 								<i class="fa fa-tags"></i>
 							</div>
-							<label for="" class="title_link_project">Rénover sa salle de bain</label>
+							<label for="" class="title_link_project">Les aides de l’ANAH notre dossier spécial</label>
 						</a>
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Pour répondre à des utilisations très différentes, mais devant toutes êtres au top, la salle de bain doit être rafraîchie régulièrement.</p>
-				 		<p>On pourra effectuer des réparations au niveau des revêtements et des équipements, mais on pourra également modifier l’implantation totale de la pièce.</p>
-				 		<p>Pour vous aider dans cette rénovation qui peut être compliquée et intimidante, nous vous proposons un dossier complet consacré à la salle de bain sous toutes ses formes.</p>
+				 		<p>L’Agence Nationale pour l’Amélioration de l’Habitat est une vénérable institution vouée à l’aide aux travaux orientée vers les plus modestes. Depuis les années 1970 l’agence a pour but d’améliorer la qualité de l’habitat français, en le poussant vers les technologies les plus modernes.</p>
+				 		<p>De nos jours, l’ANAH s’efforce d’encourager la transition énergétique en mettant en valeur les technologies propres et les énergies renouvelables.</p>
+				 		<p>Les aides proposées par l’ANAH ne sont pas négligeables et valent largement l’effort de découvrir leurs règlements et de monter un dossier.</p>
 				 	</div>
 				 </div>
 			</div>
-			<button class="btn_view_devis">
-				<i class="fa fa-chevron-circle-right"></i>
-				Voir devis
-			</button>
 		</div>	
 		<div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation d’une cuisine</label>
+				<label class="title_cg">A qui s’adressent les aides de l’ANAH ?</label>
 			</div>
 			<div class="item_description">
 				 <div class="desc_row desc_column_reverse">
-				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/renover-cuisine-1.jpg') !!}" class="img_cg" alt="" />
-						 <a class="link_project" href="#">
-							<div class="icons_link_project">
-								<i class="fa fa-tags"></i>
-							</div>
-							<label for="" class="title_link_project">Rénover sa cuisine</label>
-						</a>
-				 	</div>
+				 	
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>La cuisine est la deuxième pièce la plus rénovée par les Français. Lors d’une rénovation de ce type, on doit se concentrer sur les revêtements, les gaines techniques, mais également toute la partie mobilier et électroménager.</p>
-				 		<p>La cuisine est en effet une pièce où de très nombreux éléments se côtoient dans un espace généralement restreint. Toucher à un élément revient le plus souvent à rénover ceux qui l’entourent. La rénovation d’une cuisine possède donc un effet domino important que nous mettons en perspective dans notre dossier complet. Sans prétendre à l’exhaustivité, nous vous proposons un bouquet d’articles qui vous mettront votre pied à l’étrier de la très grande majorité des rénovations de cuisine constatées actuellement en France.</p>
+				 		<p>Les aides et subventions de l’ANAH s’adressent principalement aux plus modestes. Les aides sont en effet soumises à des plafonds de ressources qui constituent le premier critère qu’il faut considérer.</p>
+				 		<p>Si vos revenus sont inférieurs aux plafonds établis par l’ANAH, vous pourrez bénéficier de substantielles subventions pour vos travaux.</p>
+				 		<p>Sachez que plus votre famille est grande, plus les aides pour les travaux débloquées par l’ANAH sont importantes et plus le plafond de ressources est élevé.</p>
 				 	</div>
 				 </div>
 			</div>
-			<button class="btn_view_devis">
-				<i class="fa fa-chevron-circle-right"></i>
-				Voir devis
-			</button>
 		</div>	
 		<div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation d’une chambre</label>
+				<label class="title_cg">Quels sont les avantages des aides de l’ANAH ?</label>
 			</div>
 			<div class="item_description">
 				 <div class="desc_row desc_column">
-				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/renover-chambre-1.jpg') !!}" class="img_cg" alt="" />
-						 <a class="link_project" href="#">
-							<div class="icons_link_project">
-								<i class="fa fa-tags"></i>
-							</div>
-							<label for="" class="title_link_project">Rénover sa chambre</label>
-						</a>
-				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Nous passons presque la moitié de nos vies dans la chambre. Même si nous y dormons le plus souvent, la chambre est également un havre de pays, de sécurité et de relaxation. Une rénovation de maison implique donc souvent de considérer la chambre.</p>
-				 		<p>Le plus souvent, les rénovations de chambre interviennent pour deux raisons principales. La première est de réactualiser une chambre d’enfant ou d’ado lorsque l’ambiance adonnée n’est plus pertinente. On rénovera par exemple une chambre d’enfant lorsque ce dernier devient un ado.</p>
-				 		<p>La seconde raison principale est de rafraîchir une chambre de maître en améliorant son confort son esthétique et ses capacités techniques : dressings, salle de bain intégrée et ambiance zen sont les principaux éléments de ce type de rénovation de chambre.</p>
+				 		<p>Les aides aux travaux de l’ANAH sont de vraies aides réellement efficaces pour les foyers les plus modestes. Les montants disponibles permettent aux moins fortunés d’accéder à des équipements ou des matériaux modernes, propres et très efficaces sur le long terme.</p>
+				 		<p>Grâce à l’ANAH ont peut désormais sortir de la précarité énergétique sans se ruiner et faire un geste pour améliorer l’état de la planète. Une excellente initiative que nous conseillons à tous ceux dont les revenus sont sous les plafonds de ressources.</p>
 				 	</div>
 				 </div>
 			</div>
-			<button class="btn_view_devis">
-				<i class="fa fa-chevron-circle-right"></i>
-				Voir devis
-			</button>
 		</div>	
 		<div class="item_categories_form">
 			<div class="title_item_cg">
-				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation d’un salon</label>
+				<img src="{!! url('/image/front/icones/star.svg') !!}" class="img_title_cg" alt="" />
+				<label class="title_cg">CITE : Un crédit d’impôt intelligent</label>
 			</div>
 			<div class="item_description">
 				 <div class="desc_row desc_column">
@@ -129,79 +97,74 @@
 							<div class="icons_link_project">
 								<i class="fa fa-tags"></i>
 							</div>
-							<label for="" class="title_link_project">Rénover son salon</label>
+							<label for="" class="title_link_project">Le CITE : Pour vos rénovations énergétiques</label>
 						</a>
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Soirées festives entre amis, nuits cinéma en famille, repas convivial du dimanche, le salon est une pièce multiface devant répondre à de très nombreux critères, dont le niveau de qualité est sans cesse à la hausse.</p>
-				 		<p>Il est donc tout naturel qu’une rénovation de maison s’oriente à un certain moment vers le salon. Il s’agit généralement de déterminer quels sont les revêtements les plus adaptés et de trouver l’esthétique la plus en accord avec les besoins des habitants.</p>
-				 		<p>On pourra également s’orienter vers des équipements supplémentaires au rang desquels les cheminées et les poêles figurent en bonne place. Nous vous proposons donc des idées déco et rénovation pour redonner à votre salon l’éclat du neuf.</p>
+				 		<p>Les subventions pour les travaux peuvent également prendre des formes inattendues. C’est le cas du CITE. Cette aide aux travaux énergétiques permet de bénéficier d’une réduction de ses impôts. Le CITE est une initiative très efficace du gouvernement, qui s’efforce continuellement de la mettre en évidence auprès des particuliers.</p>
+				 		<p>Contrairement à beaucoup de rumeurs récentes, le CITE est maintenu pour les années à venir, aussi vous pouvez envisager cette option très sereinement. Notre guide détaillé répondra à toutes vos questions sur le sujet.</p>
 				 	</div>
 				 </div>
 			</div>
-			<button class="btn_view_devis">
-				<i class="fa fa-chevron-circle-right"></i>
-				Voir devis
-			</button>
 		</div>	
 		<div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation d’une véranda</label>
+				<label class="title_cg">Le CITE, une aide ouverte à tous</label>
 			</div>
 			<div class="item_description">
 				 <div class="desc_row desc_column">
-				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/renover-veranda-1.jpg') !!}" class="img_cg" alt="" />
-						 <a class="link_project" href="#">
-							<div class="icons_link_project">
-								<i class="fa fa-tags"></i>
-							</div>
-							<label for="" class="title_link_project">Rénover sa véranda</label>
-						</a>
-				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Les vérandas sont des pièces désormais modernes et similaires aux autres pièces de la maison, mais ce ne fut pas toujours le cas. En effet, à l’origine les vérandas étaient des pièces vitrées destinées à n’être utilisées que durant les périodes les plus chaudes.</p>
-				 		<p>Il est donc tout à fait logique que ces vérandas anciennes appellent de nos jours une rénovation profonde. Le moment idéal est souvent celui de la rénovation d’une maison juste après achat, au moment où des travaux profonds et structurels peuvent être entrepris sans dérangement excessif.</p>
-				 		<p>On devra donc considérer les revêtements de sol, les équipements techniques, le chauffage et surtout la qualité du vitrage et de la structure de la véranda. Nos conseils vous guideront vers le choix de la véranda la plus indiquée pour votre situation.</p>
+				 		<p>Le CITE est une aide aux travaux ouverte à tous, sans aucune distinction de revenus ou de patrimoine.</p>
+				 		<p>Pourtant, cette subvention pour les travaux prenant la forme d’une réduction d’impôts, on pourrait penser qu’elle ne s’adresse qu’à ceux qui sont imposables.</p>
+				 		<p>Il n’en est rien, car les pouvoirs publics ont pris la décision de l’ouvrir à tous les foyers fiscaux. Ceux qui ne sont pas imposables reçoivent un montant par virement bancaire.</p>
+				 		<p>Le CITE est donc plus que jamais une subvention pour les travaux efficace et très avantageuse pour les Français.</p>
 				 	</div>
 				 </div>
 			</div>
-			<button class="btn_view_devis">
-				<i class="fa fa-chevron-circle-right"></i>
-				Voir devis
-			</button>
 		</div>	
 		<div class="item_categories_form">
 			<div class="title_item_cg">
 				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
-				<label class="title_cg">Rénovation de combles</label>
+				<label class="title_cg">Pourquoi opter pour le CITE ?</label>
+			</div>
+			<div class="item_description">
+				 <div class="desc_row desc_column">
+				 	<div class="content_desc_row">
+				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
+				 		<p>Il faudrait plutôt se demander pourquoi ne pas opter pour le CITE tant cette aide pour les travaux est efficace.</p>
+				 		<p>Le CITE est cumulable avec toutes les autres aides et subventions et permet de réduire encore plus la facture d’un projet énergétique.</p>
+				 		<p>Les démarches sont relativement simples, car elles ne consistent qu’en quelques cases à remplir sur la déclaration de revenus et en la conservation des justificatifs relatifs aux travaux engagés.</p>
+				 	</div>
+				 </div>
+			</div>
+		</div>	
+		<div class="item_categories_form">
+			<div class="title_item_cg">
+				<img src="{!! url('/image/front/icones/star_g.svg') !!}" class="img_title_cg" alt="" />
+				<label class="title_cg">Éco PTZ : Un prêt avantageux</label>
 			</div>
 			<div class="item_description">
 				 <div class="desc_row desc_column">
 				 	<div class="image_desc_row">
-						 <img src="{!! url('/image/categories/renover-chambre-1.jpg') !!}" class="img_cg" alt="" />
+						 <img src="{!! url('/image/categories/help_me/interets-nuls-travaux-eco-ptz-1.jpg') !!}" class="img_cg" alt="" />
 						 <a class="link_project" href="#">
 							<div class="icons_link_project">
 								<i class="fa fa-tags"></i>
 							</div>
-							<label for="" class="title_link_project">Rénover ses combles</label>
+							<label for="" class="title_link_project">Éco PTZ : Des intérêts nuls pour vos travaux</label>
 						</a>
 				 	</div>
 				 	<div class="content_desc_row">
 				 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-				 		<p>Toute maison, sauf toit plat, possède des combles. Ces derniers sont la partie située directement sous la toiture et formant l’isolation pleine et entière de la toiture et donc d’environ 30% de la maison.</p>
-				 		<p>La rénovation d’une maison s’arrête très souvent sur l’étape combles, car ces derniers peuvent présenter des avantages considérables. En effet, les combles forment le plus souvent un espace particulièrement large que l’on peut aménager et rendre habitables lors d’une rénovation. Il faut donc dans ce cas se lancer dans une rénovation relativement profonde pouvant faire appel à des intervenants très variés.</p>
-				 		<p>Si vous ne désirez pas aller jusqu’à l’aménagement des combles, il faudra sans doute cependant assurer une rénovation plus légère de manière à renforcer ou à améliorer l’isolation de la toiture.</p>
+				 		<p>Nous avons tous entendu parler des prêts à taux zéro. Cependant il s’agit le plus souvent d’aides et de subventions temporaires pour la construction, de manière à dynamiser le secteur du bâtiment.</p>
+				 		<p>L’Éco PTZ, plus discret, est en revanche une aide permanente destinée à aider les particuliers à accéder à un prêt pour la réalisation d’une rénovation énergétique.</p>
+				 		<p>Le but de l’Éco PTZ est de permettre aux particuliers de s’offrir un équipement plus onéreux et plus performant, ou tout simplement de donner accès à des appareils modernes aux plus modestes.</p>
 				 	</div>
 				 </div>
 			</div>
-			<button class="btn_view_devis">
-				<i class="fa fa-chevron-circle-right"></i>
-				Voir devis
-			</button>
 		</div>	
 	</div>
 </section>
