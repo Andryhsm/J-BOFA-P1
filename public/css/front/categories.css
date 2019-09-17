@@ -121,3 +121,31 @@
 	background: #0062ae;
 	transition: all 0.5s ease 0s;
 }
+
+@media screen and (max-width: 780px) {
+    .content_category {
+        padding: 0 4%;
+    }
+    .image_desc_row {
+        height: 260px;
+        width: 100%;
+    }
+    .img_cg {
+        height: 100%;
+    }
+}
+@media screen and (max-width: 415px) {
+    .title_categories {
+        margin-top: 3rem;
+    }
+    .title_categories h2{
+        text-align: center;
+        font-size: 25px !important;
+    }
+    .title_cg {
+        font-size: 18px;
+    }
+    .link_project {
+        font-size: 18px;
+    }
+}

@@ -1,3 +1,10 @@
+@media screen and (max-width: 915px) {
+    .item_chiffrage {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .liste_menu {
         flex-direction: column;
@@ -9,5 +16,12 @@
     }
     .item_response {
         width: 100%;
+    }
+    .row_history {
+        flex-wrap: wrap;
+    }
+    .row_history .image_histoyr {
+        width: 100%;
+        margin-right: 0;
     }
 }

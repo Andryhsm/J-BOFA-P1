@@ -25,9 +25,9 @@
         <div class="item_menu" data-tab="tab-4" id="about_menus">
           <label for="" class="title_menu">Qui nous sommes?</label>
         </div>
-        <div class="item_menu" data-tab="tab-3" id="recrutement_menus">
+        <!-- <div class="item_menu" data-tab="tab-3" id="recrutement_menus">
           <label for="" class="title_menu">Recrutement</label>
-        </div>
+        </div> -->
         <div class="item_menu" data-tab="tab-2" id="temoignages_menus">
           <label for="" class="title_menu">Temoignages</label>
         </div>
@@ -61,10 +61,10 @@
       <div class="about_history">
         <div class="row_history">
           <img src="{!! url('/image/faq/renover-carrelage-1.jpg') !!}" class="image_histoyr" alt="" />
-          <dir class="row_text_history">
+          <div class="row_text_history">
             <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
             <img src="{!! url('/image/faq/img_doublequote_before.png') !!}" class="guillemets" alt="" />
-          </dir>
+          </div>
         </div>
         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
 
@@ -114,7 +114,7 @@
     </div>
 
     <!-- Page Recrutements -->
-    <div class="content_faq" id="tab-3">
+   <!-- <div class="content_faq" id="tab-3">
       <div class="title_recutement">
         <label class="simple_title_recrutement">Vous êtes plein d’enthousiasme et souhaitez rejoindre une équipe dynamique ? Vous souhaitez bouleverser l’univers des travaux ? </label>
         <label class="bold_title_recrutement">Bienvenue à Tous !</label>
@@ -126,7 +126,7 @@
       <div class="btn_recrutement">
         <button class="see_offre">Voir les offres</button>
       </div>  
-    </div>
+    </div> -->
 
     <!-- Page Temoignages -->
     <div class="content_faq" id="tab-2">
