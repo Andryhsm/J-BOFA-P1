@@ -92,6 +92,7 @@ class TemoinController extends Controller
     {
         //
         $this->temoin_repo->updateTemoin($id,$request->all());
+        toastr()->success('Modification réussie!');
         return redirect('admin/temoignage');
     }
 

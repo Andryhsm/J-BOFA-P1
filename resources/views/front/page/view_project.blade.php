@@ -103,7 +103,6 @@
               <label for="" class="title_item ">Code Postal *</label>
               <input type="text" name="" id="postal_code" class="input_form_step1" placeholder="Votre code postal" required="">
             </div>
-            @if($details->name == "Chauffe-eau")
             <div class="item_form_step1" id="travaux_type">
               <label for="" class="title_item title_radio">Type de travaux</label>
               <input type="hidden" name="travaux">
@@ -154,6 +153,8 @@
                   </select>
                 </div>
               </div>
+
+            @if($details->name == "Chauffe-eau")
               <div class="item_form_step1" id="chauffeau">
                   <label for="" class="title_item title_radio">Y a-t-il un chauffe-eau à désinstaller ?</label>
                   <input type="hidden" name="chauffeau" value="0">
