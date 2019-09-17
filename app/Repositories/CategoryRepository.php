@@ -70,7 +70,8 @@ class CategoryRepository implements  CategoryRepositoryInterface{
         $this->model->name = $data['name'];
         $this->model->description = $data['description'];
         $this->model->status = $data['inputStatus'];
-        $this->model->ispopular = $data['isPopular'];
+        if(isset($data['isPopular']))
+            $this->model->ispopular = $data['isPopular'];
         if (isset($data['inputPhoto'])) {
             $this->model->image = $data['inputPhoto'];
         }
@@ -83,5 +84,9 @@ class CategoryRepository implements  CategoryRepositoryInterface{
 
     public function getPopular(){
         return $this->model->where('status',1)->where('ispopular',1)->get();
+    }
+
+    public function getRandom(){
+        return $this->model->get()->random(3);
     }
 }

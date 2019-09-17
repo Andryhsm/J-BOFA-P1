@@ -31,8 +31,7 @@ $(document).ready(function(){
     
   });
   // activation step 2
-  $('.btn_next_page').on('click', '#btn-step-2', function() {
-    console.log($('.container_view_project').find('#ville').val());
+  $('.btn_next_page').on('click', '#btn-step-3', function() {
     var value = true;
     // console.log($(this).closest('.btn_next_page').closest('#step-1').siblings('#step-2').html());
     var sel1 = $('.container_view_project').find('#sel1').val();
@@ -42,7 +41,6 @@ $(document).ready(function(){
     var first_name = $('.container_view_project').find('#first_name').val();
     var email = $('.container_view_project').find('#email').val();
     var phone = $('.container_view_project').find('#phone').val();
-    console.log(horaire)
     if(horaire=="" || horaire=="selectionnez"){
       $('.container_view_project').find('#horaire').focus();
       value=false;
@@ -64,6 +62,8 @@ $(document).ready(function(){
       $('.container_view_project').find('#sel1').focus();
       value = false;
     }
+    var gender = $('.container_view_project').find('#gender').siblings('input').val();
+    
     if(first_name==""){
       value = false;
       $('.container_view_project').find('#first_name').focus();
@@ -72,10 +72,18 @@ $(document).ready(function(){
       value = false;
       $('.container_view_project').find('#last_name').focus();
     }
+    if(gender == ""){
+      $('.container_view_project').find('#gender #mr').focus();
+      toastr.warning('Veuillez selectionnez votre civilité');
+      value = false;
+    }
     
     if(value==true){
-      $(this).closest('.btn_next_page').closest('#step-2').removeClass('active');
-      $(this).closest('.btn_next_page').closest('#step-2').siblings('#step-3').addClass('active');
+      $(this).closest('.btn_next_page').closest('#step-3').removeClass('active');
+      $(this).closest('.btn_next_page').closest('#step-3').siblings('#step-3').addClass('active');
+      setTimeout(
+        save($(this)),
+         10000);
     }
     
   });
@@ -110,9 +118,13 @@ $(document).ready(function(){
     $(this).closest('.item_radio_step1').siblings('input').val(value);
   });
 
-  $('.btn_next_page').on('click', '#btn-step-3', function() {
-    $(this).siblings('#valide').trigger('click');
-  });
+  // $('.btn_next_page').on('click', '#btn-step-3', function() {
+  //   $(this).siblings('#valide').trigger('click');
+  // });
 
 
 });
+function save(parent){
+  toastr.success('Devis enregistré !');
+  parent.siblings('#valide').trigger('click')
+}

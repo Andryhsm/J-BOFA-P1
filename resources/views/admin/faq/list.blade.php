@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Profil')
+@section('title', 'Faq')
 
 @section('content_header')
     <h1>Liste des Faqs</h1>

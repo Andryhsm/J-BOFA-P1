@@ -66,7 +66,7 @@
           <div class="row justify-content-center" style="margin-top: 3rem;">
               <div class="col-md-4">
                   <div class="featured-btn-wrap">
-                      <a href="#" class="btn btn-danger">Consulter tous les témoignages</a>
+                      <a href="{{route('faq')}}#tab-2" data-temoin="temoin" class="btn btn-danger">Consulter tous les témoignages</a>
                   </div>
               </div>
           </div>

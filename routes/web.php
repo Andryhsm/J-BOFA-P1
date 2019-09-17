@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'Front\LoginController@getIndex');
+Route::get('/', 'Front\LoginController@getIndex')->name('accueil');
 
 Auth::routes();
 
@@ -71,7 +71,7 @@ Route::namespace('Front')->group(function () {
     Route::get('how_work', function () {
         return view('front.page.how_work');
     });
-    Route::get('faq','CityController@getFaq');
+    Route::get('faq','CityController@getFaq')->name('faq');
     Route::get('tarif', function () {
         return view('front.page.tarif');
     });
@@ -86,9 +86,7 @@ Route::namespace('Front')->group(function () {
     Route::get('help_me', function () {
         return view('front.categories.help_me');
     });
-     Route::get('renovation', function () {
-        return view('front.categories.categories');
-    });
+     Route::get('renovation','CategoryController@renovation');
     /* End Devis and presentation catégories*/
 });
 /*end front router*/

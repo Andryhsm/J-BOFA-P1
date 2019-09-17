@@ -135,9 +135,9 @@
                 </div>
               </div> -->
 
-              <div class="btn_footer_project_plus">
+              <!-- <div class="btn_footer_project_plus">
                 <a href="{{ url('view_project') }}" class="find_project_plus">Débuter un nouveau projet</a>
-              </div>
+              </div> -->
             </div>
         </div>
     </section>

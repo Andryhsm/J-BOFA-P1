@@ -33,7 +33,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('additional-css')
-
+    @toastr_css
     <!-- End Style CSS -->
   </head>
 
@@ -115,6 +115,7 @@
           <!-- Script -->
 
     <!-- End Script -->
-
+    @toastr_js
+    @toastr_render
   </body>
 </html>

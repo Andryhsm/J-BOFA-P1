@@ -14,7 +14,7 @@
     <section class="header_project">
       <div class="content_header_project" style="background-image:url({!! url('/image/front/images/fond14.jpg') !!})">
         <div class="menus_header_project">
-          <a href="#" class="menus_project">ACCEUIL</a> /
+          <a href="{{route('accueil')}}" class="menus_project">ACCEUIL</a> /
           <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">{{$details->name}}</label></a>
         </div>
         <div class="chearch_project" id="parent">
@@ -87,7 +87,7 @@
         </div>
         <div class="description_projet">
           <div class="image_step_project">
-            <img class="img_step1" src="{!! url('/image/projects/chauffe_eau.jpg') !!}" alt="">
+            <img class="img_step1" src="{!! (isset($details->image)) ? url('/image/Category/'.$details->image): url('/image/front/icones/carte_project.png') !!}" alt="">
           </div>
 
           <div class="text_desc_step1">
@@ -153,6 +153,8 @@
                   </select>
                 </div>
               </div>
+
+            @if($details->name == "Chauffe-eau")
               <div class="item_form_step1" id="chauffeau">
                   <label for="" class="title_item title_radio">Y a-t-il un chauffe-eau à désinstaller ?</label>
                   <input type="hidden" name="chauffeau" value="0">
@@ -179,6 +181,7 @@
                   </select>
                 </div>
               </div>
+              @endif
           </div>
         </div>
         <div class="btn_next_page">
@@ -313,7 +316,9 @@
 
         </div>
         <div class="btn_next_page">
-          <button type="button" name="button" class="btn_next_form" id="btn-step-2">SUIVANT <i class="fa fa-long-arrow-right"></i></button>
+          <input type="submit" style="display: none;" id="valide" name="">
+          <!-- <button type="button" name="button" class="btn_next_form" id="btn-step-2">SUIVANT <i class="fa fa-long-arrow-right"></i></button> -->
+          <button type="button" name="button" class="btn_next_form" id="btn-step-3">TERMINER</button>
         </div>
       </div>
       <div class="step_nav" id="step-3">
@@ -360,16 +365,18 @@
               <label for="">Demandes de devis associées</label>
             </div>
             <div class="list_item_step3">
+              @foreach($randoms as $random)
                 <div class="product_item">
                   <div class="image_product">
-                    <img class="" src="{!! url('/image/projects/chauffe_eau.jpg') !!}" alt="">
+                    <img class="" src="{!! (isset($random->image)) ? url('/image/Category/'.$random->image): url('/image/projects/Plomberie_sanitaires.png') !!}" alt="">
                   </div>
-                  <label for="" class="title_product">Chauffe Eau</label>
+                  <label for="" class="title_product">{{$random->name}}</label>
                   <div class="btn_action">
-                    <button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button>
+                    <a href="{{ Url('/view_project/'.$random->id.'') }}" ><button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button></a>
                   </div>
                 </div>
-                <div class="product_item">
+              @endforeach
+                <!-- <div class="product_item">
                   <div class="image_product">
                     <img class="" src="{!! url('/image/projects/Plomberie_sanitaires.png') !!}" alt="">
                   </div>
@@ -386,14 +393,13 @@
                   <div class="btn_action">
                     <button type="button" name="button" class="devis_gratuit">DEVIS GRATUIT</button>
                   </div>
-                </div>
+                </div> -->
             </div>
           </div>
 
         </div>
         <div class="btn_next_page">
-          <input type="submit" style="display: none;" id="valide" name="">
-          <button type="button" name="button" class="btn_next_form" id="btn-step-3">TERMINER</button>
+          
         </div>
       </div>
     </section>
