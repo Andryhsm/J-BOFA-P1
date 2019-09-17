@@ -3,6 +3,38 @@
         width: 100%;
         margin-bottom: 1rem;
     }
+    .row_history {
+        flex-wrap: wrap;
+    }
+    .row_history .image_histoyr {
+        width: 100%;
+        margin-right: 0;
+    }
+    .guillemets {
+        width: 50px;
+        top: 2px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .auteur_tem {
+        top: inherit;
+        bottom: -3.2rem;
+        width: calc(100% + 4px);
+        flex-direction: column;
+        align-items: center;
+    }
+    .about_temoin {
+        padding: 5% 1%;
+    }
+
+    .image_icon_tem {
+        width: 95px;
+        margin-right: 1rem;
+    }
+    .image_icon_tem img {
+        object-fit: contain;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -17,11 +49,5 @@
     .item_response {
         width: 100%;
     }
-    .row_history {
-        flex-wrap: wrap;
-    }
-    .row_history .image_histoyr {
-        width: 100%;
-        margin-right: 0;
-    }
+    
 }

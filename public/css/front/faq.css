@@ -292,7 +292,7 @@
 }
 .titre_temoin {
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
     border-bottom: 1px solid #707070;
     padding-bottom: 5%;
 }
@@ -324,9 +324,10 @@
   flex-wrap: wrap;
   border: 2px solid #707070;
   padding: 0 1rem 0 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   cursor: pointer;
   transition: all 0.5s ease 0s;
+  position: relative;
 }
 .image_icon_tem {
   width: 160px;
@@ -356,6 +357,25 @@
 .item_tem:hover .image_icon_tem{
   background-color: #0062ae;
   transition: all 0.5s ease 0s;
+}
+
+.auteur_tem {
+  position: absolute;
+  top: -2.07rem;
+  right: -2px;
+  width: calc(85% - 2px);
+  padding: 5px;
+  background-color: #0062ae;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #044651;
+  align-items: center;
+}
+.auteur_title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 12px;
 }
 /** End page Temoignage*/
 

@@ -25,6 +25,7 @@
 	    width: 50%;
         height: 158px;
     	object-fit: contain;
+	    border-radius: inherit;
 	}
 	.item_form_step1 {
 	    width: 100%;
@@ -34,7 +35,7 @@
 	}
 	.btn_next_form {
 	    width: 50%;
-        padding: 4%;
+        padding: 1.5%;
 	}
 	.title_item_step2 {
 		width: 100%;
@@ -47,5 +48,24 @@
 	.product_item {
 		padding: 0 5%;
     	margin-bottom: 5rem;
+	}
+	.img_step1 {
+		object-fit: contain;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.menus_header_project {
+		flex-direction: column-reverse;
+    	color: transparent;
+    	font-size: 20px;
+	}
+	.chearch_project {
+		flex-direction: column;
+    	padding: 0 5%;
+	}
+	.research_project {
+		width: 100%;
+    	margin-bottom: 1rem;
 	}
 }
