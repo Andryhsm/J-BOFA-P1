@@ -50,9 +50,9 @@
 						 	</div>
 						 	<div class="content_desc_row">
 						 		<img src="{!! url('/image/categories/guillemets2.svg') !!}" class="image_cg_commentaire" alt="" />
-						 		<p>Pour répondre à des utilisations très différentes, mais devant toutes êtres au top, la salle de bain doit être rafraîchie régulièrement.</p>
+						 		<p>{{$categorie->description}}<!-- Pour répondre à des utilisations très différentes, mais devant toutes êtres au top, la salle de bain doit être rafraîchie régulièrement.</p>
 						 		<p>On pourra effectuer des réparations au niveau des revêtements et des équipements, mais on pourra également modifier l’implantation totale de la pièce.</p>
-						 		<p>Pour vous aider dans cette rénovation qui peut être compliquée et intimidante, nous vous proposons un dossier complet consacré à la salle de bain sous toutes ses formes.</p>
+						 		<p>Pour vous aider dans cette rénovation qui peut être compliquée et intimidante, nous vous proposons un dossier complet consacré à la salle de bain sous toutes ses formes. --></p>
 						 	</div>
 						 </div>
 					</div>

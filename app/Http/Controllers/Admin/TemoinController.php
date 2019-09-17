@@ -91,6 +91,8 @@ class TemoinController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->temoin_repo->updateTemoin($id,$request->all());
+        return redirect('admin/temoignage');
     }
 
     /**
