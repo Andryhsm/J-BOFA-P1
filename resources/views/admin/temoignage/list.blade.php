@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Profil')
+@section('title', 'Temoignage')
 
 @section('content_header')
     <h1>Liste des temoingnages</h1>

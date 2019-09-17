@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Question')
+@section('title', 'Temoignage')
 
 @section('content_header')
     @if($temoin)
