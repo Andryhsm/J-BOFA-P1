@@ -31,4 +31,5 @@ class CategoryController extends Controller
         $categories = $this->category_repository->getCategory();
         return view('front.categories.categories',compact('categories'));
     }
+
 }

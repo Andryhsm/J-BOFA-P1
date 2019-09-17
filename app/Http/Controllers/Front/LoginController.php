@@ -49,7 +49,8 @@ class LoginController extends Controller
     public function viewProject($id){
         $categories = $this->category_repo->getCategory();
         $details = $this->category_repo->findCategory($id);
-        return view('front.page.view_project',compact("categories","details"));
+        $randoms = $this->category_repo->getRandom();
+        return view('front.page.view_project',compact("categories","details","randoms"));
     }
 
     public function getEmail(Request $request){

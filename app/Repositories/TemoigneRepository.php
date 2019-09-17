@@ -70,4 +70,9 @@ class TemoigneRepository {
         return $this->model->with('categorie')->where('status',1)->limit(3)->get();
     }
 
+    public function getAllTemoins()
+    {
+        return $this->model->with('categorie')->where('status',1)->get();
+    }
+
 }
