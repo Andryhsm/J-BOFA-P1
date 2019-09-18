@@ -194,6 +194,11 @@
             <div class="text_tem">
               <p>{{$temoin->description}}</p>
             </div>
+
+            <div class="auteur_tem">
+              <label class="auteur_title">NOM Auteur</label>
+              <label class="auteur_title">CATEGORIES THEME</label>
+            </div>
           </div>
           @endforeach
           @endif

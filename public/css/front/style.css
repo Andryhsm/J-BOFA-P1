@@ -1334,3 +1334,11 @@ footer {
   }
 
 }
+
+@media screen and (max-width: 500px) {
+  .item_project_plus {
+        width: 100%;
+        margin-right: 0;
+  }
+
+}
