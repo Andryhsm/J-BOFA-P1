@@ -197,7 +197,7 @@ $(document).ready(function(){
         }
       //console.log(trie.reverse())
     });
-    $('.slider').on('click', '.rechercheVal', function(){
+    $('.container_view_project').on('click', '.rechercheVal', function(){ 
     var value = $(this).text();
     $(this).closest('#ul').siblings('input').val(value);
     $('#ul').css('display', 'none');

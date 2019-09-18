@@ -48,7 +48,8 @@
   position: relative;
 }
 .research_project {
-  width: 35%;
+  /*width: 35%;*/
+  flex: 1;
   padding: 15px;
   margin-right: 15px;
   border-radius: 5px;
@@ -374,7 +375,7 @@
   flex: 1;
 }
 .champ_item_step2 input {
-  width: 100%;
+  /*width: 100%;*/
 }
 .champ_item_flex {
   display: flex;
@@ -385,6 +386,7 @@
 .item_radio_step2 {
   margin-right: 5rem;
   color: #707070;
+  white-space: nowrap;
 }
 .item_radio_step2 label {
   margin: 0;
@@ -551,6 +553,12 @@ input::-o-outer-spin-button {
 /**recherche*/
 .cherch_view_project {
     top: 3rem;
-    width: 45%;
+    width: 100%;
+}
+.porte_cherche {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 /*End recherche*/

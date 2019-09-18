@@ -17,9 +17,11 @@
           <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">{{($details) ? $details->name : 'Nouveau projet'}}</label></a>
         </div>
         <div class="chearch_project" id="parent">
-          <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
-          <button type="button" name="button" class="btn_chearch_project">DEVIS GRATUIT</button>
-        <ul id="ul" class="dropdown dropdown_search cherch_view_project"></ul>
+          <div class="porte_cherche">
+            <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
+            <button type="button" name="button" class="btn_chearch_project">DEVIS GRATUIT</button>
+            <ul id="ul" class="dropdown dropdown_search cherch_view_project"></ul>
+          </div>
         </div>
       </div>
     </section>
