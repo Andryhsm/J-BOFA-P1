@@ -21,10 +21,10 @@ class ViewProjectRepository {
         $this->model->country_id = $data['ville'];
         $this->model->last_name = $data['last_name'];
         $this->model->first_name = $data['first_name'];
-        if(isset($data['batiment_type'])){
-            $this->model->batiment = $data['batiment_type'];
-            $this->model->travaux = $data['travaux'];
-            $this->model->prestation = $data['prestation'];
+        $this->model->batiment = $data['batiment_type'];
+        $this->model->travaux = $data['travaux'];
+        $this->model->prestation = $data['prestation'];
+        if(isset($data['chauffeau'])){
             $this->model->type_energie = $data['energie_type'];
             $this->model->is_chauffe = $data['chauffeau'];
         }

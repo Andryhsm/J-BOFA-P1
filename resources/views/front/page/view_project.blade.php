@@ -19,8 +19,8 @@
         <div class="chearch_project" id="parent">
           <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
           <button type="button" name="button" class="btn_chearch_project">DEVIS GRATUIT</button>
-        </div>
         <ul id="ul" class="dropdown dropdown_search"></ul>
+        </div>
       </div>
     </section>
     <section class="tab_project">
@@ -104,7 +104,7 @@
             </div>
             <div class="item_form_step1" id="travaux_type">
               <label for="" class="title_item title_radio">Type de travaux</label>
-              <input type="hidden" name="travaux">
+              <input type="hidden" name="travaux" value="Remplacement">
               <div class="item_radio_step1">
                 <input type="radio" id="remplacement" name="work" value="remplacement"
                        checked>
@@ -127,7 +127,7 @@
             </div>
             <div class="item_form_step1" id="prestation">
                   <label for="" class="title_item title_radio">Prestation souhaitée</label>
-                  <input type="hidden" name="prestation">
+                  <input type="hidden" name="prestation" value="Pose uniquement">
                   <div class="item_radio_step1">
                     <input type="radio" id="pose" name="work1" value="pose"
                            checked>
@@ -409,5 +409,4 @@
 
   @section('additional-script')
     {!! Html::script('js/front/view_project.js') !!}
-    {!! Html::script('js/front/index.js') !!}
   @endsection
