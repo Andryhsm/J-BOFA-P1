@@ -537,8 +537,11 @@ input::-o-outer-spin-button {
   display: flex;
   justify-content: center;
 }
-.devis_gratuit {
+.btn_action a{
   width: 90%;
+}
+.devis_gratuit {
+  width: 100%;
   padding: 7px;
   border-radius: 2px;
   font-size: 17px;

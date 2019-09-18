@@ -138,7 +138,7 @@
 
                   <div class="item_radio_step1">
                     <input type="radio" id="fourniture" name="work1" value="fourniture">
-                    <label for="fourniture">Fourniture uniquement</label>
+                    <label for="fourniture">Fourniture et pose</label>
                   </div>
               </div>
               <div class="item_form_step1">
