@@ -197,7 +197,7 @@
 
             <div class="auteur_tem">
               <label class="auteur_title">{{$temoin->name}}</label>
-              <label class="auteur_title">{{$temoin->categorie->name}}</label>
+              <label class="auteur_title">{{strtoupper($temoin->categorie->name)}}</label>
             </div>
           </div>
           @endforeach
