@@ -189,8 +189,6 @@ $(document).ready(function(){
         for(var k=0;k<trie.sort().length;k++){
           $('#ul').append(trie[k]);
           $('#ul').css('display', 'inline-block');
-          $('#ul').css('margin-top', '3.5rem');
-          $('#ul').css('width', '48%');
         }
       }
       if (data == "") {

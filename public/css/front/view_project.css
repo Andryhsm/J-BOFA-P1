@@ -45,6 +45,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .research_project {
   width: 35%;
@@ -545,3 +546,11 @@ input::-o-outer-spin-button {
   border: 1px solid #044651;
   cursor: pointer;
 }
+
+
+/**recherche*/
+.cherch_view_project {
+    top: 3rem;
+    width: 45%;
+}
+/*End recherche*/

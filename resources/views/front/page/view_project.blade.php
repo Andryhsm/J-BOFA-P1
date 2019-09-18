@@ -19,7 +19,7 @@
         <div class="chearch_project" id="parent">
           <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
           <button type="button" name="button" class="btn_chearch_project">DEVIS GRATUIT</button>
-        <ul id="ul" class="dropdown dropdown_search"></ul>
+        <ul id="ul" class="dropdown dropdown_search cherch_view_project"></ul>
         </div>
       </div>
     </section>
