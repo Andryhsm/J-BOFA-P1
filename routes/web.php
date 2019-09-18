@@ -77,6 +77,7 @@ Route::namespace('Front')->group(function () {
     });
     /**** Devis  ****/
     Route::get('view_project/{id}','LoginController@viewProject');
+    Route::get('view_project','LoginController@newDevis')->name('new_project');
     Route::post('create_devis','DevisController@createDevis')->name('create_devis');
     /**** End Devis ****/
     /** DEvis and presentation catégories */

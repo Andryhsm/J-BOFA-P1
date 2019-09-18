@@ -20,4 +20,8 @@ class DevisController extends Controller
     	$this->devis_repository->createDevis($request->all());
     	return redirect('/');
     }
+
+    public function newDevis(){
+        return view('front.page.view_project');
+    }
 }

@@ -63,6 +63,13 @@ class LoginController extends Controller
         $categories = $this->category_repo->getPopular();
         return view('front.home.index', compact('temoins','categories'));
     }
+
+    public function newDevis(){
+        $categories = $this->category_repo->getCategory();
+        $details = false;
+        $randoms = $this->category_repo->getRandom();
+        return view('front.page.view_project',compact("categories","details","randoms"));
+    }
 }
 
 

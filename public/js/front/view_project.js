@@ -122,6 +122,64 @@ $(document).ready(function(){
   //   $(this).siblings('#valide').trigger('click');
   // });
 
+  var currencies=[];
+  var ids =[];
+  var position= [];
+  $.ajax({
+        type: "GET",
+        url: base_url + 'category',
+        success: function (success) {
+          console.log(success[0])
+            for (var i = 0; i < success.length; i++) {
+              currencies.push(success[i].name);
+              ids.push(success[i].id);
+            }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+  $('.container_view_project').on('keyup', '#recherche', function(){
+
+    var data = $(this).val();
+    $('#ul').html("");
+      var trie = [];
+    currencies.forEach(function(dataEl, index){
+        var numero = dataEl.indexOf(data);
+        var dataLow = dataEl.toLowerCase();
+        var numeroLow = dataLow.indexOf(data);
+        var dataUp = dataEl.toUpperCase();
+        var numeroUp = dataUp.indexOf(data);
+        var value_data = new RegExp(data);
+        var value_dataLow = new RegExp(data.toLowerCase);
+        var value_dataUp = new RegExp(data.toLowerCase);
+        if( value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
+          position.push(index);
+          var dropdown = '<a href="'+base_url+'view_project/'+ids[index]+'"><li class="rechercheVal" data-id="'+ids[index]+'">'+currencies[index]+'</li></a>';
+          trie.push(dropdown);
+        }
+        
+      });
+      if(trie.length>0){
+        for(var k=0;k<trie.sort().length;k++){
+          $('#ul').append(trie[k]);
+          $('#ul').css('display', 'block');
+          $('#ul').css('margin-top', '0.5rem');
+        }
+      }
+      if (data == "") {
+          $('#ul').html("");
+          $('#ul').css('display', 'none');
+        }
+      //console.log(trie.reverse())
+    });
+    $('.slider').on('click', '.rechercheVal', function(){
+    var value = $(this).text();
+    $(this).closest('#ul').siblings('#parent').find('input').val(value);
+    $('#ul').css('display', 'none');
+
+  });
+
 
 });
 function save(parent){
