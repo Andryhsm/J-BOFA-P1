@@ -196,8 +196,8 @@
             </div>
 
             <div class="auteur_tem">
-              <label class="auteur_title">NOM Auteur</label>
-              <label class="auteur_title">CATEGORIES THEME</label>
+              <label class="auteur_title">{{$temoin->name}}</label>
+              <label class="auteur_title">{{$temoin->categorie->name}}</label>
             </div>
           </div>
           @endforeach

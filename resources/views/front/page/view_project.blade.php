@@ -121,7 +121,7 @@
                 <label for="reparation">Réparation neuve</label>
               </div>
               <div class="item_radio_step1">
-                <input type="radio" id="entretient" name="work  " value="entretient">
+                <input type="radio" id="entretient" name="work" value="entretient">
                 <label for="entretient">Entretient/Maintenance</label>
               </div>
             </div>
@@ -129,13 +129,13 @@
                   <label for="" class="title_item title_radio">Prestation souhaitée</label>
                   <input type="hidden" name="prestation">
                   <div class="item_radio_step1">
-                    <input type="radio" id="pose" name="work" value="pose"
+                    <input type="radio" id="pose" name="work1" value="pose"
                            checked>
                     <label for="pose">Pose uniquement</label>
                   </div>
 
                   <div class="item_radio_step1">
-                    <input type="radio" id="fourniture" name="work" value="fourniture">
+                    <input type="radio" id="fourniture" name="work1" value="fourniture">
                     <label for="fourniture">Fourniture uniquement</label>
                   </div>
               </div>
@@ -158,12 +158,12 @@
                   <label for="" class="title_item title_radio">Y a-t-il un chauffe-eau à désinstaller ?</label>
                   <input type="hidden" name="chauffeau" value="0">
                   <div class="item_radio_step1">
-                    <input type="radio" id="oui" name="work" value="oui"
+                    <input type="radio" id="oui" name="work2" value="oui"
                            checked>
                     <label for="oui">Oui</label>
                   </div>
                   <div class="item_radio_step1">
-                    <input type="radio" id="non" name="work" value="non">
+                    <input type="radio" id="non" name="work2" value="non">
                     <label for="non">Non</label>
                   </div>
               </div>
