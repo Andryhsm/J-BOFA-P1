@@ -1342,3 +1342,8 @@ footer {
   }
 
 }
+
+.legal_mention {
+    color: #0062ae;
+    text-decoration: underline;
+} 

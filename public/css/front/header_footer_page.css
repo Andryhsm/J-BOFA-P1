@@ -64,6 +64,8 @@
   display: none;
 }
 
+
+
   @media screen and (max-width: 750px){
   .item_header {
     padding: 0 4rem 0 1rem;

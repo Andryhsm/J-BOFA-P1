@@ -72,8 +72,8 @@ Route::namespace('Front')->group(function () {
         return view('front.page.how_work');
     });
     Route::get('faq','CityController@getFaq')->name('faq');
-    Route::get('tarif', function () {
-        return view('front.page.tarif');
+    Route::get('term&condition', function () {
+        return view('front.page.term&condition');
     });
     /**** Devis  ****/
     Route::get('view_project/{id}','LoginController@viewProject');

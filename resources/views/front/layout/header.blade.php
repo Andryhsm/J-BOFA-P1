@@ -34,18 +34,6 @@
                             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                                 <ul class="navbar-nav">
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link" href="{{ url('how_work') }}" >
-                                           Comment ça marche
-                                         </a>
-
-                                    </li>
-                                    <!-- <li class="nav-item active">
-                                        <a class="nav-link" href="{{-- url('tarif') --}}">Tarifs</a>
-                                    </li> -->
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="{{ url('faq') }}">FAQ</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
                                         <a class="nav-link" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                           Guide Travaux
                                           <span class="icon-arrow-down"></span>
@@ -58,10 +46,18 @@
                                         </div>
                                     </li>
 
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Blog</a>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{ url('faq') }}">FAQ</a>
                                     </li>
+                                    
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="{{ url('how_work') }}" >
+                                           Comment ça marche
+                                         </a>
 
+                                    </li>
+                                    
+                                    
                                 </ul>
                             </div>
                         </nav>

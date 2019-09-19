@@ -363,7 +363,7 @@
   position: absolute;
   top: -2.07rem;
   right: -2px;
-  width: calc(85% - 2px);
+  width: calc(100% - 157px);
   padding: 5px;
   background-color: #0062ae;
   color: #fff;

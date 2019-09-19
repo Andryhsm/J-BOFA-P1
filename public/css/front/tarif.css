@@ -76,6 +76,8 @@
   color: #fff;
   font-size: 17px;
   margin-top: 3rem;
+  text-align: center;
+  white-space: nowrap;
 }
 .btn_tarif_example:hover {
   background-color: #fff;
@@ -104,4 +106,20 @@
   font-family: 'Open Sans Condensed',sans-serif;
   font-weight: 600;
   font-size: 20px;
+}
+
+
+@media screen and (max-width: 950px) {
+  .tarifs {
+    background-size: 100% 100%;
+    padding: 10% 2% 10% 2%;
+    width: 100%;
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .tarifs {
+    margin-top: 12rem;
+  }
 }
