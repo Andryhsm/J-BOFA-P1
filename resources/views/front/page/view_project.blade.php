@@ -155,7 +155,7 @@
                 </div>
               </div>
 
-            @if($details && $details->name == "Chauffage -climatisation -ventilation")
+            @if($details && ($details->name == "Chauffe-eau" || $details->name == "Chauffe eau"))
               <div class="item_form_step1" id="chauffeau">
                   <label for="" class="title_item title_radio">Y a-t-il un chauffe-eau à désinstaller ?</label>
                   <input type="hidden" name="chauffeau" value="0">
