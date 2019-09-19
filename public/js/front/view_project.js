@@ -169,32 +169,69 @@ $(document).ready(function(){
     var data = $(this).val();
     $('#ul').html("");
       var trie = [];
-    currencies.forEach(function(dataEl, index){
-        var numero = dataEl.indexOf(data);
-        var dataLow = dataEl.toLowerCase();
-        var numeroLow = dataLow.indexOf(data);
-        var dataUp = dataEl.toUpperCase();
-        var numeroUp = dataUp.indexOf(data);
-        var value_data = new RegExp(data);
-        var value_dataLow = new RegExp(data.toLowerCase);
-        var value_dataUp = new RegExp(data.toLowerCase);
-        if( value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
-          position.push(index);
-          var dropdown = '<a href="'+base_url+'view_project/'+ids[index]+'"><li class="rechercheVal" data-id="'+ids[index]+'">'+currencies[index]+'</li></a>';
-          trie.push(dropdown);
+
+      currencies.forEach(function(dataEl, index){
+        // var numero = dataEl.indexOf(data);
+        // var dataLow = dataEl.toLowerCase();
+        // var numeroLow = dataLow.indexOf(data);
+        // var dataUp = dataEl.toUpperCase();
+        // var numeroUp = dataUp.indexOf(data);
+        // var value_data = new RegExp(data);
+        // var value_dataLow = new RegExp(data.toLowerCase);
+        // var value_dataUp = new RegExp(data.toLowerCase);
+        // if(value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
+        //  //position.push(index);
+        //  var dropdown = '<a href="'+base_url+'view_project/'+ids[index]+'"><li class="rechercheVal" data-id="'+ids[index]+'">'+currencies[index]+'</li></a>';
+        //  trie.push(dropdown);
+        // }
+
+        var lengthData = data.length;
+        if (data.localeCompare(currencies[index].substring(0, lengthData), 'en', {sensitivity: 'base'}) == 0){
+          //var dropdown = '<a href="'+base_url+'view_project/'+ids[index]+'"><li class="rechercheVal" data-id="'+ids[index]+'">'+currencies[index]+'</li></a>';
+          trie.push(currencies[index]+"####"+ids[index]);
         }
         
       });
+      trie = trie.sort();
       if(trie.length>0){
-        for(var k=0;k<trie.sort().length;k++){
-          $('#ul').append(trie[k]);
-          $('#ul').css('display', 'inline-block');
+        for(var k=0;k<trie.length;k++){
+          var tabTemp = trie[k].split('####');
+          var dropdown = '<a href="'+base_url+'view_project/'+tabTemp[1]+'"><li class="rechercheVal" data-id="'+tabTemp[1]+'">'+tabTemp[0]+'</li></a>';
+          $('#ul').append(dropdown);
+          $('#ul').css('display', 'block');
         }
       }
       if (data == "") {
-          $('#ul').html("");
-          $('#ul').css('display', 'none');
-        }
+        $('#ul').html("");
+        $('#ul').css('display', 'none');
+      }
+
+    // currencies.forEach(function(dataEl, index){
+    //     var numero = dataEl.indexOf(data);
+    //     var dataLow = dataEl.toLowerCase();
+    //     var numeroLow = dataLow.indexOf(data);
+    //     var dataUp = dataEl.toUpperCase();
+    //     var numeroUp = dataUp.indexOf(data);
+    //     var value_data = new RegExp(data);
+    //     var value_dataLow = new RegExp(data.toLowerCase);
+    //     var value_dataUp = new RegExp(data.toLowerCase);
+    //     if( value_dataLow.test(currencies[index]) || value_dataUp.test(currencies[index]) || numeroLow == 0 || numeroUp==0 || data.toLowerCase() == 0 || data.toUpperCase()==0){
+    //       position.push(index);
+    //       var dropdown = '<a href="'+base_url+'view_project/'+ids[index]+'"><li class="rechercheVal" data-id="'+ids[index]+'">'+currencies[index]+'</li></a>';
+    //       trie.push(dropdown);
+    //     }
+        
+    //   });
+    //   if(trie.length>0){
+    //     for(var k=0;k<trie.sort().length;k++){
+    //       $('#ul').append(trie[k]);
+    //       $('#ul').css('display', 'inline-block');
+    //     }
+    //   }
+    //   if (data == "") {
+    //       $('#ul').html("");
+    //       $('#ul').css('display', 'none');
+    //     }
       //console.log(trie.reverse())
     });
     $('.container_view_project').on('click', '.rechercheVal', function(){ 
