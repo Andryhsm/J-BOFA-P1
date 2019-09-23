@@ -31,54 +31,150 @@
     @endsection
 
     @section('content')
-    	<div class="pages profil_page">
-    		<div class="nav_bar">
-    			<div class="d-flex justify-content-between">
-    				<h5>Mes coordonnées</h5>
-    				<button class="btn_update_coordonate">Modifier mes coordonnées</button>
+    	<div class="pages_profil profil_page">
+    		<div class="content_profil">
+    			<div class="description_personnal">
+    				<div class="d-flex justify-content-between title_separate">
+	    				<h5 class="title_profil">Mes coordonnées</h5>
+	    				<a href="{{ route('artisan_coordonate') }}" class="btn_orange_link_artisan">Modifier mes coordonnées ></a>
+	    			</div>
+		        	<div class="d-flex">
+		        		<div class="coordonate_item">
+		        			<p>
+		        				<span class="label">Téléphone:</span>
+		        				<span class="value">0000</span>
+		        			</p>
+		        			<p>
+		        				<span class="label">Portable:</span>
+		        				<span class="value">000000</span>
+		        			</p>
+		        			<p>
+		        				<span class="label">Adresse:</span>
+		        				<span class="value">0000</span>
+		        			</p>
+		        			<p>
+		        				<span class="label">Ville:</span>
+		        				<span class="value">0000</span>
+		        			</p>
+		        		</div>
+		        		<div class="coordonate_item">
+		        			<p>
+		        				<span class="label">Date de création:</span>
+		        				<span class="value">0000</span>
+		        			</p>
+		        			<p>
+		        				<span class="label">N° SIRET:</span>
+		        				<span class="value">0000</span>
+		        			</p>
+		        			<p>
+		        				<span class="label">E-mail:</span>
+		        				<span class="value">0000</span>
+		        			</p>
+		        			<p>
+		        				<span class="label">Site web:</span>
+		        				<span class="value"><a href="" class="btn_orange_link_artisan">Créer mon site web ></a></span>
+		        			</p>
+		        		</div>
+		        	</div>
+		        	<div class="d-flex justify-content-center top_separate_changemdp">
+		        		<a href="" class="btn_orange_link_artisan">Changer mon mot de passe ></a>
+		        	</div>
+
+	        		<div class="border_bottom border_dashed dashed_margin"></div>
     			</div>
-	        	<div class="d-flex">
-	        		<div class="coordonate_item">
-	        			<p>
-	        				<span class="label">Téléphone:</span>
-	        				<span class="value">0000</span>
-	        			</p>
-	        			<p>
-	        				<span class="label">Portable:</span>
-	        				<span class="value">000000</span>
-	        			</p>
-	        			<p>
-	        				<span class="label">Adresse:</span>
-	        				<span class="value">0000</span>
-	        			</p>
-	        			<p>
-	        				<span class="label">Ville:</span>
-	        				<span class="value">0000</span>
-	        			</p>
-	        		</div>
-	        		<div class="coordonate_item">
-	        			<p>
-	        				<span class="label">Date de création:</span>
-	        				<span class="value">0000</span>
-	        			</p>
-	        			<p>
-	        				<span class="label">N° SIRET:</span>
-	        				<span class="value">0000</span>
-	        			</p>
-	        			<p>
-	        				<span class="label">E-mail:</span>
-	        				<span class="value">0000</span>
-	        			</p>
-	        			<p>
-	        				<span class="label">Site web:</span>
-	        				<span class="value">00000</span>
-	        			</p>
-	        		</div>
-	        	</div>
-	        	<div class="d-flex justify-content-center">
-	        		<button class="">Changer mon mot de passe</button>
-	        	</div>
+
+    			<div class="entreprise_description">
+					<div class="d-flex justify-content-between title_separate">
+	    				<h5 class="title_profil">DESCRIPTION DE MON ENTREPRISE</h5>
+	    				<a href="" class="btn_orange_link_artisan hide">Modifier les coordonnées ></a>
+	    			</div>
+
+		        	<div class="border_bottom border_dashed dashed_margin"></div>
+		        </div>
+
+		        <div class="cotnent_document">
+					<div class="d-flex justify-content-between title_separate">
+						<div class="items_doc">
+							<div class="title_items">
+								<h5 class="title_profil">MES DOCUMENTS OFFICIELS</h5>
+							</div>
+							<div class="descrition_doc">
+								<p>Vous avez <strong>2 fois plus de chance de signer</strong> un projet en important vos documents légaux !</p>
+							</div>
+							<div class="liste_document">
+								<div class="item_doc_upload">
+									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
+									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
+									<label class="title_paper">Kbis</label>
+									<input type="file" class="hide" name="">
+								</div>
+								<div class="item_doc_upload">
+									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
+									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
+									<label class="title_paper">Assurance</label>
+									<input type="file" class="hide" name="">
+								</div>
+								<div class="item_doc_upload">
+									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
+									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
+									<label class="title_paper">Garantie Décennale</label>
+									<input type="file" class="hide" name="">
+								</div>
+								<div class="item_doc_upload">
+									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
+									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
+									<label class="title_paper">Modifier</label>
+									<input type="file" class="hide" name="">
+								</div>
+							</div>
+						</div>
+						<div class="items_doc">
+							<div class="title_items">
+								<h5 class="title_profil">MES LABELS QUALITÉ</h5>
+							</div>
+							<div class="descrition_doc">
+								<p>Gagnez <strong>en visibilité et en crédibilité</strong>  en important vos labels qualité ! </p>
+							</div>
+							<div class="liste_document">
+								<div class="item_doc_upload">
+									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
+									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
+									<label class="title_paper"></label>
+									<input type="file" class="hide" name="">
+								</div>
+							</div>
+						</div>
+					</div>
+		        	<div class="question_reponse">
+		        		<label class="title_question">Vous n'arrivez pas à importer vos documents ?</label>
+		        		<label class="reponse_question">Envoyez-les à votre conseiller par e-mail (membre@habitatpresto.com), il les ajoutera pour vous !</label>
+		        	</div>
+		        	<div class="border_bottom border_dashed dashed_margin"></div>
+		        </div>
+
+
+		        <div class="content_chantier">
+		        	<div class="d-flex justify-content-between title_separate">
+	    				<h5 class="title_profil">CHANTIERS RÉALISÉS</h5>
+	    				<a href="" class="btn_orange_link_artisan hide"></a>
+	    			</div>
+	    			<div class="descrition_doc">
+						<p><strong>Gagnez en visibilité </strong> en montrant des <strong>photos de chantiers</strong> que vous avez déjà réalisés !</p>
+					</div>
+					<div class="liste_document">
+						<div class="item_image_upload">
+							<img src="{!! url('/image/artisan/modif_profil/image_empty.png') !!}" class="image_fond_paper" alt="" />
+							<input type="file" class="hide" name="">
+						</div>
+					</div>
+					<div class="question_reponse">
+		        		<label class="title_question">Vous n'arrivez pas à importer vos réalisations ?</label>
+		        		<label class="reponse_question">Envoyez-les à votre conseiller par e-mail (membre@habitatpresto.com), il les ajoutera pour vous !</label>
+		        	</div>
+		        </div>
+    			
 	        </div>
+	        
     	</div>
     @endsection
 

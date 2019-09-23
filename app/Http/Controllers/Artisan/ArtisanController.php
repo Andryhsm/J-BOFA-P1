@@ -31,5 +31,8 @@ class ArtisanController extends Controller
     public function showProfil() {
         return view('artisan.page.profil');
     }
+    public function coordonate() {
+        return view('artisan.page.coordonate');
+    }
 
 }

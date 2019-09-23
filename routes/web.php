@@ -110,5 +110,6 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::get('disponnible','ArtisanController@showAvailablePage')->name('artisan_available');
     Route::get('project','ArtisanController@showProjectDetails')->name('project_details');
     Route::get('profil','ArtisanController@showProfil')->name('artisan_profil');
+    Route::get('coordonate','ArtisanController@coordonate')->name('artisan_coordonate');
 });
 // end Auth route 
