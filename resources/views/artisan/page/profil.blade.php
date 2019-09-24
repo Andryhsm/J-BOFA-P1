@@ -147,7 +147,7 @@
 					</div>
 		        	<div class="question_reponse">
 		        		<label class="title_question">Vous n'arrivez pas à importer vos documents ?</label>
-		        		<label class="reponse_question">Envoyez-les à votre conseiller par e-mail (membre@habitatpresto.com), il les ajoutera pour vous !</label>
+		        		<label class="reponse_question">Envoyez-les à votre conseiller par e-mail (membre@lorem.com), il les ajoutera pour vous !</label>
 		        	</div>
 		        	<div class="border_bottom border_dashed dashed_margin"></div>
 		        </div>
@@ -169,7 +169,7 @@
 					</div>
 					<div class="question_reponse">
 		        		<label class="title_question">Vous n'arrivez pas à importer vos réalisations ?</label>
-		        		<label class="reponse_question">Envoyez-les à votre conseiller par e-mail (membre@habitatpresto.com), il les ajoutera pour vous !</label>
+		        		<label class="reponse_question">Envoyez-les à votre conseiller par e-mail (membre@lorem.com), il les ajoutera pour vous !</label>
 		        	</div>
 		        </div>
     			

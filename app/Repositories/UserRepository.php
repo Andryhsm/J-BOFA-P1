@@ -74,4 +74,8 @@ class UserRepository implements UserRepositoryInterface
     public function getMail($email){
         return $this->model->select('email')->where('email',$email)->get();
     }
+
+    public function getTenArtisan(){
+        return $this->model->with('category')->with('city')->orderBy('created_at','desc')->limit(10)->get();
+    }
 }
