@@ -109,7 +109,7 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::get('accueil','ArtisanController@index')->name('artisan_home');
     Route::get('disponnible','ArtisanController@showAvailablePage')->name('artisan_available');
     Route::get('project','ArtisanController@showProjectDetails')->name('project_details');
-    Route::get('profil','ArtisanController@showProfil')->name('artisan_profil');
-    Route::get('coordonate','ArtisanController@coordonate')->name('artisan_coordonate');
+    Route::get('profil/{id}','ArtisanController@showProfil');
+    Route::get('coordonate/{id}','ArtisanController@coordonate')->name('artisan_coordonate');
 });
 // end Auth route 

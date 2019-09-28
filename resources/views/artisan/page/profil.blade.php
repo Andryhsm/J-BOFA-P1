@@ -36,39 +36,39 @@
     			<div class="description_personnal">
     				<div class="d-flex justify-content-between title_separate">
 	    				<h5 class="title_profil">Mes coordonnées</h5>
-	    				<a href="{{ route('artisan_coordonate') }}" class="btn_orange_link_artisan">Modifier mes coordonnées ></a>
+	    				<a href="{{ Url('/artisan/coordonate/'.Auth::user()->id.'') }}" class="btn_orange_link_artisan">Modifier mes coordonnées ></a>
 	    			</div>
 		        	<div class="d-flex">
 		        		<div class="coordonate_item">
 		        			<p>
 		        				<span class="label">Téléphone:</span>
-		        				<span class="value">0000</span>
+		        				<span class="value">{{$profil->phone}}</span>
 		        			</p>
-		        			<p>
+		        			<!-- <p>
 		        				<span class="label">Portable:</span>
-		        				<span class="value">000000</span>
+		        				<span class="value">{{$profil->phone}}</span>
 		        			</p>
 		        			<p>
 		        				<span class="label">Adresse:</span>
-		        				<span class="value">0000</span>
-		        			</p>
+		        				<span class="value">{{$profil->name}}</span>
+		        			</p> -->
 		        			<p>
 		        				<span class="label">Ville:</span>
-		        				<span class="value">0000</span>
+		        				<span class="value">{{$profil->city->ville_nom}}</span>
 		        			</p>
 		        		</div>
 		        		<div class="coordonate_item">
 		        			<p>
 		        				<span class="label">Date de création:</span>
-		        				<span class="value">0000</span>
+		        				<span class="value">{{$profil->created_at}}</span>
 		        			</p>
-		        			<p>
+		        			<!-- <p>
 		        				<span class="label">N° SIRET:</span>
 		        				<span class="value">0000</span>
-		        			</p>
+		        			</p> -->
 		        			<p>
 		        				<span class="label">E-mail:</span>
-		        				<span class="value">0000</span>
+		        				<span class="value">{{$profil->email}}</span>
 		        			</p>
 		        			<p>
 		        				<span class="label">Site web:</span>
