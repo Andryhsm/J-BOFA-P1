@@ -34,9 +34,11 @@
     @endsection
 
     @section('content')
+    <form action="" method="POST">
     	<div class="pages_profil profil_page">
     		<div class="content_profil">
     			<div class="entreprise_presentation">
+                    <input type="hidden" name="city_id" value="{{$profil->city_id}}">
                     <div class="d-flex justify-content-between title_separate">
                         <h5 class="title_profil">INFORMATIONS SUR MON ENTREPRISE</h5>
                     </div>
@@ -51,9 +53,9 @@
                         <div class="liste_formulaire">
                              <div class="item_formulaire">
                                 <label class="name_item_formulaire">Nom de l'entreprise *</label>
-                                <input type="text" name="" placeholder="Nom de l'entreprise">
+                                <input type="text" name="" value="{{$profil->enterprise}}" placeholder="Nom de l'entreprise">
                             </div>
-                            <div class="item_formulaire">
+                            <!-- <div class="item_formulaire">
                                 <label class="name_item_formulaire">Siret *</label>
                                 <input type="text" name="" placeholder="Numéro Siret">
                             </div>
@@ -64,7 +66,7 @@
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Adresse *</label>
                                 <input type="text" name="" placeholder="Adresse">
-                            </div>
+                            </div> -->
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Ville *</label>
                                 <select id="update_contact_titre" name=""  class="select_items">
@@ -75,7 +77,7 @@
                         </div>
 
                          <div class="liste_formulaire">
-                           <div class="item_formulaire">
+                           <!-- <div class="item_formulaire">
                                 <label class="name_item_formulaire">Civilité *</label>
                                 <select id="update_contact_titre" name=""  class="select_items">
                                     <option value="">-- Choisissez --</option>
@@ -83,19 +85,19 @@
                                     <option value="Mme">Mme</option>
                                     <option value="Mlle">Mlle</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Nom *</label>
-                                <input type="text" name="" placeholder="Votre Nom">
+                                <input type="text" name="" placeholder="Votre Nom" value="{{$profil->name}}">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Prénom *</label>
-                                <input type="text" name="" placeholder="Votre prénom">
+                                <input type="text" name="" placeholder="Votre prénom" value="{{$profil->first_name}}">
                             </div>
-                             <div class="item_formulaire">
+                             <!-- <div class="item_formulaire">
                                 <label class="name_item_formulaire"> Fonction</label>
                                 <input type="text" name="" placeholder="Votre fonction">
-                            </div>
+                            </div> -->
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Métier *</label>
                                 <select id="update_contact_titre" name=""  class="select_items">
@@ -118,13 +120,13 @@
                          <div class="liste_formulaire">
                            <div class="item_formulaire">
                                 <label class="name_item_formulaire">Email *</label>
-                                <input type="text" name="" placeholder="Votre e-mail">
+                                <input type="text" name="" placeholder="Votre e-mail" value="{{$profil->email}}">
                             </div>
                              <div class="item_formulaire">
                                 <label class="name_item_formulaire">Téléphone</label>
-                                <input type="number" name="" placeholder="Téléphone">
+                                <input type="number" name="" placeholder="Téléphone" value="{{$profil->phone}}">
                             </div>
-                            <div class="item_formulaire">
+                            <!-- <div class="item_formulaire">
                                 <label class="name_item_formulaire">Portable</label>
                                 <input type="number" name="" placeholder="Portable">
                             </div>
@@ -135,7 +137,7 @@
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Site Internet</label>
                                 <input type="text" name="" placeholder="Site internet">
-                            </div>
+                            </div> -->
                             
                         </div>
                         
@@ -186,6 +188,7 @@
 	        </div>
 	        
     	</div>
+    </form>
     @endsection
 
     @section('additional-script')

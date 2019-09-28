@@ -20,7 +20,7 @@
       <label for="">Mes évaluations</label>
     </div>
   </a>
-  <a class="menus" href="{{ route('artisan_profil') }}">
+  <a class="menus" href="{{ Url('/artisan/profil/'.Auth::user()->id.'') }}">
     <div class="item_menu">
       <label for="">Mon profil</label>
     </div>
