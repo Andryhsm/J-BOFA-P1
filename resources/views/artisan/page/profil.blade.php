@@ -77,7 +77,7 @@
 		        		</div>
 		        	</div>
 		        	<div class="d-flex justify-content-center top_separate_changemdp">
-		        		<a href="" class="btn_orange_link_artisan">Changer mon mot de passe ></a>
+		        		<a href="{{ route('change_mdp') }}" class="btn_orange_link_artisan">Changer mon mot de passe ></a>
 		        	</div>
 
 	        		<div class="border_bottom border_dashed dashed_margin"></div>
@@ -102,30 +102,30 @@
 								<p>Vous avez <strong>2 fois plus de chance de signer</strong> un projet en important vos documents légaux !</p>
 							</div>
 							<div class="liste_document">
-								<div class="item_doc_upload">
+								<a class="item_doc_upload" href="{{ route('document_official') }}"> 
 									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
 									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
 									<label class="title_paper">Kbis</label>
 									<input type="file" class="hide" name="">
-								</div>
-								<div class="item_doc_upload">
+								</a>
+								<a class="item_doc_upload" href="{{ route('document_official') }}">
 									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
 									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
 									<label class="title_paper">Assurance</label>
 									<input type="file" class="hide" name="">
-								</div>
-								<div class="item_doc_upload">
+								</a>
+								<a class="item_doc_upload" href="{{ route('document_official') }}">
 									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
 									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
 									<label class="title_paper">Garantie Décennale</label>
 									<input type="file" class="hide" name="">
-								</div>
-								<div class="item_doc_upload">
+								</a>
+								<a class="item_doc_upload" href="{{ route('document_official') }}">
 									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
 									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
 									<label class="title_paper">Modifier</label>
 									<input type="file" class="hide" name="">
-								</div>
+								</a>
 							</div>
 						</div>
 						<div class="items_doc">
@@ -136,12 +136,12 @@
 								<p>Gagnez <strong>en visibilité et en crédibilité</strong>  en important vos labels qualité ! </p>
 							</div>
 							<div class="liste_document">
-								<div class="item_doc_upload">
+								<a class="item_doc_upload" href="{{ route('label_quality') }}">
 									<img src="{!! url('/image/artisan/modif_profil/paper_empty.png') !!}" class="image_fond_paper" alt="" />
 									<img src="{!! url('/image/artisan/modif_profil/plus_additionnal.png') !!}" class="image_upload_paper" alt="" />
 									<label class="title_paper"></label>
 									<input type="file" class="hide" name="">
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -161,11 +161,11 @@
 	    			<div class="descrition_doc">
 						<p><strong>Gagnez en visibilité </strong> en montrant des <strong>photos de chantiers</strong> que vous avez déjà réalisés !</p>
 					</div>
-					<div class="liste_document">
-						<div class="item_image_upload">
+					<div class="liste_document"> 
+						<a class="item_image_upload" href="{{ route('realisation') }}">
 							<img src="{!! url('/image/artisan/modif_profil/image_empty.png') !!}" class="image_fond_paper" alt="" />
 							<input type="file" class="hide" name="">
-						</div>
+						</a>
 					</div>
 					<div class="question_reponse">
 		        		<label class="title_question">Vous n'arrivez pas à importer vos réalisations ?</label>

@@ -186,19 +186,6 @@
 	        </div>
 	        
     	</div>
-        <!-- <div class="item_formulaire">
-                                <label class="name_item_formulaire">Civilité *</label>
-                                <select id="update_contact_titre" name=""  class="select_items">
-                                    <option value="">-- Choisissez --</option>
-                                    <option value="Mr" selected="selected">Mr</option>
-                                    <option value="Mme">Mme</option>
-                                    <option value="Mlle">Mlle</option>
-                                </select>
-                            </div>
-                            <div class="item_formulaire">
-                                <label class="name_item_formulaire">Email *</label>
-                                <input type="text" name="" placeholder="Email de l'entreprise">
-                            </div>  -->
     @endsection
 
     @section('additional-script')

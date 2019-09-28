@@ -71,6 +71,7 @@
 	    justify-content: center;
         margin-right: 0.5rem;
         cursor: pointer;
+        text_decoration: none;
 
 	    .image_fond_paper {
     	    width: 100%;
@@ -88,6 +89,10 @@
 		    color: #0062ae;
 	    }
     }
+}
+
+.item_image_upload {
+	text_decoration: none;
 }
 
 .content_chantier {

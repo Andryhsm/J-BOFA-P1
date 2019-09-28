@@ -87,19 +87,20 @@
   justify-content: center;
   margin-right: 0.5rem;
   cursor: pointer;
+  text_decoration: none;
 }
-/* line 75, ../../sass/admin/profil.scss */
+/* line 76, ../../sass/admin/profil.scss */
 .liste_document .item_doc_upload .image_fond_paper {
   width: 100%;
   height: 100%;
 }
-/* line 79, ../../sass/admin/profil.scss */
+/* line 80, ../../sass/admin/profil.scss */
 .liste_document .item_doc_upload .image_upload_paper {
   position: absolute;
   bottom: -1rem;
   left: -1rem;
 }
-/* line 84, ../../sass/admin/profil.scss */
+/* line 85, ../../sass/admin/profil.scss */
 .liste_document .item_doc_upload .title_paper {
   position: absolute;
   font-size: 11px;
@@ -108,27 +109,32 @@
 }
 
 /* line 94, ../../sass/admin/profil.scss */
+.item_image_upload {
+  text_decoration: none;
+}
+
+/* line 99, ../../sass/admin/profil.scss */
 .content_chantier .liste_document {
   margin-top: 2rem;
 }
-/* line 97, ../../sass/admin/profil.scss */
+/* line 102, ../../sass/admin/profil.scss */
 .content_chantier .liste_document .item_image_upload {
   cursor: pointer;
 }
 
-/* line 102, ../../sass/admin/profil.scss */
+/* line 107, ../../sass/admin/profil.scss */
 .question_reponse {
   margin-top: 4rem;
   background-color: #f0f0f0;
   padding: 1.5rem;
   font-size: 14px;
 }
-/* line 108, ../../sass/admin/profil.scss */
+/* line 113, ../../sass/admin/profil.scss */
 .question_reponse .title_question {
   font-weight: 600;
   color: #474747;
 }
-/* line 112, ../../sass/admin/profil.scss */
+/* line 117, ../../sass/admin/profil.scss */
 .question_reponse .reponse_question {
   color: #474747;
 }

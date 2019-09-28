@@ -34,5 +34,17 @@ class ArtisanController extends Controller
     public function coordonate() {
         return view('artisan.page.coordonate');
     }
+     public function ChangeMdp() {
+        return view('artisan.page.change_mdp');
+    }
+    public function DocumentOfficial() {
+        return view('artisan.page.document_official');
+    }
+    public function LabelQuality() {
+        return view('artisan.page.label_quality');
+    }
+    public function Realisation() {
+        return view('artisan.page.realisation');
+    }
 
 }
