@@ -17,7 +17,7 @@ class UserRepository implements UserRepositoryInterface
 
     public function findUser($user_id)
     {
-        return $this->model->find($user_id);
+        return $this->model->with('city')->find($user_id);
     }
 
     public function createUser($data)

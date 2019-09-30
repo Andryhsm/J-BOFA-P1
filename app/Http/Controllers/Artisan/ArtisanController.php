@@ -5,12 +5,15 @@ namespace App\Http\Controllers\Artisan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\TemoigneRepository;
+use App\Repositories\UserRepository;
 
 class ArtisanController extends Controller
 {
     protected $temoin_repo;
-    public function __construct(TemoigneRepository $temoin_repo){
+    protected $user_repo;
+    public function __construct(TemoigneRepository $temoin_repo, UserRepository $user_repo){
         $this->temoin_repo = $temoin_repo;
+        $this->user_repo = $user_repo;
     }
 
     public function index()
@@ -28,8 +31,25 @@ class ArtisanController extends Controller
     	return view('artisan.page.project_details');
     }
 
-    public function showProfil() {
-        return view('artisan.page.profil');
+    public function showProfil($id) {
+        $profil = $this->user_repo->findUser($id);
+        return view('artisan.page.profil',compact('profil'));
+    }
+    public function coordonate($id) {
+        $profil = $this->user_repo->findUser($id);
+        return view('artisan.page.coordonate',compact('profil'));
+    }
+     public function ChangeMdp() {
+        return view('artisan.page.change_mdp');
+    }
+    public function DocumentOfficial() {
+        return view('artisan.page.document_official');
+    }
+    public function LabelQuality() {
+        return view('artisan.page.label_quality');
+    }
+    public function Realisation() {
+        return view('artisan.page.realisation');
     }
 
 }

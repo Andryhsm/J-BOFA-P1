@@ -31,9 +31,9 @@ class HomeController extends Controller
     public function index()
     {
         //dd('ici');
+        $derniers = $this->user_repo->getTenArtisan();
         $users = $this->user_repo->getAllUser();
         $admins = $this->admin_repo->getAll();
-        $derniers = $this->user_repo->getTenArtisan();
         return view('admin.dashboard.index',compact('users','admins','derniers'));
     }
 }

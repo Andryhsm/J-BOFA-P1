@@ -1,4 +1,4 @@
-<div class="pages project_list_page">
+<div class="pages_artisan project_list_page">
   <div class="liste_project flex_one">
     <div class="project_item">
       <div class="title_project">
