@@ -118,3 +118,18 @@
     	color: #474747;
     }
 }
+
+@media screen and (max-width: 1300px) {
+	.pages_profil {
+		padding: inherit;
+	    margin-bottom: 2.5rem;
+	}
+	.pages {
+		.navbar_j {
+		    width: 100%;
+		}
+		.nav_bar {
+			padding: 6%;
+		}
+	}
+}

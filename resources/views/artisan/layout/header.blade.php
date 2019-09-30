@@ -9,13 +9,13 @@
         </a>
       </div>
       <div class="user_status">
-        <div class="user_icones">
+        <a class="user_icones" href="">
           <i class="fa fa-user user"></i>
           <div class="description_user">
             <label for="">Bonjour</label>
             <label for="" class="name_user">{{Auth::user()->first_name}} {{Auth::user()->name}}</label>
           </div>
-        </div>
+        </a>
         <div class="separated_items"></div>
         <a class="user_deconnexion" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
           <i class="fa fa-sign-out userdeco"></i>

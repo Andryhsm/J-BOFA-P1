@@ -192,5 +192,4 @@
     @endsection
 
     @section('additional-script')
-
     @endsection

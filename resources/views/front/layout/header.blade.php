@@ -9,10 +9,10 @@
                     <label for="" class="email item_box_header">
                         <div class="icones_headers"> <i class="fa fa-envelope-o"></i></div> loremipsum@dolorethasmany.com
                     </label>
-                    
+                    <!-- 
                     <label for="" class="email item_box_header">
                         <div class="icones_headers"><i class="fa fa-phone"></i></div> +261 88 42 455 28
-                    </label>
+                    </label> -->
                   </div>
                   <div class="compte_artisan">
                     <!-- login --><a href="{{ route('connexion') }}" class="btn_artisan login_artisan">Se connecter</a>

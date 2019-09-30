@@ -13,9 +13,14 @@
 @media (max-width:1300px) {
   .content_page .pages {
     padding: 0 0%;
+    flex-direction: column-reverse;
   }
   .nav_menu {
     padding: 2% 5%;
+  }
+  .pages_artisan {
+    padding: inherit;
+    margin-bottom: 3rem;
   }
 }
 

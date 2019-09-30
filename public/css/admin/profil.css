@@ -138,3 +138,20 @@
 .question_reponse .reponse_question {
   color: #474747;
 }
+
+@media screen and (max-width: 1300px) {
+  /* line 123, ../../sass/admin/profil.scss */
+  .pages_profil {
+    padding: inherit;
+    margin-bottom: 2.5rem;
+  }
+
+  /* line 128, ../../sass/admin/profil.scss */
+  .pages .navbar_j {
+    width: 100%;
+  }
+  /* line 131, ../../sass/admin/profil.scss */
+  .pages .nav_bar {
+    padding: 6%;
+  }
+}
