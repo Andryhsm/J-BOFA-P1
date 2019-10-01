@@ -15,7 +15,7 @@
                     </div>
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-10">
-                            <form class="form-wrap mt-4 position_relative">
+                            <form class="form-wrap mt-4 position_relative form_recherche_inovation">
                                 <div class="btn-group" role="group" aria-label="Basic example" id="parent">
                                     <input type="text" placeholder="Ex: Plomberie, Maçonnerie" id="recherche" class="btn-group1 header_search">
                                     <!-- <input type="text" placeholder="New york" class="btn-group2"> -->
