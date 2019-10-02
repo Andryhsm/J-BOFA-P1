@@ -34,6 +34,7 @@ class ArtisanController extends Controller
     	return view('artisan.page.project_details');
     }
 
+// Change Profil Menu
     public function showProfil($id) {
         $profil = $this->user_repo->findUser($id);
         return view('artisan.page.profil',compact('profil'));
@@ -54,6 +55,11 @@ class ArtisanController extends Controller
     }
     public function Realisation() {
         return view('artisan.page.realisation');
+    }
+
+// Show Service Menu
+    public function showService() {
+        return view('artisan.page.service');
     }
 
 }

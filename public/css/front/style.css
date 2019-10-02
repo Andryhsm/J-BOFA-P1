@@ -1347,3 +1347,18 @@ footer {
     color: #0062ae;
     text-decoration: underline;
 } 
+
+
+.form_recherche_inovation {
+    padding: 5px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.5);
+    box-shadow: inset 2px 1px 3px 0 rgba(4,4,255, 0.4);
+
+}
+
+
+.form_recherche_inovation #recherche {
+  color: #0062ae;
+  font-weight: 400;
+}
