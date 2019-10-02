@@ -6,14 +6,17 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\TemoigneRepository;
 use App\Repositories\UserRepository;
+use App\Repositories\CityRepository;
 
 class ArtisanController extends Controller
 {
     protected $temoin_repo;
     protected $user_repo;
-    public function __construct(TemoigneRepository $temoin_repo, UserRepository $user_repo){
+    protected $citie_repo;
+    public function __construct(TemoigneRepository $temoin_repo, UserRepository $user_repo,CityRepository $citie_repo){
         $this->temoin_repo = $temoin_repo;
         $this->user_repo = $user_repo;
+        $this->citie_repo = $citie_repo;
     }
 
     public function index()
@@ -37,7 +40,8 @@ class ArtisanController extends Controller
     }
     public function coordonate($id) {
         $profil = $this->user_repo->findUser($id);
-        return view('artisan.page.coordonate',compact('profil'));
+        $cities = $this->citie_repo->getAll();
+        return view('artisan.page.coordonate',compact('profil','cities'));
     }
      public function ChangeMdp() {
         return view('artisan.page.change_mdp');

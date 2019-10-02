@@ -53,31 +53,36 @@
                         <div class="liste_formulaire">
                              <div class="item_formulaire">
                                 <label class="name_item_formulaire">Nom de l'entreprise *</label>
-                                <input type="text" name="" value="{{$profil->enterprise}}" placeholder="Nom de l'entreprise">
+                                <input type="text" name="enterprise" value="{{$profil->enterprise}}" placeholder="Nom de l'entreprise">
                             </div>
-                            <!-- <div class="item_formulaire">
+                            <div class="item_formulaire">
                                 <label class="name_item_formulaire">Siret *</label>
-                                <input type="text" name="" placeholder="Numéro Siret">
+                                <input type="text" name="siret" placeholder="Numéro Siret">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Année de création</label>
-                                <input type="text" name="" placeholder="Année de création">
+                                <input type="text" name="creation" placeholder="Année de création">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Adresse *</label>
-                                <input type="text" name="" placeholder="Adresse">
-                            </div> -->
+                                <input type="text" name="address" placeholder="Adresse">
+                            </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Ville *</label>
                                 <select id="update_contact_titre" name=""  class="select_items">
                                     <option value="">-- Choisissez --</option>
+                                    @if(isset($cities))
+                                        @foreach($cities as $citie)
+                                            <option value="{{$citie->ville_id}}" {{($profil->city_id == $citie->ville_id) ? 'selected' : ''}}>{{$citie->ville_nom}}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                             </div>
                             
                         </div>
 
                          <div class="liste_formulaire">
-                           <!-- <div class="item_formulaire">
+                           <div class="item_formulaire">
                                 <label class="name_item_formulaire">Civilité *</label>
                                 <select id="update_contact_titre" name=""  class="select_items">
                                     <option value="">-- Choisissez --</option>
@@ -85,7 +90,7 @@
                                     <option value="Mme">Mme</option>
                                     <option value="Mlle">Mlle</option>
                                 </select>
-                            </div> -->
+                            </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Nom *</label>
                                 <input type="text" name="" placeholder="Votre Nom" value="{{$profil->name}}">
@@ -126,7 +131,7 @@
                                 <label class="name_item_formulaire">Téléphone</label>
                                 <input type="number" name="" placeholder="Téléphone" value="{{$profil->phone}}">
                             </div>
-                            <!-- <div class="item_formulaire">
+                            <div class="item_formulaire">
                                 <label class="name_item_formulaire">Portable</label>
                                 <input type="number" name="" placeholder="Portable">
                             </div>
@@ -137,7 +142,7 @@
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Site Internet</label>
                                 <input type="text" name="" placeholder="Site internet">
-                            </div> -->
+                            </div>
                             
                         </div>
                         

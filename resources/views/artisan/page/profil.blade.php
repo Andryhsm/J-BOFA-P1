@@ -44,14 +44,14 @@
 		        				<span class="label">Téléphone:</span>
 		        				<span class="value">{{$profil->phone}}</span>
 		        			</p>
-		        			<!-- <p>
+		        			<p>
 		        				<span class="label">Portable:</span>
 		        				<span class="value">{{$profil->phone}}</span>
 		        			</p>
 		        			<p>
 		        				<span class="label">Adresse:</span>
-		        				<span class="value">{{$profil->name}}</span>
-		        			</p> -->
+		        				<span class="value">{{$profil->city->ville_nom}}</span>
+		        			</p>
 		        			<p>
 		        				<span class="label">Ville:</span>
 		        				<span class="value">{{$profil->city->ville_nom}}</span>
@@ -62,10 +62,10 @@
 		        				<span class="label">Date de création:</span>
 		        				<span class="value">{{$profil->created_at}}</span>
 		        			</p>
-		        			<!-- <p>
+		        			<p>
 		        				<span class="label">N° SIRET:</span>
 		        				<span class="value">0000</span>
-		        			</p> -->
+		        			</p>
 		        			<p>
 		        				<span class="label">E-mail:</span>
 		        				<span class="value">{{$profil->email}}</span>

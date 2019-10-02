@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Category;
 use App\Models\City;
+use App\Models\UserProfile;
 
 class User extends Authenticatable
 {
@@ -45,5 +46,10 @@ class User extends Authenticatable
 
     public function city(){
         return $this->hasOne(City::class,'ville_id','city_id');
+    }
+
+    public function profile()
+    {
+        return $this->hasMany(UserProfile::class,'user_id','id');
     }
 }

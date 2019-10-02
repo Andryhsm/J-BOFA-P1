@@ -4,15 +4,18 @@ namespace App\Repositories;
 
 use App\Interfaces\UserRepositoryInterface;
 Use App\User;
+Use App\Models\UserProfile;
 use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
 {
     protected $model;
+    protected $user_profil;
 
-	public function __construct(User $user)
+	public function __construct(User $user,UserProfile $user_profil)
     {
         $this->model = $user;
+        $this->user_profil = $user_profil;
     }
 
     public function findUser($user_id)
@@ -40,10 +43,13 @@ class UserRepository implements UserRepositoryInterface
     public function updateUser($user_id, $data)
     {
         $this->model = $this->model->with('category')->with('city')->find($user_id);
-        $this->model->name = $data['inputName'];
-        $this->model->email = $data['inputEmail'];
-        $this->model->phone = $data['inputPhone'];
-        $this->model->status = $data['inputStatus'];
+        $this->model->name = $data['name'];
+        $this->model->first_name = $data['first_name'];
+        $this->model->enterprise = $data['enterprise'];
+        $this->model->city_id = $data['ville'];
+        $this->model->category_id = $data['category'];
+        $this->model->email = $data['email'];
+        $this->model->phone = $data['phone'];
         if (isset($data['inputPhoto'])) 
             $this->model->photo = $data['inputPhoto'];        
         $this->model->password = (!empty($data['inputPassword']))? Hash::make($data['inputPassword']) : $this->model->password;

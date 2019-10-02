@@ -80,6 +80,11 @@ class RegisterController extends Controller
         //     'password' => Hash::make($data['password']),
         // ]);
        $user = $this->user_repository->createUser($data->all());
-       return redirect()->guest(route('connexion'));
+       if (auth()->attempt(['email' => $data->email, 'password' => $data->password])) {
+            //dd(auth()->guard('admin')->user());
+            return redirect()->route('artisan_home');
+        }else{
+            return redirect()->guest(route('connexion'));
+        }
     }
 }
