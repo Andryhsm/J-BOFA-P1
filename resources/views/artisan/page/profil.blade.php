@@ -46,11 +46,11 @@
 		        			</p>
 		        			<p>
 		        				<span class="label">Portable:</span>
-		        				<span class="value">{{$profil->phone}}</span>
+		        				<span class="value">{{($profil->profile) ? $profil->profile->portable : ''}}</span>
 		        			</p>
 		        			<p>
 		        				<span class="label">Adresse:</span>
-		        				<span class="value">{{$profil->city->ville_nom}}</span>
+		        				<span class="value">{{($profil->profile) ? $profil->profile->address : ''}}</span>
 		        			</p>
 		        			<p>
 		        				<span class="label">Ville:</span>
@@ -64,7 +64,7 @@
 		        			</p>
 		        			<p>
 		        				<span class="label">N° SIRET:</span>
-		        				<span class="value">0000</span>
+		        				<span class="value">{{($profil->profile) ? $profil->profile->siret : ''}}</span>
 		        			</p>
 		        			<p>
 		        				<span class="label">E-mail:</span>

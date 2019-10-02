@@ -20,12 +20,13 @@ class UserProfile extends Migration
             $table->binary('gender')->nullable();
             $table->string('address');
             $table->string('siret');
-            $table->string('creation');
+            $table->string('creation')->nullable();
             $table->string('metier');
             $table->string('portable')->nullable();
             $table->string('fax')->nullable();
             $table->string('site')->nullable();
             $table->string('rge')->nullable();
+            $table->text('description')->nullable();
         });
 
         Schema::table('user_profil',function(Blueprint $table){

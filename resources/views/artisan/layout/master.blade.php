@@ -30,6 +30,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('additional-css')
+    @toastr_css
 
     <!-- End Style CSS -->
   </head>
@@ -50,13 +51,13 @@
       </div>
     </div>
     @include('front.layout.footer')
-
     {!! Html::script('js/front/jquery-3.2.1.min.js') !!}
     {!! Html::script('js/front/popper.min.js') !!}
     {!! Html::script('js/front/bootstrap.min.js') !!}
     {!! Html::script('js/front/swiper.min.js') !!}
     {!! Html::script('js/front/index.js') !!}
     {!! Html::script('js/artisan/header.js') !!}
+    {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js') !!}
     {!! Html::script('js/artisan/profil.js') !!}
           <!-- ajout script -->
             @yield('additional-script')
@@ -120,7 +121,8 @@
                 }
             </script>
           <!-- Script -->
-
+      @toastr_js
+    @toastr_render
     <!-- End Script -->
 
   </body>

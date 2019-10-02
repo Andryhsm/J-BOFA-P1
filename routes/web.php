@@ -116,5 +116,6 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::get('label_quality','ArtisanController@LabelQuality')->name('label_quality');
     Route::get('realisation','ArtisanController@Realisation')->name('realisation');
     Route::get('service','ArtisanController@showService')->name('service');
+    Route::post('update_profile','ArtisanController@updateProfil')->name('update_profile');
 });
 // end Auth route 

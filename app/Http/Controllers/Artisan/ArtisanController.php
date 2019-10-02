@@ -57,6 +57,13 @@ class ArtisanController extends Controller
         return view('artisan.page.realisation');
     }
 
+    public function updateProfil(Request $request){
+        //dd($request['user_id']);
+        $id = $request['user_id'];
+        $this->user_repo->updateUser($id,$request->all());
+        return redirect('/artisan/accueil');
+    }
+
 // Show Service Menu
     public function showService() {
         return view('artisan.page.service');

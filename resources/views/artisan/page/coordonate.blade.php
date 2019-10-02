@@ -34,15 +34,17 @@
     @endsection
 
     @section('content')
-    <form action="" method="POST">
+    <form action="{{route('update_profile')}}" method="POST">
+        {!! csrf_field() !!}
     	<div class="pages_profil profil_page">
     		<div class="content_profil">
     			<div class="entreprise_presentation">
                     <input type="hidden" name="city_id" value="{{$profil->city_id}}">
+                    <input type="hidden" name="user_id" value="{{$profil->id}}">
                     <div class="d-flex justify-content-between title_separate">
                         <h5 class="title_profil">INFORMATIONS SUR MON ENTREPRISE</h5>
                     </div>
-                    <textarea class="info_entreprise" placeholder="vous n'avez pas encore rédigé de présentation de votre activité"></textarea>
+                    <textarea class="info_entreprise" name="description" placeholder="vous n'avez pas encore rédigé de présentation de votre activité">{{($profil->profile && $profil->profile->description!="") ? $profil->profile->description : ''}}</textarea>
                 </div>
 
                 <div class="coordonate_entreprise">
@@ -57,20 +59,20 @@
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Siret *</label>
-                                <input type="text" name="siret" placeholder="Numéro Siret">
+                                <input type="text" name="siret" placeholder="Numéro Siret" value="{{($profil->profile) ? $profil->profile->siret : ''}}"> 
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Année de création</label>
-                                <input type="text" name="creation" placeholder="Année de création">
+                                <input type="text" name="creation" placeholder="Année de création" value="{{($profil->profile) ? $profil->profile->creation : ''}}">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Adresse *</label>
-                                <input type="text" name="address" placeholder="Adresse">
+                                <input type="text" name="address" placeholder="Adresse" value="{{($profil->profile) ? $profil->profile->address : ''}}">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Ville *</label>
-                                <select id="update_contact_titre" name=""  class="select_items">
-                                    <option value="">-- Choisissez --</option>
+                                <select id="update_contact_titre" name="ville"  class="select_items">
+                                    <option value="choisissez">-- Choisissez --</option>
                                     @if(isset($cities))
                                         @foreach($cities as $citie)
                                             <option value="{{$citie->ville_id}}" {{($profil->city_id == $citie->ville_id) ? 'selected' : ''}}>{{$citie->ville_nom}}</option>
@@ -84,20 +86,20 @@
                          <div class="liste_formulaire">
                            <div class="item_formulaire">
                                 <label class="name_item_formulaire">Civilité *</label>
-                                <select id="update_contact_titre" name=""  class="select_items">
-                                    <option value="">-- Choisissez --</option>
-                                    <option value="Mr" selected="selected">Mr</option>
-                                    <option value="Mme">Mme</option>
-                                    <option value="Mlle">Mlle</option>
+                                <select id="gender" name="gender"  class="select_items">
+                                    <option value="choisissez">-- Choisissez --</option>
+                                    <option value="Mr" {{($profil->profile && $profil->profile->gender == "Mr") ? 'selected' : ''}}>Mr</option>
+                                    <option value="Mme" {{($profil->profile && $profil->profile->gender == "Mme") ? 'selected' : ''}}>Mme</option>
+                                    <option value="Mlle" {{($profil->profile && $profil->profile->gender == "Mlle") ? 'selected' : ''}}>Mlle</option>
                                 </select>
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Nom *</label>
-                                <input type="text" name="" placeholder="Votre Nom" value="{{$profil->name}}">
+                                <input type="text" name="name" placeholder="Votre Nom" value="{{$profil->name}}">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Prénom *</label>
-                                <input type="text" name="" placeholder="Votre prénom" value="{{$profil->first_name}}">
+                                <input type="text" name="first_name" placeholder="Votre prénom" value="{{$profil->first_name}}">
                             </div>
                              <!-- <div class="item_formulaire">
                                 <label class="name_item_formulaire"> Fonction</label>
@@ -105,43 +107,43 @@
                             </div> -->
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Métier *</label>
-                                <select id="update_contact_titre" name=""  class="select_items">
-                                    <option value="">-- Choisissez --</option>
-                                    <option value="3">Architecte</option>
-                                    <option value="5">Carreleur</option>
-                                    <option value="6">Charpentier</option>
-                                    <option value="7">Chauffagiste</option>
-                                    <option value="8">Climatisation (installateur)</option>
-                                    <option value="10">Constructeur de maison</option>
-                                    <option value="70">Courtier</option>
-                                    <option value="11">Couvreur</option>
-                                    <option value="12">Cuisiniste</option>
-                                    <option value="13">Décorateur</option>
-                                    <option value="16">Dératiseur</option>
-                                    <option value="68">Diagnostiqueur Immobilier</option>
+                                <select id="metier" name="metier"  class="select_items">
+                                    <option value="choisissez">-- Choisissez --</option>
+                                    <option value="3" {{($profil->profile && $profil->profile->metier == "3") ? 'selected' : ''}}>Architecte</option>
+                                    <option value="5" {{($profil->profile && $profil->profile->metier == "5") ? 'selected' : ''}}>Carreleur</option>
+                                    <option value="6" {{($profil->profile && $profil->profile->metier == "6") ? 'selected' : ''}}>Charpentier</option>
+                                    <option value="7" {{($profil->profile && $profil->profile->metier == "7") ? 'selected' : ''}}>Chauffagiste</option>
+                                    <option value="8" {{($profil->profile && $profil->profile->metier == "8") ? 'selected' : ''}}> Climatisation (installateur)</option>
+                                    <option value="10" {{($profil->profile && $profil->profile->metier == "10") ? 'selected' : ''}}>Constructeur de maison</option>
+                                    <option value="70" {{($profil->profile && $profil->profile->metier == "70") ? 'selected' : ''}}>Courtier</option>
+                                    <option value="11" {{($profil->profile && $profil->profile->metier == "11") ? 'selected' : ''}}>Couvreur</option>
+                                    <option value="12" {{($profil->profile && $profil->profile->metier == "12") ? 'selected' : ''}}>Cuisiniste</option>
+                                    <option value="13" {{($profil->profile && $profil->profile->metier == "13") ? 'selected' : ''}}>Décorateur</option>
+                                    <option value="16" {{($profil->profile && $profil->profile->metier == "16") ? 'selected' : ''}}>Dératiseur</option>
+                                    <option value="68" {{($profil->profile && $profil->profile->metier == "68") ? 'selected' : ''}}>Diagnostiqueur Immobilier</option>
                                 </select>
                             </div>
                         </div>
                          <div class="liste_formulaire">
                            <div class="item_formulaire">
                                 <label class="name_item_formulaire">Email *</label>
-                                <input type="text" name="" placeholder="Votre e-mail" value="{{$profil->email}}">
+                                <input type="text" name="email" placeholder="Votre e-mail" value="{{$profil->email}}">
                             </div>
                              <div class="item_formulaire">
                                 <label class="name_item_formulaire">Téléphone</label>
-                                <input type="number" name="" placeholder="Téléphone" value="{{$profil->phone}}">
+                                <input type="number" name="phone" placeholder="Téléphone" value="{{$profil->phone}}">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Portable</label>
-                                <input type="number" name="" placeholder="Portable">
+                                <input type="number" name="portable" placeholder="Portable" value="{{($profil->profile) ? $profil->profile->portable : ''}}">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Fax</label>
-                                <input type="number" name="" placeholder="Fax">
+                                <input type="number" name="fax" placeholder="Fax" value="{{($profil->profile) ? $profil->profile->fax : ''}}">
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Site Internet</label>
-                                <input type="text" name="" placeholder="Site internet">
+                                <input type="text" name="site" placeholder="Site internet" value="{{($profil->profile) ? $profil->profile->site : ''}}">
                             </div>
                             
                         </div>
@@ -158,13 +160,13 @@
                         <div class="liste_formulaire">
                              <div class="item_formulaire">
                                 <label class="name_item_formulaire"></label>
-                                <select id="update_contact_rge" name="" class="">
+                                <select id="update_contact_rge" name="rge" class="">
                                     <option value="" selected="selected">-- Choisissez --</option>
-                                    <option value="notconcerned">Pas concerné</option>
-                                    <option value="notdefined">Non renseigné</option>
-                                    <option value="notinterested">Concerné - pas intéressé</option>
-                                    <option value="pending">En cours / à l'étude</option>
-                                    <option value="yes">Oui</option>
+                                    <option value="notconcerned" {{($profil->profile && $profil->profile->rge == "notconcerned") ? 'selected' : ''}}>Pas concerné</option>
+                                    <option value="notdefined" {{($profil->profile && $profil->profile->rge == "notdefined") ? 'selected' : ''}}>Non renseigné</option>
+                                    <option value="notinterested" {{($profil->profile && $profil->profile->rge == "notinterested") ? 'selected' : ''}}>Concerné - pas intéressé</option>
+                                    <option value="pending" {{($profil->profile && $profil->profile->rge == "pending") ? 'selected' : ''}}>En cours / à l'étude</option>
+                                    <option value="yes" {{($profil->profile && $profil->profile->rge == "yes") ? 'selected' : ''}}>Oui</option>
                                 </select>
                             </div>
                         </div>
@@ -181,20 +183,21 @@
 
                      <div class="upload_image_profil">
                          <span class="decoration_upload justify-content-center align-items-center">Téléchargez votre photo de profil</span>
-                         <input type="file" class="input_file_profil" name="">
+                         <input type="file" class="input_file_profil" name="photo">
                      </div>
                 </div>
 
 
                 <div class="btn_save_profil justify-content-center align-items-center">
+                    <input type="submit" name="" style="display: none;">
                     <button class="save_profil">Enregistrer</button>
                 </div>
 
 	        </div>
-	        
     	</div>
     </form>
     @endsection
 
     @section('additional-script')
+        {!! Html::script('js/artisan/coordonate.js') !!}
     @endsection

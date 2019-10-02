@@ -20,7 +20,7 @@ class UserRepository implements UserRepositoryInterface
 
     public function findUser($user_id)
     {
-        return $this->model->with('city')->find($user_id);
+        return $this->model->with('profile')->with('category')->with('city')->find($user_id);
     }
 
     public function createUser($data)
@@ -47,17 +47,20 @@ class UserRepository implements UserRepositoryInterface
         $this->model->first_name = $data['first_name'];
         $this->model->enterprise = $data['enterprise'];
         $this->model->city_id = $data['ville'];
-        $this->model->category_id = $data['category'];
         $this->model->email = $data['email'];
         $this->model->phone = $data['phone'];
-        if (isset($data['inputPhoto'])) 
-            $this->model->photo = $data['inputPhoto'];        
+        if (isset($data['photo'])) 
+            $this->model->photo = $data['photo'];        
         $this->model->password = (!empty($data['inputPassword']))? Hash::make($data['inputPassword']) : $this->model->password;
         $this->model->save();
+
+        $this->user_profil = $this->user_profil->updateOrCreate(['user_id'   => $user_id],
+            ['siret'=> $data['siret'],'creation'=> $data['creation'],'portable'=> $data['portable'],'fax'=> $data['fax'],'address'=> $data['address'],'metier'=> $data['metier'],'rge'=> $data['rge'],'gender'=> $data['gender'],'site'=> $data['site'],'description'=> $data['description']]);
+
     }
 
     public function getAllUser(){
-        return $this->model->with('category')->with('city')->orderBy('id','desc')->get();
+        return $this->model->with('profile')->with('category')->with('city')->orderBy('id','desc')->get();
     }
 
     public function deleteUser($user_id){
@@ -82,6 +85,6 @@ class UserRepository implements UserRepositoryInterface
     }
 
     public function getTenArtisan(){
-        return $this->model->with('category')->with('city')->orderBy('created_at','desc')->limit(10)->get();
+        return $this->model->with('profile')->with('category')->with('city')->orderBy('created_at','desc')->limit(10)->get();
     }
 }
