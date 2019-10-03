@@ -1,4 +1,7 @@
 @media screen and (max-width: 1024px) {
+	.container_page {
+		/* flex-direction: column-reverse; */
+	}
 	.nav_bar {
 	    width: 100%;
     	margin: 0;
