@@ -7,25 +7,24 @@
 
     @section('side_nav')
       <div class="nav_bar">
-        <div class="description_user">
-          <div class="image_user">
-            <img src="{!! url('/image/front/user/user.png') !!}" class="" alt="" />
-          </div>
-          <div class="user_description">
-            <label for="" class="name">AZL ELECTRICITE</label>
-            <label for="" class="user_work">Electrician</label>
-            <div class="evaluation">
-              <div class="liste_star">
-                <img src="{!! url('/image/front/icones/star.svg') !!}" class="" alt="" />
-                <img src="{!! url('/image/front/icones/star.svg') !!}" class="" alt="" />
-                <img src="{!! url('/image/front/icones/star.svg') !!}" class="" alt="" />
-                <img src="{!! url('/image/front/icones/star_g.svg') !!}" class="" alt="" />
-                <img src="{!! url('/image/front/icones/star_g.svg') !!}" class="" alt="" />
-              </div>
-              <label for="" class="number_star">(0 avis)</label>
-            </div>
-          </div>
-        </div>
+        <ul class="liste_service">
+          <li>
+          	<label class="title_service0">ILS ONT CRÉÉ LEUR SITE</label>
+          	<a href="" class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
+          </li>
+          <li>
+          	<label class="title_service0">ACCOMPAGNEMENT JURIDIQUE</label>
+          	<a href="" class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
+          </li>
+          <li>
+          	<label class="title_service0">DOCUMENTS JURIDIQUES</label>
+          	<a href="" class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
+          </li>
+          <li>
+          	<label class="title_service0">CABINET EXPERT COMPTABLE</label>
+          	<a href="" class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
+          </li>
+        </ul>
       </div>
 
       @include('artisan.layout.side_map')

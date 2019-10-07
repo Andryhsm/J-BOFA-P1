@@ -30,7 +30,7 @@
       <label for="">Mes factures</label>
     </div>
   </a>
-  <a class="menus">
+  <a class="menus" href="{{ route('service') }}">
     <div class="item_menu">
       <label for="">Services</label>
       <label for="" class="add_service">+</label>
