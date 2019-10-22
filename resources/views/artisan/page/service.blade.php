@@ -87,7 +87,35 @@
 
             <div class="btn_separate_service">
               <button class="btn_service">Je crée mon site</button>
-
+            </div>
+          </div>
+          <div class="liste_site_service">
+            <label for="" class="title_site">ILS ONT CRÉÉ LEUR SITE</label>
+            <div class="service_site d-flex justify-content-between align-items-center">
+              <div class="form_item_site">
+                <img src="{!! url('/image/artisan/service/sites/site1.jpeg') !!}" alt="">
+                <label for="" class="title_site_absolute">123 Artisan</label>
+              </div>
+              <div class="form_item_site">
+                <img src="{!! url('/image/artisan/service/sites/site2.png') !!}" alt="">
+                <label for="" class="title_site_absolute">123 Artisan</label>
+              </div>
+              <div class="form_item_site">
+                <img src="{!! url('/image/artisan/service/sites/site3.png') !!}" alt="">
+                <label for="" class="title_site_absolute">123 Artisan</label>
+              </div>
+              <div class="form_item_site">
+                <img src="{!! url('/image/artisan/service/sites/site4.jpg') !!}" alt="">
+                <label for="" class="title_site_absolute">123 Artisan</label>
+              </div>
+              <div class="form_item_site">
+                <img src="{!! url('/image/artisan/service/sites/site5.jpg') !!}" alt="">
+                <label for="" class="title_site_absolute">123 Artisan</label>
+              </div>
+              <div class="form_item_site">
+                <img src="{!! url('/image/artisan/service/sites/site6.jpg') !!}" alt="">
+                <label for="" class="title_site_absolute">123 Artisan</label>
+              </div>
             </div>
           </div>
     	</div>

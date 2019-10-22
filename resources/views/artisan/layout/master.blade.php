@@ -59,6 +59,7 @@
     {!! Html::script('js/artisan/header.js') !!}
     {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js') !!}
     {!! Html::script('js/artisan/profil.js') !!}
+
           <!-- ajout script -->
             @yield('additional-script')
           <!-- end ajout script -->
@@ -120,6 +121,42 @@
                     });
                 }
             </script>
+             {{-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKwbmXbI2xTnvbxrQTL7W8UEL7RXXKBns &callback=initMap"
+             type="text/javascript"></script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script> --}}
+            
+             
+             <script type="text/javascript">
+            //  var locations = print_r(json_encode($locations));
+            //    console.log(locations);
+            //    var mymap = new GMaps({
+            //      el: '#mymap',
+            //      lat: 21.170240,
+            //      lng: 72.831061,
+            //      zoom:6
+            //    });
+         
+         
+            //    $.each( locations, function( index, value ){
+            //      mymap.addMarker({
+            //        lat: value.ville_latitude_deg,
+            //        lng: value.ville_longitude_deg,
+            //        title: value.ville_nom,
+            //        click: function(e) {
+            //          alert('This is '+value.ville_nom+', gujarat from India.');
+            //        }
+            //      });
+            //    });
+            $(function() {
+                $("#mymap").googleMap({
+                  zoom: 10, // Initial zoom level (optional)
+                  coords: [48.895651, 2.290569], // Map center (optional)
+                  type: "ROADMAP" // Map type (optional)
+                });
+              })
+         
+         
+             </script>
           <!-- Script -->
       @toastr_js
     @toastr_render

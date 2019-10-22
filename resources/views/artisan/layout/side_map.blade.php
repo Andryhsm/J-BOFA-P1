@@ -8,7 +8,8 @@
       <label>Si vous le souhaitez, vous pouvez définir une zone kilométrique autour d'une ville donnée.</label>
     </div>
     <div class="maps_location">
-      <img src="{!! url('/image/artisan/maps.png') !!}" class="" alt="maps" />
+      {{-- <img src="{!! url('/image/artisan/maps.png') !!}" class="" alt="maps" /> --}}
+      <div id="mymap" style="width: 100%; height: 300px;"></div>
     </div>
     <div class="btn_foot_list">
       <button type="button" name="" class="btn_view_more_list">Modifier ma zone de prospection</button>
