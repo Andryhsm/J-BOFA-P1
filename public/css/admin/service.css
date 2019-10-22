@@ -196,7 +196,7 @@
   text-align: center;
   font-size: 22px;
   text-transform: uppercase;
-  margin: 30px 0;
+  margin: 30px 0 0 0;
   color: #4e4e4e;
   font-family: 'Open Sans Condensed',sans-serif;
 }
@@ -207,8 +207,8 @@
 }
 /* line 189, ../../sass/admin/service.scss */
 .liste_site_service .form_item_site {
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 225px;
   position: relative;
   cursor: pointer;
   margin-top: 50px;
@@ -232,16 +232,19 @@
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  -moz-transition: height 3s ease;
-  -webkit-transition: height 3s ease;
-  -o-transition: height 3s ease;
-  transition: height 3s ease;
+  /*height: auto;*/
+  padding-bottom: 0;
+  -moz-transition: padding-bottom 2s ease;
+  -webkit-transition: padding-bottom 2s ease;
+  -o-transition: padding-bottom 2s ease;
+  transition: padding-bottom 2s ease;
 }
-/* line 223, ../../sass/admin/service.scss */
+/* line 225, ../../sass/admin/service.scss */
 .liste_site_service .form_item_site:hover .title_site_absolute {
-  height: 100%;
-  -moz-transition: height 3s ease;
-  -webkit-transition: height 3s ease;
-  -o-transition: height 3s ease;
-  transition: height 3s ease;
+  /*height: 100%;*/
+  padding-bottom: 20%;
+  -moz-transition: padding-bottom 2s ease;
+  -webkit-transition: padding-bottom 2s ease;
+  -o-transition: padding-bottom 2s ease;
+  transition: padding-bottom 2s ease;
 }

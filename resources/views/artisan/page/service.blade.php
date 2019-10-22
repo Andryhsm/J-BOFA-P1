@@ -117,6 +117,9 @@
                 <label for="" class="title_site_absolute">123 Artisan</label>
               </div>
             </div>
+            <div class="btn_separate_service">
+              <button class="btn_service">Je crée mon site</button>
+            </div>
           </div>
     	</div>
     @endsection
