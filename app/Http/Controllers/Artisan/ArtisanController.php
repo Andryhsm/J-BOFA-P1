@@ -21,8 +21,11 @@ class ArtisanController extends Controller
 
     public function index()
     {
+        $cities = auth()->user()->city_id;
         $temoins = $this->temoin_repo->getTemoins();
-        return view('artisan.page.index', compact('temoins'));
+        $locations = $this->citie_repo->getAddress($cities);
+        //dd($locations);
+        return view('artisan.page.index', compact('temoins','locations'));
     }
 
     public function showAvailablePage()
