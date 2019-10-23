@@ -32,97 +32,113 @@
 
     @section('content')
     	<div class="service_page position-relative">
-	        <div class="header_page_service position-absolute">
-            <img src="{!! url('/image/artisan/service/fond_page.png') !!}" alt="" class="image_header">
-          </div>
-          <div class="content_page_service">
-            <div class="item_title_service d-flex justify-content-center align-items-center">
-              <label class="title_service">ILS ONT CRÉÉ LEUR SITE</label>
+        <div class="pagination_service" id="site_web">
+           <div class="header_page_service position-absolute">
+              <img src="{!! url('/image/artisan/service/fond_page.png') !!}" alt="" class="image_header">
             </div>
-            <div class="item_service d-flex justify-content-between">
-                <div class="form_item_service d-flex justify-content-center align-items-center">
-                  <div class="img_representation">
-                      <img src="{!! url('/image/artisan/service/loupi.jpg') !!}" alt="">
+            <div class="content_page_service">
+              <div class="item_title_service d-flex justify-content-center align-items-center">
+                <label class="title_service">ILS ONT CRÉÉ LEUR SITE</label>
+              </div>
+              <div class="item_service d-flex justify-content-between">
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/loupi.jpg') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation">RASSUREZ</label>
+                      <label for="" class="text_description">les clients, ils vous cherchent sur Google</label>
+                    </div>
                   </div>
-                  <div class="description_representation">
-                    <label for="" class="title_representation">RASSUREZ</label>
-                    <label for="" class="text_description">les clients, ils vous cherchent sur Google</label>
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/icone1.png') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation">TRANSFORMEZ</label>
+                      <label for="" class="text_description">plus de devis en clients</label>
+                    </div>
                   </div>
-                </div>
-                <div class="form_item_service d-flex justify-content-center align-items-center">
-                  <div class="img_representation">
-                      <img src="{!! url('/image/artisan/service/icone1.png') !!}" alt="">
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/loup.png') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation">INFORMEZ</label>
+                      <label for="" class="text_description">vos clients sur vos prestations</label>
+                    </div>
                   </div>
-                  <div class="description_representation">
-                    <label for="" class="title_representation">TRANSFORMEZ</label>
-                    <label for="" class="text_description">plus de devis en clients</label>
-                  </div>
-                </div>
-                <div class="form_item_service d-flex justify-content-center align-items-center">
-                  <div class="img_representation">
-                      <img src="{!! url('/image/artisan/service/loup.png') !!}" alt="">
-                  </div>
-                  <div class="description_representation">
-                    <label for="" class="title_representation">INFORMEZ</label>
-                    <label for="" class="text_description">vos clients sur vos prestations</label>
-                  </div>
-                </div>
-            </div>
+              </div>
 
-            <div class="item_video_service d-flex justify-content-between">
-              <div class="form_place_video">
-                <div class="video_service">
-                  <iframe src="https://www.youtube.com/watch?v=N7K59z9gi14&list=PL8JStPcpp3yqFNhm_JQ0KQKmu6d56hBJm" width="100%" frameborder="0" allowfullscreen></iframe> 
+              <div class="item_video_service d-flex justify-content-between">
+                <div class="form_place_video">
+                  <div class="video_service">
+                    <iframe src="https://www.youtube.com/watch?v=N7K59z9gi14&list=PL8JStPcpp3yqFNhm_JQ0KQKmu6d56hBJm" width="100%" frameborder="0" allowfullscreen></iframe> 
+                  </div>
+                </div>
+                <div class="form_place_video">
+                 <ul class="citation_video">
+                   <li>Nous créons votre site de A à Z - vous n'avez rien à faire</li>
+                   <li>Le site est compatible avec les mobiles et les tablettes</li>
+                   <li>Ensuite, modifiez le vous-même, ou en nous appelant</li>
+                   <li>Vous faites signer 6 devis sur 10 ? Passez à 8 grâce à un site rassurant !</li>
+                 </ul>
                 </div>
               </div>
-              <div class="form_place_video">
-               <ul class="citation_video">
-                 <li>Nous créons votre site de A à Z - vous n'avez rien à faire</li>
-                 <li>Le site est compatible avec les mobiles et les tablettes</li>
-                 <li>Ensuite, modifiez le vous-même, ou en nous appelant</li>
-                 <li>Vous faites signer 6 devis sur 10 ? Passez à 8 grâce à un site rassurant !</li>
-               </ul>
-              </div>
-            </div>
 
-            <div class="btn_separate_service">
-              <button class="btn_service">Je crée mon site</button>
-            </div>
-          </div>
-          <div class="liste_site_service">
-            <label for="" class="title_site">ILS ONT CRÉÉ LEUR SITE</label>
-            <div class="service_site d-flex justify-content-between align-items-center">
-              <div class="form_item_site">
-                <img src="{!! url('/image/artisan/service/sites/site1.jpeg') !!}" alt="">
-                <label for="" class="title_site_absolute">123 Artisan</label>
-              </div>
-              <div class="form_item_site">
-                <img src="{!! url('/image/artisan/service/sites/site2.png') !!}" alt="">
-                <label for="" class="title_site_absolute">123 Artisan</label>
-              </div>
-              <div class="form_item_site">
-                <img src="{!! url('/image/artisan/service/sites/site3.png') !!}" alt="">
-                <label for="" class="title_site_absolute">123 Artisan</label>
-              </div>
-              <div class="form_item_site">
-                <img src="{!! url('/image/artisan/service/sites/site4.jpg') !!}" alt="">
-                <label for="" class="title_site_absolute">123 Artisan</label>
-              </div>
-              <div class="form_item_site">
-                <img src="{!! url('/image/artisan/service/sites/site5.jpg') !!}" alt="">
-                <label for="" class="title_site_absolute">123 Artisan</label>
-              </div>
-              <div class="form_item_site">
-                <img src="{!! url('/image/artisan/service/sites/site6.jpg') !!}" alt="">
-                <label for="" class="title_site_absolute">123 Artisan</label>
+              <div class="btn_separate_service">
+                <button class="btn_service">Je crée mon site</button>
               </div>
             </div>
-            <div class="btn_separate_service">
-              <button class="btn_service">Je crée mon site</button>
+            <div class="liste_site_service">
+              <label for="" class="title_site">ILS ONT CRÉÉ LEUR SITE</label>
+              <div class="service_site d-flex justify-content-between align-items-center">
+                <div class="form_item_site">
+                  <img src="{!! url('/image/artisan/service/sites/site1.jpeg') !!}" alt="">
+                  <label for="" class="title_site_absolute">123 Artisan</label>
+                </div>
+                <div class="form_item_site">
+                  <img src="{!! url('/image/artisan/service/sites/site2.png') !!}" alt="">
+                  <label for="" class="title_site_absolute">123 Artisan</label>
+                </div>
+                <div class="form_item_site">
+                  <img src="{!! url('/image/artisan/service/sites/site3.png') !!}" alt="">
+                  <label for="" class="title_site_absolute">123 Artisan</label>
+                </div>
+                <div class="form_item_site">
+                  <img src="{!! url('/image/artisan/service/sites/site4.jpg') !!}" alt="">
+                  <label for="" class="title_site_absolute">123 Artisan</label>
+                </div>
+                <div class="form_item_site">
+                  <img src="{!! url('/image/artisan/service/sites/site5.jpg') !!}" alt="">
+                  <label for="" class="title_site_absolute">123 Artisan</label>
+                </div>
+                <div class="form_item_site">
+                  <img src="{!! url('/image/artisan/service/sites/site6.jpg') !!}" alt="">
+                  <label for="" class="title_site_absolute">123 Artisan</label>
+                </div>
+              </div>
+              <div class="btn_separate_service">
+                <button class="btn_service">Je crée mon site</button>
+              </div>
             </div>
-          </div>
+        </div>
+
+        <div class="pagination_service" id="site_web">
+          je suis la 2eme page
+        </div>
+
+        <div class="pagination_service" id="site_web">
+          je suis la 3eme page
+        </div>
+
+        <div class="pagination_service" id="site_web">
+          je suis la 4eme page
+        </div>
+	       
     	</div>
     @endsection
 
     @section('additional-script')
+      {!! Html::script('js/artisan/service.js') !!}
     @endsection
