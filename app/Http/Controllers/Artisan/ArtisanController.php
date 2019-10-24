@@ -10,6 +10,14 @@ use App\Repositories\CityRepository;
 
 class ArtisanController extends Controller
 {
+    // protected $temoin_repo;
+    // protected $user_repo;
+    // protected $citie_repo;
+    // public function __construct(TemoigneRepository $temoin_repo, UserRepository $user_repo,CityRepository $citie_repo){
+    //     $this->temoin_repo = $temoin_repo;
+    //     $this->user_repo = $user_repo;
+    //     $this->citie_repo = $citie_repo;
+    // }
     protected $temoin_repo;
     protected $user_repo;
     protected $citie_repo;
@@ -17,7 +25,8 @@ class ArtisanController extends Controller
         $this->temoin_repo = $temoin_repo;
         $this->user_repo = $user_repo;
         $this->citie_repo = $citie_repo;
-    }
+    }   
+    
 
     public function index()
     {
@@ -27,6 +36,12 @@ class ArtisanController extends Controller
         //dd($locations);
         return view('artisan.page.index', compact('temoins','locations'));
     }
+
+    // public function index()
+    // {
+    //     $temoins = $this->temoin_repo->getTemoins();
+    //     return view('artisan.page.index', compact('temoins'));
+    // }
 
     public function showAvailablePage()
     {

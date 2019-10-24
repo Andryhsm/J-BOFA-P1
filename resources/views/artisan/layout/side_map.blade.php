@@ -10,7 +10,6 @@
     <div class="maps_location">
       <!-- <img src="{!! url('/image/artisan/maps.png') !!}" class="" alt="maps" /> -->
       <div id="mymap"></div>
-      
     </div>
     <div class="btn_foot_list">
       <button type="button" name="" class="btn_view_more_list">Modifier ma zone de prospection</button>
