@@ -132,7 +132,7 @@
             <script type="text/javascript">
 
 
-              var locations = <?php print_r(json_encode($locations)) ?>;
+              var locations = <?php //print_r(json_encode($locations)) ?>;
 
               console.log(locations);
               var mymap = new GMaps({
@@ -160,7 +160,7 @@
               //<![CDATA[
 
               var map;
-              var markers = {!! json_encode($locations) !!}; //this should dump a javascript array object which does not need any extra interperting.
+              var markers = {{-- json_encode($locations) --}}; //this should dump a javascript array object which does not need any extra interperting.
               var marks = []; //just incase you want to be able to manipulate this later
 
               function load() {
