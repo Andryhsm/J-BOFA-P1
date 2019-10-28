@@ -8,21 +8,21 @@
     @section('side_nav')
       <div class="nav_bar">
         <ul class="liste_service">
-          <li class="d-flex justify-content-between align-items-center">
+          <li class="d-flex justify-content-between align-items-center item_service current_flex" data-tab="service4">
           	<label class="title_service0">ILS ONT CRÉÉ LEUR SITE</label>
-          	<a href="" class="icones_more_servie d-flex justify active"><i class="fa fa-caret-right"></i></a>
+          	<a class="icones_more_servie d-flex justify active"><i class="fa fa-caret-right"></i></a>
           </li>
-          <li class="d-flex justify-content-between align-items-center">
+          <li class="d-flex justify-content-between align-items-center item_service" data-tab="service3">
           	<label class="title_service0">ACCOMPAGNEMENT JURIDIQUE</label>
-          	<a href="" class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
+          	<a class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
           </li>
-          <li class="d-flex justify-content-between align-items-center">
+          <li class="d-flex justify-content-between align-items-center item_service" data-tab="service2">
           	<label class="title_service0">DOCUMENTS JURIDIQUES</label>
-          	<a href="" class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
+          	<a class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
           </li>
-          <li class="d-flex justify-content-between align-items-center">
+          <li class="d-flex justify-content-between align-items-center item_service" data-tab="service1">
           	<label class="title_service0">CABINET EXPERT COMPTABLE</label>
-          	<a href="" class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
+          	<a class="icones_more_servie"><i class="fa fa-caret-right"></i></a>
           </li>
         </ul>
       </div>
@@ -32,7 +32,7 @@
 
     @section('content')
     	<div class="service_page position-relative">
-        <div class="pagination_service" id="site_web">
+        <div class="pagination_service current" id="service4">
            <div class="header_page_service position-absolute">
               <img src="{!! url('/image/artisan/service/fond_page.png') !!}" alt="" class="image_header">
             </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="description_representation">
                       <label for="" class="title_representation">TRANSFORMEZ</label>
-                      <label for="" class="text_description">plus de devis en clients</label>
+                      <label for="" class="text_description">plus de devis en clients, en qualités</label>
                     </div>
                   </div>
                   <div class="form_item_service d-flex justify-content-center align-items-center">
@@ -124,15 +124,76 @@
             </div>
         </div>
 
-        <div class="pagination_service" id="site_web">
-          je suis la 2eme page
+        <div class="pagination_service" id="service3">
+          <div class="header_page_service position-absolute">
+            <img src="{!! url('/image/artisan/service/fond_page2.png') !!}" alt="" class="image_header">
+          </div>
+          <div class="content_page_service">
+            <div class="item_title_service d-flex justify-content-center align-items-center">
+              <label class="title_service">ACCOMPAGNEMENT JURIDIQUE</label>
+            </div>
+            <div class="item_service d-flex justify-content-between">
+                <div class="form_item_service d-flex justify-content-center align-items-center">
+                  <div class="img_representation">
+                      <img src="{!! url('/image/artisan/service/loupi.jpg') !!}" alt="">
+                  </div>
+                  <div class="description_representation">
+                    <label for="" class="title_representation">SIMPLE</label>
+                    <label for="" class="text_description">Votre juriste est joignable les jours ouvrés par email ou téléphone pour répondre à vos questions. Tous les documents juridiques sont accessibles sur le site Juritravail en quelques clics.</label>
+                  </div>
+                </div>
+                <div class="form_item_service d-flex justify-content-center align-items-center">
+                  <div class="img_representation">
+                      <img src="{!! url('/image/artisan/service/icone1.png') !!}" alt="">
+                  </div>
+                  <div class="description_representation">
+                    <label for="" class="title_representation">ACCESSIBLE</label>
+                    <label for="" class="text_description">Vous n’avez pas les moyens d’embaucher un juriste ? Notre offre est faite pour vous ! Nos prix sont adaptés à la taille de votre structure.</label>
+                  </div>
+                </div>
+                <div class="form_item_service d-flex justify-content-center align-items-center">
+                  <div class="img_representation">
+                      <img src="{!! url('/image/artisan/service/loup.png') !!}" alt="">
+                  </div>
+                  <div class="description_representation">
+                    <label for="" class="title_representation">FIABLE</label>
+                    <label for="" class="text_description">Nous avons plus de 15 ans d’expérience dans les démarches juridiques et avons aujourd’hui 300 clients qui ont souscrit à cette offre d’accompagnement.</label>
+                  </div>
+                </div>
+            </div>
+            <div class="description_representation">
+              <label for="" class="title_representation">VOTRE JURISTE DÉDIÉ VOUS ACCOMPAGNE AU QUOTIDIEN DANS LA VIE DE VOTRE ENTREPRISE</label>
+              <label for="" class="text_description">Dans votre métier il vous arrive d’avoir des problématiques juridiques à régler : embauche ou licenciement d’un salarié, contrats ou litiges avec vos fournisseurs, nouvelles réglementations à appliquer...</label>
+              <label for="" class="text_description">Vous n’avez pas de juriste interne à votre entreprise et vous ne savez pas vers qui vous tourner pour poser vos questions ?</label>
+              <label for="" class="text_description">Juritravail vous accompagne au quotidien dans toutes vos problématiques juridiques grâce à une offre spécialement dédié aux TPE / PME :</label>
+            </div>
+            <div class="item_video_service d-flex justify-content-between">
+              
+              <div class="form_place_video">
+                <div class="video_service">
+                  <iframe src="https://www.youtube.com/watch?v=N7K59z9gi14&list=PL8JStPcpp3yqFNhm_JQ0KQKmu6d56hBJm" width="100%" frameborder="0" allowfullscreen></iframe> 
+                </div>
+              </div>
+              <div class="form_place_video">
+               <ul class="citation_video">
+                 <li>Posez toutes vos questions à votre juriste dédié : il est disponible tous les jours par email ou téléphone</li>
+                 <li>Téléchargez en illimité tous les documents juridiques dont vous avez besoin (lettres, contrats...)</li>
+                 <li>Vous rencontrez une situation conflictuelle ? Votre juriste vous met en relation avec un avocat</li>
+               </ul>
+              </div>
+            </div>
+
+            <div class="btn_separate_service">
+              <button class="btn_service">Je découvre l'offre</button>
+            </div>
+          </div>
         </div>
 
-        <div class="pagination_service" id="site_web">
+        <div class="pagination_service" id="service2">
           je suis la 3eme page
         </div>
 
-        <div class="pagination_service" id="site_web">
+        <div class="pagination_service" id="service1">
           je suis la 4eme page
         </div>
 	       
