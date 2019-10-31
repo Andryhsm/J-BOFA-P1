@@ -123,8 +123,9 @@
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-/* line 113, ../../sass/admin/service.scss */
+/* line 114, ../../sass/admin/service.scss */
 .description_representation .title_representation {
   font-size: 22px;
   text-transform: uppercase;
@@ -132,14 +133,14 @@
   color: #4e4e4e;
   font-family: 'Open Sans Condensed',sans-serif;
 }
-/* line 120, ../../sass/admin/service.scss */
+/* line 121, ../../sass/admin/service.scss */
 .description_representation .text_description {
   font-size: 15px;
   text-align: center;
   color: #474747;
 }
 
-/* line 127, ../../sass/admin/service.scss */
+/* line 128, ../../sass/admin/service.scss */
 .item_video_service {
   width: 100%;
   flex-wrap: wrap;
@@ -147,29 +148,40 @@
   background-color: #fff;
   border-radius: 5px;
 }
-/* line 134, ../../sass/admin/service.scss */
+/* line 135, ../../sass/admin/service.scss */
 .item_video_service .form_place_video {
   width: 48%;
   height: 100%;
 }
-/* line 138, ../../sass/admin/service.scss */
-.item_video_service .form_place_video .video_service {
+/* line 139, ../../sass/admin/service.scss */
+.item_video_service .video_service {
   width: 100%;
   height: 200px;
 }
-/* line 142, ../../sass/admin/service.scss */
-.item_video_service .form_place_video .video_service iframe {
+/* line 143, ../../sass/admin/service.scss */
+.item_video_service .video_service iframe {
   width: 100%;
   height: 100%;
 }
 /* line 147, ../../sass/admin/service.scss */
-.item_video_service .form_place_video .citation_video {
+.item_video_service .video_service img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* line 153, ../../sass/admin/service.scss */
+.item_video_service .citation_video {
   margin-bottom: 0;
   list-style: circle;
   color: #044651;
 }
+/* line 159, ../../sass/admin/service.scss */
+.item_video_service .form_place_no_video {
+  width: 100%;
+  height: 100%;
+}
 
-/* line 155, ../../sass/admin/service.scss */
+/* line 165, ../../sass/admin/service.scss */
 .btn_separate_service {
   width: 100%;
   display: flex;
@@ -178,7 +190,7 @@
   padding: 3% 0;
   border-bottom: 2px dotted #cecece;
 }
-/* line 163, ../../sass/admin/service.scss */
+/* line 173, ../../sass/admin/service.scss */
 .btn_separate_service .btn_service {
   background-color: #0062ae;
   color: #FFF;
@@ -188,11 +200,11 @@
   outline: none;
 }
 
-/* line 173, ../../sass/admin/service.scss */
+/* line 183, ../../sass/admin/service.scss */
 .liste_site_service {
   width: 100%;
 }
-/* line 176, ../../sass/admin/service.scss */
+/* line 186, ../../sass/admin/service.scss */
 .liste_site_service .title_site {
   width: 100%;
   text-align: center;
@@ -202,12 +214,12 @@
   color: #4e4e4e;
   font-family: 'Open Sans Condensed',sans-serif;
 }
-/* line 186, ../../sass/admin/service.scss */
+/* line 196, ../../sass/admin/service.scss */
 .liste_site_service .service_site {
   width: 100%;
   flex-wrap: wrap;
 }
-/* line 191, ../../sass/admin/service.scss */
+/* line 201, ../../sass/admin/service.scss */
 .liste_site_service .form_item_site {
   width: 225px;
   height: 225px;
@@ -215,13 +227,13 @@
   cursor: pointer;
   margin-top: 50px;
 }
-/* line 198, ../../sass/admin/service.scss */
+/* line 208, ../../sass/admin/service.scss */
 .liste_site_service .form_item_site img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 204, ../../sass/admin/service.scss */
+/* line 214, ../../sass/admin/service.scss */
 .liste_site_service .form_item_site .title_site_absolute {
   position: absolute;
   bottom: 0;
@@ -241,7 +253,7 @@
   -o-transition: padding-bottom 2s ease;
   transition: padding-bottom 2s ease;
 }
-/* line 227, ../../sass/admin/service.scss */
+/* line 237, ../../sass/admin/service.scss */
 .liste_site_service .form_item_site:hover .title_site_absolute {
   /*height: 100%;*/
   padding-bottom: 20%;
@@ -251,18 +263,27 @@
   transition: padding-bottom 2s ease;
 }
 
-/* line 240, ../../sass/admin/service.scss */
+/* line 250, ../../sass/admin/service.scss */
 .pagination_service {
   width: 100%;
   display: none;
 }
 
-/* line 245, ../../sass/admin/service.scss */
+/* line 255, ../../sass/admin/service.scss */
 .current {
   display: block !important;
 }
 
-/* line 248, ../../sass/admin/service.scss */
+/* line 258, ../../sass/admin/service.scss */
 .current_flex {
   display: flex !important;
+}
+
+/* line 261, ../../sass/admin/service.scss */
+.color_text_noir {
+  font-size: 20px;
+  color: #4e4e4e;
+  text-align: center;
+  margin: 2rem 0 0.5rem 0;
+  font-family: 'Open Sans Condensed',sans-serif;
 }

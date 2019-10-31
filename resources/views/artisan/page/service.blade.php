@@ -32,6 +32,8 @@
 
     @section('content')
     	<div class="service_page position-relative">
+
+<!-- ********************************************  Service Page 1 ***************************************************************-->
         <div class="pagination_service current" id="service4">
            <div class="header_page_service position-absolute">
               <img src="{!! url('/image/artisan/service/fond_page.png') !!}" alt="" class="image_header">
@@ -124,6 +126,9 @@
             </div>
         </div>
 
+
+<!-- ********************************************  Service Page 2 ***************************************************************-->
+
         <div class="pagination_service" id="service3">
           <div class="header_page_service position-absolute">
             <img src="{!! url('/image/artisan/service/fond_page2.png') !!}" alt="" class="image_header">
@@ -189,12 +194,230 @@
           </div>
         </div>
 
+
+
+<!-- ********************************************  Service Page 3 ***************************************************************-->
         <div class="pagination_service" id="service2">
-          je suis la 3eme page
+            <div class="header_page_service position-absolute">
+              <img src="{!! url('/image/artisan/service/fond_page3.png') !!}" alt="" class="image_header">
+            </div>
+            <div class="content_page_service">
+              <div class="item_title_service d-flex justify-content-center align-items-center">
+                <label class="title_service">DOCUMENTS JURIDIQUES</label>
+              </div>
+              <div class="item_service d-flex justify-content-between">
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/loupi.jpg') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation">SIMPLE</label>
+                      <label for="" class="text_description">vous répondez aux questions, nous nous chargeons du reste</label>
+                    </div>
+                  </div>
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/icone1.png') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation">ACCESSIBLE</label>
+                      <label for="" class="text_description">le prix est affiché, vous ne paierez rien de plus</label>
+                    </div>
+                  </div>
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/loup.png') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation">FIABLE</label>
+                      <label for="" class="text_description">toutes les procédures sont rédigées par des juristes</label>
+                    </div>
+                  </div>
+              </div>
+              <div class="description_representation">
+                <label for="" class="title_representation">TROUVEZ LA RÉPONSE À TOUTES VOS QUESTIONS JURIDIQUES EN LIGNE</label>
+                <label for="" class="text_description">Découvrez notre offre d'abonnement juridique dédiée aux Pros :</label>
+              </div>
+              <div class="item_video_service d-flex justify-content-between">
+                
+                <div class="form_place_video">
+                  <div class="video_service">
+                    <img src="{!! url('/image/artisan/service/juriste.png') !!}" alt="">
+                  </div>
+                </div>
+                <div class="form_place_video">
+                 <ul class="citation_video">
+                   <li>Tout le droit du travail expliqué simplement, en consultation et téléchargement illimité</li>
+                   <li>Des données fiables et à jour, rédigées par des juristes</li>
+                   <li>2 400 documents personnalisables à jour des dernières lois</li>
+                   <li>Une newsletter hebdo synthétisant les changements de lois</li>
+                 </ul>
+                </div>
+              </div>
+
+              <div class="btn_separate_service">
+                <button class="btn_service">Je m'abonne</button>
+              </div>
+              <div class=" color_text_noir item_title_service d-flex justify-content-center align-items-center">
+                <label class="">EN TANT QUE CLIENT HABITATPRESTO, TÉLÉCHARGEZ GRATUITEMENT CES DOCUMENTS :</label>
+              </div>
+              <div class="item_service d-flex justify-content-between">
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/dossier.jpg') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation"></label>
+                      <label for="" class="text_description">Recours au CDD pour un accroissement temporaire d'activité</label>
+                    </div>
+                  </div>
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/dossier.jpg') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation"></label>
+                      <label for="" class="text_description">Recevoir l'inspecteur du travail et faire face au contrôle de l'inspecteur</label>
+                    </div>
+                  </div>
+                  <div class="form_item_service d-flex justify-content-center align-items-center">
+                    <div class="img_representation">
+                        <img src="{!! url('/image/artisan/service/dossier.jpg') !!}" alt="">
+                    </div>
+                    <div class="description_representation">
+                      <label for="" class="title_representation"></label>
+                      <label for="" class="text_description">Correspondance commerciale en cas de livraison défectueuse</label>
+                    </div>
+                  </div>
+              </div>
+            </div>
         </div>
 
+
+
+<!-- ********************************************  Service Page 4 ***************************************************************-->
         <div class="pagination_service" id="service1">
-          je suis la 4eme page
+          <div class="header_page_service position-absolute">
+            <img src="{!! url('/image/artisan/service/fond_page4.png') !!}" alt="" class="image_header">
+          </div>
+          <div class="content_page_service">
+            <div class="item_title_service d-flex justify-content-center align-items-center">
+              <label class="title_service">Réduisez vos coûts de comptabilité</label>
+            </div>
+            <div class="item_service d-flex justify-content-between">
+                <div class="form_item_service d-flex justify-content-center align-items-center">
+                  <div class="img_representation">
+                      <img src="{!! url('/image/artisan/service/loupi.jpg') !!}" alt="">
+                  </div>
+                  <div class="description_representation">
+                    <label for="" class="title_representation"></label>
+                    <label for="" class="text_description">bilan réalisé par un cabinet certifié par l'ordre des experts comptable</label>
+                  </div>
+                </div>
+                <div class="form_item_service d-flex justify-content-center align-items-center">
+                  <div class="img_representation">
+                      <img src="{!! url('/image/artisan/service/icone1.png') !!}" alt="">
+                  </div>
+                  <div class="description_representation">
+                    <label for="" class="title_representation"></label>
+                    <label for="" class="text_description">déclarations, télédéclarations à jour, terminé les retards et les oublis !</label>
+                  </div>
+                </div>
+                <div class="form_item_service d-flex justify-content-center align-items-center">
+                  <div class="img_representation">
+                      <img src="{!! url('/image/artisan/service/loup.png') !!}" alt="">
+                  </div>
+                  <div class="description_representation">
+                    <label for="" class="title_representation"></label>
+                    <label for="" class="text_description">conseils illimité de votre comptable et optimisation fiscale inclus !</label>
+                  </div>
+                </div>
+            </div>
+            <div class="description_representation">
+              <label for="" class="title_representation">SIMPLIFIEZ-VOUS LA VIE AVEC UNE SOLUTION CLÉ EN MAIN ET À TARIF ULTRA COMPÉTITIF</label>
+              <label for="" class="text_description">Pourquoi choisir notre offre de comptabilité ?</label>
+            </div>
+            <div class="item_video_service d-flex justify-content-between">
+              <div class="form_place_video">
+                <div class="video_service">
+                  <img src="{!! url('/image/artisan/service/reduction.png') !!}" alt="">
+                </div>
+              </div>
+              <div class="form_place_video">
+               <ul class="citation_video">
+                 <li>Saisie de tous vos documents</li>
+                 <li>Réalisation de toutes vos déclarations</li>
+                 <li>Réalisation de votre bilan</li>
+                 <li>Comptable dédié et spécialisé du BTP</li>
+                 <li>Conseils illimités inclus dans l'offre</li>
+                 <li>Optimisation fiscale également incluse</li>
+                 <li>Un tarif clair, fixe et sans surprise !</li>
+               </ul>
+              </div>
+            </div>
+            <div class="btn_separate_service">
+              <button class="btn_service">Je veux profiter de l'offre</button>
+            </div>
+
+            <div class="description_representation">
+              <label for="" class="title_representation">TRANSMISSION DES DONNÉES SIMPLIFIÉES</label>
+              <label for="" class="text_description">Transmettre les documents à son comptable n'a jamais été aussi simple...</label>
+            </div>
+            <div class="item_video_service d-flex justify-content-between">
+              <div class="form_place_no_video">
+                 <ul class="citation_video">
+                   <li><strong>Transmettez simplement</strong> vos documents, factures d'achats et de ventes directement sur votre espace sécurisé</li>
+                   <li><strong>Application mobile disponible :</strong> transmettez vos factures à votre comptable d'une simple photo !</li>
+                   <li><strong>Sauvegarde en ligne</strong> de toute votre comptabilité</li>
+                   <li><strong>Relevés bancaires automatiquement</strong> envoyés à votre comptable chaque mois</li>
+                 </ul>
+              </div>
+            </div>
+            <div class="btn_separate_service">
+              <button class="btn_service">En savoir plus</button>
+            </div>
+
+            <div class="description_representation">
+              <label for="" class="title_representation">UN LOGICIEL DE CRÉATION DE DEVIS ET FACTURES INCLUS</label>
+              <label for="" class="text_description">Un outil simple et intuitif qui vous est OFFERT</label>
+            </div>
+            <div class="item_video_service d-flex justify-content-between">
+              <div class="form_place_video">
+                <div class="video_service">
+                  <img src="{!! url('/image/artisan/service/logiciel.png') !!}" alt="">
+                </div>
+              </div>
+              <div class="form_place_video">
+               <ul class="citation_video">
+                 <li><strong>Créez votre bibliothèque de produits</strong> et personnalisez vos documents</li>
+                 <li><strong>Editez vos devis et envoyez les directement à vos clients</strong> depuis votre interface</li>
+                 <li><strong>Transformez vos devis en factures</strong></li>
+                 <li><strong>Factures directement disponibles pour votre comptable !</strong></li>
+               </ul>
+              </div>
+            </div>
+            <div class="btn_separate_service">
+              <button class="btn_service">En savoir plus</button>
+            </div>
+
+           <div class="description_representation">
+              <label for="" class="title_representation">EN NOUS CONFIANT VOTRE COMPTABILITÉ, VOUS :</label> 
+            </div>
+            <div class="item_video_service d-flex justify-content-between">
+              <div class="form_place_no_video">
+               <ul class="citation_video">
+                 <li>Pourrez <strong>vous concentrer sur votre métier</strong> car nous nous occupons de tout !</li>
+                 <li><strong>N'aurez plus de retards, d'oublis de déclarations de TVA,</strong> de risques de pénalités car nous nous occupons de tout !</li>
+                 <li><strong>Serez accompagné,</strong> votre comptable répondra à l'ensemble de vos questions et vous aidera à faire les bons choix !</li>
+                 <li><strong>Économiserez de l'argent !</strong> Une mensualité fixe, pas d'options cachées, pas de réévaluation de la mensualité car votre chiffre d'affaires à explosé !</li>
+               </ul>
+              </div>
+            </div>
+            <div class="btn_separate_service">
+              <button class="btn_service">Je veux confier ma comptabilité</button>
+            </div>
+
+          </div>
         </div>
 	       
     	</div>
