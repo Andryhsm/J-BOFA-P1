@@ -17,6 +17,9 @@ class EmailController extends Controller
 
     public function sendEmial(){
     	//dd('ok');
-    	Mail::to('rakotonirinabjr@gmail.com')->send(new ContactMail());
+    	$data = request()->all();
+    	//dd($data);
+    	Mail::to($data['mail'])->send(new ContactMail());
+    	return redirect()->route('emailing');
     }
 }

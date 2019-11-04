@@ -3,8 +3,8 @@
 @section('title', 'Catégories')
 
 @section('content_header')
-    <h1>Liste des cat&eacute;gories</h1>
-    <a class="btn btn-primary header-button" href="{{ route('category.create') }}"> <i class="fa fa-plus"></i> Ajout</a>
+    <!-- <h1>Liste des cat&eacute;gories</h1>
+    <a class="btn btn-primary header-button" href="{{ route('category.create') }}"> <i class="fa fa-plus"></i> Ajout</a> -->
 @stop
 
 @section('css')
@@ -13,19 +13,65 @@
 
 @section('content')
 
-    <section class="category-list">
-        <div class="row">
+    <section class="email-list">
+        <div class="card">
+            <div class="card-image" style="background-color:#cdcdcd">
+                <center><strong><h1 style="color:#f90;font-size:40px"> Modes d'envoye d'e-mail </h1></strong></center>
+            </div>
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10" style="margin-top:50px;margin-bottom:50px">
+                    <div class="col-xs-10" style="line-height:27px">
+                        <span><h3> Envoyer les devis normalement : </h3> 
+                            <div class="switch-container position-relative form-group ">
+                                <label class="switch">
+                                  <input type="checkbox" class="form-check-input" checked>
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </span>
+                        <br class="span1">
+                        <span>
+                            <h3> Envoyer les demandes à une seule personne : </h3>
+                            <div class="switch-container position-relative form-group ">
+                                <label class="switch">
+                                  <input type="checkbox" class="form-check-input sending" >
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </span>
+                        <br class="span2">
+                        <span>
+                            <h3> Envoyer les devis à plusieurs personnes : </h3>
+                            <div class="switch-container position-relative form-group ">
+                                <label class="switch">
+                                  <input type="checkbox" class="form-check-input" >
+                                  <span class="slider round"></span>
+                                </label>
+                                <button class="btn btn-default btn_inactive" type="button" style="margin-left:20px">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="btn btn-success btn_active hidden" type="button" style="margin-left:20px">
+                                    <i class="fa fa-eye"></i></button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>    
+        <div class="row email_list hidden">
             <div class="col-xs-12">
                 <div class="box">
-                    <div class="box-body">
+                    <div class="box-body ">
                         <table id="category" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Nom cat&eacute;gories</th>
-                                <th>Populaire</th>
-                                <th>Cr&eacute;e par</th>
+                                <th>Nom </th>
+                                <th>Prenom</th>
+                                <th>Email</th>
                                 <th>Cr&eacute;e le</th>
-                                <th>Status</th>
+                                <!-- <th>Status</th> -->
                                 <th class="no-sort">Action</th>
                             </tr>
                             </thead>
@@ -33,12 +79,6 @@
                         </table>
                     </div>
                 </div>
-            </div>
-            <div class="col-xs-12">
-                <form class="form-control" action="{{route('send_email')}}" method="POST">
-                    @csrf
-                    <input type="submit"  value="Send">
-                </form>
             </div>
         </div>
 
@@ -83,35 +123,55 @@
     {!! Html::script('js/admin/datatables/dataTables.bootstrap.min.js') !!}
     <!-- {!! Html::script('js/admin/category.js') !!} -->
   <script type="text/javascript">
-    $(document).on('click', '.delete-btn', function(event) {
-        event.preventDefault();
-        var $form = jQuery(this).closest('form');
-        $('#confirm').modal({backdrop: 'static', keyboard: false})
-                .one('click', '#delete', function () {
-                $form.trigger('submit'); // submit the form
-        });
+    $('.email-list').on('click','.btn_inactive',function(){
+        $(this).addClass('hidden');
+        $(this).closest('.email-list').find('.email_list').removeClass('hidden');
+        $(this).siblings('.btn_active').removeClass('hidden');
     });
-
-      $('.category-list').on('click','.popular',function(){
-        var category_id = $(this).closest('.switch').data('id');
-        
-        $.ajax({
-            type: "POST",
-            data: {'category_id':category_id},
-            url: base_url + 'admin/category_popular',
-            success: function (success) {
-                if (success.ispopular == 1){
-                    toastr.success('Popularité activé');
-                }
-                else{
-                    toastr.warning('Popularité desactivé');
-                }
-            },
-            error: function (error) {
-                console.log(error);
-            }
+    $('.email-list').on('click','.btn_active',function(){
+        $(this).addClass('hidden');
+        $(this).closest('.email-list').find('.email_list').addClass('hidden');
+        $(this).siblings('.btn_inactive').removeClass('hidden');
+    });
+    $('.email-list').on('click','.sending',function(){
+        if($(this).prop('checked')==true){
+            $('#send_email').modal({backdrop: 'static', keyboard: false})
+                .one('click', '.main-button', function () {
+                    console.log('sending')
+                
         });
-      });
+        }else
+            console.log('not ok')
+    });
+    // $(document).on('click', '.delete-btn', function(event) {
+    //     event.preventDefault();
+    //     var $form = jQuery(this).closest('form');
+    //     $('#confirm').modal({backdrop: 'static', keyboard: false})
+    //             .one('click', '#delete', function () {
+    //             $form.trigger('submit'); // submit the form
+    //     });
+    // });
+
+      // $('.category-list').on('click','.popular',function(){
+      //   var category_id = $(this).closest('.switch').data('id');
+        
+      //   $.ajax({
+      //       type: "POST",
+      //       data: {'category_id':category_id},
+      //       url: base_url + 'admin/category_popular',
+      //       success: function (success) {
+      //           if (success.ispopular == 1){
+      //               toastr.success('Popularité activé');
+      //           }
+      //           else{
+      //               toastr.warning('Popularité desactivé');
+      //           }
+      //       },
+      //       error: function (error) {
+      //           console.log(error);
+      //       }
+      //   });
+      // });
       
   </script>  
 @stop

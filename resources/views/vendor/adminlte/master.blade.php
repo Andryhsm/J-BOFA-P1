@@ -78,5 +78,6 @@
 
 @yield('adminlte_js')
 @include('layouts.modal')
+@include('admin.emailing.modal_email')
 </body>
 </html>
