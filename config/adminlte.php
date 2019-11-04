@@ -140,6 +140,11 @@ return [
             'url'        =>'admin/temoignage',
             'icon'        =>'fa fa-bandcamp',
         ],
+        [
+            'text'        =>'Mode d\'envoie email',
+            'url'        =>'admin/emailing',
+            'icon'        =>'fa fa-envelope',
+        ],
         // [
         //     'text'    => 'Multilevel',
         //     'icon'    => 'share',

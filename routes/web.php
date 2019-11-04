@@ -23,6 +23,9 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     //show homepage
     Route::get('/home', 'HomeController@index')->name('home');
 
+    Route::get('/emailing','EmailController@index')->name('emailing');
+    Route::post('/sendemail','EmailController@sendEmial')->name('send_email');
+
     /*start profil*/
     Route::resource('user','AdminController');
     Route::resource('artisan','UserController');
