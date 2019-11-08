@@ -1,0 +1,11 @@
+.container_stripe {
+	height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.row_stripe {
+    width: 100%;
+}
