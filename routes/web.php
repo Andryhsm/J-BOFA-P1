@@ -14,10 +14,6 @@
 Route::get('/', 'Front\LoginController@getIndex')->name('accueil');
 
 Auth::routes();
-/*Test stripe*/
-Route::get('stripe', 'StripeController@stripe');
-Route::post('payment', 'StripeController@payStripe'); 
-/*end test stripe*/
 
 Route::prefix('admin')->namespace('Admin')->group(function () {
     //show homepage
@@ -124,6 +120,10 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::get('realisation','ArtisanController@Realisation')->name('realisation');
     Route::get('service','ArtisanController@showService')->name('service');
     Route::post('update_profile','ArtisanController@updateProfil')->name('update_profile');
+    /*Test stripe*/
+    Route::get('stripe', 'ArtisanController@stripe');
+    Route::post('payment', 'ArtisanController@payStripe'); 
+    /*end test stripe*/
 });
 // end Auth route 
 

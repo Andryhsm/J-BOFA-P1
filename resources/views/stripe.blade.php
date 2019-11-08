@@ -27,8 +27,6 @@
   
 <div class="container container_stripe">
   
-    
-  
     <div class="row row_stripe">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default credit-card-box">
