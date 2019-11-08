@@ -66,6 +66,22 @@
   display: none;
 }
 
+.versionPro {
+  background-color: #ff580c;
+  color: #fff;
+  border-radius: 2px;
+  border: 1px solid #ff580c;
+  font-size: 12px;
+  padding: 6px;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+.versionPro:hover {
+  text-decoration: none;
+  color: #ff580c;
+  background-color: #fff;
+}
+
 
 
   @media screen and (max-width: 750px){

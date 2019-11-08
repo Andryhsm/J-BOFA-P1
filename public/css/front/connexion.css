@@ -307,7 +307,19 @@ label {
 .menus .item_menu label {
   cursor: pointer;
 }
+.menus .item_menu {
+  position: relative;
+}
 
+.item_menu .pro_version {
+  position: absolute;
+  background-color: #ff580c;
+  padding: 0 5px;
+  font-size: 11px;
+  color: #fff;
+  top: -12px;
+  left: 0;
+}
 /**Zone maps */
 .nav_maps {
   width: 100%;
