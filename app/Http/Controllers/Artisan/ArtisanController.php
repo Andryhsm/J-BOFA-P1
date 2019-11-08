@@ -81,10 +81,15 @@ class ArtisanController extends Controller
         $this->user_repo->updateUser($id,$request->all());
         return redirect('/artisan/accueil');
     }
-
+    public function confirmMail($id){
+        $this->user_repo->confirmMail($id);
+        return redirect('/artisan/accueil');
+    }
 // Show Service Menu
     public function showService() {
         return view('artisan.page.service');
     }
+
+    
 
 }

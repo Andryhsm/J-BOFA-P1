@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailConfirmation;
 
 class RegisterController extends Controller
 {
@@ -82,6 +84,13 @@ class RegisterController extends Controller
        $user = $this->user_repository->createUser($data->all());
        if (auth()->attempt(['email' => $data->email, 'password' => $data->password])) {
             //dd(auth()->guard('admin')->user());
+            $valueArray = [
+                'name' => $data->first_name.' '.$data->name,
+                'email'=>$data->email,
+                'message'=>'Vous recevez cet email car nous avons reçu une demande d\'inscription pour votre compte ce courrier. :)',
+                'url_confirm'=>url("artisan/confirm_email/".auth()->user()->id)
+            ];
+            Mail::to($data->email)->send(new MailConfirmation($valueArray));
             return redirect()->route('artisan_home');
         }else{
             return redirect()->guest(route('connexion'));

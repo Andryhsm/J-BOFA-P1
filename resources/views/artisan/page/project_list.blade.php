@@ -1,6 +1,6 @@
 <div class="pages_artisan project_list_page">
   <div class="liste_project flex_one">
-    <div class="project_item mail_not_active">
+    <div class="project_item {{(Auth::user()->email_verified_at == null) ? 'mail_not_active' : ''}}">
       <div class="title_project">
         <label for="" class="number_project">8</label>
         <label for="" class="title_project_item">PROJETS DISPONIBLES SUR MON SECTEUR</label>
@@ -100,7 +100,7 @@
       </div>
     </div>
 
-    <div class="mail_confirm">
+    <div class="mail_confirm {{(Auth::user()->email_verified_at != null) ? 'mail_not_active' : ''}}" >
         <label for="" class="activate_mail mail_thanks">Merci Beaucoup pour votre inscription!</label>
         <label for="" class="activate_mail">SVP, Veillez cliquer sur le lien de confirmation de votre compte dans votre boite mail</label>
     </div>

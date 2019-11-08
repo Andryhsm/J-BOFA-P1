@@ -87,4 +87,9 @@ class UserRepository implements UserRepositoryInterface
     public function getTenArtisan(){
         return $this->model->with('profile')->with('category')->with('city')->orderBy('created_at','desc')->limit(10)->get();
     }
+    public function confirmMail($user_id){
+        $this->model = $this->findUser($user_id);
+        $this->model->email_verified_at = \Carbon\Carbon::now();
+        $this->model->save();
+    }
 }
