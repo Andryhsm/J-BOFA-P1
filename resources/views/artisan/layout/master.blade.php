@@ -127,84 +127,9 @@
             <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?sensor=false"
   type="text/javascript"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script> -->
-            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr66ahbzw1h4OFCFZAWuqf8IB3NSXkmWs&amp;size=360x200&amp;callback=initMap" async="" defer=""></script>
+            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr66ahbzw1h4OFCFZAWuqf8IB3NSXkmWs&amp;size=360x200&amp;callback=initMap" async="" defer=""></script>-->
 
-            <script type="text/javascript">
-
-
-              var locations = <?php //print_r(json_encode($locations)) ?>;
-
-              console.log(locations);
-              var mymap = new GMaps({
-                el: '#mymap',
-                lat: 21.170240,
-                lng: 72.831061,
-                zoom:6
-              });
-
-
-              $.each( locations, function( index, value ){
-                mymap.addMarker({
-                  lat: value.ville_latitude_deg,
-                  lng: value.ville_longitude_deg,
-                  title: value.ville_nom,
-                  click: function(e) {
-                    alert('This is '+value.ville_nom+', gujarat from India.');
-                  }
-                });
-             });
-
-
-            </script> -->
-            <!-- <script type="text/javascript">
-              //<![CDATA[
-
-              var map;
-              var markers = {{-- json_encode($locations) --}}; //this should dump a javascript array object which does not need any extra interperting.
-              var marks = []; //just incase you want to be able to manipulate this later
-
-              function load() {
-
-                  map = new google.maps.Map(document.getElementById('map'), {
-                      center: {lat: 45.327168, lng: 14.442902},
-                      zoom: 13
-                  });           
-
-                  for(var i = 0; i < markers.length; i++){
-                      marks[i] = addMarker(markers[i]);
-                  }
-              }
-
-              function addMarker(marker){
-                  //var sadrzaj = marker.nazivMarkera;
-                  //var adresa = marker.adresa;
-                  //var grad = marker.nazivGrada;
-                  //var postanskibroj = marker.postanski_broj;
-                  var zupanija = marker.ville_nom;
-
-                  var html = "<b>" + sadrzaj + "</b> <br/>" + adresa +",<br/>"+postanskibroj+" "+grad+",<br/>"+zupanija;
-
-
-                  var markerLatlng = new google.maps.LatLng(parseFloat(marker.ville_latitude_deg),parseFloat(marker.ville_longitude_deg));
-
-
-                  var mark = new google.maps.Marker({
-                      map: map,
-                      position: markerLatlng,
-                  });
-
-                  var infoWindow = new google.maps.InfoWindow;
-                  google.maps.event.addListener(mark, 'click', function(){
-                      infoWindow.setContent(html);
-                      infoWindow.open(map, mark);
-                  });
-
-                  return mark;
-              }
-
-              function doNothing(){}
-              //]]>
-            </script> -->
+        
 
             <script type="text/javascript">
         $(function () {
