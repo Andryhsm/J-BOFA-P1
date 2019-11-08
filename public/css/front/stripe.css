@@ -9,3 +9,31 @@
 .row_stripe {
     width: 100%;
 }
+
+.card_payment {
+    padding: 15px 5px;
+}
+
+.item_header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+label {
+    margin-bottom: 0 !important;
+    /* padding: 0 !important; */
+}
+
+.activate_pro {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff580c;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    color: #ff580c;
+}
+
+.activate_pro .text_pro {
+    font-size: 12px;
+}

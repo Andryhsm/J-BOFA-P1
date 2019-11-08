@@ -9,7 +9,7 @@
         </a>
       </div>
       <div class="user_status">
-        <a href="" class="versionPro">Passer en PRO</a>
+        <a href="{{ Url('/artisan/stripe') }}" class="versionPro">Passer en PRO</a>
         <a class="user_icones" href="">
           <i class="fa fa-user user"></i>
           <div class="description_user">

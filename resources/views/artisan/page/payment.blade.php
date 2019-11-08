@@ -32,7 +32,6 @@
           <div class="description_header">
             <div class="text_header">
                 <h2>ESPACE POUR DEVENIR UN DES MEMBRES PRO</h2>
-                <h2>BIENVENUE DANS NOTRE ESPACE PRO</h2>
             </div>
           </div>
         </div>

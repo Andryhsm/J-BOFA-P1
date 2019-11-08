@@ -1,6 +1,15 @@
 <div class="container container_stripe">
         <div class="row row_stripe">
             <div class="col-md-6 col-md-offset-3">
+
+                <div class="activate_pro">
+                    <p class="text_pro">
+                        Pour devenir un(e) membre Pro, veuillez payer 360€ pour une abonnement de 1 ans
+                    </p>
+                    <p class="text_pro">360€ pour découvrir l'ensemble de vos projet et de profiter au maximum nos service</p>
+                    <p class="text_pro">Avec Stripe, nous assurons la sécuriter de votre payment</p>
+
+                </div>
                 <div class="panel panel-default credit-card-box">
                     <div class="panel-heading display-table" >
                         <div class="row display-tr" >
@@ -33,7 +42,7 @@
                             </div>
       
                             <div class='form-row row'>
-                                <div class='col-xs-12 form-group card required'>
+                                <div class='col-xs-12 form-group card required card_payment'>
                                     <label class='control-label'>Card Number</label> <input
                                         autocomplete='off' class='form-control card-number' size='20'
                                         type='text'>
@@ -67,7 +76,7 @@
       
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($100)</button>
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now</button>
                                 </div>
                             </div>
                               
