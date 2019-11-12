@@ -7,7 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Repositories\TemoigneRepository;
 use App\Repositories\UserRepository;
 use App\Repositories\CityRepository;
-
+use Stripe;
+use Session;
 class ArtisanController extends Controller
 {
     // protected $temoin_repo;
@@ -104,6 +105,7 @@ class ArtisanController extends Controller
  */
     public function payStripe(Request $request)
     {
+        dd($request->all());
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
             Stripe\Charge::create ([
                     "amount" => 100 * 100,
