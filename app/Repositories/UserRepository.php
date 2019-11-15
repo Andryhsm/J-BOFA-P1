@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Interfaces\UserRepositoryInterface;
 Use App\User;
+Use App\Models\Abonnement;
 Use App\Models\UserProfile;
 use Illuminate\Support\Facades\Hash;
 
@@ -11,16 +12,18 @@ class UserRepository implements UserRepositoryInterface
 {
     protected $model;
     protected $user_profil;
+    protected $user_abonnement;
 
-	public function __construct(User $user,UserProfile $user_profil)
+	public function __construct(User $user,UserProfile $user_profil,Abonnement $user_abonnement)
     {
         $this->model = $user;
         $this->user_profil = $user_profil;
+        $this->user_abonnement = $user_abonnement;
     }
 
     public function findUser($user_id)
     {
-        return $this->model->with('profile')->with('category')->with('city')->find($user_id);
+        return $this->model->with('profile','category','city','user_abonnement')->find($user_id);
     }
 
     public function createUser($data)
@@ -42,7 +45,7 @@ class UserRepository implements UserRepositoryInterface
 
     public function updateUser($user_id, $data)
     {
-        $this->model = $this->model->with('category')->with('city')->find($user_id);
+        $this->model = $this->model->with('category','city','user_abonnement')->find($user_id);
         $this->model->name = $data['name'];
         $this->model->first_name = $data['first_name'];
         $this->model->enterprise = $data['enterprise'];
@@ -60,7 +63,7 @@ class UserRepository implements UserRepositoryInterface
     }
 
     public function getAllUser(){
-        return $this->model->with('profile')->with('category')->with('city')->orderBy('id','desc')->get();
+        return $this->model->with('profile','category','city','user_abonnement')->orderBy('id','desc')->get();
     }
 
     public function deleteUser($user_id){
@@ -91,5 +94,12 @@ class UserRepository implements UserRepositoryInterface
         $this->model = $this->findUser($user_id);
         $this->model->email_verified_at = \Carbon\Carbon::now();
         $this->model->save();
+    }
+
+    public function addAbonnement($data){
+        $this->user_abonnement->amount = $data['amount']/100;
+        $this->user_abonnement->completed_at = \Carbon\Carbon::now();
+        $this->user_abonnement->user_id = auth()->user()->id;
+        $this->user_abonnement->save();
     }
 }

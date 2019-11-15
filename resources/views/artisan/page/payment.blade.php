@@ -136,7 +136,5 @@
           id: 'marker1' // Unique ID for your marker
         });
       })
-   
-   
-       </script>
+    </script>
     @endsection

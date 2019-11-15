@@ -105,18 +105,18 @@ class ArtisanController extends Controller
  */
     public function payStripe(Request $request)
     {
-        dd($request->all());
+        //dd($request->stripeToken);
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-            Stripe\Charge::create ([
-                    "amount" => 100 * 100,
-                    "currency" => "usd",
-                    "source" => $request->stripeToken,
-                    "description" => "Test payment " 
-            ]);
-    
-            Session::flash('success', 'Payment successful!');
-            
-            return back();
+        $stripe= Stripe\Charge::create ([
+            "amount" => 360 * 100,
+            "currency" => "eur",
+            "source" => $request->stripeToken,
+            "description" => "Test payment " 
+        ]);
+        $this->user_repo->addAbonnement($stripe);
+        Session::flash('success', 'Payment successful!');
+        // dd($stripe);
+        return back();
 
     //     $this->validate($request, [
     //         'card_no' => 'required',
