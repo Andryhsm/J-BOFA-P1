@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
                     console.log(status);
                 },
                 error:function(error){
-                    console.log(base_url+"admin/subscribe")
+                    console.log(error,base_url+"admin/subscribe")
                 }
             },
             "responsive"   : true,
@@ -31,8 +31,7 @@ jQuery(document).ready(function () {
                 {data: 'name', name:'name',searchable: true, sortable: true},
                 {data: 'sold', name:'sold',searchable: true, sortable: true},
                 {data: 'created', name:'created',searchable: true, sortable:true},
-                {data: 'status', name:'status',searchable: true, sortable: false},
-                // {data: 'action', name:'action',searchable: false, sortable: false}
+                {data: 'status', name:'status',searchable: true, sortable: false}
             ],
             fnDrawCallback : function () {
                 var $paginate = this.siblings('.dataTables_paginate');

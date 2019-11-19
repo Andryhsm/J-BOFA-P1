@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\City;
 use App\Models\UserProfile;
 use App\Models\LastSubscription;
+use App\Models\Abonnement;
 
 class User extends Authenticatable
 {
@@ -57,4 +58,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(LastSubscription::class,'user_id','id');
     }
+
+    // public function user_subscribe(){
+    //     return $this->hasOne(Abonnement::class,'user_id','id');
+    // }
 }

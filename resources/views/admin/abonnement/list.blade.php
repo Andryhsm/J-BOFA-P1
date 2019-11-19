@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Catégories')
+@section('title', 'Abonnement')
 
 @section('content_header')
-    <h1>Liste des cat&eacute;gories</h1>
+    <h1>Liste des abonnées</h1>
 @stop
 
 @section('css')
@@ -12,7 +12,7 @@
 
 @section('content')
 
-    <section class="category-list">
+    <section class="subscribe-list">
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
@@ -23,10 +23,21 @@
                                 <th>Nom et prenom</th>
                                 <th>Montant</th>
                                 <th>Date de payement</th>
-                                <th>Status</th>
+                                <!-- <th>Status</th> -->
                                 <!-- <th class="no-sort">Action</th> -->
                             </tr>
                             </thead>
+                            <tbody>
+                                @if(isset($subscribes))
+                                @foreach($subscribes as $sub)
+                                <tr>
+                                    <td>{{$sub->user_subscribe[0]->first_name.' '.$sub->user_subscribe[0]->name}}</td>
+                                    <td>{{$sub->amount}} €</td>
+                                    <td>{{$sub->completed_at}}</td>
+                                </tr>
+                                @endforeach
+                                @endif
+                            </tbody>
                             <!-- -->
                         </table>
                     </div>
@@ -40,5 +51,5 @@
 @section('js')
     {!! Html::script('js/admin/datatables/jquery.dataTables.min.js') !!}
     {!! Html::script('js/admin/datatables/dataTables.bootstrap.min.js') !!}
-    {!! Html::script('js/admin/subscribe.js') !!}
+   <!--  {!! Html::script('js/admin/subscribe.js') !!} -->
 @stop

@@ -112,7 +112,18 @@ class UserRepository implements UserRepositoryInterface
         $this->subscribe->save();
     }
 
-    public function getSubscribe(){
-        return $this->subscribe->with('user_subscribe')->get();
+    public function get_subscribe(){
+        // $subs = $this->subscribe->get();
+        // $ids=[];
+        // $dates = [];
+        // if(isset($subs)){
+        //     foreach ($subs as $sub) {
+        //         array_push($ids, $sub->user_id);
+        //     }
+        // }
+
+        // $users = $this->model->whereIn('id',$ids)->get();
+        $values=$this->subscribe->with('user_subscribe')->get();
+        return $values;
     }
 }

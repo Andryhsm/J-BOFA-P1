@@ -302,11 +302,13 @@ class AdminController extends Controller
     }
     /* subscribetion*/
     public function listSubscribe(){
-        return view('admin.abonnement.list');
+        $subscribes = $this->user_repository->get_subscribe();
+        //dd($subscribes);
+        return view('admin.abonnement.list',compact('subscribes'));
     }
     public function getSubscribe(){
-        $subscribes = $this->user_repository->getSubscribe();
-        \Log::debug('$subscribes');
+        $subscribes = $this->user_repository->get_subscribe();
+        \Log::debug($subscribes);
         $data_tables = DataTables::collection($subscribes);
         $data_tables->EditColumn('name', function ($subscribe) {
             if(isset($subscribe->id))
