@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Interfaces\UserRepositoryInterface;
 Use App\User;
+Use App\Models\LastSubscription;
 Use App\Models\Abonnement;
 Use App\Models\UserProfile;
 use Illuminate\Support\Facades\Hash;
@@ -13,12 +14,15 @@ class UserRepository implements UserRepositoryInterface
     protected $model;
     protected $user_profil;
     protected $user_abonnement;
+    protected $subscribe;
 
-	public function __construct(User $user,UserProfile $user_profil,Abonnement $user_abonnement)
+
+	public function __construct(User $user,UserProfile $user_profil,LastSubscription $user_abonnement,Abonnement $subscribe)
     {
         $this->model = $user;
         $this->user_profil = $user_profil;
         $this->user_abonnement = $user_abonnement;
+        $this->subscribe = $subscribe;
     }
 
     public function findUser($user_id)
@@ -97,9 +101,18 @@ class UserRepository implements UserRepositoryInterface
     }
 
     public function addAbonnement($data){
-        $this->user_abonnement->amount = $data['amount']/100;
-        $this->user_abonnement->completed_at = \Carbon\Carbon::now();
+        $this->user_abonnement = LastSubscription::firstOrNew(array('user_id' => auth()->user()->id));
+        //$this->user_abonnement->amount = $data['amount']/100;
+        $this->user_abonnement->created_at = \Carbon\Carbon::now();
         $this->user_abonnement->user_id = auth()->user()->id;
         $this->user_abonnement->save();
+        $this->subscribe->amount = $data['amount']/100;
+        $this->subscribe->completed_at = \Carbon\Carbon::now();
+        $this->subscribe->user_id = auth()->user()->id;
+        $this->subscribe->save();
+    }
+
+    public function getSubscribe(){
+        return $this->subscribe->with('user_subscribe')->get();
     }
 }

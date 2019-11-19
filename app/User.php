@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Category;
 use App\Models\City;
 use App\Models\UserProfile;
-use App\Models\Abonnement;
+use App\Models\LastSubscription;
 
 class User extends Authenticatable
 {
@@ -55,6 +55,6 @@ class User extends Authenticatable
     }
     public function user_abonnement()
     {
-        return $this->hasOne(Abonnement::class,'user_id','id');
+        return $this->hasOne(LastSubscription::class,'user_id','id');
     }
 }

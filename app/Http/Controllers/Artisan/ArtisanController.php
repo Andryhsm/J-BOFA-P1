@@ -34,8 +34,9 @@ class ArtisanController extends Controller
         $cities = auth()->user()->city_id;
         $temoins = $this->temoin_repo->getTemoins();
         $locations = $this->citie_repo->getAddress($cities);
+        $diff = $this->getDate();
         //dd($locations);
-        return view('artisan.page.index', compact('temoins','locations'));
+        return view('artisan.page.index', compact('temoins','locations','diff'));
     }
 
     // public function index()
@@ -46,34 +47,41 @@ class ArtisanController extends Controller
 
     public function showAvailablePage()
     {
-        return view('artisan.page.project_available');
+        $diff = $this->getDate();
+        return view('artisan.page.project_available',compact('diff'));
     }
 
     public function showProjectDetails() {
-    	return view('artisan.page.project_details');
+        $diff = $this->getDate();
+    	return view('artisan.page.project_details',compact('diff'));
     }
 
 // Change Profil Menu
     public function showProfil($id) {
+        $diff = $this->getDate();
         $profil = $this->user_repo->findUser($id);
-        return view('artisan.page.profil',compact('profil'));
+        return view('artisan.page.profil',compact('profil','diff'));
     }
     public function coordonate($id) {
         $profil = $this->user_repo->findUser($id);
         $cities = $this->citie_repo->getAll();
-        return view('artisan.page.coordonate',compact('profil','cities'));
+        $diff = $this->getDate();
+        return view('artisan.page.coordonate',compact('profil','cities','diff'));
     }
      public function ChangeMdp() {
         return view('artisan.page.change_mdp');
     }
     public function DocumentOfficial() {
-        return view('artisan.page.document_official');
+        $diff = $this->getDate();
+        return view('artisan.page.document_official',compact('diff'));
     }
     public function LabelQuality() {
-        return view('artisan.page.label_quality');
+        $diff = $this->getDate();
+        return view('artisan.page.label_quality',compact('diff'));
     }
     public function Realisation() {
-        return view('artisan.page.realisation');
+        $diff = $this->getDate();
+        return view('artisan.page.realisation',compact('diff'));
     }
 
     public function updateProfil(Request $request){
@@ -83,18 +91,21 @@ class ArtisanController extends Controller
         return redirect('/artisan/accueil');
     }
     public function confirmMail($id){
+        $diff = $this->getDate();
         $this->user_repo->confirmMail($id);
         return redirect('/artisan/accueil');
     }
 // Show Service Menu
     public function showService() {
-        return view('artisan.page.service');
+        $diff = $this->getDate();
+        return view('artisan.page.service',compact('diff'));
     }
 
 
     public function stripe()
     {
-        return view('artisan.page.payment');
+        $diff = $this->getDate();
+        return view('artisan.page.payment',compact('diff'));
     }
  
  
@@ -105,7 +116,7 @@ class ArtisanController extends Controller
  */
     public function payStripe(Request $request)
     {
-        //dd($request->stripeToken);
+        $diff = $this->getDate();
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $stripe= Stripe\Charge::create ([
             "amount" => 360 * 100,
@@ -156,5 +167,24 @@ class ArtisanController extends Controller
     //     }
             
     }  
+
+    public function getDate(){
+        $user_date = $this->user_repo->findUser(auth()->user()->id);
+        if(isset($user_date->user_abonnement->created_at)){
+            $start_date= strtotime($user_date->user_abonnement->created_at);
+            $since_start = strtotime(\Carbon\Carbon::now());
+            $diff = abs($since_start - $start_date);
+            $years = floor($diff / (365*60*60*24));
+            $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24)); 
+            $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+            $hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24) / (60*60));
+            $minutes = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24 - $hours*60*60)/ 60);
+            return $minutes;
+        }else{
+            $hours=0;
+            return $hours;
+        }
+        
+    }
 
 }

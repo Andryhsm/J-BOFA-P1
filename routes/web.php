@@ -49,7 +49,10 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::get('get_faq','FaqController@getAll');
     Route::post('faq_status', 'FaqController@updateStatus');
     /*end faq */
-
+    /* subscibe list*/
+    Route::get('list_subscibe','AdminController@listSubscribe')->name('list_subscribe');
+    Route::get('subscibe','AdminController@getSubscribe')->name('get_subscribe');
+    /* end subscibe list*/
     
 
     /* start temoignage */

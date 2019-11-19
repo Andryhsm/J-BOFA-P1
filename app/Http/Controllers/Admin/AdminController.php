@@ -300,4 +300,50 @@ class AdminController extends Controller
         });
         return $data_tables->rawColumns(['last_name','status','action'])->make(true);
     }
+    /* subscribetion*/
+    public function listSubscribe(){
+        return view('admin.abonnement.list');
+    }
+    public function getSubscribe(){
+        $subscribes = $this->user_repository->getSubscribe();
+        \Log::debug('$subscribes');
+        $data_tables = DataTables::collection($subscribes);
+        $data_tables->EditColumn('name', function ($subscribe) {
+            if(isset($subscribe->id))
+            {
+                return $subscribe->id;
+                // return $subscribe->subscribe->first_name.' '.$subscribe->subscribe->name;
+            }
+        })->EditColumn('sold', function ($subscribe) {
+            if(isset($subscribe->amount))    
+                return $subscribe->amount.' €';
+        })->EditColumn('created', function ($subscribe) {
+            if(isset($subscribe->created_at)) 
+                return $subscribe->created_at;
+        })->EditColumn('status', function ($subscribe) {
+            switch ($subscribe->status) {
+                 case 0:
+                    return '<div class="switch-container position-relative form-group">
+                                <label class="switch" data-id="'.$subscribe->id.'">
+                                  <input type="checkbox" class="form-check-input" >
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>';
+                    break; 
+                case 1:
+                    return '<div class="switch-container position-relative form-group">
+                                <label class="switch" data-id="'.$subscribe->id.'">
+                                  <input type="checkbox" class="form-check-input" checked>
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>';
+                    break; 
+               
+                
+             }
+        });
+        return $data_tables->rawColumns(['status'])->make(true);
+    }
+
+    
 }

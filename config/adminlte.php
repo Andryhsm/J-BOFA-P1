@@ -141,6 +141,11 @@ return [
             'icon'        =>'fa fa-bandcamp',
         ],
         [
+            'text'        =>'Liste des abonnées',
+            'url'        =>'admin/list_subscibe',
+            'icon'        =>'fa fa-bandcamp',
+        ],
+        [
             'text'        =>'Mode d\'envoie email',
             'url'        =>'admin/emailing',
             'icon'        =>'fa fa-envelope',
