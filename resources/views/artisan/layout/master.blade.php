@@ -60,114 +60,91 @@
     {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js') !!}
     {!! Html::script('js/artisan/profil.js') !!}
 
-          <!-- ajout script -->
-            @yield('additional-script')
-          <!-- end ajout script -->
-          <!-- Fin de la page -->
-          <script>
-                $(window).scroll(function() {
-                    // 100 = The point you would like to fade the nav in.
+  <!-- ajout script -->
+    @yield('additional-script')
+  <!-- end ajout script -->
+  <!-- Fin de la page -->
+  <script>
+        $(window).scroll(function() {
+            // 100 = The point you would like to fade the nav in.
 
-                    if ($(window).scrollTop() > 100) {
+            if ($(window).scrollTop() > 100) {
 
-                        $('.fixed').addClass('is-sticky');
+                $('.fixed').addClass('is-sticky');
 
-                    } else {
+            } else {
 
-                        $('.fixed').removeClass('is-sticky');
+                $('.fixed').removeClass('is-sticky');
 
-                    };
-                });
-            </script>
-            <script type="text/javascript">
-                $.ajaxSetup({
-                  headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                  }
-                });
-                var base_url = {!! "'".URL::to('/')."/'" !!};
-            </script>
-            <script>
-                var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 3,
-                    slidesPerGroup: 3,
-                    loop: true,
-                    loopFillGroupWithBlank: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-            </script>
-            <script>
-                if ($('.image-link').length) {
-                    $('.image-link').magnificPopup({
-                        type: 'image',
-                        gallery: {
-                            enabled: true
-                        }
-                    });
+            };
+        });
+    </script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        var base_url = {!! "'".URL::to('/')."/'" !!};
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        if ($('.image-link').length) {
+            $('.image-link').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
                 }
-                if ($('.image-link2').length) {
-                    $('.image-link2').magnificPopup({
-                        type: 'image',
-                        gallery: {
-                            enabled: true
-                        }
-                    });
+            });
+        }
+        if ($('.image-link2').length) {
+            $('.image-link2').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
                 }
-            </script>
+            });
+        }
+    </script>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-            <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyAwqmlxmd3Fabvf8BRSoOlH6wv-Fc5yvCA"></script> -->
-            <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?sensor=false"
-  type="text/javascript"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script> -->
-            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr66ahbzw1h4OFCFZAWuqf8IB3NSXkmWs&amp;size=360x200&amp;callback=initMap" async="" defer=""></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyAwqmlxmd3Fabvf8BRSoOlH6wv-Fc5yvCA"></script> -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?sensor=false"
+type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr66ahbzw1h4OFCFZAWuqf8IB3NSXkmWs&amp;size=360x200&amp;callback=initMap" async="" defer=""></script>-->
 
-        
 
-            <script type="text/javascript">
+
+    <script type="text/javascript">
         $(function () {
             $('.select2-container').removeClass('form-control').width('100%');
         });
-
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('mymap'), {
-                zoom: 9,
-                center: new google.maps.LatLng('49.4392', '1.08909'),
-                mapTypeId: google.maps.MapTypeId.TERRAIN //?
-            });
-            var rectangle = new google.maps.Rectangle({
-                strokeColor: '#d5732e',
-                strokeOpacity: 0.8,
-                strokeWeight: 2,
-                fillOpacity: 0.15,
-                map: map,
-                bounds: new google.maps.LatLngBounds(
-                    new google.maps.LatLng('48.991624430657', '0.39118129879215'),
-                    new google.maps.LatLng('49.886775569343', '1.7869987012079')
-                )
-            });
-            var infowindow = new google.maps.InfoWindow({
-                content: '<h5>ROUEN (76000)</h5>'
-            });
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng('49.4392', '1.08909'),
-                map: map,
-                title: 'ROUEN',
-            });
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.open(map, marker);
-            });
-        }
-
+        $('.nav_menu').on('click','.menus',function(){
+            var diff = $(this).data('val');
+            if(diff==0){
+                alert('Vous n\'êtes pas un pro');
+            }
+            if(diff>1){
+                alert('Veuillez renouveller votre abonnement!');
+            }
+        })
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr66ahbzw1h4OFCFZAWuqf8IB3NSXkmWs&amp;size=360x200&amp;callback=initMap" async defer></script>
           <!-- Script -->
       @toastr_js
     @toastr_render
