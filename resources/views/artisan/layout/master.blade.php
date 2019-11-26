@@ -2,6 +2,7 @@
 <html>
   <head>
     	<title>Front Page | 123-ARTISAN</title>
+
     	<meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -17,7 +18,9 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 
       <!--// ICONS //-->
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
     <!--// BOOTSTRAP & Main //-->
     {!! Html::style('css/front/bootstrap.min.css') !!}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
@@ -121,6 +124,7 @@
             });
         }
     </script>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyAwqmlxmd3Fabvf8BRSoOlH6wv-Fc5yvCA"></script> -->
