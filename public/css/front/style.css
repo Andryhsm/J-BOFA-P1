@@ -1363,3 +1363,31 @@ footer {
   color: #0062ae;
   font-weight: 400;
 }
+
+/**Link BO FOOter*/
+.relative_footer {
+  position: relative;
+}
+.absolute_footer {
+  position: absolute; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 2rem;
+  right: 0;
+}
+.administration_link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+.administration_link:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #252a33;
+}
+/**END LINK BO*/
