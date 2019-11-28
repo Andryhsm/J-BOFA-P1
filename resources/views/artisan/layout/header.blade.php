@@ -9,7 +9,10 @@
         </a>
       </div>
       <div class="user_status">
-        <a href="{{ Url('/artisan/stripe') }}" class="versionPro">Passer en PRO</a>
+        @if($diff  <=0 || $diff>1)
+          <a href="{{ Url('/artisan/stripe') }}" class="versionPro">Passer en PRO</a>
+        @endif
+        
         <a class="user_icones" href="">
           <i class="fa fa-user user"></i>
           <div class="description_user">

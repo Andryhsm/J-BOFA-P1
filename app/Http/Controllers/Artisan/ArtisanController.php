@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\TemoigneRepository;
 use App\Repositories\UserRepository;
 use App\Repositories\CityRepository;
+use App\Repositories\ViewProjectRepository;
 use Stripe;
 use Session;
 class ArtisanController extends Controller
@@ -22,21 +23,26 @@ class ArtisanController extends Controller
     protected $temoin_repo;
     protected $user_repo;
     protected $citie_repo;
-    public function __construct(TemoigneRepository $temoin_repo, UserRepository $user_repo,CityRepository $citie_repo){
+    protected $view_repo;
+    public function __construct(TemoigneRepository $temoin_repo, UserRepository $user_repo,CityRepository $citie_repo,ViewProjectRepository $view_repo){
         $this->temoin_repo = $temoin_repo;
         $this->user_repo = $user_repo;
         $this->citie_repo = $citie_repo;
+        $this->view_repo = $view_repo;
     }   
     
 
     public function index()
     {
+        //dd(auth()->user()->id);
         $cities = auth()->user()->city_id;
         $temoins = $this->temoin_repo->getTemoins();
         $locations = $this->citie_repo->getAddress($cities);
+        $category = auth()->user()->category_id;
+        $project_availables = $this->view_repo->projectDispo($category);
         $diff = $this->getDate();
         //dd($locations);
-        return view('artisan.page.index', compact('temoins','locations','diff'));
+        return view('artisan.page.index', compact('temoins','locations','diff','project_availables'));
     }
 
     // public function index()
@@ -48,12 +54,15 @@ class ArtisanController extends Controller
     public function showAvailablePage()
     {
         $diff = $this->getDate();
-        return view('artisan.page.project_available',compact('diff'));
+        $category = auth()->user()->category_id;
+        $project_availables = $this->view_repo->projectDispo($category);
+        return view('artisan.page.project_available',compact('diff','project_availables'));
     }
 
-    public function showProjectDetails() {
+    public function showProjectDetails($id) {
         $diff = $this->getDate();
-    	return view('artisan.page.project_details',compact('diff'));
+        $project = $this->view_repo->getProject($id);
+    	return view('artisan.page.project_details',compact('diff','project'));
     }
 
 // Change Profil Menu
@@ -166,7 +175,9 @@ class ArtisanController extends Controller
     //         return $ex->getMessage();
     //     }
             
-    }  
+    } 
+
+
 
     public function getDate(){
         $user_date = $this->user_repo->findUser(auth()->user()->id);
@@ -179,7 +190,7 @@ class ArtisanController extends Controller
             $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
             $hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24) / (60*60));
             $minutes = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24 - $hours*60*60)/ 60);
-            return $hours;
+            return $minutes;
         }else{
             $hours=0;
             return $hours;

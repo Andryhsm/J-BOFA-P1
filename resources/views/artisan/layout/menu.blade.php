@@ -1,26 +1,32 @@
 <div class="nav_menu">
-  <a class="menus active"  href="{{ route('artisan_home') }}">
+  <a class="menus active"  href="{{ route('accueil') }}">
     <div class="item_menu">
       <label for="">Accueil</label>
     </div>
   </a>
-  <a class="menus" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>1 ) ? 'return false' : 'return true'}}">
+  <a class="menus" href="{{ route('artisan_home') }}" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>60 ) ? 'return false' : 'return true'}}">
     <div class="item_menu" >
       <label for="">Projet Disponible</label>
       <label for="" class="notification">8</label>
-      <label for="" class="pro_version">Pro</label>
+      @if($diff  <=0 || $diff>1)
+        <label for="" class="pro_version">Pro</label>
+      @endif
     </div>
   </a>
-  <a class="menus" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>1 ) ? 'return false' : 'return true'}}">
+  <a class="menus" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>61 ) ? 'return false' : 'return true'}}">
     <div class="item_menu">
       <label for="">Mes projet accéptés</label>
-      <label for="" class="pro_version">Pro</label>
+      @if($diff  <=0 || $diff>1)
+        <label for="" class="pro_version">Pro</label>
+      @endif
     </div>
   </a>
-  <a class="menus" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>1 ) ? 'return false' : 'return true'}}">
+  <a class="menus" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>61 ) ? 'return false' : 'return true'}}">
     <div class="item_menu">
       <label for="">Mes évaluations</label>
-      <label for="" class="pro_version">Pro</label>
+      @if($diff  <=0 || $diff>1)
+        <label for="" class="pro_version">Pro</label>
+      @endif
     </div>
   </a>
   <a class="menus" href="{{ Url('/artisan/profil/'.Auth::user()->id.'') }}">
@@ -28,17 +34,21 @@
       <label for="">Mon profil</label>
     </div>
   </a>
-  <a class="menus" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>1 ) ? 'return false' : 'return true'}}">
+  <a class="menus" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>61 ) ? 'return false' : 'return true'}}">
     <div class="item_menu">
       <label for="">Mes factures</label>
-      <label for="" class="pro_version">Pro</label>
+      @if($diff  <=0 || $diff>1)
+        <label for="" class="pro_version">Pro</label>
+      @endif
     </div>
   </a>
-  <a class="menus" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>1 ) ? 'return false' : 'return true'}}" href="{{ route('service') }}">
+  <a class="menus" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>61 ) ? 'return false' : 'return true'}}" href="{{ route('service') }}">
     <div class="item_menu">
       <label for="">Services</label>
       <label for="" class="add_service">+</label>
-      <label for="" class="pro_version">Pro</label>
+      @if($diff  <=0 || $diff>1)
+        <label for="" class="pro_version">Pro</label>
+      @endif
     </div>
   </a>
 </div>

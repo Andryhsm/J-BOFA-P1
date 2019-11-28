@@ -5,7 +5,8 @@
         <label for="" class="number_project">8</label>
         <label for="" class="title_project_item">PROJETS DISPONIBLES SUR MON SECTEUR</label>
       </div>
-
+      @if(isset($project_availables))
+      @foreach($project_availables as $project)
       <div class="item_project d-flex flex-wrap">
         <div class="calendar">
           <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
@@ -16,7 +17,7 @@
         </div>
         <div class="project_desc flex_one">
           <div class="title_item">
-            <label for="" class="title">Chauffage Electrique</label>
+            <label for="" class="title">{{$project->category->name}}</label>
           </div>
           <div class="city_item">
             <label for="" class="city">BARENTIN</label>
@@ -28,13 +29,16 @@
         </div>
         <div class="btn_action_item">
           <a href="{{ route('project_details') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+          <!-- <a href="{{ url('/artisan/project/'.$project->id.'') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center"> -->
             <span>Voir le project</span>
           </a>
         </div>
         <div class="border_bottom border_dashed"></div>
       </div>
+      @endforeach
+      @endif
 
-      <div class="item_project padding_new  d-flex flex-wrap">
+      <!-- <div class="item_project padding_new  d-flex flex-wrap">
         <label class="new_label">
           <img src="{!! url('/image/artisan/notification.svg') !!}" class="" alt="" />
           Nouveau
@@ -93,7 +97,7 @@
           </a>
         </div>
         <div class="border_bottom border_dashed"></div>
-      </div>
+      </div> -->
 
       <div class="btn_foot_list">
         <button type="button" name="" class="btn_view_more_list">Voir tous les projets disponibles</button>

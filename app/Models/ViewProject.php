@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Category;
 
 class ViewProject extends Model
 {
@@ -11,10 +12,10 @@ class ViewProject extends Model
     protected $primarykey = "id";
 
     public function category(){
-    	return $this->haseOne(category::class,'id','category_id');
+        return $this->hasOne(Category::class,'id','category_id');
     }
 
-    public function ville(){
-    	return $this->haseOne(City::class,'ville_id','country_id');
+    public function city(){
+        return $this->hasOne(City::class,'ville_id','city_id');
     }
 }

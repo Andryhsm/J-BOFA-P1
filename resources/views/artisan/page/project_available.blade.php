@@ -185,8 +185,10 @@
                           <button type="button" name="" class="btn_action">Voir le project</button>
                         </div>
                       </div>
+                      @if(isset($project_availables))
+                      @foreach($project_availables as $project)
                       <div class="item_project padding_new">
-                        <label class="new_label">Nouveau</label>
+                        <label class="new_label">Test</label>
                         <div class="calendar">
                           <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
                           <div class="liste_dates">
@@ -210,7 +212,9 @@
                           <button type="button" name="" class="btn_action">Voir le project</button>
                         </div>
                       </div>
-                      <div class="item_project padding_new">
+                      @endforeach
+                      @endif
+                      <!-- <div class="item_project padding_new">
                         <label class="new_label">Nouveau</label>
                         <div class="calendar">
                           <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
@@ -234,7 +238,7 @@
                         <div class="btn_action_item">
                           <button type="button" name="" class="btn_action">Voir le project</button>
                         </div>
-                      </div>
+                      </div> -->
 
                       <!-- <div class="btn_foot_list">
                         <button type="button" name="" class="btn_view_more_list">Voir tous les projets disponibles</button>

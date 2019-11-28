@@ -2,7 +2,6 @@
 <html>
   <head>
     	<title>Front Page | 123-ARTISAN</title>
-
     	<meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -19,7 +18,7 @@
 
       <!--// ICONS //-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="http://maps.google.com/maps/api/js"></script>
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
     <!--// BOOTSTRAP & Main //-->
     {!! Html::style('css/front/bootstrap.min.css') !!}
@@ -126,7 +125,7 @@
     </script>
     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
     <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyAwqmlxmd3Fabvf8BRSoOlH6wv-Fc5yvCA"></script> -->
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?sensor=false"
 type="text/javascript"></script>
@@ -144,7 +143,7 @@ type="text/javascript"></script>
             if(diff==0){
                 alert('Vous n\'êtes pas un pro');
             }
-            if(diff>1){
+            if(diff>60){
                 alert('Veuillez renouveller votre abonnement!');
             }
         })

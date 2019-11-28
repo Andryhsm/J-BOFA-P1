@@ -37,5 +37,15 @@ class ViewProjectRepository {
 
         $this->model->save();
     }
+
+    //Projet disponible
+
+    public function projectDispo($categoriy_id){
+        return $this->model->with('category','city')->where('category_id',$categoriy_id)->get();
+    }
+
+    public function getProject($id){
+        return $this->model->with('category','city')->find($id);
+    }
     
 }
