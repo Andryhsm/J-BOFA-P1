@@ -6,13 +6,16 @@ Use App\Models\ViewProject;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
+use App\Models\ProjectAccepted;
 
 class ViewProjectRepository {
 	protected $model;
+    protected $accepted;
 
-	public function __construct(ViewProject $view_project)
+	public function __construct(ViewProject $view_project,ProjectAccepted $accepted)
     {
         $this->model = $view_project;
+        $this->accepted = $accepted;
     }
 
     public function createDevis($data){
@@ -46,6 +49,10 @@ class ViewProjectRepository {
 
     public function getProject($id){
         return $this->model->with('category','city')->find($id);
+    }
+
+    public function createAccept(Request $request){
+        
     }
     
 }

@@ -115,7 +115,7 @@ Route::namespace('Auth')->group(function () {
 Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(function () {
     Route::get('accueil','ArtisanController@index')->name('artisan_home');
     Route::get('disponnible','ArtisanController@showAvailablePage')->name('artisan_available');
-    Route::get('project','ArtisanController@showProjectDetails')->name('project_details');
+    Route::get('project/{id}','ArtisanController@showProjectDetails')->name('project_details');
     Route::get('profil/{id}','ArtisanController@showProfil')->name('artisan_profil');
     Route::get('confirm_email/{id}','ArtisanController@confirmMail')->name('confim');
     Route::get('coordonate/{id}','ArtisanController@coordonate')->name('artisan_coordonate');

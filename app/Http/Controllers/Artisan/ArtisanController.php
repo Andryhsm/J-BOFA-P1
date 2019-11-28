@@ -62,7 +62,9 @@ class ArtisanController extends Controller
     public function showProjectDetails($id) {
         $diff = $this->getDate();
         $project = $this->view_repo->getProject($id);
-    	return view('artisan.page.project_details',compact('diff','project'));
+        $category = auth()->user()->category_id;
+        $project_availables = $this->view_repo->projectDispo($category);
+    	return view('artisan.page.project_details',compact('diff','project','project_availables'));
     }
 
 // Change Profil Menu

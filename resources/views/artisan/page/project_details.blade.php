@@ -10,7 +10,8 @@
         <div class="title_project">
           <label for="" class="title_project_item">PROJETS DISPONIBLES</label>
         </div>
-
+        @if(isset($project_availables))
+        @foreach($project_availables as $project)
         <div class="item_project d-flex flex-wrap">
           <div class="calendar">
             <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
@@ -21,7 +22,7 @@
           </div>
           <div class="project_desc flex_one">
             <div class="title_item">
-              <label for="" class="title">Chauffage Electrique</label>
+              <label for="" class="title">{{$project->category->name}}</label>
             </div>
             <div class="city_item">
               <label for="" class="city">BARENTIN - (76740)</label>
@@ -33,8 +34,9 @@
           </div>
           <div class="border_bottom border_dashed"></div>
         </div>
-
-        <div class="item_project padding_new d-flex flex-wrap">
+        @endforeach
+        @endif
+        <!-- <div class="item_project padding_new d-flex flex-wrap">
           <label class="new_label">
             <img src="{!! url('/image/artisan/notification.svg') !!}" class="" alt="" />Nouveau
           </label>
@@ -82,7 +84,7 @@
             <button><i class="fa fa-angle-right"></i></button>
           </div>
           <div class="border_bottom border_dashed"></div>
-        </div>
+        </div> -->
 
         <div class="btn_foot_list">
           <button type="button" name="" class="btn_view_more_list">Voir tous les projets disponibles</button>

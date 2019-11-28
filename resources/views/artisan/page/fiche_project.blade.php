@@ -1,8 +1,8 @@
 <div class="detail_item">
-	<h5 class="title">Chauffage Electrique</h5>
+	<h5 class="title">{{$project->category->name}}</h5>
 	<p class="d-flex">
-		<span>Date de la demande: </span>
-		<span>24/08/2019 </span>
+		<span>Date de la demande:  </span>
+		<span> {{ $project->created_at }} </span>
 	</p>
 	<div class="description_item">
 	    <p for="" class="description_project d-flex justify-content-center">Je souhaite réaliser un désembouage pour un radiateurs électrique.</p>
@@ -21,11 +21,11 @@
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">Type de client:</span>
-		<span class="info">Particulier propriétaire</span>
+		<span class="info">{{ $project->category_type1 }}</span>
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">Type d'habitation:</span>
-		<span class="info">Ancien</span>
+		<span class="info">{{ $project->batiment }}</span>
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">But de la demande:</span>
@@ -33,7 +33,7 @@
 	</p>
 </div>
 
-<div class="detail_item">
+<!-- <div class="detail_item">
 	<h5 class="title d-flex justify-content-center">Informations géographique</h5>
 	<p class="centered_label_info d-flex">
 		<span class="label">Référence:</span>
@@ -55,4 +55,4 @@
 		<span class="label">But de la demande:</span>
 		<span class="info">Demande concrète: recevoir  des devis pour réaliser mes travaux</span>
 	</p>
-</div>
+</div> -->
