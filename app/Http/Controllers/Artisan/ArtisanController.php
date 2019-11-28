@@ -64,6 +64,7 @@ class ArtisanController extends Controller
         $project = $this->view_repo->getProject($id);
         $category = auth()->user()->category_id;
         $project_availables = $this->view_repo->projectDispo($category);
+        //dd($project_availables);
     	return view('artisan.page.project_details',compact('diff','project','project_availables'));
     }
 

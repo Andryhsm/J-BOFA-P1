@@ -16,6 +16,6 @@ class ViewProject extends Model
     }
 
     public function city(){
-        return $this->hasOne(City::class,'ville_id','city_id');
+        return $this->hasOne(City::class,'ville_id','country_id');
     }
 }

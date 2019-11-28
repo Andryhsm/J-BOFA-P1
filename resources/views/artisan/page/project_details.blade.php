@@ -25,7 +25,7 @@
               <label for="" class="title">{{$project->category->name}}</label>
             </div>
             <div class="city_item">
-              <label for="" class="city">BARENTIN - (76740)</label>
+              <label for="" class="city">{{$project->city->ville_nom}}</label>
               <label for="" class="city_km">à environ 16 km</label>
             </div>
           </div>
