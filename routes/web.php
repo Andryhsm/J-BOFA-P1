@@ -129,6 +129,11 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::get('stripe', 'ArtisanController@stripe');
     Route::post('payment', 'ArtisanController@payStripe'); 
     /*end test stripe*/
+
+    /*project accepted*/
+    Route::post('accept','ArtisanController@accepted')->name('accept_project');
+    Route::get('accepted','ArtisanController@showAccepted')->name('project_accepted');
+    /*end project accepted*/
 });
 // end Auth route 
 

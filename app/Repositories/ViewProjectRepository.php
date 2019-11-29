@@ -51,8 +51,15 @@ class ViewProjectRepository {
         return $this->model->with('category','city')->find($id);
     }
 
-    public function createAccept(Request $request){
-        
+    public function createAccept($request){
+        $this->accepted->project_id = $request['project'];
+        $this->accepted->user_id = $request['user'];
+        $this->accepted->accepted_at = \Carbon\Carbon::now();
+        $this->accepted->save();
+    }
+
+    public function projectAccepted($user_id){
+        return $this->accepted->with('project','project.city','project.category')->where('user_id',$user_id)->get();
     }
     
 }

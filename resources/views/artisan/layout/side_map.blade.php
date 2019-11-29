@@ -120,7 +120,7 @@
 
       <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1NMlHcCPpSQ2hv2OUWmh_t72vd6bYy5Y&callback=initMap"
     async defer></script> -->
-    <!-- <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=40.7127837,-74.0059413&amp;key=AIzaSyD1NMlHcCPpSQ2hv2OUWmh_t72vd6bYy5Y"></iframe> -->
+    <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=40.7127837,-74.0059413&amp;key=AIzaSyD1NMlHcCPpSQ2hv2OUWmh_t72vd6bYy5Y"></iframe>
     </div>
     <div class="btn_foot_list">
       <button type="button" name="" class="btn_view_more_list">Modifier ma zone de prospection</button>

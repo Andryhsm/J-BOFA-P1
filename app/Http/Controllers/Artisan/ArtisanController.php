@@ -113,11 +113,27 @@ class ArtisanController extends Controller
         return view('artisan.page.service',compact('diff'));
     }
 
+    //project accepted
+    public function accepted(Request $request){
+        $diff =$this->getDate();
+        $this->view_repo->createAccept($request->all());
+        return redirect('/artisan/accueil');
+    }
+
+    public function showAccepted(){
+        $diff =$this->getDate();
+        $user_id = auth()->user()->id;
+        $project_availables = $this->view_repo->projectAccepted($user_id);
+        //dd($project_availables);
+        return view('artisan.page.project_accepted.index',compact('diff','project_availables'));
+    }
+    //end project accepted
 
     public function stripe()
     {
         $diff = $this->getDate();
         return view('artisan.page.payment',compact('diff'));
+
     }
  
  
