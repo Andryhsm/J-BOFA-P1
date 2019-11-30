@@ -8,7 +8,7 @@
     <div class="item_menu" >
       <label for="">Projet Disponible</label>
       <!-- <label for="" class="notification">8</label> -->
-      @if($diff  <=0 || $diff>1)
+      @if($diff  <=0 || $diff>2)
         <label for="" class="pro_version">Pro</label>
       @endif
     </div>
@@ -17,7 +17,7 @@
   <a class="menus" href="{{route('project_accepted')}}" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>61 ) ? 'return false' : 'return true'}}">
     <div class="item_menu">
       <label for="">Mes projet accéptés</label>
-      @if($diff  <=0 || $diff>1)
+      @if($diff  <=0 || $diff>2)
         <label for="" class="pro_version">Pro</label>
       @endif
     </div>
@@ -25,7 +25,7 @@
   <a class="menus" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>61 ) ? 'return false' : 'return true'}}">
     <div class="item_menu">
       <label for="">Mes évaluations</label>
-      @if($diff  <=0 || $diff>1)
+      @if($diff  <=0 || $diff>2)
         <label for="" class="pro_version">Pro</label>
       @endif
     </div>
@@ -38,7 +38,7 @@
   <a class="menus" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>61 ) ? 'return false' : 'return true'}}">
     <div class="item_menu">
       <label for="">Mes factures</label>
-      @if($diff  <=0 || $diff>1)
+      @if($diff  <=0 || $diff>2)
         <label for="" class="pro_version">Pro</label>
       @endif
     </div>
@@ -47,7 +47,7 @@
     <div class="item_menu">
       <label for="">Services</label>
       <label for="" class="add_service">+</label>
-      @if($diff  <=0 || $diff>1)
+      @if($diff  <=0 || $diff>2)
         <label for="" class="pro_version">Pro</label>
       @endif
     </div>
