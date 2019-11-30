@@ -68,6 +68,13 @@ class ArtisanController extends Controller
     	return view('artisan.page.project_details',compact('diff','project','project_availables'));
     }
 
+    public function showProjectAccepted()
+    {
+        $diff = $this->getDate();
+        //dd($locations);
+        return view('artisan.page.project_accepted', compact('diff'));
+    }
+
 // Change Profil Menu
     public function showProfil($id) {
         $diff = $this->getDate();

@@ -13,7 +13,7 @@
       @endif
     </div>
   </a>
-  <a class="menus" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>61 ) ? 'return false' : 'return true'}}">
+  <a class="menus" href="{{ route('project_accepted') }}" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>61 ) ? 'return false' : 'return true'}}">
     <div class="item_menu">
       <label for="">Mes projet accéptés</label>
       @if($diff  <=0 || $diff>1)
