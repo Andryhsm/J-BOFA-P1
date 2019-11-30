@@ -126,4 +126,10 @@ class UserRepository implements UserRepositoryInterface
         $values=$this->subscribe->with('user_subscribe')->get();
         return $values;
     }
+
+    public function updateMdp($id,$data){
+        $this->model = $this->model->with('category')->find($id);
+        $this->model->password = (!empty($data['new_mdp']))? Hash::make($data['new_mdp']) : $this->model->password;
+        $this->model->save();
+    }
 }

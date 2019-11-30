@@ -8,6 +8,9 @@ use App\Repositories\TemoigneRepository;
 use App\Repositories\UserRepository;
 use App\Repositories\CityRepository;
 use App\Repositories\ViewProjectRepository;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Hash;
 use Stripe;
 use Session;
 class ArtisanController extends Controller
@@ -137,6 +140,38 @@ class ArtisanController extends Controller
         return view('artisan.page.project_accepted.index',compact('diff','project_availables'));
     }
     //end project accepted
+    // change mdp
+    public function updateMdp(Request $request){
+        $mdp = $this->user_repo->findUser(auth()->user()->id);
+        //dd($mdp->password);
+        $rules = array(
+            'actuel' => 'required' ,
+            'new_mdp' => 'required' ,
+            'new_confirm' => 'required' ,
+        );
+        $validator = Validator::make($request->all(), $rules);
+
+        if($validator->fails()){
+            toastr()->error('Veuillez completer les champs !');
+            return Redirect::back()->withInput()->withErrors($validator);
+        }else{
+            $value =  password_verify($request->actuel,$mdp->password);
+            if($value){
+                if($request->new_mdp == $request->new_confirm){
+                    $this->user_repo->updateMdp(auth()->user()->id,$request->all());
+                    toastr()->success('Votre mot de passe est à jour !' );
+                    return redirect('/artisan/accueil');
+                }else{
+                    toastr()->warning('Les nouveaux mot de passe ne sont pas identique !' );
+                    return Redirect::back()->withInput()->withErrors($validator);
+                }
+            }else{
+               toastr()->warning('Le mot de passe actuel n\'est pas correct !' );
+               return Redirect::back()->withInput()->withErrors($validator);
+            }
+        }
+    }
+    // end change mdp
 
     public function stripe()
     {

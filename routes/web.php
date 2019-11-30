@@ -135,6 +135,9 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::post('accept','ArtisanController@accepted')->name('accept_project');
     /*Route::get('accepted','ArtisanController@showAccepted')->name('project_accepted');*/
     /*end project accepted*/
+    /* change mdp */
+    Route::post('change_mdp','ArtisanController@updateMdp')->name('change_mdp');
+    /* end change mdp */
 });
 // end Auth route 
 
