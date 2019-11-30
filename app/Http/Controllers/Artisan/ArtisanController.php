@@ -89,7 +89,8 @@ class ArtisanController extends Controller
         return view('artisan.page.coordonate',compact('profil','cities','diff'));
     }
      public function ChangeMdp() {
-        return view('artisan.page.change_mdp');
+        $diff = $this->getDate();
+        return view('artisan.page.change_mdp',compact('diff'));
     }
     public function DocumentOfficial() {
         $diff = $this->getDate();
@@ -155,7 +156,7 @@ class ArtisanController extends Controller
         $diff = $this->getDate();
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $stripe= Stripe\Charge::create ([
-            "amount" => 360 * 100,
+            "amount" => 60 * 100,
             "currency" => "eur",
             "source" => $request->stripeToken,
             "description" => "Test payment " 

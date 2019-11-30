@@ -48,30 +48,6 @@
     @endsection
 
     @section('content')
-      <h1>Si projet vide</h1>
-      <div class="pages_artisan project_list_page">
-        <div class="last-accepted-project">
-            <h2 class="title">Mes projets acceptés</h2>
-            <p class="mt-4">
-                Vous n'avez pas encore accepté de projets.
-            </p>
-            <p class="mt-4 lh-20">
-                Dès que vous accepterez un projet, il sera affiché ici.
-                Vous pourrez suivre l'avancée de vos projets en mettant à jour leur statut (particulier à contacter, rendez-vous pris, devis à faire...).
-            </p>
-        </div>
-        <div class="completed-projects-block">
-            <h2 class="title">Mes projets terminés avec succès</h2>
-            <p class="mt-4">
-                Vous n'avez pas encore finalisé de projets.
-            </p>
-            <p class="mt-4">
-                Dès que vous avez terminé l'un de vos projets, n'oubliez pas de mettre à jour son statut afin d'en faciliter le suivi.
-            </p>
-        </div>
-      </div>
-
-      <h1>Si non vide</h1>
       <div class="pages_artisan project_list_page">
         <div class="liste_project flex_one">
           <div class="project_item {{(Auth::user()->email_verified_at == null) ? 'mail_not_active' : ''}}">
@@ -109,6 +85,28 @@
               <div class="border_bottom border_dashed"></div>
             </div>
             @endforeach
+            @else
+              <div class="pages_artisan project_list_page">
+                <div class="last-accepted-project">
+                    <h2 class="title">Mes projets acceptés</h2>
+                    <p class="mt-4">
+                        Vous n'avez pas encore accepté de projets.
+                    </p>
+                    <p class="mt-4 lh-20">
+                        Dès que vous accepterez un projet, il sera affiché ici.
+                        Vous pourrez suivre l'avancée de vos projets en mettant à jour leur statut (particulier à contacter, rendez-vous pris, devis à faire...).
+                    </p>
+                </div>
+                <div class="completed-projects-block">
+                    <h2 class="title">Mes projets terminés avec succès</h2>
+                    <p class="mt-4">
+                        Vous n'avez pas encore finalisé de projets.
+                    </p>
+                    <p class="mt-4">
+                        Dès que vous avez terminé l'un de vos projets, n'oubliez pas de mettre à jour son statut afin d'en faciliter le suivi.
+                    </p>
+                </div>
+              </div>
             @endif
 
           </div>

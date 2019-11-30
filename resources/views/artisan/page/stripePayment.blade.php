@@ -6,7 +6,7 @@
                     <p class="text_pro">
                         Pour devenir un(e) membre Pro, veuillez payer 360€ pour une abonnement de 1 ans
                     </p>
-                    <p class="text_pro">360€ pour découvrir l'ensemble de vos projet et de profiter au maximum nos service</p>
+                    <p class="text_pro">60€ pour découvrir l'ensemble de vos projet et de profiter au maximum nos service</p>
                     <p class="text_pro">Avec Stripe, nous assurons la sécuriter de votre payment</p>
 
                 </div>
@@ -76,7 +76,7 @@
       
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now - 360€</button>
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now - 60€</button>
                                 </div>
                             </div>
                               
