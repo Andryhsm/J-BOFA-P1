@@ -2,7 +2,7 @@
   <div class="liste_project flex_one">
     <div class="project_item {{(Auth::user()->email_verified_at == null) ? 'mail_not_active' : ''}}">
       <div class="title_project">
-        <label for="" class="number_project">8</label>
+        <label for="" class="number_project">{{isset($project_availables) ? count($project_availables) : 0}}</label>
         <label for="" class="title_project_item">PROJETS DISPONIBLES SUR MON SECTEUR</label>
       </div>
       @if(isset($project_availables))

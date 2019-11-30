@@ -9,8 +9,9 @@ class ProjectAccepted extends Model
 {
     //
     protected $table = "project_accepted";
+    public $timestamps = false;
 
-    public function poject(){
+    public function project(){
     	return $this->hasOne(ViewProject::class,'id','project_id');
     }
 
