@@ -285,3 +285,9 @@ input:checked + .slider::before {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/* line 226, ../../sass/admin/main.scss */
+.basic-background {
+  border: 1px solid #cecece;
+  background-color: #fff;
+}
