@@ -1,5 +1,5 @@
 <div class="detail_item">
-	<h5 class="title">{{$project->category->name}}</h5>
+	<h5 class="title">{{$project->name}}</h5>
 	<p class="d-flex">
 		<span>Date de la demande:  </span>
 		<span> {{ $project->created_at }} </span>

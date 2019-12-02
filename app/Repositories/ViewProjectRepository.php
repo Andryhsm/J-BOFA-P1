@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 use App\Models\ProjectAccepted;
+use DB;
 
 class ViewProjectRepository {
 	protected $model;
@@ -43,8 +44,9 @@ class ViewProjectRepository {
 
     //Projet disponible
 
-    public function projectDispo($categoriy_id){
-        return $this->model->with('category','city')->where('category_id',$categoriy_id)->get();
+    public function projectDispo($category_id,$postal_code){
+        return DB::table('view_project')->join('cities','view_project.country_id','=','cities.ville_id')->join('category','view_project.category_id','=','category.id')->where('category_id',$category_id)->where('cities.ville_code_postal','LIKE',$postal_code.'%')->get();
+        // return $this->model->with('category','city')->where('category_id',$category_id)->where('ville_code_postal', 'LIKE', $postal_code.'%')->get();
     }
 
     public function getProject($id){

@@ -109,18 +109,19 @@
                                 <label class="name_item_formulaire">Métier *</label>
                                 <select id="metier" name="metier"  class="select_items">
                                     <option value="choisissez">-- Choisissez --</option>
-                                    <option value="3" {{($profil->profile && $profil->profile->metier == "3") ? 'selected' : ''}}>Architecte</option>
-                                    <option value="5" {{($profil->profile && $profil->profile->metier == "5") ? 'selected' : ''}}>Carreleur</option>
-                                    <option value="6" {{($profil->profile && $profil->profile->metier == "6") ? 'selected' : ''}}>Charpentier</option>
-                                    <option value="7" {{($profil->profile && $profil->profile->metier == "7") ? 'selected' : ''}}>Chauffagiste</option>
-                                    <option value="8" {{($profil->profile && $profil->profile->metier == "8") ? 'selected' : ''}}> Climatisation (installateur)</option>
-                                    <option value="10" {{($profil->profile && $profil->profile->metier == "10") ? 'selected' : ''}}>Constructeur de maison</option>
-                                    <option value="70" {{($profil->profile && $profil->profile->metier == "70") ? 'selected' : ''}}>Courtier</option>
-                                    <option value="11" {{($profil->profile && $profil->profile->metier == "11") ? 'selected' : ''}}>Couvreur</option>
-                                    <option value="12" {{($profil->profile && $profil->profile->metier == "12") ? 'selected' : ''}}>Cuisiniste</option>
-                                    <option value="13" {{($profil->profile && $profil->profile->metier == "13") ? 'selected' : ''}}>Décorateur</option>
-                                    <option value="16" {{($profil->profile && $profil->profile->metier == "16") ? 'selected' : ''}}>Dératiseur</option>
-                                    <option value="68" {{($profil->profile && $profil->profile->metier == "68") ? 'selected' : ''}}>Diagnostiqueur Immobilier</option>
+                                    <option value="Architecte" {{($profil->profile && $profil->profile->metier == "Architecte") ? 'selected' : ''}}>Architecte</option>
+                                    <option value="Carreleur" {{($profil->profile && $profil->profile->metier == "Carreleur") ? 'selected' : ''}}>Carreleur</option>
+                                    <option value="Charpentier" {{($profil->profile && $profil->profile->metier == "Charpentier") ? 'selected' : ''}}>Charpentier</option>
+                                    <option value="Chauffagiste" {{($profil->profile && $profil->profile->metier == "Chauffagiste") ? 'selected' : ''}}>Chauffagiste</option>
+                                    <option value="Climatisation" {{($profil->profile && $profil->profile->metier == "Climatisation") ? 'selected' : ''}}> Climatisation (installateur)</option>
+                                    <option value="Constructeur de maison" {{($profil->profile && $profil->profile->metier == "Constructeur de maison") ? 'selected' : ''}}>Constructeur de maison</option>
+                                    <option value="Courtier" {{($profil->profile && $profil->profile->metier == "Courtier") ? 'selected' : ''}}>Courtier</option>
+                                    <option value="Couvreur" {{($profil->profile && $profil->profile->metier == "Couvreur") ? 'selected' : ''}}>Couvreur</option>
+                                    <option value="Cuisiniste" {{($profil->profile && $profil->profile->metier == "Cuisiniste") ? 'selected' : ''}}>Cuisiniste</option>
+                                    <option value="Décorateur" {{($profil->profile && $profil->profile->metier == "Décorateur") ? 'selected' : ''}}>Décorateur</option>
+                                    <option value="Dératiseur" {{($profil->profile && $profil->profile->metier == "Dératiseur") ? 'selected' : ''}}>Dératiseur</option>
+                                    <option value="Diagnostiqueur Immobilier" {{($profil->profile && $profil->profile->metier == "Diagnostiqueur Immobilier") ? 'selected' : ''}}>Diagnostiqueur Immobilier</option>
+                                    <option value="Electrician" {{($profil->profile && $profil->profile->metier == "Electrician") ? 'selected' : ''}}>Electrician</option>
                                 </select>
                             </div>
                         </div>

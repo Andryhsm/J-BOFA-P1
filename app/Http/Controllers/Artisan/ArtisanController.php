@@ -39,13 +39,17 @@ class ArtisanController extends Controller
     {
         //dd(auth()->user()->id);
         $cities = auth()->user()->city_id;
+        $user = $this->user_repo->findUser(auth()->user()->id);
+        $postal = $user->city->ville_code_postal ;
+        $code = $postal[0].$postal[1];
         $temoins = $this->temoin_repo->getTemoins();
         $locations = $this->citie_repo->getAddress($cities);
         $category = auth()->user()->category_id;
-        $project_availables = $this->view_repo->projectDispo($category);
+        $project_availables = $this->view_repo->projectDispo($category,$code);
+        //dd($project_availables);
         $diff = $this->getDate();
         //dd($locations);
-        return view('artisan.page.index', compact('temoins','locations','diff','project_availables'));
+        return view('artisan.page.index', compact('temoins','locations','diff','project_availables','user'));
     }
 
     // public function index()
@@ -58,15 +62,21 @@ class ArtisanController extends Controller
     {
         $diff = $this->getDate();
         $category = auth()->user()->category_id;
+        $user = $this->user_repo->findUser(auth()->user()->id);
+        $postal = $user->city->ville_code_postal ;
+        //dd($postal);
         $project_availables = $this->view_repo->projectDispo($category);
         return view('artisan.page.project_available',compact('diff','project_availables'));
     }
 
     public function showProjectDetails($id) {
         $diff = $this->getDate();
+        $user = $this->user_repo->findUser(auth()->user()->id);
+        $postal = $user->city->ville_code_postal ;
+        $code = $postal[0].$postal[1];
         $project = $this->view_repo->getProject($id);
         $category = auth()->user()->category_id;
-        $project_availables = $this->view_repo->projectDispo($category);
+        $project_availables = $this->view_repo->projectDispo($category,$code);
         //dd($project_availables);
     	return view('artisan.page.project_details',compact('diff','project','project_availables'));
     }

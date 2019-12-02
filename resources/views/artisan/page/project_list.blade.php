@@ -17,10 +17,10 @@
         </div>
         <div class="project_desc flex_one">
           <div class="title_item">
-            <label for="" class="title">{{$project->category->name}}</label>
+            <label for="" class="title">{{$project->name}}</label>
           </div>
           <div class="city_item">
-            <label for="" class="city">BARENTIN</label>
+            <label for="" class="city">{{$project->ville_nom}}</label>
             <label for="" class="city_km">- à environ 16 km</label>
           </div>
           <div class="description_item">
