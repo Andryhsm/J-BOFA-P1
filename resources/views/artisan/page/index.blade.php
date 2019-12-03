@@ -49,19 +49,4 @@
     @endsection
 
     @section('additional-script')
-    <script type="text/javascript" src="javascripts/jquery.googlemap.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKwbmXbI2xTnvbxrQTL7W8UEL7RXXKBns"></script>
-    
-    <script type="text/javascript"> 
-      $(function() {
-        $("#mymap").googleMap();
-        $("#mymap").addMarker({
-          coords: [48.895651, 2.290569], // GPS coords
-          url: 'http://www.tiloweb.com', // Link to redirect onclick (optional)
-          id: 'marker1' // Unique ID for your marker
-        });
-      })
-   
-   
-       </script>
     @endsection

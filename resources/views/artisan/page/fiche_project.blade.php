@@ -1,20 +1,24 @@
 <div class="detail_item">
-	<h5 class="title">{{$project->name}}</h5>
+	<h5 class="title">{{$project_details[0]->category->name}}</h5>
 	<p class="d-flex">
 		<span>Date de la demande:  </span>
-		<span> {{ $project->created_at }} </span>
+		<span> {{ $project_details[0]->created_at }} </span>
 	</p>
 	<div class="description_item">
 	    <p for="" class="description_project d-flex justify-content-center">Je souhaite réaliser un désembouage pour un radiateurs électrique.</p>
 	</div>
 
 	<div class="btn_action_item">
-		<form action="{{route('accept_project')}}" method="POST">
-			{!! csrf_field() !!}
-	      	<input type="hidden" name="project" value="{{$project->id}}">
-	      	<input type="hidden" name="user" value="{{auth()->user()->id}}">
-	      	<button >Accepter</button> 
-        </form>
+		@if(count($project_accepteds) != 0)
+			Projet déjà accepté
+		@else
+			<form action="{{route('accept_project')}}" method="POST">
+				{!! csrf_field() !!}
+		      	<input type="hidden" name="project" value="{{$project_details[0]->project_id}}">
+		      	<input type="hidden" name="user" value="{{auth()->user()->id}}">
+		      	<button >Accepter</button> 
+	        </form>
+        @endif
      <!--  <a href=""  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
         <span>Accepter</span>
       </a> -->
@@ -33,11 +37,11 @@
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">Type de client:</span>
-		<span class="info">{{ $project->category_type1 }}</span>
+		<span class="info">{{ $project_details[0]->category_type1 }}</span>
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">Type d'habitation:</span>
-		<span class="info">{{ $project->batiment }}</span>
+		<span class="info">{{ $project_details[0]->batiment }}</span>
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">But de la demande:</span>

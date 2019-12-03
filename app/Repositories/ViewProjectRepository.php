@@ -49,8 +49,14 @@ class ViewProjectRepository {
         // return $this->model->with('category','city')->where('category_id',$category_id)->where('ville_code_postal', 'LIKE', $postal_code.'%')->get();
     }
 
-    public function getProject($id){
-        return $this->model->with('category','city')->find($id);
+    public function projectAvAcc($project_id){
+        return DB::table('view_project')->join('cities','view_project.country_id','=','cities.ville_id')->join('category','view_project.category_id','=','category.id')->whereIn('view_project.project_id',$project_id)->get();
+    }
+
+    public function getProject($project_id){
+        $data = $this->model->with('category','city')->where('project_id',$project_id)->get();
+        return $data;
+        //dd($data);
     }
 
     public function createAccept($request){
@@ -62,6 +68,10 @@ class ViewProjectRepository {
 
     public function projectAccepted($user_id){
         return $this->accepted->with('project','project.city','project.category')->where('user_id',$user_id)->get();
+    }
+
+    public function getOn($user_id,$project_id){
+        return $this->accepted->where('user_id',$user_id)->where('project_id',$project_id)->get();
     }
     
 }

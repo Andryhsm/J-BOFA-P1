@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="btn_action_item">
-          <a href="{{ url('/artisan/project/'.$project->id.'') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+          <a href="{{ url('/artisan/project/'.$project->project_id.'') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
             <span>Voir le project</span>
           </a>
         </div>

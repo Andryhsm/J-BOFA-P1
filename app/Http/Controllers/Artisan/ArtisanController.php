@@ -64,42 +64,56 @@ class ArtisanController extends Controller
         $category = auth()->user()->category_id;
         $user = $this->user_repo->findUser(auth()->user()->id);
         $postal = $user->city->ville_code_postal ;
-        //dd($postal);
         $project_availables = $this->view_repo->projectDispo($category);
+        //dd($project_availables);
         return view('artisan.page.project_available',compact('diff','project_availables'));
     }
 
     public function showProjectDetails($id) {
         $diff = $this->getDate();
         $user = $this->user_repo->findUser(auth()->user()->id);
+        $project_accepteds = $this->view_repo->getOn(auth()->user()->id,$id);
         $postal = $user->city->ville_code_postal ;
         $code = $postal[0].$postal[1];
-        $project = $this->view_repo->getProject($id);
+        $project_details = $this->view_repo->getProject($id);
         $category = auth()->user()->category_id;
         $project_availables = $this->view_repo->projectDispo($category,$code);
-        //dd($project_availables);
-    	return view('artisan.page.project_details',compact('diff','project','project_availables'));
+        //dd($project_accepteds);
+    	return view('artisan.page.project_details',compact('diff','project_details','project_accepteds','project_availables'));
     }
 
     public function showProjectAccepted()
     {
         $diff = $this->getDate();
         $user_id = auth()->user()->id;
-        $project_availables = $this->view_repo->projectAccepted($user_id);
-        return view('artisan.page.project_accepted', compact('diff','project_availables'));
+        $project_accepteds = $this->view_repo->projectAccepted($user_id);
+        $val = [];
+        foreach ($project_accepteds as $value) {
+            # code...
+            array_push($val, $value->project_id);
+        }
+        $project_availables = $this->view_repo->projectAvAcc($val);
+        //dd($project_accepteds);
+        return view('artisan.page.project_accepted', compact('diff','project_accepteds','project_availables'));
     }
 
 // Change Profil Menu
     public function showProfil($id) {
         $diff = $this->getDate();
+        $cities = auth()->user()->city_id;
+        $project_availables = $this->citie_repo->getAddress($cities);
+        $locations = $project_availables;
         $profil = $this->user_repo->findUser($id);
-        return view('artisan.page.profil',compact('profil','diff'));
+        return view('artisan.page.profil',compact('profil','diff','project_availables','locations'));
     }
     public function coordonate($id) {
+
+        $cities = auth()->user()->city_id;
+        $project_availables = $this->citie_repo->getAddress($cities);
         $profil = $this->user_repo->findUser($id);
         $cities = $this->citie_repo->getAll();
         $diff = $this->getDate();
-        return view('artisan.page.coordonate',compact('profil','cities','diff'));
+        return view('artisan.page.coordonate',compact('profil','cities','diff','project_availables'));
     }
      public function ChangeMdp() {
         $diff = $this->getDate();
@@ -185,8 +199,9 @@ class ArtisanController extends Controller
 
     public function stripe()
     {
+        $project_availables = "";
         $diff = $this->getDate();
-        return view('artisan.page.payment',compact('diff'));
+        return view('artisan.page.payment',compact('diff','project_availables'));
 
     }
  
