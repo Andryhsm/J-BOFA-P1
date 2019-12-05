@@ -70,6 +70,35 @@ class LoginController extends Controller
         $randoms = $this->category_repo->getRandom();
         return view('front.page.view_project',compact("categories","details","randoms"));
     }
+
+    public function recuperMdp(){
+        return view('artisan.recuperation');
+    }
+
+    public function updateMdp(Request $request){
+        //dd($mdp->password);
+        $rules = array(
+            'email' => 'required | email' ,
+            'password' => 'required' ,
+            'confirm' => 'required' ,
+        );
+        $validator = Validator::make($request->all(), $rules);
+
+        if($validator->fails()){
+            toastr()->error('Veuillez completer les champs !');
+            return Redirect::back()->withInput()->withErrors($validator);
+        }else{
+            if($request->password == $request->confirm){
+                $this->user_repo->reseteMdp($request->all());
+                toastr()->success('Votre mot de passe est à jour !' );
+                return redirect('/artisan/accueil');
+            }else{
+                toastr()->warning('Les nouveaux mot de passe ne sont pas identique !' );
+                return Redirect::back()->withInput()->withErrors($validator);
+            }
+            
+        }
+    }
 }
 
 

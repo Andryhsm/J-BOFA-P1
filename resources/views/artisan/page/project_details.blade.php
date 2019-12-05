@@ -26,7 +26,29 @@
             </div>
             <div class="city_item">
               <label for="" class="city">{{$project->ville_nom}}</label>
-              <label for="" class="city_km">à environ 16 km</label>
+              <label for="" class="city_km">- à <?php
+                $lon2 = auth()->user()->city->ville_longitude_deg; 
+                $lon1 = $project->ville_longitude_deg; 
+                $lat2 = auth()->user()->city->ville_latitude_deg; 
+                $lat1 = $project->ville_latitude_deg; 
+                $unit = "K";
+
+                $theta = $lon1 - $lon2;
+                $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+                $dist = acos($dist);
+                $dist = rad2deg($dist);
+                $miles = $dist * 60 * 1.1515;
+                $unit = strtoupper($unit);
+
+                if ($unit == "K") {
+                  echo round(($miles * 1.609344));
+                } else if ($unit == "N") {
+                  echo round(($miles * 0.8684));
+                } else {
+                  echo round($miles);
+                }
+              ?> Km
+              </label>
             </div>
           </div>
           <div class="btn_action_item">

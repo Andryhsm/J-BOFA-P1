@@ -12,7 +12,7 @@
         <img src="{!! url('/image/front/images/fond.jpg') !!}" class="img_fond" alt="" />
         <div class="description_header">
           <div class="text_header">
-              <h2>SE CONNECTER</h2>
+              <h2>RECUPERER VOTRE MOT DE PASSE</h2>
           </div>
         </div>
       </div>
@@ -44,10 +44,10 @@
         <div class="bloc_form">
           <!-- {{ route('login') }} -->
           <!-- url(config('adminlte.login_url', 'login')) -->
-          <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+          <form class="form-horizontal" role="form" method="POST" action="{{route('recup_mdp')}}">
           {{ csrf_field() }}
           <div class="item_formulaire">
-            <label for="" class="title_inscription">Se connecter en tant que Professionnels</label>
+            <label for="" class="title_inscription">Récuperation mot de passe</label>
             <div class="sparated_form_title">
               <div class="separate"></div>
             </div>
@@ -70,21 +70,53 @@
                   </span>
               @endif
             </div>
+            <div class="formular_item">
+              <label for="" class="label_form">Confirmer mot de passe*</label>
+              <input type="password" class="input_form" name="confirm" required autocomplete="current-password">
+              @if ($errors->has('confirm'))
+                  <span class="help-block">
+                      <strong>{{ $errors->first('confirm') }}</strong>
+                  </span>
+              @endif
+            </div>
 
             <div class="btn_form">
-              <button type="submit" name="button" class="formular_button btn_artisan">SE CONNECTER  </button>
+              <button type="submit" name="button" class="formular_button btn_artisan">Valider  </button>
             </div>
-            <div>
-              <a href="{{route('recuperation')}}" class="">Mot de passe oublier  </a>
-            </div>
-            
           </div>
         </form>
+
         </div>
       </div>
     </section>
     @endsection
 
     @section('additional-script')
+    <script type="text/javascript">
+        $(document).ready(function() {
 
+            $('.bloc_form').find('.form-horizontal').on('change','input[name="email"]',function(data){
+                data = $(this).val();
+                $.ajax({
+                  type : "GET",
+                  url : base_url+'get_email',
+                  data : {'emails':data},
+                  success : function(succes){
+                    if(succes.length ==0){
+                      toastr.warning('Cette mail n\'existe pas ');
+                      $('.form-horizontal').find('input[name="email"]').val('');
+                      $('.form-horizontal').find('input[name="email"]').focus();
+                    }
+                   // console.log(data,succes.length)
+                  },
+                  error : function(error){
+                    console.log(error)
+                  }
+                });
+            });
+        });
+    </script>
     @endsection
+
+
+

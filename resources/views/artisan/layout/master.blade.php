@@ -121,18 +121,18 @@
         }
     </script>
     <script type="text/javascript">
-        $(function () {
-            $('.select2-container').removeClass('form-control').width('100%');
-        });
-        $('.nav_menu').on('click','.menus',function(){
-            var diff = $(this).data('val');
-            if(diff==0){
-                alert('Vous n\'êtes pas un pro');
-            }
-            if(diff>60){
-                alert('Veuillez renouveller votre abonnement!');
-            }
-        })
+        // $(function () {
+        //     $('.select2-container').removeClass('form-control').width('100%');
+        // });
+        // $('.nav_menu').on('click','.menus',function(){
+        //     var diff = $(this).data('val');
+        //     if(diff==0){
+        //         alert('Vous n\'êtes pas un pro');
+        //     }
+        //     if(diff>60){
+        //         alert('Veuillez renouveller votre abonnement!');
+        //     }
+        // })
     </script>
           <!-- Script -->
       @toastr_js

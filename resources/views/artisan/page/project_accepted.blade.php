@@ -75,7 +75,7 @@
                   </div>
                   <div class="city_item">
                     <label for="" class="city">{{isset($project->project->city) ? $project->project->city->ville_nom : ''}}</label>
-                    <label for="" class="city_km">- à environ 16 km</label>
+                    <!--  -->
                   </div>
                   <div class="description_item">
                     <label for="" class="description_project">Je souhaite réaliser un désembouage pour un radiateurs électrique.</label>

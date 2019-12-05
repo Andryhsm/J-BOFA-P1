@@ -132,4 +132,11 @@ class UserRepository implements UserRepositoryInterface
         $this->model->password = (!empty($data['new_mdp']))? Hash::make($data['new_mdp']) : $this->model->password;
         $this->model->save();
     }
+
+    public function reseteMdp($data){
+        $this->model = $this->model->where('email',$data['email'])->get();
+        //dd($this->model);
+        $this->model[0]->password = (!empty($data['password']))? Hash::make($data['password']) : $this->model[0]->password;
+        $this->model[0]->save();
+    }
 }

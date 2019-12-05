@@ -4,7 +4,7 @@
       <label for="">Accueil</label>
     </div>
   </a>
-  <a class="menus" href="{{ route('artisan_home') }}" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>3 ) ? 'return false' : 'return true'}}">
+  <a class="menus" href="{{ route('artisan_home') }}" data-val="{{$diff}}" >
     <div class="item_menu" >
       <label for="">Projet Disponible</label>
       <!-- <label for="" class="notification">8</label> -->
@@ -14,7 +14,7 @@
     </div>
   </a>
 
-  <a class="menus" href="{{route('project_accepted')}}" data-val="{{$diff}}" onclick="{{($diff  <=0 || $diff>3 ) ? 'return false' : 'return true'}}">
+  <a class="menus" href="{{route('project_accepted')}}" data-val="{{$diff}}">
     <div class="item_menu">
       <label for="">Mes projet accéptés</label>
       @if($diff  <=0 || $diff>3)

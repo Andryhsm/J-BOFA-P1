@@ -5,7 +5,7 @@
 		<span> {{ $project_details[0]->created_at }} </span>
 	</p>
 	<div class="description_item">
-	    <p for="" class="description_project d-flex justify-content-center">Je souhaite réaliser un désembouage pour un radiateurs électrique.</p>
+	    <p for="" class="description_project d-flex justify-content-center">Je souhaite réaliser un désembouage pour un {{$project_details[0]->category->name}}.</p>
 	</div>
 
 	<div class="btn_action_item">
@@ -28,12 +28,20 @@
 <div class="detail_item">
 	<h5 class="title d-flex justify-content-center">Informations pratiques</h5>
 	<p class="centered_label_info d-flex">
-		<span class="label">Référence:</span>
-		<span class="info">J365488</span>
+		<span class="label">Projet:</span>
+		<span class="info">{{ $project_details[0]->category->name }}</span>
 	</p>
 	<p class="centered_label_info d-flex">
-		<span class="label">Début du projet:</span>
-		<span class="info">Immédiat</span>
+		<span class="label">Nom du client:</span>
+		<span class="info">{{ ($project_details[0]->gender == 1) ? "Mr" : "Mme" }} {{ $project_details[0]->first_name }} {{ $project_details[0]->last_name }}</span>
+	</p>
+	<p class="centered_label_info d-flex">
+		<span class="label">Téléphone:</span>
+		<span class="info">{{ $project_details[0]->phone }}</span>
+	</p>
+	<p class="centered_label_info d-flex">
+		<span class="label">Email:</span>
+		<span class="info">{{ $project_details[0]->email }}</span>
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">Type de client:</span>

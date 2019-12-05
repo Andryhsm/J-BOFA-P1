@@ -78,7 +78,7 @@ class ArtisanController extends Controller
         $project_details = $this->view_repo->getProject($id);
         $category = auth()->user()->category_id;
         $project_availables = $this->view_repo->projectDispo($category,$code);
-        //dd($project_accepteds);
+        //dd($project_details);
     	return view('artisan.page.project_details',compact('diff','project_details','project_accepteds','project_availables'));
     }
 
@@ -116,8 +116,11 @@ class ArtisanController extends Controller
         return view('artisan.page.coordonate',compact('profil','cities','diff','project_availables'));
     }
      public function ChangeMdp() {
+        $cities = auth()->user()->city_id;
+        $project_availables = $this->citie_repo->getAddress($cities);
+        $locations = $project_availables;
         $diff = $this->getDate();
-        return view('artisan.page.change_mdp',compact('diff'));
+        return view('artisan.page.change_mdp',compact('diff','project_availables'));
     }
     public function DocumentOfficial() {
         $diff = $this->getDate();

@@ -96,6 +96,11 @@ Route::namespace('Front')->group(function () {
     });
      Route::get('renovation','CategoryController@renovation');
     /* End Devis and presentation catégories*/
+
+    /* Recuperation mdp*/
+    Route::get('recuperation','LoginController@recuperMdp')->name('recuperation');
+    Route::post('recup_mdp','LoginController@updateMdp')->name('recup_mdp');
+    /* end Recuperation mdp*/
 });
 /*end front router*/
 
