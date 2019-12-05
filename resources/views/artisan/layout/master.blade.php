@@ -17,9 +17,6 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 
       <!--// ICONS //-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
     <!--// BOOTSTRAP & Main //-->
     {!! Html::style('css/front/bootstrap.min.css') !!}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
@@ -53,9 +50,9 @@
       </div>
     </div>
     @include('front.layout.footer')
-    {!! Html::script('js/front/jquery-3.2.1.min.js') !!}
+    <!-- {!! Html::script('js/front/jquery-3.2.1.min.js') !!} -->
     {!! Html::script('js/front/popper.min.js') !!}
-    {!! Html::script('js/front/bootstrap.min.js') !!}
+    <!-- {!! Html::script('js/front/bootstrap.min.js') !!} -->
     {!! Html::script('js/front/swiper.min.js') !!}
     {!! Html::script('js/front/index.js') !!}
     {!! Html::script('js/artisan/header.js') !!}
@@ -123,30 +120,19 @@
             });
         }
     </script>
-    
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-    <!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyAwqmlxmd3Fabvf8BRSoOlH6wv-Fc5yvCA"></script> -->
-    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?sensor=false"
-type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script> -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr66ahbzw1h4OFCFZAWuqf8IB3NSXkmWs&amp;size=360x200&amp;callback=initMap" async="" defer=""></script>-->
-
-
-
     <script type="text/javascript">
-        $(function () {
-            $('.select2-container').removeClass('form-control').width('100%');
-        });
-        $('.nav_menu').on('click','.menus',function(){
-            var diff = $(this).data('val');
-            if(diff==0){
-                alert('Vous n\'êtes pas un pro');
-            }
-            if(diff>60){
-                alert('Veuillez renouveller votre abonnement!');
-            }
-        })
+        // $(function () {
+        //     $('.select2-container').removeClass('form-control').width('100%');
+        // });
+        // $('.nav_menu').on('click','.menus',function(){
+        //     var diff = $(this).data('val');
+        //     if(diff==0){
+        //         alert('Vous n\'êtes pas un pro');
+        //     }
+        //     if(diff>60){
+        //         alert('Veuillez renouveller votre abonnement!');
+        //     }
+        // })
     </script>
           <!-- Script -->
       @toastr_js

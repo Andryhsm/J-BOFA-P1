@@ -51,16 +51,16 @@
 
     @section('content')
     
-      @if(count($project_availables) > 0)  
+      @if(count($project_accepteds) > 0)  
         <div class="pages_artisan project_list_page">
           <div class="liste_project flex_one">
             <div class="project_item {{(Auth::user()->email_verified_at == null) ? 'mail_not_active' : ''}}">
               <div class="title_project">
-                <label for="" class="number_project">{{isset($project_availables) ? count($project_availables) : 0}}</label>
+                <label for="" class="number_project">{{isset($project_accepteds) ? count($project_accepteds) : 0}}</label>
                 <label for="" class="title_project_item">PROJETS ACCEPTE</label>
               </div>
-              @if(isset($project_availables))
-              @foreach($project_availables as $project)
+              @if(isset($project_accepteds))
+              @foreach($project_accepteds as $project)
               <div class="item_project d-flex flex-wrap">
                 <div class="calendar">
                   <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
@@ -71,11 +71,11 @@
                 </div>
                 <div class="project_desc flex_one">
                   <div class="title_item">
-                    <label for="" class="title">{{$project->project->category->name}}</label>
+                    <label for="" class="title">{{isset($project->project->category) ? $project->project->category->name : ''}}</label>
                   </div>
                   <div class="city_item">
-                    <label for="" class="city">{{$project->project->city->ville_nom}}</label>
-                    <label for="" class="city_km">- à environ 16 km</label>
+                    <label for="" class="city">{{isset($project->project->city) ? $project->project->city->ville_nom : ''}}</label>
+                    <!--  -->
                   </div>
                   <div class="description_item">
                     <label for="" class="description_project">Je souhaite réaliser un désembouage pour un radiateurs électrique.</label>
@@ -128,19 +128,4 @@
     @endsection
 
     @section('additional-script')
-    <script type="text/javascript" src="javascripts/jquery.googlemap.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKwbmXbI2xTnvbxrQTL7W8UEL7RXXKBns"></script>
-    
-    <script type="text/javascript"> 
-      $(function() {
-        $("#mymap").googleMap();
-        $("#mymap").addMarker({
-          coords: [48.895651, 2.290569], // GPS coords
-          url: 'http://www.tiloweb.com', // Link to redirect onclick (optional)
-          id: 'marker1' // Unique ID for your marker
-        });
-      })
-   
-   
-       </script>
     @endsection

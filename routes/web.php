@@ -96,6 +96,11 @@ Route::namespace('Front')->group(function () {
     });
      Route::get('renovation','CategoryController@renovation');
     /* End Devis and presentation catégories*/
+
+    /* Recuperation mdp*/
+    Route::get('recuperation','LoginController@recuperMdp')->name('recuperation');
+    Route::post('recup_mdp','LoginController@updateMdp')->name('recup_mdp');
+    /* end Recuperation mdp*/
 });
 /*end front router*/
 
@@ -115,7 +120,7 @@ Route::namespace('Auth')->group(function () {
 Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(function () {
     Route::get('accueil','ArtisanController@index')->name('artisan_home');
     Route::get('disponnible','ArtisanController@showAvailablePage')->name('artisan_available');
-    Route::get('project/{id}','ArtisanController@showProjectDetails')->name('project_details');
+    Route::get('project/{project_id}','ArtisanController@showProjectDetails')->name('project_details');
     Route::get('profil/{id}','ArtisanController@showProfil')->name('artisan_profil');
     Route::get('confirm_email/{id}','ArtisanController@confirmMail')->name('confim');
     Route::get('coordonate/{id}','ArtisanController@coordonate')->name('artisan_coordonate');
@@ -135,6 +140,9 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::post('accept','ArtisanController@accepted')->name('accept_project');
     /*Route::get('accepted','ArtisanController@showAccepted')->name('project_accepted');*/
     /*end project accepted*/
+    /* change mdp */
+    Route::post('change_mdp','ArtisanController@updateMdp')->name('change_mdp');
+    /* end change mdp */
 });
 // end Auth route 
 

@@ -12,7 +12,7 @@ class ProjectAccepted extends Model
     public $timestamps = false;
 
     public function project(){
-    	return $this->hasOne(ViewProject::class,'id','project_id');
+    	return $this->hasOne(ViewProject::class,'project_id','project_id');
     }
 
     public function user(){

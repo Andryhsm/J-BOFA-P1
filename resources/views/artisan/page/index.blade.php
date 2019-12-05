@@ -25,8 +25,8 @@
             <img src="{!! url('/image/front/user/user.png') !!}" class="" alt="" />
           </div>
           <div class="user_description">
-            <label for="" class="name">AZL ELECTRICITE</label>
-            <label for="" class="user_work">Electrician</label>
+            <label for="" class="name">{{auth()->user()->enterprise}}</label>
+            <label for="" class="user_work">{{isset(auth()->user()->profile) ? auth()->user()->profile->metier : '' }}</label>
             <div class="evaluation">
               <div class="liste_star">
                 <img src="{!! url('/image/front/icones/star.svg') !!}" class="" alt="" />
@@ -49,19 +49,4 @@
     @endsection
 
     @section('additional-script')
-    <script type="text/javascript" src="javascripts/jquery.googlemap.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKwbmXbI2xTnvbxrQTL7W8UEL7RXXKBns"></script>
-    
-    <script type="text/javascript"> 
-      $(function() {
-        $("#mymap").googleMap();
-        $("#mymap").addMarker({
-          coords: [48.895651, 2.290569], // GPS coords
-          url: 'http://www.tiloweb.com', // Link to redirect onclick (optional)
-          id: 'marker1' // Unique ID for your marker
-        });
-      })
-   
-   
-       </script>
     @endsection

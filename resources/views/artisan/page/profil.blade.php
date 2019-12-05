@@ -11,8 +11,8 @@
             <img src="{!! url('/image/front/user/user.png') !!}" class="" alt="" />
           </div>
           <div class="user_description">
-            <label for="" class="name">AZL ELECTRICITE</label>
-            <label for="" class="user_work">Electrician</label>
+            <label for="" class="name">{{$profil->enterprise}}</label>
+            <label for="" class="user_work">{{isset($profil->profile) ? $profil->profile->metier : '' }}</label>
             <div class="evaluation">
               <div class="liste_star">
                 <img src="{!! url('/image/front/icones/star.svg') !!}" class="" alt="" />

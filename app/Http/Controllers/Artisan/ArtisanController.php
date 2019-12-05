@@ -8,6 +8,9 @@ use App\Repositories\TemoigneRepository;
 use App\Repositories\UserRepository;
 use App\Repositories\CityRepository;
 use App\Repositories\ViewProjectRepository;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Hash;
 use Stripe;
 use Session;
 class ArtisanController extends Controller
@@ -36,13 +39,17 @@ class ArtisanController extends Controller
     {
         //dd(auth()->user()->id);
         $cities = auth()->user()->city_id;
+        $user = $this->user_repo->findUser(auth()->user()->id);
+        $postal = $user->city->ville_code_postal ;
+        $code = $postal[0].$postal[1];
         $temoins = $this->temoin_repo->getTemoins();
         $locations = $this->citie_repo->getAddress($cities);
         $category = auth()->user()->category_id;
-        $project_availables = $this->view_repo->projectDispo($category);
+        $project_availables = $this->view_repo->projectDispo($category,$code);
+        //dd($project_availables);
         $diff = $this->getDate();
         //dd($locations);
-        return view('artisan.page.index', compact('temoins','locations','diff','project_availables'));
+        return view('artisan.page.index', compact('temoins','locations','diff','project_availables','user'));
     }
 
     // public function index()
@@ -55,42 +62,65 @@ class ArtisanController extends Controller
     {
         $diff = $this->getDate();
         $category = auth()->user()->category_id;
+        $user = $this->user_repo->findUser(auth()->user()->id);
+        $postal = $user->city->ville_code_postal ;
         $project_availables = $this->view_repo->projectDispo($category);
+        //dd($project_availables);
         return view('artisan.page.project_available',compact('diff','project_availables'));
     }
 
     public function showProjectDetails($id) {
         $diff = $this->getDate();
-        $project = $this->view_repo->getProject($id);
+        $user = $this->user_repo->findUser(auth()->user()->id);
+        $project_accepteds = $this->view_repo->getOn(auth()->user()->id,$id);
+        $postal = $user->city->ville_code_postal ;
+        $code = $postal[0].$postal[1];
+        $project_details = $this->view_repo->getProject($id);
         $category = auth()->user()->category_id;
-        $project_availables = $this->view_repo->projectDispo($category);
-        //dd($project_availables);
-    	return view('artisan.page.project_details',compact('diff','project','project_availables'));
+        $project_availables = $this->view_repo->projectDispo($category,$code);
+        //dd($project_details);
+    	return view('artisan.page.project_details',compact('diff','project_details','project_accepteds','project_availables'));
     }
 
     public function showProjectAccepted()
     {
         $diff = $this->getDate();
         $user_id = auth()->user()->id;
-        $project_availables = $this->view_repo->projectAccepted($user_id);
-        return view('artisan.page.project_accepted', compact('diff','project_availables'));
+        $project_accepteds = $this->view_repo->projectAccepted($user_id);
+        $val = [];
+        foreach ($project_accepteds as $value) {
+            # code...
+            array_push($val, $value->project_id);
+        }
+        $project_availables = $this->view_repo->projectAvAcc($val);
+        //dd($project_accepteds);
+        return view('artisan.page.project_accepted', compact('diff','project_accepteds','project_availables'));
     }
 
 // Change Profil Menu
     public function showProfil($id) {
         $diff = $this->getDate();
+        $cities = auth()->user()->city_id;
+        $project_availables = $this->citie_repo->getAddress($cities);
+        $locations = $project_availables;
         $profil = $this->user_repo->findUser($id);
-        return view('artisan.page.profil',compact('profil','diff'));
+        return view('artisan.page.profil',compact('profil','diff','project_availables','locations'));
     }
     public function coordonate($id) {
+
+        $cities = auth()->user()->city_id;
+        $project_availables = $this->citie_repo->getAddress($cities);
         $profil = $this->user_repo->findUser($id);
         $cities = $this->citie_repo->getAll();
         $diff = $this->getDate();
-        return view('artisan.page.coordonate',compact('profil','cities','diff'));
+        return view('artisan.page.coordonate',compact('profil','cities','diff','project_availables'));
     }
      public function ChangeMdp() {
+        $cities = auth()->user()->city_id;
+        $project_availables = $this->citie_repo->getAddress($cities);
+        $locations = $project_availables;
         $diff = $this->getDate();
-        return view('artisan.page.change_mdp',compact('diff'));
+        return view('artisan.page.change_mdp',compact('diff','project_availables'));
     }
     public function DocumentOfficial() {
         $diff = $this->getDate();
@@ -137,11 +167,44 @@ class ArtisanController extends Controller
         return view('artisan.page.project_accepted.index',compact('diff','project_availables'));
     }
     //end project accepted
+    // change mdp
+    public function updateMdp(Request $request){
+        $mdp = $this->user_repo->findUser(auth()->user()->id);
+        //dd($mdp->password);
+        $rules = array(
+            'actuel' => 'required' ,
+            'new_mdp' => 'required' ,
+            'new_confirm' => 'required' ,
+        );
+        $validator = Validator::make($request->all(), $rules);
+
+        if($validator->fails()){
+            toastr()->error('Veuillez completer les champs !');
+            return Redirect::back()->withInput()->withErrors($validator);
+        }else{
+            $value =  password_verify($request->actuel,$mdp->password);
+            if($value){
+                if($request->new_mdp == $request->new_confirm){
+                    $this->user_repo->updateMdp(auth()->user()->id,$request->all());
+                    toastr()->success('Votre mot de passe est à jour !' );
+                    return redirect('/artisan/accueil');
+                }else{
+                    toastr()->warning('Les nouveaux mot de passe ne sont pas identique !' );
+                    return Redirect::back()->withInput()->withErrors($validator);
+                }
+            }else{
+               toastr()->warning('Le mot de passe actuel n\'est pas correct !' );
+               return Redirect::back()->withInput()->withErrors($validator);
+            }
+        }
+    }
+    // end change mdp
 
     public function stripe()
     {
+        $project_availables = "";
         $diff = $this->getDate();
-        return view('artisan.page.payment',compact('diff'));
+        return view('artisan.page.payment',compact('diff','project_availables'));
 
     }
  
