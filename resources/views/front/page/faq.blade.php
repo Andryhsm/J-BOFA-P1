@@ -133,7 +133,7 @@
       <div class="about_temoin">
         <div class="titre_temoin">
           <label class="title_content_temoin">VOUS AUSSI DONNEZ VOTRE AVIS !</label>
-          <label class="text_content_temoin">Vous avez utilisé les services de Devispresto ou Habitatpresto ? Dites-nous ce que vous en avez pensé ! Envoyez nous un mail à <strong>lorem@ipsum.com</strong> et racontez-nous votre expérience.</label>
+          <label class="text_content_temoin">Vous avez utilisé les services de Orange-travaux ? Dites-nous ce que vous en avez pensé ! Envoyez nous un mail à <strong>lorem@ipsum.com</strong> et racontez-nous votre expérience.</label>
         </div>
         <div class="content_tem">
           @if(isset($temoins))

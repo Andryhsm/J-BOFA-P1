@@ -48,6 +48,10 @@
 		<span class="info">{{ $project_details[0]->category_type1 }}</span>
 	</p>
 	<p class="centered_label_info d-flex">
+		<span class="label">Type de travaux:</span>
+		<span class="info">{{ $project_details[0]->travaux }}</span>
+	</p>
+	<p class="centered_label_info d-flex">
 		<span class="label">Type d'habitation:</span>
 		<span class="info">{{ $project_details[0]->batiment }}</span>
 	</p>
