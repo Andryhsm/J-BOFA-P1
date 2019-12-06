@@ -74,8 +74,8 @@
             <div class="btn_form">
               <button type="submit" name="button" class="formular_button btn_artisan">SE CONNECTER  </button>
             </div>
-            <div>
-              <a href="{{route('recuperation')}}" class="">Mot de passe oublier  </a>
+            <div class="text-center forget-password">
+              <a href="{{route('recuperation')}}" class="">Mot de passe oublié</a>
             </div>
             
           </div>

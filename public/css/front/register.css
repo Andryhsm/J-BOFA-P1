@@ -109,6 +109,11 @@
 .btn_form button {
   width: 50%;
 }
+
+.forget-password {
+  margin-bottom: 7%;
+}
+
 .form-horizontal {
   display: flex;
   flex: 1;
