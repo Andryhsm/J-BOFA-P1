@@ -8,7 +8,7 @@
 @stop
 
 @section('css')
-    
+    {!! Html::style('css/admin/main.css') !!}
 @stop
 
 @section('content')
@@ -22,39 +22,41 @@
                 <div class="col-xs-1"></div>
                 <div class="col-xs-10" style="margin-top:50px;margin-bottom:50px">
                     <div class="col-xs-10" style="line-height:27px">
-                        <span><h3> Envoyer les devis normalement : </h3> 
-                            <div class="switch-container position-relative form-group ">
-                                <label class="switch">
-                                  <input type="checkbox" class="form-check-input" checked>
-                                  <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </span>
+                        <div class="d-flex align-items-center">
+                          <div class="switch-container position-relative d-flex align-items-center" style="margin-right: 10px;">
+                              <label class="switch">
+                                <input type="checkbox" class="form-check-input" checked>
+                                <span class="slider round"></span>
+                              </label>
+                          </div>
+                          <h3 style="margin-top: 0; margin-bottom: 0;"> Envoyer les devis normalement  </h3> 
+                        </div>
+
                         <br class="span1">
-                        <span>
-                            <h3> Envoyer les demandes à une seule personne : </h3>
-                            <div class="switch-container position-relative form-group ">
-                                <label class="switch">
-                                  <input type="checkbox" class="form-check-input sending" >
-                                  <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </span>
+                        <div class="d-flex align-items-center">
+                          <div class="switch-container position-relative d-flex align-items-center" style="margin-right: 10px;">
+                              <label class="switch">
+                                <input type="checkbox" class="form-check-input sending" >
+                                <span class="slider round"></span>
+                              </label>
+                          </div>
+                          <h3 style="margin-top: 0; margin-bottom: 0;"> Envoyer les demandes à une seule personne </h3>                          
+                        </div>
                         <br class="span2">
-                        <span>
-                            <h3> Envoyer les devis à plusieurs personnes : </h3>
-                            <div class="switch-container position-relative form-group ">
-                                <label class="switch">
-                                  <input type="checkbox" class="form-check-input" >
-                                  <span class="slider round"></span>
-                                </label>
-                                <button class="btn btn-default btn_inactive" type="button" style="margin-left:20px">
-                                    <i class="fa fa-eye"></i>
-                                </button>
-                                <button class="btn btn-success btn_active hidden" type="button" style="margin-left:20px">
-                                    <i class="fa fa-eye"></i></button>
-                            </div>
-                        </span>
+                        <div class="d-flex align-items-center">
+                          <div class="switch-container position-relative d-flex flex-column align-items-center justify-content-center" style="margin-right: 10px;">
+                              <label class="switch">
+                                <input type="checkbox" class="form-check-input" >
+                                <span class="slider round"></span>
+                              </label>
+                              <button class="btn btn-default btn_inactive" type="button" style="margin-top:8px">
+                                  <i class="fa fa-eye"></i>
+                              </button>
+                              <button class="btn btn-success btn_active hidden" type="button" style="margin-left:20px">
+                                  <i class="fa fa-eye"></i></button>
+                          </div>
+                          <h3  style="margin-top: 0; margin-bottom: 0;"> Envoyer les devis à plusieurs personnes </h3>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-1"></div>
