@@ -38,6 +38,7 @@ class ViewProjectRepository {
         $this->model->category_type1 = $data['category1'];
         $this->model->category_type2 = $data['category2'];
         $this->model->hour = $data['hour'];
+        $this->model->create_at = \Carbon\Carbon::now();
 
         $this->model->save();
     }

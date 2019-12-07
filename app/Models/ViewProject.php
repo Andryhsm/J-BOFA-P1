@@ -10,6 +10,7 @@ class ViewProject extends Model
     //
     protected $table = "view_project";
     protected $primarykey = "project_id";
+    public $timestamps = false;
 
     public function category(){
         return $this->hasOne(Category::class,'id','category_id');

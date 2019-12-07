@@ -11,12 +11,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1NMlHcCPpSQ2hv2OUWmh_t72vd6bYy5Y"></script>
   <div class="nav_maps">
-    <label for="" class="title_maps">Ma Zone Géographique</label>
+    <label for="" class="title_maps">Zone Géographique</label>
     <div class="localisation">
-      <label for="" class="bold_localise">50 km</label>
+      <!-- <label for="" class="bold_localise">50 km</label>
       <label>autour de </label>
-      <label for="" class="bold_localise_to">ROUEN</label>
-      <label>Si vous le souhaitez, vous pouvez définir une zone kilométrique autour d'une ville donnée.</label>
+      <label for="" class="bold_localise_to">ROUEN</label> -->
+      <label>Vous pouvez définir une zone kilométrique autour d'une ville donnée.</label>
     </div>
       <div id="map_wrapper">
       <div id="map_canvas" class="mapping"></div>

@@ -192,8 +192,8 @@
                         <div class="calendar">
                           <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
                           <div class="liste_dates">
-                            <label for="" class="dates">18</label>
-                            <label for="" class="mounth">Jul.</label>
+                            <label for="" class="dates">{{date('d',strtotime($project->create_at))}}</label>
+                            <label for="" class="mounth">{{date('M',strtotime($project->create_at))}}</label>
                           </div>
                         </div>
                         <div class="project_desc">
