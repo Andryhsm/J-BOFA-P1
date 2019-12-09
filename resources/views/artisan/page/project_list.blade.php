@@ -47,7 +47,7 @@
             </label>
           </div>
           <div class="description_item">
-            <label for="" class="description_project">Je souhaite réaliser un désembouage pour un radiateurs électrique.</label>
+            <label for="" class="description_project">{{$project->comment}}.</label>
           </div>
         </div>
         <div class="btn_action_item">

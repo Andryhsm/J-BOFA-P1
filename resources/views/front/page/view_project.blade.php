@@ -314,6 +314,16 @@
               </div>
             </div>
           </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Commentaire: </label>
+              </div>
+              <div class="champ_item_step2 champ_item_flex_name">
+                <textarea id="comment" name="comment"class="input_form_step1"  style="width:100%"></textarea>
+              </div>
+            </div>
+          </div>
 
         </div>
         <div class="btn_next_page">

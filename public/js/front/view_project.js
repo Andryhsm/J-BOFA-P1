@@ -32,8 +32,8 @@ $(document).ready(function(){
   });
   // activation step 2
   $('.btn_next_page').on('click', '#btn-step-3', function() {
-    var value = true;
-    console.log('batiment_type',batiment_type)
+     var value = true;
+    // console.log('batiment_type',batiment_type)
     // console.log($(this).closest('.btn_next_page').closest('#step-1').siblings('#step-2').html());
     var sel1 = $('.container_view_project').find('#sel1').val();
     var sel2 = $('.container_view_project').find('#sel2').val();
@@ -96,10 +96,11 @@ $(document).ready(function(){
       var category2 = $('.container_view_project').find('#sel2').val();
       var hour = $('.container_view_project').find('#horaire').val();
       var postale_code = $('.container_view_project').find('#postal_code').val();
+      var comment = $('.container_view_project').find('#comment').val();
       $.ajax({
         url: base_url+'/create_devis',
         type:'POST',
-        data:{'id_category':id_category,'ville':ville,'last_name':last_name,'first_name':first_name,'batiment_type':batiment_type,'travaux':travaux,'prestation':prestation,'energie_type':energie_type,'chauffeau':chauffeau,'gender':gender,'phone':phone,'email':email,'category1':category1,'category2':category2,'hour':hour},
+        data:{'id_category':id_category,'ville':ville,'last_name':last_name,'first_name':first_name,'batiment_type':batiment_type,'travaux':travaux,'prestation':prestation,'energie_type':energie_type,'chauffeau':chauffeau,'gender':gender,'phone':phone,'email':email,'category1':category1,'category2':category2,'hour':hour,'comment':comment},
         success: function (success) {
           toastr.success('Devis enregistré !')
           $('.btn_next_page').find('#btn-step-3').closest('.btn_next_page').closest('#step-2').removeClass('active');

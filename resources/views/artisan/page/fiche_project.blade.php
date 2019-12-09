@@ -5,7 +5,7 @@
 		<span> {{ $project_details[0]->created_at }} </span>
 	</p>
 	<div class="description_item">
-	    <p for="" class="description_project d-flex justify-content-center">Je souhaite réaliser un désembouage pour un {{$project_details[0]->category->name}}.</p>
+	    <p for="" class="description_project d-flex justify-content-center">{{$project_details[0]->comment}}.</p>
 	</div>
 
 	<div class="btn_action_item">
@@ -57,7 +57,8 @@
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">But de la demande:</span>
-		<span class="info">Demande concrète: recevoir  des devis pour réaliser mes travaux</span>
+		<span class="info"> {{$project_details[0]->comment}}</span>
+		<!-- <span class="info">Demande concrète: recevoir  des devis pour réaliser mes travaux</span> -->
 	</p>
 </div>
 
