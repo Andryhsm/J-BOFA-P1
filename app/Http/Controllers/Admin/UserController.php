@@ -177,11 +177,11 @@ class UserController extends Controller
         $data_tables->EditColumn('name', function ($user) {
             if(isset($user->name))
             {
-                if(isset($user->photo)){
-                    return '<img class=" img-circle img-profil-list" src="'.url("image/User/Profil/".$user->photo."").'" alt="User profile picture">&nbsp;&nbsp;'.$user->name;
-                }else{
-                    return '<img class=" img-circle img-profil-list" src="'.url("image/User/Profil/avatar.png").'" alt="User profile picture">&nbsp;&nbsp;'.$user->name;
-                }
+                // if(isset($user->photo)){
+                //     return '<img class=" img-circle img-profil-list" src="'.url("image/User/Profil/".$user->photo."").'" alt="User profile picture">&nbsp;&nbsp;'.$user->name;
+                // }else{
+                    return $user->name;
+                //}
             }
                 
         })->EditColumn('email', function ($user) {
@@ -215,7 +215,7 @@ class UserController extends Controller
                 
              }
         })->EditColumn('action', function ($user) {
-            return view("User.user.action", ['User' => $user]);
+            return view("admin.user.action", ['User' => $user]);
         });
         return $data_tables->rawColumns(['name','status','action'])->make(true);
     }

@@ -150,6 +150,13 @@ class AdminController extends Controller
         return view('admin.list');
     }
 
+    public function deleteArtisan(Request $request){
+        $this->user_repository->deleteUser($request->all());
+        toastr()->success('Suppression réussie!');
+        $users = $this->user_repository->getAllUser();
+        return view('admin.user.list',compact('users'));
+    }
+
     public function uploadImage($request)
     {
         $image_name = null;
@@ -188,11 +195,11 @@ class AdminController extends Controller
         $data_tables->EditColumn('name', function ($user) {
             if(isset($user->name))
             {
-                if(isset($user->photo)){
-                    return '<img class=" img-circle img-profil-list" src="'.url("image/Admin/Profil/".$user->photo."").'" alt="User profile picture">&nbsp;&nbsp;'.$user->name;
-                }else{
-                    return '<img class=" img-circle img-profil-list" src="'.url("image/Admin/Profil/avatar.png").'" alt="User profile picture">&nbsp;&nbsp;'.$user->name;
-                }
+                // if(isset($user->photo)){
+                //     return '<img class=" img-circle img-profil-list" src="'.url("image/Admin/Profil/".$user->photo."").'" alt="User profile picture">&nbsp;&nbsp;'.$user->name;
+                // }else{
+                    return $user->first_name.' '.$user->name;
+                //}
             }
                 
         })->EditColumn('email', function ($user) {

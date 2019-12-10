@@ -7,7 +7,7 @@
   <a class="menus" href="{{ route('artisan_home') }}" data-val="{{$diff}}" >
     <div class="item_menu" >
       <label for="">Projet Disponible</label>
-      <!-- <label for="" class="notification">8</label> -->
+      <label for="" class="notification">{{isset($notif) ? $notif : 0}}</label>
       <!-- @if($diff  <=0 || $diff>3)
         <label for="" class="pro_version">Pro</label>
       @endif -->

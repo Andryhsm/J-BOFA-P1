@@ -78,12 +78,22 @@
     {!! Html::script('js/admin/datatables/dataTables.bootstrap.min.js') !!}
     {!! Html::script('js/admin/list.js') !!}
   <script type="text/javascript">
-    $(document).on('click', '.delete-btn', function(event) {
+    $('.user-list').on('click', '.delete-btn', function(event) {
         event.preventDefault();
-        var $form = jQuery(this).closest('form');
+        var $form = jQuery(this).closest('form').data('id');
         $('#confirm').modal({backdrop: 'static', keyboard: false})
                 .one('click', '#delete', function () {
-                $form.trigger('submit'); // submit the form
+                    //console.log('form ',base_url + "admin/user");
+                    $.ajax({
+                        type: "POST",
+                        data:{'user_id':$form},
+                        url: base_url+'admin/artisan/delete',
+                        success: function(success){
+                            toastr.success('Suppréssion réussi !');
+                            window.location.href = base_url + "admin/user";
+                        }
+                    });
+                //$form.trigger('submit'); // submit the form
         });
     });
 

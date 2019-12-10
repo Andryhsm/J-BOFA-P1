@@ -47,7 +47,7 @@ class ViewProjectRepository {
     //Projet disponible
 
     public function projectDispo($category_id,$postal_code){
-        return DB::table('view_project')->join('cities','view_project.country_id','=','cities.ville_id')->join('category','view_project.category_id','=','category.id')->where('category_id',$category_id)->where('cities.ville_code_postal','LIKE',$postal_code.'%')->get();
+        return DB::table('view_project')->join('cities','view_project.country_id','=','cities.ville_id')->join('category','view_project.category_id','=','category.id')->where('category_id',$category_id)->where('cities.ville_code_postal','LIKE',$postal_code.'%')->orderBy('view_project.create_at', 'desc')->get();
         // return $this->model->with('category','city')->where('category_id',$category_id)->where('ville_code_postal', 'LIKE', $postal_code.'%')->get();
     }
 
@@ -74,6 +74,16 @@ class ViewProjectRepository {
 
     public function getOn($user_id,$project_id){
         return $this->accepted->where('user_id',$user_id)->where('project_id',$project_id)->get();
+    }
+
+    public function getNotif($user_id,$category_id,$postal_code){
+        $accepteds = $this->accepted->where('user_id',$user_id)->get();
+        $project_ids = [];
+        foreach ($accepteds as $value) {
+             array_push($project_ids, $value->project_id);
+         } 
+
+        return DB::table('view_project')->join('cities','view_project.country_id','=','cities.ville_id')->join('category','view_project.category_id','=','category.id')->where('category_id',$category_id)->where('cities.ville_code_postal','LIKE',$postal_code.'%')->whereNotIn('project_id',$project_ids)->get();
     }
     
 }

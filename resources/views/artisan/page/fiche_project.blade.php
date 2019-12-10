@@ -1,8 +1,8 @@
 <div class="detail_item">
 	<h5 class="title">{{$project_details[0]->category->name}}</h5>
 	<p class="d-flex">
-		<span>Date de la demande:  </span>
-		<span> {{ $project_details[0]->created_at }} </span>
+		<span>Date de la demande :  </span>
+		<span> {{ date('d',strtotime($project_details[0]->create_at)) }} {{ date('M',strtotime($project_details[0]->create_at)) }} {{ date('Y',strtotime($project_details[0]->create_at)) }} </span>
 	</p>
 	<div class="description_item">
 	    <p for="" class="description_project d-flex justify-content-center">{{$project_details[0]->comment}}.</p>
@@ -42,6 +42,10 @@
 	<p class="centered_label_info d-flex">
 		<span class="label">Email:</span>
 		<span class="info">{{ $project_details[0]->email }}</span>
+	</p>
+	<p class="centered_label_info d-flex">
+		<span class="label">Ville:</span>
+		<span class="info">{{ $project_details[0]->city->ville_nom }}</span>
 	</p>
 	<p class="centered_label_info d-flex">
 		<span class="label">Type de client:</span>

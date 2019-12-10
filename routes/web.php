@@ -25,6 +25,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     /*start profil*/
     Route::resource('user','AdminController');
     Route::resource('artisan','UserController');
+    Route::post('artisan/delete','AdminController@deleteArtisan')->name('delete_artisan');
     Route::get('/edit-profil', 'ProfilController@index')->name('profil');
     Route::get('/get_user', 'AdminController@getAll')->name('get_user');
     Route::get('/Admin', 'AdminController@listAdmin')->name('Admin');

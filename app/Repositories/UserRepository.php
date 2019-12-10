@@ -70,8 +70,8 @@ class UserRepository implements UserRepositoryInterface
         return $this->model->with('profile','category','city','user_abonnement')->orderBy('id','desc')->get();
     }
 
-    public function deleteUser($user_id){
-        return $this->model->where('id', $user_id)->delete();
+    public function deleteUser($data){
+        return $this->model->where('id', $data['user_id'])->delete();
     }
 
     public function changeStatus($user_id){
