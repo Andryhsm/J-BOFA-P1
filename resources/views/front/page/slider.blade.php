@@ -15,11 +15,11 @@
                     </div>
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-10">
-                            <form class="form-wrap mt-4 position_relative form_recherche_inovation">
+                            <form class="form-wrap mt-4 position_relative form_recherche_inovation" method="GET" action="{{route('view_project')}}">
                                 <div class="btn-group" role="group" aria-label="Basic example" id="parent">
-                                    <input type="text" placeholder="Ex: Plomberie, Maçonnerie" id="recherche" class="btn-group1 header_search">
-                                    <!-- <input type="text" placeholder="New york" class="btn-group2"> -->
+                                    <input type="text" name="name" placeholder="Ex: Plomberie, Maçonnerie" id="recherche" class="btn-group1 header_search">
                                     <button type="submit" class="btn-form btn_research_bofa"><span class="icon-magnifier search-icon"></span>RECHERCHER<i class="pe-7s-angle-right"></i></button>
+                                    <!-- <input type="hidden" name="id" placeholder="New york" id="id" class="btn-group2"> -->
                                 </div>
                                 <ul id="ul" class="dropdown dropdown_search"></ul>
                             </form>

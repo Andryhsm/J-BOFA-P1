@@ -8,23 +8,26 @@
 
   @section('content')
   <div class="container_view_project">
-    <form action="{{route('create_devis')}}" method="POST">
-      {!! csrf_field() !!}
+    
     <section class="header_project">
       <div class="content_header_project" style="background-image:url({!! url('/image/front/images/fond14.jpg') !!})">
         <div class="menus_header_project">
           <a href="{{route('accueil')}}" class="menus_project">ACCEUIL</a> /
           <a href="#" class="menus_project active">DEVIS <label for="" class="title_project">{{($details) ? $details->name : 'Nouveau projet'}}</label></a>
         </div>
-        <div class="chearch_project" id="parent">
-          <div class="porte_cherche">
-            <input type="text" name="" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
-            <button type="button" name="button" class="btn_chearch_project">DEVIS GRATUIT</button>
-            <ul id="ul" class="dropdown dropdown_search cherch_view_project"></ul>
+        <form class="chearch_project" method="GET" action="{{route('view_project')}}">
+          <div class="chearch_project" id="parent">
+            <div class="porte_cherche">
+              <input type="text" name="name" value="" class="research_project" id="recherche" placeholder="Ex: Plomberie, Maçonnerie">
+              <button type="submit" name="button" class="btn_chearch_project">DEVIS GRATUIT</button>
+              <ul id="ul" class="dropdown dropdown_search cherch_view_project"></ul>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </section>
+    <form action="{{route('create_devis')}}" method="POST">
+      {!! csrf_field() !!}
     <section class="tab_project">
       <div class="content_tab">
         <div class="line_tab"></div>

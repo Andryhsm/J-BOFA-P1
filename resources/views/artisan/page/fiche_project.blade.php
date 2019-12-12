@@ -15,6 +15,9 @@
 			<form action="{{route('accept_project')}}" method="POST">
 				{!! csrf_field() !!}
 		      	<input type="hidden" name="project" value="{{$project_details[0]->project_id}}">
+		      	<input type="hidden" name="email" value="{{$project_details[0]->email}}">
+		      	<input type="hidden" name="first_name" value="{{$project_details[0]->first_name}}">
+		      	<input type="hidden" name="last_name" value="{{$project_details[0]->last_name}}">
 		      	<input type="hidden" name="user" value="{{auth()->user()->id}}">
 		      	<button >Accepter</button> 
 	        </form>

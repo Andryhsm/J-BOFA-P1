@@ -11,6 +11,8 @@ use App\Repositories\ViewProjectRepository;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\EmailProject;
 use Stripe;
 use Session;
 class ArtisanController extends Controller
@@ -47,7 +49,7 @@ class ArtisanController extends Controller
         $category = auth()->user()->category_id;
         $project_availables = $this->view_repo->projectDispo($category,$code);
         $notif_available = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
-        $notif = count($project_availables);
+        $notif = count($notif_available);
         //dd(count($notif_available));
         $diff = $this->getDate();
         //dd($locations);
@@ -67,7 +69,7 @@ class ArtisanController extends Controller
         $user = $this->user_repo->findUser(auth()->user()->id);
         $postal = $user->city->ville_code_postal ;
         $code = $postal[0].$postal[1];
-        $project_notif = $this->view_repo->projectDispo($category,$code);
+        $project_notif = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
         $project_availables = $this->view_repo->projectDispo($category);
         $notif = count($project_notif);
         return view('artisan.page.project_available',compact('diff','project_availables','notif'));
@@ -81,7 +83,7 @@ class ArtisanController extends Controller
         $code = $postal[0].$postal[1];
         $project_details = $this->view_repo->getProject($id);
         $category = auth()->user()->category_id;
-        $project_availables = $this->view_repo->projectDispo($category,$code);
+        $project_availables = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
         $notif = count($project_availables);
         //dd($project_details);
     	return view('artisan.page.project_details',compact('diff','project_details','project_accepteds','project_availables','notif'));
@@ -103,7 +105,7 @@ class ArtisanController extends Controller
         $postal = $user->city->ville_code_postal ;
         $code = $postal[0].$postal[1];
         $category = auth()->user()->category_id;
-        $project_notif = $this->view_repo->projectDispo($category,$code);
+        $project_notif = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
         $notif = count($project_notif);
         return view('artisan.page.project_accepted', compact('diff','project_accepteds','project_availables','notif'));
     }
@@ -120,7 +122,7 @@ class ArtisanController extends Controller
         $postal = $user->city->ville_code_postal ;
         $code = $postal[0].$postal[1];
         $category = auth()->user()->category_id;
-        $project_notif = $this->view_repo->projectDispo($category,$code);
+        $project_notif = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
         $notif = count($project_notif);
         return view('artisan.page.profil',compact('profil','diff','project_availables','locations','notif'));
     }
@@ -136,7 +138,7 @@ class ArtisanController extends Controller
         $postal = $user->city->ville_code_postal ;
         $code = $postal[0].$postal[1];
         $category = auth()->user()->category_id;
-        $project_notif = $this->view_repo->projectDispo($category,$code);
+        $project_notif = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
         $notif = count($project_notif);
         return view('artisan.page.coordonate',compact('profil','cities','diff','project_availables','notif'));
     }
@@ -145,7 +147,13 @@ class ArtisanController extends Controller
         $project_availables = $this->citie_repo->getAddress($cities);
         $locations = $project_availables;
         $diff = $this->getDate();
-        return view('artisan.page.change_mdp',compact('diff','project_availables'));
+        $user = $this->user_repo->findUser(auth()->user()->id);
+        $postal = $user->city->ville_code_postal ;
+        $code = $postal[0].$postal[1];
+        $category = auth()->user()->category_id;
+        $project_notif = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
+        $notif = count($project_notif);
+        return view('artisan.page.change_mdp',compact('diff','notif','project_availables'));
     }
     public function DocumentOfficial() {
         $diff = $this->getDate();
@@ -191,15 +199,31 @@ class ArtisanController extends Controller
     public function accepted(Request $request){
         $diff =$this->getDate();
         $this->view_repo->createAccept($request->all());
-        return redirect('/artisan/accueil');
+        // dd($values);
+        // if ($values) {
+            //dd(auth()->guard('admin')->user());
+            $valueArray = [
+                'name' => $request->first_name.' '.$request->last_name,
+                'email'=>$request->email,
+                'message'=>'Vous recevez cet email car l\'entreprise '.auth()->user()->enterprise.' peut faire votre projet',
+                'url_confirm'=>url("artisan/confirm_email/".auth()->user()->id)
+            ];
+            Mail::to($request->email)->send(new EmailProject($valueArray));
+            return redirect('/artisan/accueil');
+        //}
     }
 
     public function showAccepted(){
         $diff =$this->getDate();
         $user_id = auth()->user()->id;
         $project_availables = $this->view_repo->projectAccepted($user_id);
-        //dd($project_availables);
-        return view('artisan.page.project_accepted.index',compact('diff','project_availables'));
+        $user = $this->user_repo->findUser($user_id);
+        $postal = $user->city->ville_code_postal ;
+        $code = $postal[0].$postal[1];
+        $category = auth()->user()->category_id;
+        $project_notif = $this->view_repo->getNotif($user_id,$category,$postal);
+        $notif = count($project_notif);
+        return view('artisan.page.project_accepted.index',compact('diff','notif','project_availables'));
     }
     //end project accepted
     // change mdp
@@ -239,7 +263,15 @@ class ArtisanController extends Controller
     {
         $project_availables = "";
         $diff = $this->getDate();
-        return view('artisan.page.payment',compact('diff','project_availables'));
+        $user_id = auth()->user()->id;
+        $project_availables = $this->view_repo->projectAccepted($user_id);
+        $user = $this->user_repo->findUser($user_id);
+        $postal = $user->city->ville_code_postal ;
+        $code = $postal[0].$postal[1];
+        $category = auth()->user()->category_id;
+        $project_notif = $this->view_repo->getNotif($user_id,$category,$postal);
+        $notif = count($project_notif);
+        return view('artisan.page.payment',compact('diff','notif','project_availables'));
 
     }
  
@@ -254,7 +286,7 @@ class ArtisanController extends Controller
         $diff = $this->getDate();
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $stripe= Stripe\Charge::create ([
-            "amount" => 60 * 100,
+            "amount" => 6 * 100,
             "currency" => "eur",
             "source" => $request->stripeToken,
             "description" => "Test payment " 

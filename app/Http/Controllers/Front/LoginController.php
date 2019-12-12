@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Service\UploadService;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Input;
 use Auth;
 class LoginController extends Controller
 {
@@ -51,6 +52,20 @@ class LoginController extends Controller
         $details = $this->category_repo->findCategory($id);
         $randoms = $this->category_repo->getRandom();
         return view('front.page.view_project',compact("categories","details","randoms"));
+    }
+
+    public function getCategory(){
+        $category = Input::get('name');
+        $categorie = $this->category_repo->getCategories($category);
+        if(count($categorie) >0){
+            $details = $categorie[0];
+            $categories = $this->category_repo->getCategory();
+            $randoms = $this->category_repo->getRandom();
+            //dd($details);
+            return view('front.page.view_project',compact("categories","details","randoms"));
+        }else{
+            return Redirect::back()->withInput()->withErrors('validator');
+        }
     }
 
     public function getEmail(Request $request){

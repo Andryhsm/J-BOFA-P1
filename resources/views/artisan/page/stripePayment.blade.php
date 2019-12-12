@@ -6,14 +6,14 @@
                     <p class="text_pro">
                         Pour devenir un(e) membre Pro, veuillez payer 360€ pour une abonnement de 1 ans
                     </p>
-                    <p class="text_pro">60€ pour découvrir l'ensemble de vos projet et de profiter au maximum nos service</p>
+                    <p class="text_pro">360€ pour découvrir l'ensemble de vos projet et de profiter au maximum nos service</p>
                     <p class="text_pro">Avec Stripe, nous assurons la sécuriter de votre payment</p>
 
                 </div>
                 <div class="panel panel-default credit-card-box">
                     <div class="panel-heading display-table" >
                         <div class="row display-tr" >
-                            <h3 class="panel-title display-td" >Payment Details</h3>
+                            <h3 class="panel-title display-td" >Details du payement</h3>
                             <div class="display-td" >                            
                                 <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
                             </div>
@@ -36,14 +36,14 @@
       
                             <div class='form-row row'>
                                 <div class='col-xs-12 form-group required'>
-                                    <label class='control-label'>Name on Card</label> <input
+                                    <label class='control-label'>Nom du carte</label> <input
                                         class='form-control' size='4' type='text'>
                                 </div>
                             </div>
       
                             <div class='form-row row'>
                                 <div class='col-xs-12 form-group card required card_payment'>
-                                    <label class='control-label'>Card Number</label> <input
+                                    <label class='control-label'>Numero de la carte</label> <input
                                         autocomplete='off' class='form-control card-number' size='20'
                                         type='text'>
                                 </div>
@@ -56,12 +56,12 @@
                                         type='text'>
                                 </div>
                                 <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                    <label class='control-label'>Expiration Month</label> <input
+                                    <label class='control-label'>Mois d'expiration</label> <input
                                         class='form-control card-expiry-month' placeholder='MM' size='2'
                                         type='text'>
                                 </div>
                                 <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                    <label class='control-label'>Expiration Year</label> <input
+                                    <label class='control-label'>Année d'expiration</label> <input
                                         class='form-control card-expiry-year' placeholder='YYYY' size='4'
                                         type='text'>
                                 </div>
@@ -69,14 +69,13 @@
       
                             <div class='form-row row'>
                                 <div class='col-md-12 error form-group hide'>
-                                    <div class='alert-danger alert'>Please correct the errors and try
-                                        again.</div>
+                                    <div class='alert-danger alert'>Ressayez s'il vous plait !.</div>
                                 </div>
                             </div>
       
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now - 60€</button>
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Payer maintenant - 360€</button>
                                 </div>
                             </div>
                               

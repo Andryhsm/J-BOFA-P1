@@ -107,40 +107,6 @@
                       <option value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
                   @endif
-                  <!-- <option value="Chauffage-climatisation">Chauffage-climatisation</option>
-                  <option value="Fenetre-porte">Fenetre-porte</option>
-                  <option value="Entretient-traitement">Entretient-traitement</option>
-                  <option value="Cuisine">Cuisine</option>
-                  <option value="Salle de bain">Salle de bain</option>
-                  <option value="Sols intérieurs">Sols intérieurs</option>
-                  <option value="Véranda">Véranda</option>
-                  <option value="Energie Renouvelable ">Energie Renouvelable </option>
-                  <option value="Electricité-Alarme">Electricité-Alarme</option>
-                  <option value="Isolation thermique et accoustique">Isolation thermique et accoustique</option>
-                  <option value="Rénovation intérieur">Rénovation intérieur</option>
-                  <option value="Architecture">Architecture</option>
-                  <option value="Construction">Construction</option>
-                  <option value="Maçonnerie-démolition">Maçonnerie-démolition</option>
-                  <option value="Couverture-Toiture-Charpente">Couverture-Toiture-Charpente</option>
-                  <option value="Salle de bain-Spa">Salle de bain-Spa</option>
-                  <option value="Peinture-Décoration">Peinture-Décoration</option>
-                  <option value="Cheminée">Cheminée</option>
-                  <option value="Sol - Carrelage - Parquet">Sol - Carrelage - Parquet</option>
-                  <option value="Véranda">Véranda</option>
-                  <option value="Diagnostics">Diagnostics</option>
-                  <option value="Salle de bains">Salle de bains</option>
-                  <option value="Peinture - Décorations">Peinture - Décorations</option>
-                  <option value="Piscine -  abri de piscine ">Piscine -  abri de piscine </option>
-                  <option value="Jardin - Clotûre - Portail">Jardin - Clotûre - Portail</option>
-                  <option value="Véranda">Véranda</option>
-                  <option value="Sols - Carrelage - Parquet">Sols - Carrelage - Parquet</option>
-                  <option value="Architecture">Architecture</option>
-                  <option value="Piscine -  abri de piscine ">Piscine -  abri de piscine </option>
-                  <option value="Gros oeuvres">Gros oeuvres</option>
-                  <option value="Maçonnerie-démolitions">Maçonnerie-démolitions</option>
-                  <option value="Couverture-Toiture-Charpentes">Couverture-Toiture-Charpentes</option>
-                  <option value="Salle de bain">Salle de bain</option>
-                  <option value="Sol - Carrelage - Parquets">Sol - Carrelage - Parquets</option> -->
               </select>
             </div>
             <div class="formular_item formular_item_responsive">
@@ -158,11 +124,11 @@
               <input type="text" class="input_form" name="enterprise" value="" placeholder="Nom de votre société" required>
             </div>
             <div class="formular_item">
-              <label for="" class="label_form">Nom</label>
+              <label for="" class="label_form">Nom et prenom</label>
               <input type="text" class="input_form" name="name" value="" placeholder="Nom" required>
             </div>
             <div class="formular_item">
-              <label for="" class="label_form">Prénom</label>
+             <!--  <label for="" class="label_form">Prénom</label> -->
               <input type="text" class="input_form" name="first_name" value="" placeholder="Prénom" required>
             </div>
             <div class="formular_item">

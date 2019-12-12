@@ -31,6 +31,15 @@ class CategoryRepository implements  CategoryRepositoryInterface{
     {
         return $this->model->find($id);
     }
+
+    public function getCategories($data){
+        $cates = $this->model->where('name',$data)->get();
+        if(isset($cates)){
+            return $cates;
+        }else{
+            return $cates = "";
+        }
+    }
     public function getAll(){
     	$data= $this->model->with('admin')->get();
         return $data;

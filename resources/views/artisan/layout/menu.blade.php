@@ -43,7 +43,7 @@
       @endif -->
     </div>
   </a>
-  <a class="menus" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>3 ) ? 'return false' : 'return true'}}" href="{{ route('service') }}">
+  <a class="menus" data-val="{{$diff}}" onclick="//{{($diff <=0 || $diff>3 ) ? 'return false' : 'return true'}}" href="{{ route('service') }}">
     <div class="item_menu">
       <label for="">Services</label>
       <label for="" class="add_service">+</label>

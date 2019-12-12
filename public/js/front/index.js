@@ -61,11 +61,11 @@ $(document).ready(function(){
   		//console.log(trie.reverse())
     });
     $('.slider').on('click', '.rechercheVal', function(){
-		var value = $(this).text();
-		$(this).closest('#ul').siblings('#parent').find('input').val(value);
-		$('#ul').css('display', 'none');
+  		var value = $(this).text();
+  		$(this).closest('#ul').siblings('#parent').find('#recherche').val(value);
+  		$('#ul').css('display', 'none');
 
-	});
+  	});
 
     $('.inscription').on('keyup','#postal_code',function(data){
       $('#ville').trigger('change');
