@@ -292,7 +292,7 @@ class ArtisanController extends Controller
             "description" => "Test payment " 
         ]);
         $this->user_repo->addAbonnement($stripe);
-        Session::flash('success', 'Payment successful!');
+        Session::flash('success', 'Payment réussi!');
         // dd($stripe);
         return back();
 
