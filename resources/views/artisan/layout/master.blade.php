@@ -46,7 +46,7 @@
         <div class="navbar_j">
           @yield('side_nav')
         </div>
-        <div class="flex_one">
+        <div class="artisan_content_wrapper flex_one">
           @yield('content')
         </div>        
       </div>

@@ -139,20 +139,3 @@
 .question_reponse .reponse_question {
   color: #474747;
 }
-
-@media screen and (max-width: 1300px) {
-  /* line 124, ../../sass/account/profil.scss */
-  .pages_profil {
-    padding: inherit;
-    margin-bottom: 2.5rem;
-  }
-
-  /* line 129, ../../sass/account/profil.scss */
-  .pages .navbar_j {
-    width: 100%;
-  }
-  /* line 132, ../../sass/account/profil.scss */
-  .pages .nav_bar {
-    padding: 6%;
-  }
-}
