@@ -1,0 +1,11 @@
+@media screen and (max-width: 1320px) {
+  /* line 3, ../../sass/responsive/artisan.scss */
+  .content_page {
+    padding: 0 6% 2% 6%;
+  }
+
+  /* line 5, ../../sass/responsive/artisan.scss */
+  .content_page .pages {
+    padding: 0;
+  }
+}

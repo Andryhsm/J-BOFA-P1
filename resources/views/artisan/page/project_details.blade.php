@@ -116,7 +116,7 @@
 @endsection
 
 @section('content')
-  <div class="pages">
+  <div class="pages page_artisan">
     @include('artisan.page.fiche_project')
   </div>
 @endsection 

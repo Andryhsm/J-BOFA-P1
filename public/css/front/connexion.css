@@ -113,6 +113,7 @@ label {
 }
 .pages .navbar_j {
   width: 31%;
+  min-width: 370px;
   display: flex;
   flex-direction: column;
 }
@@ -210,7 +211,7 @@ label {
   flex: 1;
   justify-content: space-between;
   border-bottom: 2px dotted #cecece;
-  margin-bottom: 1rem;
+  padding: 0;
 }
 .item_project .calendar {
   position: relative;

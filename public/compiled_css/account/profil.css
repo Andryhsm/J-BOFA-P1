@@ -88,19 +88,20 @@
   margin-right: 0.5rem;
   cursor: pointer;
   text_decoration: none;
+  margin-bottom: 30px;
 }
-/* line 76, ../../sass/account/profil.scss */
+/* line 77, ../../sass/account/profil.scss */
 .liste_document .item_doc_upload .image_fond_paper {
   width: 100%;
   height: 100%;
 }
-/* line 80, ../../sass/account/profil.scss */
+/* line 81, ../../sass/account/profil.scss */
 .liste_document .item_doc_upload .image_upload_paper {
   position: absolute;
   bottom: -1rem;
   left: -1rem;
 }
-/* line 85, ../../sass/account/profil.scss */
+/* line 86, ../../sass/account/profil.scss */
 .liste_document .item_doc_upload .title_paper {
   position: absolute;
   font-size: 11px;
@@ -108,49 +109,49 @@
   color: #0062ae;
 }
 
-/* line 94, ../../sass/account/profil.scss */
+/* line 95, ../../sass/account/profil.scss */
 .item_image_upload {
   text_decoration: none;
 }
 
-/* line 99, ../../sass/account/profil.scss */
+/* line 100, ../../sass/account/profil.scss */
 .content_chantier .liste_document {
   margin-top: 2rem;
 }
-/* line 102, ../../sass/account/profil.scss */
+/* line 103, ../../sass/account/profil.scss */
 .content_chantier .liste_document .item_image_upload {
   cursor: pointer;
 }
 
-/* line 107, ../../sass/account/profil.scss */
+/* line 108, ../../sass/account/profil.scss */
 .question_reponse {
   margin-top: 4rem;
   background-color: #f0f0f0;
   padding: 1.5rem;
   font-size: 14px;
 }
-/* line 113, ../../sass/account/profil.scss */
+/* line 114, ../../sass/account/profil.scss */
 .question_reponse .title_question {
   font-weight: 600;
   color: #474747;
 }
-/* line 117, ../../sass/account/profil.scss */
+/* line 118, ../../sass/account/profil.scss */
 .question_reponse .reponse_question {
   color: #474747;
 }
 
 @media screen and (max-width: 1300px) {
-  /* line 123, ../../sass/account/profil.scss */
+  /* line 124, ../../sass/account/profil.scss */
   .pages_profil {
     padding: inherit;
     margin-bottom: 2.5rem;
   }
 
-  /* line 128, ../../sass/account/profil.scss */
+  /* line 129, ../../sass/account/profil.scss */
   .pages .navbar_j {
     width: 100%;
   }
-  /* line 131, ../../sass/account/profil.scss */
+  /* line 132, ../../sass/account/profil.scss */
   .pages .nav_bar {
     padding: 6%;
   }

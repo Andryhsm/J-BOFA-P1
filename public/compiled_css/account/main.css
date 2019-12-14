@@ -242,19 +242,16 @@ input:checked + .slider::before {
   height: 2px;
 }
 
-/* line 172, ../../sass/account/main.scss */
+/* line 173, ../../sass/account/main.scss */
 .border_dashed {
   --border-color: #cecece;
   --border-weight: 1px;
   --dash-size: 8px;
   --gap-size: 8px;
   position: relative;
-  /*margin: 60px;
-  width: 300px;
-  height: 80px;
-  background: #333;*/
+  margin: 15px 0;
 }
-/* line 184, ../../sass/account/main.scss */
+/* line 182, ../../sass/account/main.scss */
 .border_dashed:after {
   transition: all .6s ease;
   content: '';
@@ -267,17 +264,17 @@ input:checked + .slider::before {
   background-size: var(--dash-size) var(--border-weight), calc(var(--dash-size) + var(--gap-size)) var(--border-weight), var(--dash-size) var(--border-weight), var(--border-weight) var(--dash-size), var(--border-weight) calc(var(--dash-size) + var(--gap-size)), var(--border-weight) var(--dash-size);
 }
 
-/* line 212, ../../sass/account/main.scss */
+/* line 210, ../../sass/account/main.scss */
 .hide {
   display: none;
 }
 
-/* line 215, ../../sass/account/main.scss */
+/* line 213, ../../sass/account/main.scss */
 .show {
   display: block;
 }
 
-/* line 218, ../../sass/account/main.scss */
+/* line 216, ../../sass/account/main.scss */
 .pages_artisan {
   padding: 0 0 0 3%;
   width: 100%;
@@ -286,7 +283,7 @@ input:checked + .slider::before {
   justify-content: space-between;
 }
 
-/* line 226, ../../sass/account/main.scss */
+/* line 224, ../../sass/account/main.scss */
 .basic-background {
   border: 1px solid #cecece;
   background-color: #fff;

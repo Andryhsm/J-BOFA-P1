@@ -169,17 +169,15 @@ input:checked + .slider::before {
   height: 2px;
 }
 
+
 .border_dashed {
   --border-color:  #cecece;
     --border-weight: 1px;
     --dash-size: 8px;
     --gap-size: 8px;
-    
+
     position: relative;
-    /*margin: 60px;
-    width: 300px;
-    height: 80px;
-    background: #333;*/
+    margin: 15px 0;
 
     &:after {
       transition: all .6s ease;
