@@ -1377,6 +1377,9 @@ footer {
   top: 2rem;
   right: 0;
 }
+
+.administration_link_wrapper { margin-bottom: 20px; }
+
 .administration_link {
   text-decoration: none;
   font-size: 18px;

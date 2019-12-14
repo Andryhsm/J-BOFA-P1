@@ -1,7 +1,7 @@
 @extends('artisan.layout.master')
 
 @section('additional-css')
-  {!! Html::style('css/admin/project_details.css') !!}
+  {!! Html::style('compiled_css/account/project_details.css') !!}
 @endsection
 
 @section('side_nav')

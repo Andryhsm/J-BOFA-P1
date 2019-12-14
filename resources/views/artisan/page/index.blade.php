@@ -2,7 +2,7 @@
 
     @section('additional-css')
       {!! Html::style('css/front/project_available.css') !!}
-      {!! Html::style('css/admin/home.css') !!}
+      {!! Html::style('compiled_css/account/home.css') !!}
     @endsection
 
     @section('banner')

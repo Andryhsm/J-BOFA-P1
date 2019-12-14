@@ -1,10 +1,10 @@
 @extends('artisan.layout.master')
 
     @section('additional-css')
-    {!! Html::style('css/admin/home.css') !!}
-    {!! Html::style('css/admin/main.css') !!}
+    {!! Html::style('compiled_css/account/home.css') !!}
+    {!! Html::style('compiled_css/account/main.css') !!}
       {!! Html::style('css/front/project_available.css') !!}
-      {!! Html::style('css/admin/project_accepted.css') !!}
+      {!! Html::style('compiled_css/account/project_accepted.css') !!}
     @endsection
 
     @section('banner')

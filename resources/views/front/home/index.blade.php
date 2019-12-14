@@ -2,6 +2,7 @@
 
     @section('additional-css')
       {!! Html::style('css/front/style_home.css') !!}
+      {!! Html::style('compiled_css/responsive/home_page.css') !!}
     @endsection
 
     @section('content')

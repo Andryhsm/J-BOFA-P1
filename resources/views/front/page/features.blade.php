@@ -1,8 +1,8 @@
 <!--============================= FEATURED PLACES =============================-->
   <section class="main-block light-bg">
-      <div class="container">
+      <div class="container featured-wrapper">
           <div class="row justify-content-center">
-              <div class="col_heading">
+              <div class="container col_heading">
                   <div class="styled-heading">
                       <h3>Les particuliers parlent de nous</h3>
                       <p>Chaque mois, plus de 15 000 personnes nous confient les travaux de leur maison en demandant des devis à notre réseau d'experts. En ferez-vous partie ?</p>
@@ -12,7 +12,7 @@
           <div class="row">
             @if(isset($temoins))
               @foreach($temoins as $temoin)
-                <div class="col-md-4 featured-responsive feature_container">
+                <div class="col-lg-4 col-md-4 col-xs-12 featured-responsive feature_container">
                     <div class="featured-place-wrap">
                         <a href="detail.html" class="height_message">
                             <span class="featured-rating-orange"><i class="fa fa-quote-left"></i></span>

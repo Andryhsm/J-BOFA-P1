@@ -1,0 +1,146 @@
+@media screen and (max-width: 1024px) {
+  /* line 2, ../../sass/responsive/view_project.scss */
+  .container_page {
+    /* flex-direction: column-reverse; */
+  }
+
+  /* line 6, ../../sass/responsive/view_project.scss */
+  .item_nav_bar {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  /* line 10, ../../sass/responsive/view_project.scss */
+  .image_step_project {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  /* line 15, ../../sass/responsive/view_project.scss */
+  .text_nav_bar {
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+  }
+
+  /* line 20, ../../sass/responsive/view_project.scss */
+  .text_image_nav_bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* line 24, ../../sass/responsive/view_project.scss */
+  .img_nav_bar {
+    width: 50%;
+    height: 158px;
+    object-fit: contain;
+    border-radius: inherit;
+  }
+
+  /* line 30, ../../sass/responsive/view_project.scss */
+  .item_form_step1 {
+    width: 100%;
+  }
+
+  /* line 33, ../../sass/responsive/view_project.scss */
+  .btn_next_page {
+    justify-content: center;
+  }
+
+  /* line 36, ../../sass/responsive/view_project.scss */
+  .btn_next_form {
+    width: 50%;
+    padding: 1.5%;
+  }
+
+  /* line 40, ../../sass/responsive/view_project.scss */
+  .title_item_step2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* line 44, ../../sass/responsive/view_project.scss */
+  .element_item {
+    margin-bottom: 5%;
+    padding: 0 5%;
+  }
+
+  /* line 48, ../../sass/responsive/view_project.scss */
+  .product_item {
+    padding: 0 5%;
+    margin-bottom: 5rem;
+  }
+
+  /* line 52, ../../sass/responsive/view_project.scss */
+  .img_step1 {
+    object-fit: contain;
+  }
+
+  /* line 55, ../../sass/responsive/view_project.scss */
+  .champ_item_step2 #phone, .champ_item_step2 #email {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 61, ../../sass/responsive/view_project.scss */
+  .porte_cherche {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* line 67, ../../sass/responsive/view_project.scss */
+  .menus_header_project {
+    flex-direction: column-reverse;
+    color: transparent;
+    font-size: 20px;
+  }
+
+  /* line 72, ../../sass/responsive/view_project.scss */
+  .chearch_project {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+
+  /* line 76, ../../sass/responsive/view_project.scss */
+  .research_project {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* line 80, ../../sass/responsive/view_project.scss */
+  .cherch_view_project {
+    width: 100%;
+  }
+
+  /* line 83, ../../sass/responsive/view_project.scss */
+  .porte_cherche {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 90, ../../sass/responsive/view_project.scss */
+  .tab_project {
+    margin-top: 20px;
+  }
+
+  /* line 92, ../../sass/responsive/view_project.scss */
+  .container_page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  /* line 97, ../../sass/responsive/view_project.scss */
+  .nav_bar, .step_nav {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 0 15px;
+  }
+}

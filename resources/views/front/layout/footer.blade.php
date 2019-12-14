@@ -2,6 +2,10 @@
   <footer class="main-block dark-bg relative_footer">
       <div class="container">
           <div class="row">
+              <div class="col-md-12 administration_link_wrapper d-flex justify-content-center">
+                <a href="{{ url('/admin') }}" class="administration_link">Administration</a>
+              </div>
+
               <div class="col-md-12">
                   <div class="copyright">
                       <p>Copyright &copy; 2019. Tous droits réservés | <a class="legal_mention" href="{{ url('term&condition') }}">Mentions Légales</a></p>
@@ -14,8 +18,8 @@
               </div>
           </div>
       </div>
-      <div class="absolute_footer">
+      <!-- <div class="absolute_footer">
         <a href="{{ url('/admin') }}" class="administration_link">Administration</a>
-      </div>
+      </div> -->
   </footer>
   <!--//END FOOTER -->

@@ -1,4 +1,4 @@
-/* line 3, ../../sass/admin/project_accepted.scss */
+/* line 3, ../../sass/account/project_accepted.scss */
 .advisor-card h2 {
   font-size: 1.4rem;
   color: #474747;
@@ -7,24 +7,24 @@
   text-transform: uppercase;
   margin-bottom: 0;
 }
-/* line 12, ../../sass/admin/project_accepted.scss */
+/* line 12, ../../sass/account/project_accepted.scss */
 .advisor-card p {
   margin-bottom: 0;
 }
-/* line 14, ../../sass/admin/project_accepted.scss */
+/* line 14, ../../sass/account/project_accepted.scss */
 .advisor-card .be-called i {
   margin-left: 8px;
 }
-/* line 18, ../../sass/admin/project_accepted.scss */
+/* line 18, ../../sass/account/project_accepted.scss */
 .advisor-card a {
   color: #ff580c;
 }
-/* line 22, ../../sass/admin/project_accepted.scss */
+/* line 22, ../../sass/account/project_accepted.scss */
 .advisor-card .name {
   font-size: 25px;
   font-family: 'Open Sans Condensed',sans-serif;
 }
-/* line 27, ../../sass/admin/project_accepted.scss */
+/* line 27, ../../sass/account/project_accepted.scss */
 .advisor-card .number {
   font-weight: 700;
   color: #28a3b2;
@@ -32,19 +32,19 @@
   padding: 10px;
 }
 
-/* line 35, ../../sass/admin/project_accepted.scss */
+/* line 35, ../../sass/account/project_accepted.scss */
 .last-accepted-project {
   margin-bottom: 30px;
   padding: 15px 15px 20px;
 }
 
-/* line 40, ../../sass/admin/project_accepted.scss */
+/* line 40, ../../sass/account/project_accepted.scss */
 .last-accepted-project, .completed-projects-block {
   width: 100%;
   margin-bottom: 30px;
   padding: 15px 15px 20px;
 }
-/* line 45, ../../sass/admin/project_accepted.scss */
+/* line 45, ../../sass/account/project_accepted.scss */
 .last-accepted-project h2, .completed-projects-block h2 {
   font-size: 1.4rem;
   color: #474747;
@@ -52,12 +52,12 @@
   margin-bottom: 0;
 }
 
-/* line 53, ../../sass/admin/project_accepted.scss */
+/* line 53, ../../sass/account/project_accepted.scss */
 p {
   margin-bottom: 0;
 }
 
-/* line 55, ../../sass/admin/project_accepted.scss */
+/* line 55, ../../sass/account/project_accepted.scss */
 .pages .nav_bar {
   padding: 15px 15px 20px;
 }
