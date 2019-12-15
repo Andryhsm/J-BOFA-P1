@@ -143,4 +143,14 @@
     margin: auto;
     padding: 0 15px;
   }
+
+  /* line 104, ../../sass/responsive/view_project.scss */
+  .nav_bar {
+    order: 2;
+  }
+
+  /* line 106, ../../sass/responsive/view_project.scss */
+  .step_nav {
+    order: 1;
+  }
 }
