@@ -22,9 +22,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
     {!! Html::style('css/front/header_footer_page.css') !!}
     {!! Html::style('css/front/style.css') !!}
-    {!! Html::style('css/admin/main.css') !!}
     {!! Html::style('css/front/connexion.css') !!}
-    {!! Html::style('css/front/connexion_responsive.css') !!}
+    {!! Html::style('compiled_css/account/main.css') !!}
+    {!! Html::style('compiled_css/responsive/artisan.css') !!}
+    
+    
     <!-- Style CSS -->
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -44,7 +46,7 @@
         <div class="navbar_j">
           @yield('side_nav')
         </div>
-        <div class="flex_one">
+        <div class="artisan_content_wrapper flex_one">
           @yield('content')
         </div>        
       </div>

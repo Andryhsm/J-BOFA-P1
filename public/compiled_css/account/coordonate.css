@@ -1,4 +1,4 @@
-/* line 1, ../../sass/admin/coordonate.scss */
+/* line 1, ../../sass/account/coordonate.scss */
 .title_profil {
   margin: 0;
   text-transform: uppercase;
@@ -6,14 +6,14 @@
   font-size: 20px;
 }
 
-/* line 7, ../../sass/admin/coordonate.scss */
+/* line 7, ../../sass/account/coordonate.scss */
 .name_entreprise {
   width: 100%;
   display: flex;
   margin-top: 1rem;
 }
 
-/* line 12, ../../sass/admin/coordonate.scss */
+/* line 12, ../../sass/account/coordonate.scss */
 .title_entreprise {
   color: #474747;
   font-size: 20px;
@@ -21,31 +21,31 @@
   text-decoration: underline;
 }
 
-/* line 18, ../../sass/admin/coordonate.scss */
+/* line 18, ../../sass/account/coordonate.scss */
 .number_phone_entreprise {
   color: #044651;
   font-size: 25px;
   font-weight: 900;
 }
 
-/* line 23, ../../sass/admin/coordonate.scss */
+/* line 23, ../../sass/account/coordonate.scss */
 .content_describe_entreprise {
   flex-direction: column;
   color: #474747;
 }
 
-/* line 27, ../../sass/admin/coordonate.scss */
+/* line 27, ../../sass/account/coordonate.scss */
 .mail_entreprise {
   color: #0062ae;
   font-size: 15px;
 }
 
 /**Container*/
-/* line 33, ../../sass/admin/coordonate.scss */
+/* line 33, ../../sass/account/coordonate.scss */
 .entreprise_presentation {
   width: 100%;
 }
-/* line 36, ../../sass/admin/coordonate.scss */
+/* line 36, ../../sass/account/coordonate.scss */
 .entreprise_presentation .info_entreprise {
   height: 200px;
   resize: none;
@@ -57,17 +57,17 @@
   padding: 1rem;
   border-radius: 2px;
 }
-/* line 47, ../../sass/admin/coordonate.scss */
+/* line 47, ../../sass/account/coordonate.scss */
 .entreprise_presentation .info_entreprise:focus {
   border: 1px solid #28a3b2;
 }
 
-/* line 53, ../../sass/admin/coordonate.scss */
+/* line 53, ../../sass/account/coordonate.scss */
 .coordonate_entreprise {
   margin-top: 2rem;
 }
 
-/* line 57, ../../sass/admin/coordonate.scss */
+/* line 57, ../../sass/account/coordonate.scss */
 .content_formulaire {
   width: 100%;
   display: flex;
@@ -75,13 +75,13 @@
   justify-content: space-between;
 }
 
-/* line 63, ../../sass/admin/coordonate.scss */
+/* line 63, ../../sass/account/coordonate.scss */
 .liste_formulaire {
   width: 28%;
   /*padding: 1rem;*/
 }
 
-/* line 68, ../../sass/admin/coordonate.scss */
+/* line 68, ../../sass/account/coordonate.scss */
 .item_formulaire {
   width: 100%;
   display: flex;
@@ -90,11 +90,11 @@
   font-size: 15px;
   margin-bottom: 0.5rem;
 }
-/* line 76, ../../sass/admin/coordonate.scss */
+/* line 76, ../../sass/account/coordonate.scss */
 .item_formulaire .name_item_formulaire {
   margin-bottom: 0.3rem;
 }
-/* line 80, ../../sass/admin/coordonate.scss */
+/* line 80, ../../sass/account/coordonate.scss */
 .item_formulaire input, .item_formulaire select {
   padding: 5px 6px;
   width: 100%;
@@ -104,21 +104,21 @@
   background-color: #fff;
 }
 
-/* line 90, ../../sass/admin/coordonate.scss */
+/* line 90, ../../sass/account/coordonate.scss */
 .label_entreprise {
   margin-top: 2rem;
 }
-/* line 93, ../../sass/admin/coordonate.scss */
+/* line 93, ../../sass/account/coordonate.scss */
 .label_entreprise .liste_formulaire {
   padding: inherit !important;
 }
 
-/* line 98, ../../sass/admin/coordonate.scss */
+/* line 98, ../../sass/account/coordonate.scss */
 .profil_image_entreprise {
   margin-top: 2rem;
 }
 
-/* line 102, ../../sass/admin/coordonate.scss */
+/* line 102, ../../sass/account/coordonate.scss */
 .messange_upload {
   width: 100%;
   padding: 3%;
@@ -127,18 +127,18 @@
   border: 1px solid #ff580c;
   margin-bottom: 1rem;
 }
-/* line 110, ../../sass/admin/coordonate.scss */
+/* line 110, ../../sass/account/coordonate.scss */
 .messange_upload p {
   margin: 0;
 }
 
-/* line 115, ../../sass/admin/coordonate.scss */
+/* line 115, ../../sass/account/coordonate.scss */
 .upload_image_profil {
   width: 100%;
   position: relative;
   cursor: pointer;
 }
-/* line 120, ../../sass/admin/coordonate.scss */
+/* line 120, ../../sass/account/coordonate.scss */
 .upload_image_profil .decoration_upload {
   position: absolute;
   top: 0;
@@ -154,7 +154,7 @@
   /* align-items: center;
    justify-content: center;*/
 }
-/* line 136, ../../sass/admin/coordonate.scss */
+/* line 136, ../../sass/account/coordonate.scss */
 .upload_image_profil .input_file_profil {
   width: 100%;
   border: 1px solid #00adf1;
@@ -164,7 +164,7 @@
   color: #474747;
 }
 
-/* line 146, ../../sass/admin/coordonate.scss */
+/* line 146, ../../sass/account/coordonate.scss */
 .btn_save_profil {
   margin-top: 9%;
   width: 100%;
@@ -172,7 +172,7 @@
   /*justify-content: center;
   align-items: center;*/
 }
-/* line 153, ../../sass/admin/coordonate.scss */
+/* line 153, ../../sass/account/coordonate.scss */
 .btn_save_profil .save_profil {
   width: 26%;
   height: 45px;

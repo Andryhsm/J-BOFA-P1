@@ -1,21 +1,25 @@
-/* line 3, ../../sass/admin/home.scss */
+/* line 3, ../../sass/account/home.scss */
 .project_list_page .btn_action:hover {
   text-decoration: none;
 }
-/* line 7, ../../sass/admin/home.scss */
+/* line 7, ../../sass/account/home.scss */
 .project_list_page .project_desc {
-  padding: 0 30px;
+  padding: 0 0 0 30px;
 }
-/* line 11, ../../sass/admin/home.scss */
+/* line 11, ../../sass/account/home.scss */
+.project_list_page .btn_action_item {
+  padding-left: 30px;
+}
+/* line 13, ../../sass/account/home.scss */
 .project_list_page .item_project {
   border-bottom: none;
 }
-/* line 14, ../../sass/admin/home.scss */
+/* line 16, ../../sass/account/home.scss */
 .project_list_page .item_project .new_label img {
   width: 15px;
   margin-right: 8px;
 }
-/* line 20, ../../sass/admin/home.scss */
+/* line 22, ../../sass/account/home.scss */
 .project_list_page .btn_view_project_detail {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -32,12 +36,12 @@
   background-color: #0062ae;
   color: #fff;
 }
-/* line 36, ../../sass/admin/home.scss */
+/* line 38, ../../sass/account/home.scss */
 .project_list_page .btn_view_project_detail span {
   position: relative;
   transition: 0.5s;
 }
-/* line 40, ../../sass/admin/home.scss */
+/* line 42, ../../sass/account/home.scss */
 .project_list_page .btn_view_project_detail span:after {
   content: "\f178";
   position: absolute;
@@ -47,17 +51,17 @@
   transition: 0.5s;
   font-family: fontAwesome;
 }
-/* line 51, ../../sass/admin/home.scss */
+/* line 53, ../../sass/account/home.scss */
 .project_list_page .btn_view_project_detail:hover span {
   padding-right: 25px;
 }
-/* line 55, ../../sass/admin/home.scss */
+/* line 57, ../../sass/account/home.scss */
 .project_list_page .btn_view_project_detail:hover span:after {
   opacity: 1;
   right: 0;
 }
 
-/* line 63, ../../sass/admin/home.scss */
+/* line 65, ../../sass/account/home.scss */
 .mail_confirm {
   width: 100%;
   height: 50vh;
@@ -66,20 +70,20 @@
   justify-content: center;
   align-items: center;
 }
-/* line 71, ../../sass/admin/home.scss */
+/* line 73, ../../sass/account/home.scss */
 .mail_confirm .activate_mail {
   color: #474747;
   font-family: 'Open Sans Condensed',sans-serif;
   font-size: 20px;
   text-align: center;
 }
-/* line 77, ../../sass/admin/home.scss */
+/* line 79, ../../sass/account/home.scss */
 .mail_confirm .mail_thanks {
   line-height: 3.6rem;
   text-transform: uppercase;
 }
 
-/* line 82, ../../sass/admin/home.scss */
+/* line 84, ../../sass/account/home.scss */
 .mail_not_active {
   display: none;
 }

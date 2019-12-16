@@ -1,0 +1,51 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 2, ../../sass/responsive/home_page.scss */
+  .featured-wrapper.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  /* line 10, ../../sass/responsive/home_page.scss */
+  .slider-title_box {
+    margin-top: 100px;
+  }
+
+  /* line 14, ../../sass/responsive/home_page.scss */
+  .styled-heading p {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 18, ../../sass/responsive/home_page.scss */
+  .feature_container {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 28, ../../sass/responsive/home_page.scss */
+  .slider-content_wrap h1 {
+    font-size: 30px !important;
+  }
+
+  /* line 29, ../../sass/responsive/home_page.scss */
+  .slider-content_wrap h5 {
+    font-size: 20px;
+  }
+
+  /* line 31, ../../sass/responsive/home_page.scss */
+  .item_project_plus {
+    height: 250px;
+  }
+  /* line 34, ../../sass/responsive/home_page.scss */
+  .item_project_plus label {
+    font-size: 22px;
+  }
+
+  /* line 37, ../../sass/responsive/home_page.scss */
+  .main-block .container_row {
+    margin: 0;
+  }
+}

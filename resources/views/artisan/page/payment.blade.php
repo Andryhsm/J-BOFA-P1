@@ -2,7 +2,7 @@
 
     @section('additional-css')
       {!! Html::style('css/front/project_available.css') !!}
-      {!! Html::style('css/admin/home.css') !!}
+      {!! Html::style('compiled_css/account/home.css') !!}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
      {!! Html::style('css/front/stripe.css') !!}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

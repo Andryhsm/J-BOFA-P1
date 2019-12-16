@@ -1,18 +1,18 @@
-/* line 2, ../../sass/admin/profil.scss */
+/* line 2, ../../sass/account/profil.scss */
 .profil_page .coordonate_item {
   width: 50%;
   text-align: left;
 }
-/* line 6, ../../sass/admin/profil.scss */
+/* line 6, ../../sass/account/profil.scss */
 .profil_page .coordonate_item p {
   margin-bottom: 8px;
 }
-/* line 10, ../../sass/admin/profil.scss */
+/* line 10, ../../sass/account/profil.scss */
 .profil_page .coordonate_item .label {
   font-weight: bold;
 }
 
-/* line 15, ../../sass/admin/profil.scss */
+/* line 15, ../../sass/account/profil.scss */
 .content_profil {
   border: 1px solid #cecece;
   padding: 2%;
@@ -20,7 +20,7 @@
   width: 100%;
 }
 
-/* line 21, ../../sass/admin/profil.scss */
+/* line 21, ../../sass/account/profil.scss */
 .pages_profil {
   padding: 0 0 0 3%;
   width: 100%;
@@ -29,55 +29,55 @@
   justify-content: space-between;
 }
 
-/* line 28, ../../sass/admin/profil.scss */
+/* line 28, ../../sass/account/profil.scss */
 .title_separate {
   margin-bottom: 1rem;
 }
 
-/* line 32, ../../sass/admin/profil.scss */
+/* line 32, ../../sass/account/profil.scss */
 .btn_orange_link_artisan {
   text-decoration: none;
   font-size: 14px;
   color: #00adf1;
 }
-/* line 37, ../../sass/admin/profil.scss */
+/* line 37, ../../sass/account/profil.scss */
 .btn_orange_link_artisan:hover {
   text-decoration: none;
 }
 
-/* line 41, ../../sass/admin/profil.scss */
+/* line 41, ../../sass/account/profil.scss */
 .top_separate_changemdp {
   margin-top: 2rem;
 }
 
-/* line 44, ../../sass/admin/profil.scss */
+/* line 44, ../../sass/account/profil.scss */
 .dashed_margin {
   margin: 1rem 0;
 }
 
-/* line 47, ../../sass/admin/profil.scss */
+/* line 47, ../../sass/account/profil.scss */
 .title_profil {
   color: #474747;
   font-weight: 200;
 }
 
-/* line 52, ../../sass/admin/profil.scss */
+/* line 52, ../../sass/account/profil.scss */
 .description_personnal {
   width: 100%;
 }
 
-/* line 56, ../../sass/admin/profil.scss */
+/* line 56, ../../sass/account/profil.scss */
 .items_doc {
   padding: 0.5rem;
 }
 
-/* line 60, ../../sass/admin/profil.scss */
+/* line 60, ../../sass/account/profil.scss */
 .liste_document {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-/* line 65, ../../sass/admin/profil.scss */
+/* line 65, ../../sass/account/profil.scss */
 .liste_document .item_doc_upload {
   position: relative;
   width: 72px;
@@ -88,19 +88,20 @@
   margin-right: 0.5rem;
   cursor: pointer;
   text_decoration: none;
+  margin-bottom: 30px;
 }
-/* line 76, ../../sass/admin/profil.scss */
+/* line 77, ../../sass/account/profil.scss */
 .liste_document .item_doc_upload .image_fond_paper {
   width: 100%;
   height: 100%;
 }
-/* line 80, ../../sass/admin/profil.scss */
+/* line 81, ../../sass/account/profil.scss */
 .liste_document .item_doc_upload .image_upload_paper {
   position: absolute;
   bottom: -1rem;
   left: -1rem;
 }
-/* line 85, ../../sass/admin/profil.scss */
+/* line 86, ../../sass/account/profil.scss */
 .liste_document .item_doc_upload .title_paper {
   position: absolute;
   font-size: 11px;
@@ -108,50 +109,33 @@
   color: #0062ae;
 }
 
-/* line 94, ../../sass/admin/profil.scss */
+/* line 95, ../../sass/account/profil.scss */
 .item_image_upload {
   text_decoration: none;
 }
 
-/* line 99, ../../sass/admin/profil.scss */
+/* line 100, ../../sass/account/profil.scss */
 .content_chantier .liste_document {
   margin-top: 2rem;
 }
-/* line 102, ../../sass/admin/profil.scss */
+/* line 103, ../../sass/account/profil.scss */
 .content_chantier .liste_document .item_image_upload {
   cursor: pointer;
 }
 
-/* line 107, ../../sass/admin/profil.scss */
+/* line 108, ../../sass/account/profil.scss */
 .question_reponse {
   margin-top: 4rem;
   background-color: #f0f0f0;
   padding: 1.5rem;
   font-size: 14px;
 }
-/* line 113, ../../sass/admin/profil.scss */
+/* line 114, ../../sass/account/profil.scss */
 .question_reponse .title_question {
   font-weight: 600;
   color: #474747;
 }
-/* line 117, ../../sass/admin/profil.scss */
+/* line 118, ../../sass/account/profil.scss */
 .question_reponse .reponse_question {
   color: #474747;
-}
-
-@media screen and (max-width: 1300px) {
-  /* line 123, ../../sass/admin/profil.scss */
-  .pages_profil {
-    padding: inherit;
-    margin-bottom: 2.5rem;
-  }
-
-  /* line 128, ../../sass/admin/profil.scss */
-  .pages .navbar_j {
-    width: 100%;
-  }
-  /* line 131, ../../sass/admin/profil.scss */
-  .pages .nav_bar {
-    padding: 6%;
-  }
 }

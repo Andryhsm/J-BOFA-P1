@@ -147,4 +147,7 @@ select.form-control:not([size]):not([multiple]) {
   .bloc_description {
     width: 100%;
   }
+
+  #form-artisan { order: 1; }
+  .content_register .bloc_description { order: 2; }
 }

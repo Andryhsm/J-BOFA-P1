@@ -1,7 +1,7 @@
 @extends('artisan.layout.master')
 
 @section('additional-css')
-  {!! Html::style('css/admin/project_details.css') !!}
+  {!! Html::style('compiled_css/account/project_details.css') !!}
 @endsection
 
 @section('side_nav')
@@ -116,7 +116,7 @@
 @endsection
 
 @section('content')
-  <div class="pages">
+  <div class="pages page_artisan">
     @include('artisan.page.fiche_project')
   </div>
 @endsection 

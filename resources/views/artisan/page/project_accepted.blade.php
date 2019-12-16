@@ -1,10 +1,10 @@
 @extends('artisan.layout.master')
 
     @section('additional-css')
-    {!! Html::style('css/admin/home.css') !!}
-    {!! Html::style('css/admin/main.css') !!}
+    {!! Html::style('compiled_css/account/home.css') !!}
+    {!! Html::style('compiled_css/account/main.css') !!}
       {!! Html::style('css/front/project_available.css') !!}
-      {!! Html::style('css/admin/project_accepted.css') !!}
+      {!! Html::style('compiled_css/account/project_accepted.css') !!}
     @endsection
 
     @section('banner')
@@ -61,7 +61,7 @@
               </div>
               @if(isset($project_accepteds))
               @foreach($project_accepteds as $project)
-              <div class="item_project d-flex flex-wrap">
+              <div class="item_project d-flex flex-wrap align-items-center">
                 <div class="calendar">
                   <img src="{!! url('/image/front/user/calendar.png') !!}" class="" alt="" />
                   <div class="liste_dates">
@@ -69,45 +69,50 @@
                     <label for="" class="mounth">{{date('M',strtotime($project->accepted_at))}}</label>
                   </div>
                 </div>
-                <div class="project_desc flex_one">
-                  <div class="title_item">
-                    <label for="" class="title">{{isset($project->project->category) ? $project->project->category->name : ''}}</label>
-                  </div>
-                  <div class="city_item">
-                    <label for="" class="city">{{isset($project->project->city) ? $project->project->city->ville_nom : ''}}</label>
-                    <label for="" class="city_km">- à <?php
-                      $lon1 = auth()->user()->city->ville_longitude_deg; 
-                      $lon2 = $project->project->city->ville_longitude_deg; 
-                      $lat1 = auth()->user()->city->ville_latitude_deg; 
-                      $lat2 = $project->project->city->ville_latitude_deg; 
-                      $unit = "K";
+                <div class="item_project_right flex-one d-flex flex-wrap align-items-center">
+                    <div class="project_desc flex-one">
+                      <div class="title_item">
+                        <label for="" class="title">{{isset($project->project->category) ? $project->project->category->name : ''}}</label>
+                      </div>
+                      <div class="city_item">
+                        <label for="" class="city">{{isset($project->project->city) ? $project->project->city->ville_nom : ''}}</label>
+                        <label for="" class="city_km">- à <?php
+                          $lon1 = auth()->user()->city->ville_longitude_deg; 
+                          $lon2 = $project->project->city->ville_longitude_deg; 
+                          $lat1 = auth()->user()->city->ville_latitude_deg; 
+                          $lat2 = $project->project->city->ville_latitude_deg; 
+                          $unit = "K";
 
-                      $theta = $lon1 - $lon2;
-                      $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-                      $dist = acos($dist);
-                      $dist = rad2deg($dist);
-                      $miles = $dist * 60 * 1.1515;
-                      $unit = strtoupper($unit);
+                          $theta = $lon1 - $lon2;
+                          $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+                          $dist = acos($dist);
+                          $dist = rad2deg($dist);
+                          $miles = $dist * 60 * 1.1515;
+                          $unit = strtoupper($unit);
 
-                      if ($unit == "K") {
-                        echo round(($miles * 1.609344));
-                      } else if ($unit == "N") {
-                        echo round(($miles * 0.8684));
-                      } else {
-                        echo round($miles);
-                      }
-                    ?> Km
-                    </label>
-                  </div>
-                  <div class="description_item">
-                    <label for="" class="description_project">{{$project->comment}}.</label>
-                  </div>
+                          if ($unit == "K") {
+                            echo round(($miles * 1.609344));
+                          } else if ($unit == "N") {
+                            echo round(($miles * 0.8684));
+                          } else {
+                            echo round($miles);
+                          }
+                        ?> Km
+                        </label>
+                      </div>
+                      @if(isset($project->comment))
+                      <div class="description_item">
+                        <label for="" class="description_project">{{$project->comment}}.</label>
+                      </div>
+                      @endif
+                    </div>
+                    <div class="btn_action_item">
+                      <a href="{{ url('/artisan/project/'.$project->project_id.'') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
+                        <span>Voir le project</span>
+                      </a>
+                    </div>
                 </div>
-                <div class="btn_action_item">
-                  <a href="{{ url('/artisan/project/'.$project->project_id.'') }}"  name="" class="btn_view_project_detail d-flex justify-content-center align-items-center">
-                    <span>Voir le project</span>
-                  </a>
-                </div>
+                
                 <div class="border_bottom border_dashed"></div>
               </div>
               @endforeach

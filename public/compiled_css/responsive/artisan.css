@@ -1,0 +1,132 @@
+@media screen and (max-width: 1320px) {
+  /* line 3, ../../sass/responsive/artisan.scss */
+  .content_page {
+    padding: 0 6% 2% 6%;
+  }
+
+  /* line 5, ../../sass/responsive/artisan.scss */
+  .content_page .pages {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 11, ../../sass/responsive/artisan.scss */
+  .pages .navbar_j {
+    width: 100%;
+    order: 2;
+  }
+
+  /* line 16, ../../sass/responsive/artisan.scss */
+  .pages_artisan, .pages_profil {
+    padding-left: 0 !important;
+  }
+
+  /* line 18, ../../sass/responsive/artisan.scss */
+  .artisan_content_wrapper {
+    width: 100%;
+    order: 1;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 775px) {
+  /* line 27, ../../sass/responsive/artisan.scss */
+  .service_page {
+    padding: 0;
+  }
+  /* line 30, ../../sass/responsive/artisan.scss */
+  .service_page .item_service {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+  /* line 34, ../../sass/responsive/artisan.scss */
+  .service_page .item_service .form_item_service {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  /* line 40, ../../sass/responsive/artisan.scss */
+  .service_page .item_service .img_representation {
+    margin-right: 30px;
+  }
+  /* line 44, ../../sass/responsive/artisan.scss */
+  .service_page .item_service .description_representation {
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  /* line 49, ../../sass/responsive/artisan.scss */
+  .service_page .item_service .description_representation .title_representation {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* line 55, ../../sass/responsive/artisan.scss */
+  .service_page .item_service .description_representation label {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 63, ../../sass/responsive/artisan.scss */
+  .nav_menu, .content_page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 68, ../../sass/responsive/artisan.scss */
+  .service_page {
+    padding: 0;
+  }
+
+  /* line 70, ../../sass/responsive/artisan.scss */
+  .header_page_service {
+    width: 100%;
+  }
+
+  /* line 72, ../../sass/responsive/artisan.scss */
+  .coordonate_entreprise .liste_formulaire {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* line 77, ../../sass/responsive/artisan.scss */
+  .item_video_service {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  /* line 80, ../../sass/responsive/artisan.scss */
+  .item_video_service .form_place_video {
+    width: 100% !important;
+  }
+  /* line 83, ../../sass/responsive/artisan.scss */
+  .item_video_service .form_place_video:first-child {
+    margin-bottom: 15px;
+  }
+
+  /* line 87, ../../sass/responsive/artisan.scss */
+  .liste_site_service .form_item_site {
+    width: 300px !important;
+    height: 250px !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px !important;
+  }
+
+  /* line 95, ../../sass/responsive/artisan.scss */
+  .project_list_page .project_desc, .project_list_page .btn_action_item {
+    padding-left: 15px !important;
+  }
+
+  /* line 99, ../../sass/responsive/artisan.scss */
+  .project_list_page .project_desc {
+    min-width: 120px !important;
+  }
+}

@@ -18,6 +18,7 @@
 		      	<input type="hidden" name="email" value="{{$project_details[0]->email}}">
 		      	<input type="hidden" name="first_name" value="{{$project_details[0]->first_name}}">
 		      	<input type="hidden" name="last_name" value="{{$project_details[0]->last_name}}">
+		      	<input type="hidden" name="project_name" value="{{$project_details[0]->category->name}}">
 		      	<input type="hidden" name="user" value="{{auth()->user()->id}}">
 		      	<button >Accepter</button> 
 	        </form>

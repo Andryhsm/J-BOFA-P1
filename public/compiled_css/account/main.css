@@ -1,29 +1,29 @@
-/* line 1, ../../sass/admin/main.scss */
+/* line 1, ../../sass/account/main.scss */
 html {
   overflow-x: hidden;
 }
 
-/* line 5, ../../sass/admin/main.scss */
+/* line 5, ../../sass/account/main.scss */
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 9, ../../sass/admin/main.scss */
+/* line 9, ../../sass/account/main.scss */
 .flex-one {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-/* line 13, ../../sass/admin/main.scss */
+/* line 13, ../../sass/account/main.scss */
 .flex-wrap {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-/* line 17, ../../sass/admin/main.scss */
+/* line 17, ../../sass/account/main.scss */
 .flex-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -31,79 +31,79 @@ html {
   flex-direction: column;
 }
 
-/* line 21, ../../sass/admin/main.scss */
+/* line 21, ../../sass/account/main.scss */
 .justify-content-start {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
-/* line 25, ../../sass/admin/main.scss */
+/* line 25, ../../sass/account/main.scss */
 .justify-content-center {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-/* line 29, ../../sass/admin/main.scss */
+/* line 29, ../../sass/account/main.scss */
 .justify-content-end {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
-/* line 33, ../../sass/admin/main.scss */
+/* line 33, ../../sass/account/main.scss */
 .justify-content-between {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-/* line 37, ../../sass/admin/main.scss */
+/* line 37, ../../sass/account/main.scss */
 .justify-content-around {
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
-/* line 41, ../../sass/admin/main.scss */
+/* line 41, ../../sass/account/main.scss */
 .justify-content-evenly {
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
-/* line 45, ../../sass/admin/main.scss */
+/* line 45, ../../sass/account/main.scss */
 .align-items-start {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
 }
 
-/* line 49, ../../sass/admin/main.scss */
+/* line 49, ../../sass/account/main.scss */
 .align-items-center {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-/* line 53, ../../sass/admin/main.scss */
+/* line 53, ../../sass/account/main.scss */
 .align-items-end {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
 }
 
-/* line 57, ../../sass/admin/main.scss */
+/* line 57, ../../sass/account/main.scss */
 .full-width {
   width: 100%;
 }
 
-/* line 61, ../../sass/admin/main.scss */
+/* line 61, ../../sass/account/main.scss */
 .full-height {
   height: 100%;
 }
 
-/* line 65, ../../sass/admin/main.scss */
+/* line 65, ../../sass/account/main.scss */
 .overflow-ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -111,40 +111,40 @@ html {
   max-width: 100%;
 }
 
-/* line 72, ../../sass/admin/main.scss */
+/* line 72, ../../sass/account/main.scss */
 .object-fit-cover {
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-/* line 76, ../../sass/admin/main.scss */
+/* line 76, ../../sass/account/main.scss */
 .object-fit-contain {
   -o-object-fit: contain;
   object-fit: contain;
 }
 
-/* line 80, ../../sass/admin/main.scss */
+/* line 80, ../../sass/account/main.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 82, ../../sass/admin/main.scss */
+/* line 82, ../../sass/account/main.scss */
 .bolder {
   font-weight: bold;
 }
 
-/* line 84, ../../sass/admin/main.scss */
+/* line 84, ../../sass/account/main.scss */
 .lighter {
   font-weight: lighter;
 }
 
-/* line 86, ../../sass/admin/main.scss */
+/* line 86, ../../sass/account/main.scss */
 .underline {
   text-decoration: underline;
 }
 
 /*btn header css*/
-/* line 88, ../../sass/admin/main.scss */
+/* line 88, ../../sass/account/main.scss */
 .header-button {
   position: absolute;
   right: 15px;
@@ -152,18 +152,18 @@ html {
 }
 
 /*profil image start*/
-/* line 95, ../../sass/admin/main.scss */
+/* line 95, ../../sass/account/main.scss */
 .img-profil {
   height: 100px;
   object-fit: cover;
 }
 
-/* line 100, ../../sass/admin/main.scss */
+/* line 100, ../../sass/account/main.scss */
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header > img, .navbar-nav > .user-menu .user-image {
   object-fit: cover;
 }
 
-/* line 104, ../../sass/admin/main.scss */
+/* line 104, ../../sass/account/main.scss */
 .user-panel > .image > img, .img-profil-list {
   height: 40px;
   object-fit: cover;
@@ -172,7 +172,7 @@ html {
 
 /*profil image end*/
 /*btn onn/off start*/
-/* line 112, ../../sass/admin/main.scss */
+/* line 112, ../../sass/account/main.scss */
 .switch {
   position: relative;
   display: inline-block;
@@ -181,12 +181,12 @@ html {
   margin: 0;
 }
 
-/* line 120, ../../sass/admin/main.scss */
+/* line 120, ../../sass/account/main.scss */
 .switch input {
   display: none;
 }
 
-/* line 124, ../../sass/admin/main.scss */
+/* line 124, ../../sass/account/main.scss */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -198,7 +198,7 @@ html {
   transition: 0.4s;
 }
 
-/* line 135, ../../sass/admin/main.scss */
+/* line 135, ../../sass/account/main.scss */
 .slider::before {
   position: absolute;
   content: "";
@@ -210,51 +210,48 @@ html {
   transition: 0.4s;
 }
 
-/* line 146, ../../sass/admin/main.scss */
+/* line 146, ../../sass/account/main.scss */
 input:checked + .slider {
   background-color: #4caf50;
 }
 
-/* line 150, ../../sass/admin/main.scss */
+/* line 150, ../../sass/account/main.scss */
 input:focus + .slider {
   box-shadow: 0 0 1px #4caf50;
 }
 
-/* line 154, ../../sass/admin/main.scss */
+/* line 154, ../../sass/account/main.scss */
 input:checked + .slider::before {
   transform: translateX(23px);
 }
 
-/* line 158, ../../sass/admin/main.scss */
+/* line 158, ../../sass/account/main.scss */
 .slider.round {
   border-radius: 25px;
 }
 
-/* line 162, ../../sass/admin/main.scss */
+/* line 162, ../../sass/account/main.scss */
 .slider.round::before {
   border-radius: 50%;
 }
 
 /*btn onn/off end*/
-/* line 167, ../../sass/admin/main.scss */
+/* line 167, ../../sass/account/main.scss */
 .border_bottom {
   width: 100%;
   height: 2px;
 }
 
-/* line 172, ../../sass/admin/main.scss */
+/* line 173, ../../sass/account/main.scss */
 .border_dashed {
   --border-color: #cecece;
   --border-weight: 1px;
   --dash-size: 8px;
   --gap-size: 8px;
   position: relative;
-  /*margin: 60px;
-  width: 300px;
-  height: 80px;
-  background: #333;*/
+  margin: 15px 0;
 }
-/* line 184, ../../sass/admin/main.scss */
+/* line 182, ../../sass/account/main.scss */
 .border_dashed:after {
   transition: all .6s ease;
   content: '';
@@ -267,17 +264,17 @@ input:checked + .slider::before {
   background-size: var(--dash-size) var(--border-weight), calc(var(--dash-size) + var(--gap-size)) var(--border-weight), var(--dash-size) var(--border-weight), var(--border-weight) var(--dash-size), var(--border-weight) calc(var(--dash-size) + var(--gap-size)), var(--border-weight) var(--dash-size);
 }
 
-/* line 212, ../../sass/admin/main.scss */
+/* line 210, ../../sass/account/main.scss */
 .hide {
   display: none;
 }
 
-/* line 215, ../../sass/admin/main.scss */
+/* line 213, ../../sass/account/main.scss */
 .show {
   display: block;
 }
 
-/* line 218, ../../sass/admin/main.scss */
+/* line 216, ../../sass/account/main.scss */
 .pages_artisan {
   padding: 0 0 0 3%;
   width: 100%;
@@ -286,7 +283,7 @@ input:checked + .slider::before {
   justify-content: space-between;
 }
 
-/* line 226, ../../sass/admin/main.scss */
+/* line 224, ../../sass/account/main.scss */
 .basic-background {
   border: 1px solid #cecece;
   background-color: #fff;

@@ -3,7 +3,7 @@
   @section('additional-css')
       {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
       {!! Html::style('css/front/view_project.css') !!}
-      {!! Html::style('css/front/view_project_responsive.css') !!}
+      {!! Html::style('compiled_css/responsive/view_project.css') !!}
   @endsection
 
   @section('content')

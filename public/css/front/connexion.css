@@ -112,7 +112,8 @@ label {
   justify-content: space-between;
 }
 .pages .navbar_j {
-  width: 31%;
+  width: 370px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -210,7 +211,7 @@ label {
   flex: 1;
   justify-content: space-between;
   border-bottom: 2px dotted #cecece;
-  margin-bottom: 1rem;
+  padding: 0;
 }
 .item_project .calendar {
   position: relative;

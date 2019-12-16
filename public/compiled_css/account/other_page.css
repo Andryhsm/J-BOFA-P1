@@ -1,5 +1,5 @@
 /*Page changer votre mot de passe*/
-/* line 2, ../../sass/admin/other_page.scss */
+/* line 2, ../../sass/account/other_page.scss */
 .change_mdp_form {
   width: 100%;
   display: flex;
@@ -8,29 +8,29 @@
   justify-content: center;
 }
 
-/* line 10, ../../sass/admin/other_page.scss */
+/* line 10, ../../sass/account/other_page.scss */
 .liste_formulaire_mdp {
   width: 50%;
 }
 
-/* line 14, ../../sass/admin/other_page.scss */
+/* line 14, ../../sass/account/other_page.scss */
 .info_mdp {
   color: #474747;
   width: 50%;
 }
 
 /*Page changer le contenue des document officiel*/
-/* line 23, ../../sass/admin/other_page.scss */
+/* line 23, ../../sass/account/other_page.scss */
 .official_doc {
   width: 100%;
 }
 
-/* line 26, ../../sass/admin/other_page.scss */
+/* line 26, ../../sass/account/other_page.scss */
 .separate_upload {
   margin: 1rem 0;
 }
 
-/* line 30, ../../sass/admin/other_page.scss */
+/* line 30, ../../sass/account/other_page.scss */
 .select_input_base {
   padding: 5px 6px;
   width: 100%;
@@ -40,12 +40,12 @@
   background-color: #fff;
 }
 
-/* line 39, ../../sass/admin/other_page.scss */
+/* line 39, ../../sass/account/other_page.scss */
 .separate_right_left_upload {
   margin: 0 1rem;
 }
 
-/* line 42, ../../sass/admin/other_page.scss */
+/* line 42, ../../sass/account/other_page.scss */
 .input_with_padding {
   padding: 0.5rem 1rem !important;
 }

@@ -205,8 +205,12 @@ class ArtisanController extends Controller
             $valueArray = [
                 'name' => $request->first_name.' '.$request->last_name,
                 'email'=>$request->email,
-                'message'=>'Vous recevez cet email car l\'entreprise '.auth()->user()->enterprise.' peut faire votre projet',
-                'url_confirm'=>url("artisan/confirm_email/".auth()->user()->id)
+                'project'=>$request->project_name,
+                'enterprise'=>auth()->user()->enterprise,
+                'phone'=>auth()->user()->phone,
+                'address_user'=>auth()->user()->profile->address,
+                'metier'=>auth()->user()->profile->metier,
+                'date'=>\Carbon\Carbon::now(),
             ];
             Mail::to($request->email)->send(new EmailProject($valueArray));
             return redirect('/artisan/accueil');

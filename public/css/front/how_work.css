@@ -199,10 +199,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin: 4rem;
 }
+
 .tel_contact {
   font-size: 15px;
   color: #28a3b2;
   font-weight: 600;
 }
+
+.text_header { text-align: center; }
+

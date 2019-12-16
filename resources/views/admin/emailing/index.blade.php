@@ -8,7 +8,7 @@
 @stop
 
 @section('css')
-    {!! Html::style('css/admin/main.css') !!}
+    {!! Html::style('compiled_css/account/main.css') !!}
 @stop
 
 @section('content')
