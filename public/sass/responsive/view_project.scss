@@ -101,7 +101,33 @@
 	    padding: 0 15px;
 	}
 
-	.nav_bar { order: 2; }
+	.nav_bar { -webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; }
 
-	.step_nav { order: 1; }
+	.step_nav { -webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1; }
+
+	#step-1.active, #step-2.active, #step-3.active {
+		display: -webkit-box!important;display: -ms-flexbox!important;display: flex!important;
+		-ms-flex-wrap: wrap;flex-wrap: wrap;
+
+		.title_step {
+			-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;
+		}
+
+		.description_projet {
+			-webkit-box-ordinal-group: 4;-ms-flex-order: 3;order: 3;
+		}
+
+		.info_step1 {
+			-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;
+			border-top: none;
+			border-bottom: none;
+		}
+
+		.btn_next_page {
+			-webkit-box-ordinal-group: 5;-ms-flex-order: 4;order: 4;
+			margin-top: 0;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+		}
+	}
 }
