@@ -94,9 +94,10 @@
     <div class="">
       <form method="POST" action="{{route('reinit_mdp')}}">
         {{ csrf_field() }}
-          <label for="" class="title_inscription">Entrez votre addresse mail</label>
+          <label for="" class="title_inscription">Réinitialisez votre mot de passe</label>
 
           <div class="formular_item">
+            <label class="label_form">Saisissez votre adresse e-mail ci-dessous et nous vous enverrons un lien pour réinitialiser votre mot de passe.</label>
             <input type="hidden" name="url" value="{{route('recuperation')}}">
             <input type="email" class="input_form" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
           </div>
@@ -129,4 +130,28 @@
       }
     }
   </script>
+  <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('.modal').on('change','input[name="email"]',function(data){
+                data = $(this).val();
+                $.ajax({
+                  type : "GET",
+                  url : base_url+'get_email',
+                  data : {'emails':data},
+                  success : function(succes){
+                    if(succes.length ==0){
+                      toastr.warning('Vous n\'êtes pas encore inscrit entant que membre artisan !');
+                      $('.modal').find('input[name="email"]').val('');
+                      $('.modal').find('input[name="email"]').focus();
+                    }
+                   // console.log(data,succes.length)
+                  },
+                  error : function(error){
+                    console.log(error)
+                  }
+                });
+            });
+        });
+    </script>
 @endsection

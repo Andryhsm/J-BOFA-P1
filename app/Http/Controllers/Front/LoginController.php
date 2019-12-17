@@ -89,7 +89,10 @@ class LoginController extends Controller
     }
 
     public function recuperMdp(){
-        return view('artisan.recuperation');
+        $email = Input::get('email');
+        $user = $this->user_repo->getMail($email);
+        $mail_conf = $user[0]->email;
+        return view('artisan.recuperation',compact('mail_conf'));
     }
 
     public function updateMdp(Request $request){
@@ -123,9 +126,10 @@ class LoginController extends Controller
                 'url'=>$request->url,
             ];
             Mail::to($request->email)->send(new MdpInitialize($valueArray));
-            return redirect('/artisan/accueil');
+            return view('front.login.reinitial');
         //}
     }
+
 }
 
 
