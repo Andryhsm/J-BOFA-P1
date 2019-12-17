@@ -146,11 +146,53 @@
 
   /* line 104, ../../sass/responsive/view_project.scss */
   .nav_bar {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
   }
 
   /* line 106, ../../sass/responsive/view_project.scss */
   .step_nav {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
+  }
+
+  /* line 108, ../../sass/responsive/view_project.scss */
+  #step-1.active, #step-2.active, #step-3.active {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  /* line 112, ../../sass/responsive/view_project.scss */
+  #step-1.active .title_step, #step-2.active .title_step, #step-3.active .title_step {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  /* line 116, ../../sass/responsive/view_project.scss */
+  #step-1.active .description_projet, #step-2.active .description_projet, #step-3.active .description_projet {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  /* line 120, ../../sass/responsive/view_project.scss */
+  #step-1.active .info_step1, #step-2.active .info_step1, #step-3.active .info_step1 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    border-top: none;
+    border-bottom: none;
+  }
+  /* line 126, ../../sass/responsive/view_project.scss */
+  #step-1.active .btn_next_page, #step-2.active .btn_next_page, #step-3.active .btn_next_page {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
+    margin-top: 0;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }

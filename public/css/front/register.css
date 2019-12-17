@@ -148,6 +148,6 @@ select.form-control:not([size]):not([multiple]) {
     width: 100%;
   }
 
-  #form-artisan { order: 1; }
-  .content_register .bloc_description { order: 2; }
+  #form-artisan { -webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1; }
+  .content_register .bloc_description { -webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; }
 }
