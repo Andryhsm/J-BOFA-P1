@@ -10,7 +10,7 @@
 			margin: 0;
 		}
 
-		div[class$="artisan-email-page"] {
+		.artisan-email-page {
 			display: -webkit-box;display: -ms-flexbox;display: flex;
 			-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
 			-webkit-box-align: center;-ms-flex-align: center;align-items: center;
@@ -21,7 +21,7 @@
 			padding: 0;
 		}
 
-		div[class$="artisan-email-page"] * {
+		.artisan-email-page * {
 			font-family: Roboto;
 			box-sizing: border-box;
 		}
@@ -130,45 +130,19 @@
 	</style>
 </head>
 <body class="artisan-body">
-	<div>
-		<div class="artisan-email-page">
-			<div class="artisan-page-header">
-				<p class="artisan-date">Le {{$content['date']}}</p>
-
-				<div class="artisan-mail-title">
-					<p>{{$content['project']}}</p>
-					<p>76000 ROUEN</p>
-				</div>
+	<div class="artisan-email-page">
+		
+		<div class="artisan-page-content">
+			<div class="artisan-introduction-text">
+				<p class="artisan-hello">Bonjour ,<p>
+				<p>Avant de pouvoir commencer à accéder à notre site vous devez confirmer votre adresse e-mail.  <strong><a href="{{$content['url']}}" >Confirmez</a> </strong>&nbsp; </p>
 			</div>
-			<div class="artisan-page-content">
-				<div class="artisan-introduction-text">
-					<p class="artisan-hello">Bonjour {{$content['name']}},<p>
-					<p>Nous avons le plaisir de vous informer que le professionnel <strong>{{$content['metier']}}</strong>&nbsp;a bien reçu votre demande de devis concernant le projet Etanchéité de toiture</p>
-				</div>
 
-				<div class="artisan-firma">
-					<p>Avec la société<p>
-					<div class="artisan-information">
-						<div class="artisan-information-wrapper">
-							<label>Société&nbsp;:</label><span>{{$content['enterprise']}}</span>
-						</div>
-						<div class="artisan-information-wrapper">
-							<label>Adresse&nbsp;:</label><span>{{$content['address_user']}}</span>
-						</div>
-						<div class="artisan-information-wrapper">
-							<label>Téléphone&nbsp;:</label><span>{{$content['phone']}}</span>
-						</div>
-					</div>
-				</div>
+			<div class="artisan-mail-footer">
+				<p>Nous vous remercions d'avoir fait appel au service HelloArtisan. Pour toute information complémentaire n'hésitez pas à nous contacter.</p>
 
-				<div class="artisan-mail-footer">
-					<p>Dès à présent vous pouvez contacter cette entreprise pour fixer un rendez-vous. Selon notre charte de qualité, les professionnels s'engagent à prendre contact avec vous sous 72h.</p>
-
-					<p>Nous vous remercions d'avoir fait appel au service HelloArtisan. Pour toute information complémentaire n'hésitez pas à nous contacter.</p>
-
-					<p>Merci de votre confiance, à bientôt.</p>
-					<p>L'équipe HelloArtisan</p>
-				</div>
+				<p>Merci de votre confiance, à bientôt.</p>
+				<p>L'équipe HelloArtisan</p>
 			</div>
 		</div>
 	</div>

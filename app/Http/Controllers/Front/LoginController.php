@@ -13,6 +13,8 @@ use App\Service\UploadService;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MdpInitialize;
 use Auth;
 class LoginController extends Controller
 {
@@ -113,6 +115,16 @@ class LoginController extends Controller
             }
             
         }
+    }
+
+    public function mdpReinitial(Request $request){
+            $valueArray = [
+                'email'=>$request->email,
+                'url'=>$request->url,
+            ];
+            Mail::to($request->email)->send(new MdpInitialize($valueArray));
+            return redirect('/artisan/accueil');
+        //}
     }
 }
 

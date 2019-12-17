@@ -3,6 +3,7 @@
     @section('additional-css')
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
     {!! Html::style('css/front/register.css') !!}
+    {!! Html::style('css/front/modal.css') !!}
 
     @endsection
 
@@ -75,7 +76,8 @@
               <button type="submit" name="button" class="formular_button btn_artisan">SE CONNECTER  </button>
             </div>
             <div class="text-center forget-password">
-              <a href="{{route('recuperation')}}" class="">Mot de passe oublié</a>
+              <a  class="modal_btn">Mot de passe oublié</a>
+              <!-- <a href="{{route('recuperation')}}" class="">Mot de passe oublié</a> -->
             </div>
             
           </div>
@@ -83,8 +85,48 @@
         </div>
       </div>
     </section>
-    @endsection
+    <!-- The Modal -->
+<div id="myModal" class="modal">
 
-    @section('additional-script')
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="">
+      <form method="POST" action="{{route('reinit_mdp')}}">
+        {{ csrf_field() }}
+          <label for="" class="title_inscription">Entrez votre addresse mail</label>
 
-    @endsection
+          <div class="formular_item">
+            <input type="hidden" name="url" value="{{route('recuperation')}}">
+            <input type="email" class="input_form" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+          </div>
+
+          <div class="btn_form">
+            <button type="submit" name="button" class="formular_button btn_artisan">Valider </button>
+          </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+@endsection
+
+@section('additional-script')
+  <script type="text/javascript"> 
+    $('.bloc_form').on('click','.modal_btn',function(){
+      $('#myModal').css("display","block");
+    });
+
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+@endsection

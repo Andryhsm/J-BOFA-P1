@@ -102,6 +102,7 @@ Route::namespace('Front')->group(function () {
     /* Recuperation mdp*/
     Route::get('recuperation','LoginController@recuperMdp')->name('recuperation');
     Route::post('recup_mdp','LoginController@updateMdp')->name('recup_mdp');
+    Route::post('reinit_mdp','LoginController@mdpReinitial')->name('reinit_mdp');
     /* end Recuperation mdp*/
 });
 /*end front router*/
