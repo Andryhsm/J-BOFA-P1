@@ -34,3 +34,9 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.reinit_mdp_modal .modal-content {
+  max-width: 500px;
+}
+
+.reinit_mdp_modal .close { margin-left: auto; }

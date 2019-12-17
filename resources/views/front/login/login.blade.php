@@ -86,7 +86,7 @@
       </div>
     </section>
     <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal reinit_mdp_modal">
 
   <!-- Modal content -->
   <div class="modal-content">
