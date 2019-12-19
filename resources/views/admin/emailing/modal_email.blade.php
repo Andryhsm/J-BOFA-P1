@@ -23,7 +23,7 @@
                                 <span>E-mail du personne :</span>
                             </div> -->
                             <!-- <div class="col-xs-8"> -->
-                                <input type="email" class="form-control" name="mail" placeholder="Entrez l'email du personne">
+                                <input type="email" class="form-control" name="mail" placeholder="Entrez l'email du personne" required>
                             <!-- </div> -->
                         </div>
                     </div>

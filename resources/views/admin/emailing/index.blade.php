@@ -25,7 +25,11 @@
                         <div class="d-flex align-items-center">
                           <div class="switch-container position-relative d-flex align-items-center" style="margin-right: 10px;">
                               <label class="switch">
-                                <input type="checkbox" class="form-check-input" checked>
+                                <form id="action" action="{{route('send_email_dep')}}" method="GET" class="hidden">
+                                  @csrf
+                                </form>
+                                <!-- <a href="{{route('send_email_dep')}}" id="lien" class="hidden"></a> -->
+                                <input type="checkbox" id="normale" class="form-check-input" checked>
                                 <span class="slider round"></span>
                               </label>
                           </div>
@@ -42,7 +46,7 @@
                           </div>
                           <h3 style="margin-top: 0; margin-bottom: 0;"> Envoyer les demandes à une seule personne </h3>                          
                         </div>
-                        <br class="span2">
+                        <!-- <br class="span2">
                         <div class="d-flex align-items-center">
                           <div class="switch-container position-relative d-flex flex-column align-items-center justify-content-center" style="margin-right: 10px;">
                               <label class="switch">
@@ -57,7 +61,7 @@
                           </div>
                           <h3  style="margin-top: 0; margin-bottom: 0;"> Envoyer les devis à plusieurs personnes </h3>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -142,6 +146,12 @@
                     console.log('sending')
                 
         });
+        }else
+            console.log('not ok')
+    });
+    $('.email-list').on('click','#normale',function(){
+        if($(this).prop('checked')==true){
+            $(this).siblings('#action').submit();
         }else
             console.log('not ok')
     });

@@ -85,5 +85,9 @@ class ViewProjectRepository {
 
         return DB::table('view_project')->join('cities','view_project.country_id','=','cities.ville_id')->join('category','view_project.category_id','=','category.id')->where('category_id',$category_id)->where('cities.ville_code_postal','LIKE',$postal_code.'%')->whereNotIn('project_id',$project_ids)->get();
     }
+
+    public function getAllProject(){
+        return DB::table('view_project')->join('cities','view_project.country_id','=','cities.ville_id')->join('category','view_project.category_id','=','category.id')->orderBy('view_project.create_at', 'desc')->get();
+    }
     
 }

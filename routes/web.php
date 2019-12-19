@@ -21,6 +21,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
 
     Route::get('/emailing','EmailController@index')->name('emailing');
     Route::post('/sendemail','EmailController@sendEmial')->name('send_email');
+    Route::get('/sendemail_by_dep','EmailController@sendByDep')->name('send_email_dep');
 
     /*start profil*/
     Route::resource('user','AdminController');

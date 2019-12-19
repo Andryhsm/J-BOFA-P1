@@ -139,4 +139,8 @@ class UserRepository implements UserRepositoryInterface
         $this->model[0]->password = (!empty($data['password']))? Hash::make($data['password']) : $this->model[0]->password;
         $this->model[0]->save();
     }
+
+    public function getOne($mail){
+        return $this->model->with('profile','city','category')->where('email',$mail)->get();
+    }
 }
