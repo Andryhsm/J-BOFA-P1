@@ -38,7 +38,7 @@
                       <p>Du lundi au vendredi de 9h00 à 18h00</p>
                       <small>(Prix d'un appel local)</small><br><br>
                       <p>
-                          <a href="mailto:maeva.leroy@habitatpresto.com">maeva.leroy@habitatpresto.com</a>
+                          <a href="mailto:maeva.leroy@habitatpresto.com">lorem@ipsum.com</a>
                       </p>
                   </div>
               </div>
@@ -50,7 +50,11 @@
     @endsection
 
     @section('content')
-    
+      <div class="mail_confirm {{(Auth::user()->email_verified_at != null) ? 'mail_not_active' : ''}}" >
+          <label for="" class="activate_mail mail_thanks">Merci Beaucoup pour votre inscription!</label>
+          <label for="" class="activate_mail">SVP, Veillez cliquer sur le lien de confirmation de votre compte dans votre boite mail</label>
+      </div>
+      @if(Auth::user()->email_verified_at != null)
       @if(count($project_accepteds) > 0)  
         <div class="pages_artisan project_list_page">
           <div class="liste_project flex_one">
@@ -150,6 +154,7 @@
               </p>
           </div>
         </div>
+      @endif
       @endif
 
     @endsection

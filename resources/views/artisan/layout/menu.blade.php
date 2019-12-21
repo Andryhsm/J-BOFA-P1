@@ -35,14 +35,14 @@
       <label for="">Mon profil</label>
     </div>
   </a>
-  <a class="menus" data-val="{{$diff}}">
+  <!-- <a class="menus" data-val="{{$diff}}">
     <div class="item_menu">
       <label for="">Mes factures</label>
-      <!-- @if($diff  <=0 || $diff>3)
+      @if($diff  <=0 || $diff>3)
         <label for="" class="pro_version">Pro</label>
-      @endif -->
+      @endif
     </div>
-  </a>
+  </a> -->
   <a class="menus" data-val="{{$diff}}" onclick="//{{($diff <=0 || $diff>3 ) ? 'return false' : 'return true'}}" href="{{ route('service') }}">
     <div class="item_menu">
       <label for="">Services</label>
