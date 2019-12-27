@@ -35,6 +35,7 @@ class EmailController extends Controller
                 foreach ($devis as $devi) {
                     $valueArray = [
                         'name' => $user->first_name.' '.$user->name,
+                        'name_devi' => $devi->first_name.' '.$devi->last_name,
                         'email'=>$devi->email,
                         'project'=>$devi->name,
                         'enterprise'=>$user->enterprise,
@@ -63,6 +64,7 @@ class EmailController extends Controller
                 foreach ($devis as $devi) {
                     $valueArray = [
                         'name' => $user->first_name.' '.$user->name,
+                        'name_devi' => $devi->first_name.' '.$devi->last_name,
                         'email'=>$devi->email,
                         'project'=>$devi->name,
                         'enterprise'=>$user->enterprise,

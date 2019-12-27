@@ -140,26 +140,28 @@
 		<div class="artisan-page-content">
 			<div class="artisan-introduction-text">
 				<p class="artisan-hello">Bonjour {{$content['name']}},<p>
-				<p>Nous avons le plaisir de vous informer que le professionnel <strong>INSPECTION ET RENOVATION DE L'HABITAT</strong>&nbsp;a bien reçu votre demande de devis concernant le projet Etanchéité de toiture</p>
+				<p>Nous avons le plaisir de vous informer que le client <strong>{{$content['name_devi']}}</strong>&nbsp;a créé un devis concernant le projet {{$content['project']}}</p>
 			</div>
 
 			<div class="artisan-firma">
-				<p>Avec la société<p>
+				<p>Description du devis<p>
 				<div class="artisan-information">
 					<div class="artisan-information-wrapper">
-						<label>Société&nbsp;:</label><span>inspection et rénovation de l'habitat</span>
+						<label>Devis:</label><span>{{$content['project']}}</span>
 					</div>
 					<div class="artisan-information-wrapper">
-						<label>Adresse&nbsp;:</label><span>7 rue marconi</span>
+						<label>Adresse&nbsp;:</label><span>{{$content['postal']}} {{$content['address']}}</span>
 					</div>
 					<div class="artisan-information-wrapper">
-						<label>Téléphone&nbsp;:</label><span>066215444</span>
+						<label>Téléphone&nbsp;:</label><span>{{$content['phone']}}</span>
 					</div>
+					<div class="artisan-information-wrapper">
+						<label>Email :</label>{{$content['email']}}					</div>
 				</div>
 			</div>
 
 			<div class="artisan-mail-footer">
-				<p>Dès à présent vous pouvez contacter cette entreprise pour fixer un rendez-vous. Selon notre charte de qualité, les professionnels s'engagent à prendre contact avec vous sous 72h.</p>
+				<p>Dès à présent vous pouvez contacter la proprietaire pour fixer un rendez-vous. Selon notre charte de qualité, les professionnels s'engagent à prendre contact avec vous sous 72h.</p>
 
 				<p>Nous vous remercions d'avoir fait appel au service HelloArtisan. Pour toute information complémentaire n'hésitez pas à nous contacter.</p>
 
