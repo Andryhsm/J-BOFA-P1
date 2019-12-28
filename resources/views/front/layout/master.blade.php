@@ -26,6 +26,7 @@
     {!! Html::style('css/front/swiper.min.css') !!}
     {!! Html::style('css/front/magnific-popup.css') !!}
     {!! Html::style('css/front/set1.css') !!}
+    {!! Html::style('compiled_css/default.css') !!}
     {!! Html::style('css/front/style.css') !!}
     {!! Html::style('css/front/how_work.css') !!}
     {!! Html::style('css/front/how_work_responsive.css') !!}

@@ -100,7 +100,18 @@
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Activité principal *</label>
-              <select required="required" tabindex="1" class="form-control input_form" name="category">
+              <div class="dropdown-wrapper">
+                <button type="button" class="select-button input_form" data-input="category">Sélectionnez une catégorie ...<span class="icon-select ti-angle-down"></span></button>
+                <ul class="dropdown-option">
+                  @if(isset($categories))
+                    @foreach($categories as $category)
+                      <li data-value="{{$category->id}}">{{$category->name}}</li>
+                    @endforeach
+                  @endif
+                </ul>
+              </div>
+
+              <select required="required" tabindex="1" class="form-control input_form hidden-input" name="category" id="category">
                   <option value="selectionnez"> Sélectionnez une catégorie ...</option>
                   @if(isset($categories))
                     @foreach($categories as $category)
@@ -115,9 +126,14 @@
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Ville *</label>
-              <select required="required" tabindex="1" class="form-control input_form" name="ville" id="ville" disabled>
+              <div class="dropdown-wrapper">
+                <button type="button" class="select-button input_form" data-input="ville">Sélectionnez une ville ...<span class="icon-select ti-angle-down"></span></button>
+                <ul class="dropdown-option"></ul> 
+              </div>
+              <input type="text" name="ville" id="ville" class="hidden-input">
+              <!-- <select required="required" tabindex="1" class="hidden-input" name="ville">  id="ville" disabled 
                 <option value="selectionnez"> Sélectionnez une ville ...</option>
-              </select>
+              </select> -->
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Raison Sociale</label>
