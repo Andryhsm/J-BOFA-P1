@@ -2,7 +2,7 @@
   <div class="header_page">
     <div class="item_header">
       <div class="logo_header">
-        <a href="{{ Url('/') }}">
+        <a href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}">
           <div class="image_bofa_logo">
             <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
           </div>
