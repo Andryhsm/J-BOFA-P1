@@ -74,7 +74,7 @@
                             </div>
                             <div class='form-row row' id="cgv_txt">
                                 <div class='col-md-12  form-group hide' id="error">
-                                    <div class='alert-warning alert'>Condition de vente flkshdlfhldjshfhdslighfidhgidf igdfigdighdlghdflighfdp lighdfpighdfihlgfdg hdfkjlghkjfg kjlfhdgjkhfdklsgfmdgkldfhg ihfdhgfldshgfsdhmgkfdhs glfdhsgklsfdgifdhgkfldsgm fkdsglfkdmg kldgkldfkg</div>
+                                    <div class='alert-warning alert'>Condition de vente </div>
                                 </div>
                             </div>
                             <div class='form-row row'>
