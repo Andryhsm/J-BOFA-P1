@@ -1,6 +1,6 @@
 <div class="container container_stripe">
         <div class="row row_stripe">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-12"> 
 
                 <div class="activate_pro">
                     <p class="text_pro">
@@ -19,7 +19,7 @@
                             </div>
                         </div>                    
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body d-flex flex-wrap justify-content-center">
       
                         @if (Session::has('success'))
                             <div class="alert alert-success text-center">

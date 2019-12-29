@@ -552,6 +552,13 @@ input::-o-outer-spin-button {
   cursor: pointer;
 }
 
+.dropdown-wrapper .select-button {
+  padding: 10px 20px;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  color: #707070;
+}
+
 
 /**recherche*/
 .cherch_view_project {
