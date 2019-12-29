@@ -162,28 +162,28 @@ function getVille(data){
         console.log(error);
     }
   });
- // $.ajax({
- //    type: "GET",
- //    url: base_url + 'cities',
- //    data: {'code_postal':data},
- //    success: function (success) {
- //        $('#ville').html("");
- //        //$('#ville').prop("selected",false);
- //        $('#ville').removeAttr("disabled");
- //        $('#ville').append('<option value="selectionnez"> Sélectionnez une ville ...</option>');
- //        for (var i = 0; i < success.length; i++) {
- //          //console.log(data)
- //          var dropdown = '<option value="'+success[i].ville_id+'" >'+success[i].ville_nom+'</option>';
- //          $('#ville').append(dropdown);
- //          $('#ville').trigger('select');
- //          //console.log('postal_code',success[i].ville_nom);
- //        }
- //        // if($('#ville').hasAttr("disabled")){
- //        //   $('#ville').append('<option value="selectionnez"> Sélectionnez une ville ...</option>');
- //        // }
- //    },
- //    error: function (error) {
- //        console.log(error);
- //    }
- //  });
+ $.ajax({
+    type: "GET",
+    url: base_url + 'cities',
+    data: {'code_postal':data},
+    success: function (success) {
+        $('#ville').html("");
+        //$('#ville').prop("selected",false);
+        $('#ville').removeAttr("disabled");
+        $('#ville').append('<option value="selectionnez"> Sélectionnez une ville ...</option>');
+        for (var i = 0; i < success.length; i++) {
+          //console.log(data)
+          var dropdown = '<option value="'+success[i].ville_id+'" >'+success[i].ville_nom+'</option>';
+          $('#ville').append(dropdown);
+          $('#ville').trigger('select');
+          //console.log('postal_code',success[i].ville_nom);
+        }
+        // if($('#ville').hasAttr("disabled")){
+        //   $('#ville').append('<option value="selectionnez"> Sélectionnez une ville ...</option>');
+        // }
+    },
+    error: function (error) {
+        console.log(error);
+    }
+  });
 }

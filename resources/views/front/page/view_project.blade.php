@@ -146,26 +146,16 @@
               </div>
               <div class="item_form_step1">
                 <label for="" class="title_item title_radio">Type de bâtiment</label>
-                <div class="dropdown-wrapper">
-                  <button type="button" class="select-button input_form" data-input="batiment_type">Choisissez...<span class="icon-select ti-angle-down"></span></button>
-                  <ul class="dropdown-option">
-                    <li data-value="Maison" individuelle="">Maison Individuelle</li>
-                    <li data-value="Appartement">Appartement</li>
-                    <li data-value="Bureau">Bureau</li>
-                    <li data-value="Commerce">Commerce</li>
-                    <li data-value="Immeuble">Immeuble</li>
-                  </ul>
-                </div>
-                <!-- <div class="select_item_form">
+                <div class="select_item_form">
                   <select class="form_select_step" name="batiment_type" id="batiment_type">
                     <option value="Choisissez...">Choisissez... </option>
                     <option value="Maison" individuelle="">Maison Individuelle</option>
-                    <option value="Appartement"></option>
+                    <option value="Appartement">Appartement</option>
                     <option value="Bureau">Bureau</option>
                     <option value="Commerce">Commerce</option>
                     <option value="Immeuble">Immeuble</option>
                   </select>
-                </div> -->
+                </div>
               </div>
 
             @if($details && ($details->name == "Chauffe-eau" || $details->name == "Chauffe eau"))
@@ -184,17 +174,7 @@
               </div>
               <div class="item_form_step1">
                 <label for="" class="title_item title_radio">Type d'énergie</label>
-                <div class="dropdown-wrapper">
-                  <button type="button" class="select-button input_form" data-input="energie_type">Choisissez...<span class="icon-select ti-angle-down"></span></button>
-                  <ul class="dropdown-option">
-                    <li data-value="Electricite">Electricite</li>
-                    <li data-value="Gaz">Gaz</li>
-                    <li data-value="Fioul">Fioul</li>
-                    <li data-value="Solaire">Solaire</li>
-                    <li data-value="Geothermique/aerothermique">Geothermique/aerothermique</li>
-                  </ul>
-                </div>
-                <!-- <div class="select_item_form">
+                <div class="select_item_form">
                   <select class="form_select_step" name="energie_type" id="energie_type">
                     <option value="Choisissez...">Choisissez... </option>
                     <option value="Electricite">Electricite</option>
@@ -203,7 +183,7 @@
                     <option value="Solaire">Solaire</option>
                     <option value="Geothermique/aerothermique">Geothermique/aerothermique</option>
                   </select>
-                </div> -->
+                </div>
               </div>
               @endif
           </div>
@@ -223,19 +203,9 @@
                 <label for="" >Lieux des travaux : </label>
               </div>
               <div class="champ_item_step2 select_item_form_step2">
-
-               <!--  <select class="form-control input_form" id="ville" name="ville"> -->
-
-                <div class="dropdown-wrapper">
-                  <button type="button" class="select-button input_form" data-input="ville">Sélectionnez une ville ...<span class="icon-select ti-angle-down"></span></button>
-                  <ul class="dropdown-option">
-                    
-                  </ul>
-                </div>
-
-                <!-- <select class="form_select_step" id="ville" name="ville">
+                <select class="form-control input_form" id="ville" name="ville">
                   <option value="selectionnez"> Sélectionnez une ville ...</option>
-                </select> -->
+                </select>
               </div>
             </div>
           </div>
@@ -279,24 +249,6 @@
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
                 <div class="item_input_step2 select_item_form_step2">
-                  <div class="dropdown-wrapper">
-                    <button type="button" class="select-button input_form" data-input="category1">Sélectionnez une catégorie ...<span class="icon-select ti-angle-down"></span></button>
-                    <ul class="dropdown-option">
-                      <li data-value="Particulier">Particulier</li>
-                      <li data-value="Societe">Societe</li>
-                      <li data-value="Commercant">Commercant</li>
-                      <li data-value="Industriel">Industriel</li>
-                      <li data-value="Profession Liberale">Profession Liberale</li>
-                      <li data-value="Syndic de copropriete">Syndic de copropriete</li>
-                      <li data-value="Promoteur-constructeur">Promoteur-constructeur</li>
-                      <li data-value="Administration">Administration</li>
-                      <li data-value="Association">Association</li>
-                      <li data-value="Architecte">Architecte</li>
-                      <li data-value="Agence immobiliere">Agence immobiliere</li>
-                      <li data-value="Autre">Autre</li>
-                    </ul>
-                  </div>
-                <!-- 
                   <select class="form_select_step" id="sel1" name="category1">
                     <option value="selectionnez"> Sélectionnez une catégorie ...</option>
                     <option value="Particulier">Particulier</option>
@@ -311,21 +263,10 @@
                     <option value="Architecte">Architecte</option>
                     <option value="Agence immobiliere">Agence immobiliere</option>
                     <option value="Autre">Autre</option>
-                  </select> -->
+                  </select>
                 </div>
                 <div class="item_input_step2 select_item_form_step2">
-                  <div class="dropdown-wrapper">
-                    <button type="button" class="select-button input_form" data-input="category2">Sélectionnez une catégorie ...<span class="icon-select ti-angle-down"></span></button>
-                    <ul class="dropdown-option">
-                      <li data-value="Locataire">Locataire</li>
-                      <li data-value="Proprietaire occupant">Proprietaire occupant</li>
-                      <li data-value="Proprietaire bailleur">Proprietaire bailleur</li>
-                      <li data-value="Futur proprietaire">Futur proprietaire</li>
-                      <li data-value="Administrateur">Administrateur</li>
-                      <li data-value="Autre">Autre</li>
-                    </ul>
-                  </div>
-                  <!-- <select class="form_select_step" id="sel2" name="category2">
+                  <select class="form_select_step" id="sel2" name="category2">
                     <option value="selectionnez"> Sélectionnez une catégorie ...</option>
                     <option value="Locataire">Locataire</option>
                     <option value="Proprietaire occupant">Proprietaire occupant</option>
@@ -334,7 +275,7 @@
                     <option value="Futur locataire">Futur locataire</option>
                     <option value="Administrateur">Administrateur</option>
                     <option value="Autre">Autre</option>
-                  </select> -->
+                  </select>
                 </div>
               </div>
             </div>
@@ -379,24 +320,14 @@
                 <label for="" >Horaires pour vous joindre : </label>
               </div>
               <div class="champ_item_step2 champ_item_flex_name select_item_form_step2">
-                <div class="dropdown-wrapper">
-                  <button type="button" class="select-button input_form" data-input="horaire"> -- : -- <span class="icon-select ti-angle-down"></span></button>
-                  <ul class="dropdown-option">
-                    <li data-value="08 : 00 - 12 : 00">08 : 00 - 12 : 00</li>
-                    <li data-value="12 : 00 - 14 : 00">12 : 00 - 14 : 00</li>
-                    <li data-value="14 : 00 - 17 : 00">14 : 00 - 17 : 00</li>
-                    <li data-value="17 : 00 - 18 : 00">17 : 00 - 18 : 00</li>
-                    <li data-value="18 : 00 - 20 : 00">18 : 00 - 20 : 00</li>
-                  </ul>
-                </div>
-                <!-- <select class="form_select_step" id="horaire" name="hour">
+                <select class="form_select_step" id="horaire" name="hour">
                   <option value="selectionnez"> -- : -- </option>
                   <option value="08 : 00 - 12 : 00">08 : 00 - 12 : 00</option>
                   <option value="12 : 00 - 14 : 00">12 : 00 - 14 : 00</option>
                   <option value="14 : 00 - 17 : 00">14 : 00 - 17 : 00</option>
                   <option value="17 : 00 - 18 : 00">17 : 00 - 18 : 00</option>
                   <option value="18 : 00 - 20 : 00">18 : 00 - 20 : 00</option>
-                </select> -->
+                </select>
               </div>
             </div>
           </div>
