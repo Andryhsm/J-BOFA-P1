@@ -68,6 +68,10 @@
 		<span class="info"> {{$project_details[0]->comment}}</span>
 		<!-- <span class="info">Demande concrète: recevoir  des devis pour réaliser mes travaux</span> -->
 	</p>
+	<p class="centered_label_info d-flex">
+		<span class="label">Durrée du projet:</span>
+		<span class="info">{{ $project_details[0]->durre }}</span>
+	</p>
 </div>
 
 <!-- <div class="detail_item">

@@ -97,14 +97,14 @@
         });
     
         if (!$form.data('cc-on-file')) {
-        e.preventDefault();
-        Stripe.setPublishableKey($form.data('stripe-publishable-key'));
-        Stripe.createToken({
-            number: $('.card-number').val(),
-            cvc: $('.card-cvc').val(),
-            exp_month: $('.card-expiry-month').val(),
-            exp_year: $('.card-expiry-year').val()
-        }, stripeResponseHandler);
+            e.preventDefault();
+            Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+            Stripe.createToken({
+                number: $('.card-number').val(),
+                cvc: $('.card-cvc').val(),
+                exp_month: $('.card-expiry-month').val(),
+                exp_year: $('.card-expiry-year').val()
+            }, stripeResponseHandler);
         }
     
     });
@@ -136,5 +136,13 @@
           id: 'marker1' // Unique ID for your marker
         });
       })
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() { 
+            $('.content_page').on('click','#cgv',function(){
+                $(this).closest('.form-row').siblings('#cgv_txt').find('#error').toggleClass('hide');
+            });
+        });
     </script>
     @endsection

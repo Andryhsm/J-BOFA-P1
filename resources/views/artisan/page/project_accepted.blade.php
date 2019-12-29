@@ -21,7 +21,7 @@
     @endsection
 
     @section('side_nav')
-      <div class="nav_bar">
+     <!--  <div class="nav_bar">
         <div class="advisor-card">
           <div class="row">
               <div class="col-12">
@@ -44,7 +44,7 @@
               </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       @include('artisan.layout.side_map')
     @endsection

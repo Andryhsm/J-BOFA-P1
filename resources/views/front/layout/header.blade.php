@@ -7,7 +7,7 @@
                 <div class="row">
                   <div class="item_form">
                     <label for="" class="email item_box_header">
-                        <div class="icones_headers"> <i class="fa fa-envelope-o"></i></div> loremipsum@dolorethasmany.com
+                        <div class="icones_headers"> <i class="fa fa-phone"></i></div> 0603190999
                     </label>
                     <!-- 
                     <label for="" class="email item_box_header">
@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="{{ url('/') }}">
+                            <a class="navbar-brand" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}">
                               <div class="image_bofa_logo">
                                 <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
                               </div>

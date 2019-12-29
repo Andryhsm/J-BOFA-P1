@@ -68,6 +68,16 @@
                             </div>
       
                             <div class='form-row row'>
+                                <div class='col-md-12 form-group '>
+                                    <input type="checkbox" name="cgv" required><label style="font-size: 10px">J'accepte les <span style="color: #337ab7;" id="cgv">Conditions Générales de vente </span> et renonce expressément à l'exercice de mon droit de rétractation</label>
+                                </div>
+                            </div>
+                            <div class='form-row row' id="cgv_txt">
+                                <div class='col-md-12  form-group hide' id="error">
+                                    <div class='alert-warning alert'>Condition de vente flkshdlfhldjshfhdslighfidhgidf igdfigdighdlghdflighfdp lighdfpighdfihlgfdg hdfkjlghkjfg kjlfhdgjkhfdklsgfmdgkldfhg ihfdhgfldshgfsdhmgkfdhs glfdhsgklsfdgifdhgkfldsgm fkdsglfkdmg kldgkldfkg</div>
+                                </div>
+                            </div>
+                            <div class='form-row row'>
                                 <div class='col-md-12 error form-group hide'>
                                     <div class='alert-danger alert'>Ressayez s'il vous plait !.</div>
                                 </div>

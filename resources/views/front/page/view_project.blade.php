@@ -203,7 +203,7 @@
                 <label for="" >Lieux des travaux : </label>
               </div>
               <div class="champ_item_step2 select_item_form_step2">
-                <select class="form_select_step" id="ville" name="ville">
+                <select class="form-control input_form" id="ville" name="ville">
                   <option value="selectionnez"> Sélectionnez une ville ...</option>
                 </select>
               </div>
@@ -297,6 +297,20 @@
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
                 <input type="email" name="email" id="email" class="input_form_step1" placeholder="Votre E-mail">
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
+                <label for="" >Durrée de travaux : </label>
+              </div>
+              <div class="champ_item_step2 select_item_form_step2">
+                <select class="form_select_step"  name="durree" id="durree">
+                  <option value="selectionnez"> Sélectionnez une durrée ...</option>
+                  <option value="3 mois"> 3 Mois</option>
+                  <option value="6 mois"> 6 Mois </option>
+                </select>
               </div>
             </div>
           </div>
