@@ -69,8 +69,9 @@ $(document).ready(function(){
   	});
 
     $('.inscription').on('keyup','#postal_code',function(data){
-      $('#ville').trigger('change');
+      //$('#ville').trigger('change');
 	     data = $(this).val();
+      console.log('postal_code',data)
 	     if(data!=""){
 	      getVille(data);
 	    }
@@ -78,6 +79,18 @@ $(document).ready(function(){
 	      $('#ville').html("");
 	      $('#ville').prop('disabled',true);
 	    }
+    });
+    $('.inscription').on('change','#postal_code',function(data){
+      //$('#ville').trigger('change');
+       data = $(this).val();
+      console.log('postal_code',data)
+       if(data!=""){
+        getVille(data);
+      }
+      else{
+        $('#ville').html("");
+        $('#ville').prop('disabled',true);
+      }
     });
 
     $('.form_item_project').on('keyup','#postal_code',function(data){
@@ -92,6 +105,7 @@ $(document).ready(function(){
     });
     $('.container_view_project').on('keyup','#postal_code',function(data){
 	     data = $(this).val();
+       console.log(data);
 	     if(data!=""){
 	      getVille(data);
 	    }
@@ -99,6 +113,17 @@ $(document).ready(function(){
 	      $('#ville').html("");
 	      $('#ville').prop('disabled',true);
 	    }
+    });
+    $('.container_view_project').on('change','#postal_code',function(data){
+       data = $(this).val();
+       console.log(data);
+       if(data!=""){
+        getVille(data);
+      }
+      else{
+        $('#ville').html("");
+        $('#ville').prop('disabled',true);
+      }
     });
 
     $('.inscription, .form_item_project, .container_view_project').on('mousedown','.select-button',function(data){
@@ -133,40 +158,42 @@ $(window).scroll(function () {
 });
 
 function getVille(data){
-	$.ajax({
-    type: "GET",
-    url: base_url + 'cities',
-    data: {'code_postal':data},
-    success: function (success) {
-        // $('#ville').html("");
-        // $('#ville').prop("selected",true);
-        // $('#ville').removeAttr("disabled");
 
-        var dropDownVille = $('.select-button[data-input="ville"]').siblings('.dropdown-option');
-        dropDownVille.html("");
+	// $.ajax({
+ //    type: "GET",
+ //    url: base_url + 'cities',
+ //    data: {'code_postal':data},
+ //    success: function (success) {
+ //        // $('#ville').html("");
+ //        // $('#ville').prop("selected",true);
+ //        // $('#ville').removeAttr("disabled");
 
-        for (var i = 0; i < success.length; i++) {
-          //console.log(data)
-          //var dropdown = '<option value="'+success[i].ville_id+'" >'+success[i].ville_nom+'</option>';
-          //$('#ville').append(dropdown);
-          //console.log('postal_code',success[i].ville_nom);
+ //        var dropDownVille = $('.select-button[data-input="ville"]').siblings('.dropdown-option');
+ //        dropDownVille.html("");
+
+ //        for (var i = 0; i < success.length; i++) {
+ //          //console.log(data)
+ //          //var dropdown = '<option value="'+success[i].ville_id+'" >'+success[i].ville_nom+'</option>';
+ //          //$('#ville').append(dropdown);
+ //          //console.log('postal_code',success[i].ville_nom);
           
-          var dropdownList = '<li data-value="' + success[i].ville_id + '">' + success[i].ville_nom + '</li>';
-          dropDownVille.append(dropdownList);
-        }
+ //          var dropdownList = '<li data-value="' + success[i].ville_id + '">' + success[i].ville_nom + '</li>';
+ //          dropDownVille.append(dropdownList);
+ //        }
 
-        if(!dropDownVille.hasClass('active')) dropDownVille.addClass('active');
+ //        if(!dropDownVille.hasClass('active')) dropDownVille.addClass('active');
         
-    },
-    error: function (error) {
-        console.log(error);
-    }
-  });
+ //    },
+ //    error: function (error) {
+ //        console.log(error);
+ //    }
+ //  });
  $.ajax({
     type: "GET",
     url: base_url + 'cities',
     data: {'code_postal':data},
     success: function (success) {
+        //console.log('data',success)
         $('#ville').html("");
         //$('#ville').prop("selected",false);
         $('#ville').removeAttr("disabled");
