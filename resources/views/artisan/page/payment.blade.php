@@ -26,13 +26,13 @@
     <style type="text/css">
         .artisan-body {
             margin: 0;
-            max-width: 700px;
+            max-width: 400px;
             display: block;
         }
 
         .cgv_txt{
 
-            height: 700px;
+            height: 400px;
             overflow-y: scroll;
         }
         .artisan-email-page {
@@ -76,7 +76,7 @@
             width: 100%;
             text-align: center;
             color: #868686;
-            font-size: 14px;
+            font-size: 24px;
             margin-bottom: 15px!important;
         }
 
@@ -84,14 +84,14 @@
             width: 100%;
             max-width: 100%;
             padding: 20px;
-            background: #23abdf;
+            /*background: #23abdf;*/
             margin-bottom: 30px;
         }
 
         .artisan-mail-title p {
             width: 100%;
             text-align: center;
-            color: #ffffff;
+            color: #ff580c;
             font-size: 18px;
         }
 
