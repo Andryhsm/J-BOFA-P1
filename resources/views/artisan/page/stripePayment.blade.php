@@ -74,7 +74,7 @@
                             </div>
                             <div class='form-row row' id="cgv_txt">
                                 <div class='col-md-12  form-group hide' id="error">
-                                    <div class='alert-warning alert'>
+                                    <div class='alert-warning alert cgv_txt'>
                                         <div class="artisan-email-page">
                                             <div class="artisan-page-header">
 
@@ -129,6 +129,53 @@
                                                     <p>
                                                         « <span style="font-weight: bold; ">Fiche Membre </span>» : Désigne la page du Membre sur laquelle sont indiquées toutes ses informations, et tous les avis
                                                         laissés par les Utilisateurs à son sujet. Cette Fiche Membre est publique.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Membre</span> » : Désigne la personne physique ou morale, inscrite au Service, qui propose des produits ou services à
+                                                        l'Utilisateur et qui peut bénéficier du service de création de Site internet et les services associés.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Module</span> » : Désigne la catégorie d'activité et/ou département d'activité proposé sur le Site HABITATPRESTO.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Nom de domaine</span> » : Désigne l'adresse unique choisie par le Membre pour y faire apparaître le Site Internet qu'il aura créé par l'intermédiaire de l'Outil.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Outil</span> » : Désigne la fonctionnalité qui permet de créer des sites internet et de gérer leur visibilité en ligne.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Partenaire</span> » : Désigne l'entreprise tierce avec laquelle E-ARTISANS.FR. entretient des relations commerciales
+                                                        dans le but d'apporter des services ou des informations complémentaires à l'Utilisateur ou au Membre.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Partie(s)</span> » : Désigne individuellement le Membre ou E-ARTISANS.FR et collectivement le Membre et
+                                                        HABITATPRESTO.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Période Initiale d'Engagement</span> » : Désigne la première durée d'Engagement du Membre et de
+                                                        E-ARTISANS.FR , d'une durée correspondant à 12 Périodes Mensuelles, telle que définie à l'article 5.1 des présentes
+                                                        Conditions Générales de Vente et dans le Bon de commande.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Période Mensuelle</span> » : Désigne la période de 28 à 31 jours au titre de laquelle le Membre a versé la cotisation due
+                                                        et E-ARTISANS.FR mis à sa disposition le Service.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Service</span> » : Désigne indistinctement le Service Chantier et le Service Internet
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Service Chantier</span>» : Désigne le service proposé par E-artisans.fr aux Membres par le biais du Site E-artisans.fr
+                                                        consistant en la transmission de Demandes de devis effectuées par des Utilisateurs.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Service de demande de devis</span> » : Désigne le service proposé par E-ARTISANS.FR l'Utilisateur par le biais du Site
+                                                        HABITATPRESTO.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Service(s) internet</span> » : Désigne le service de création de Site internet et les services associés.
+                                                    </p>
+                                                    <p>
+                                                        « <span style="font-weight: bold; ">Site Internet</span> » :
                                                     </p>
                                                 </div>
 

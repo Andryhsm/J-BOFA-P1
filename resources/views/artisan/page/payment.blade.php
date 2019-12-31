@@ -26,14 +26,21 @@
     <style type="text/css">
         .artisan-body {
             margin: 0;
+            max-width: 700px;
+            display: block;
         }
 
+        .cgv_txt{
+
+            height: 700px;
+            overflow-y: scroll;
+        }
         .artisan-email-page {
             display: -webkit-box;display: -ms-flexbox;display: flex;
             -webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
             -webkit-box-align: center;-ms-flex-align: center;align-items: center;
             -ms-flex-wrap: wrap;flex-wrap: wrap;
-            max-width: 800px;
+            max-width: 700px;
             margin: 40px   auto;
             background: #ffffff;
             padding: 0;
