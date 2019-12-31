@@ -177,6 +177,197 @@
                                                     <p>
                                                         « <span style="font-weight: bold; ">Site Internet</span> » :
                                                     </p>
+                                                    <h1>ARTICLE 2 -</h1>
+                                                    <p>
+                                                        Désigne le site internet créé pour le Membre grâce à l'Outil.
+                                                        « <span style="font-weight: bold; ">Site</span> » : Désigne le site E-ARTISANS.FR
+                                                        « <span style="font-weight: bold; ">Utilisateur</span> » : Désigne la personne physique ou morale effectuant une Demande de devis.
+                                                    </p>
+                                                    <h1 class="objet">OBJET</h1>
+                                                    <p>
+                                                        E-ARTISANS.FR propose via les Sites E-ARTISANS.FR et E-ARTISANS.FR PRO, un service d'intermédiation,mettant en relation des Utilisateurs et des Membres.
+                                                        Les Utilisateurs déposent leurs Demandes de devis, qui sont transmises par E-ARTISANS.FR
+                                                        à des Membres inscrits par le biais du Site E-ARTISANS.FR, et reçoivent de zéro à cinq devis de la part des Membres.
+                                                        Les présentes Conditions Générales de Vente (ci-après « CGV ») ont pour objet d'encadrer la relation entre et tout
+                                                        Membre.
+                                                        Les Membres ont été informés du fait que le Service qu'ils se proposent d'utiliser doit être en conformité directe avec
+                                                        leur statut juridique et/ou leurs activités professionnelles.
+                                                        Dans le cas contraire, le Membre reconnaît expressément en assumer l'entière responsabilité et s'engage
+                                                        notamment à indemniser E-ARTISANS.FR lors que celle-ci aurait subi les conséquences d'une utilisation du Service
+                                                        par le Membre qui n'aurait pas été en conformité avec son statut juridique et/ou ses activités professionnelles. Par
+                                                        ailleurs, E-ARTISANS.FR fournit un Outil permettant de créer des Sites Internet présentant l'offre commerciale des
+                                                        Membres, à l'exclusion de tout site marchand. Le Site Internet créé peut être simple (une page) ou complet (nombre
+                                                        de pages variables en fonction du besoin et du choix du Membre).
+                                                        Le Site Internet simple comprend les fonctionnalités suivantes :
+                                                        <ul>
+                                                            <li> Nom de domaine en .fr ou .com, récupérable par le Membre à tout moment dans les conditions prévues à
+                                                                l'article 11.2 des présentes CGV,
+                                                            </li>
+                                                            <li>Site compatible avec les mobiles et tablettes, Hébergement,</li>
+                                                            <li>Modifications illimitées via un Espace Personnel,</li>
+                                                            <li>Nombre de page : 1,</li>
+                                                            <li>Chaque site peut contenir les éléments suivants : textes, images, titres, séparateurs, pictogrammes, formulaires
+                                                            </li>
+                                                            <li>personnalisables, cartes dynamiques.</li>
+                                                        </ul></p>
+                                                        <p>Le Site Internet complet comprend les fonctionnalités suivantes :</p>
+                                                            <ul>
+                                                                <li>Nom de domaine en .fr ou .com, récupérable par le Membre à tout moment dans les conditions prévues à
+                                                                l'article 11.2 des présentes CGV,</li>
+                                                                <li>Site compatible avec les mobiles et tablettes,</li>
+                                                                <li>Hébergement</li>
+                                                                <li>Modifications illimitées via un Espace Personnel, Nombre
+                                                                de pages : illimité,</li>
+                                                            </ul>
+                                                    <p>
+                                                        Chaque site peut contenir les éléments suivants : textes, images, titres, séparateurs, pictogrammes,
+                                                        formulaires personnalisables, diaporamas, albums photos, vidéos, boutons, un menu principal, menus secondaires, cartes, liaisons aux réseaux sociaux, un blog interne, un livre d'or, fichiers téléchargeables,
+                                                        Rapport de trafic.
+                                                        E-ARTISANS.FR propose également un service d'Annuaire des professionnels : l'inscription du Membre sur
+                                                        l'annuaire des professionnels E-ARTISANS.FRpermet aux internautes qui recherchent un professionnel dans un
+                                                        type de métier ou localisation, de le trouver plus facilement.
+                                                    </p>
+                                                    <h1>ARTICLE 4 -</h1>
+                                                    <h1 class="objet">DISPOSITIONS GÉNÉRALES</h1>
+                                                    <p>
+                                                        <span style="font-weight: bold; ">3.1. Objet des CGV</span>
+                                                        Les présentes CGV sont exclusivement applicables à la vente du Service disponible sur le Site E-ARTISANS.FR PRO
+                                                    </p>
+                                                    <P>
+                                                        <span style="font-weight: bold; ">3.2. Domaine d'application des CGV</span>
+                                                        Les CGV régissent les contrats de vente du Service disponible sur le Site E-ARTISANS.FR PRO.
+                                                    </P>
+                                                    <p>
+                                                        <span style="font-weight: bold; ">3.3. Disponibilité et opposabilité des CGV</span>
+                                                        Les CGV sont mises à la disposition du Membre sur le Site E-ARTISANS.FR PRO.
+                                                        Les CGV sont opposables au Membre qui reconnaît, en exprimant son consentement lors de son inscription ou de sa
+                                                        souscription, les avoir acceptées.
+                                                        Cette acceptation vaut adhésion par le Membre aux CGV en vigueur au jour de l'inscription ou de la souscription dont
+                                                        la conservation et la reproduction sont assurées par E-ARTISANS.FR .
+                                                    </p>
+                                                    <p>
+                                                        <span style="font-weight: bold; ">3.4. Modification des CGV</span>
+                                                        HABITATPRESTO se réserve le droit de modifier les CGV à tout moment.
+                                                        Conformément à l'article 5.1 des présentes CGV, lors de la Période Initiale d'Engagement les CGV applicables au
+                                                        Membre restent celles en vigueur au jour de sa souscription, sauf acceptation par le Membre des nouvelles CGV.
+                                                    </p>
+                                                    <h1>ARTICLE 5 -</h1>
+                                                        <p>En cas de modification de l'un ou de plusieurs éléments essentiels des CGV, E-ARTISAN.FR s'engage à prévenir le
+                                                        Membre, par une notification apparente sur son espace personnel, de ladite modification dans un délai de 30 (trente)
+                                                        jours avant l'entrée en vigueur des Conditions Générales de Vente modifiées.
+                                                    </p>
+                                                    <p>
+                                                        Les Membres se connectant à leur Espace personnel après l'entrée en vigueur des CGV seront irréfragablement
+                                                        réputés avoir accepté lesdits amendements et modifications.
+                                                    </p>
+                                                    <h1 class="objet">SERVICE</h1>
+
+                                                    <p>
+                                                        <span style="font-weight: bold; ">4.1 Contenu du Service</span>
+                                                        E-ARTISANS.FR fournit au Membre, pour le Service chantier, des Demandes de devis.
+                                                        Les devis sont fournis gratuitement par les Membres aux Utilisateurs. Cependant, les Membres peuvent facturer des
+                                                        prestations annexes, dès lors, conformément à la législation en vigueur, qu'ils en ont précédemment averti l'Utilisateur.
+                                                    </p>
+                                                    <p>
+                                                        Le Membre complète en outre son Profil Membre, qui contient ses diverses informations légales (nom, dénomination
+                                                        de la société, numéro SIRET, ...). Il peut également mettre à la disposition des Utilisateurs certains documents légaux
+                                                        (Kbis, assurance, ...) et afficher diverses informations (labels, ...).
+                                                    </p>
+                                                    <p>
+                                                        Ce Profil Membre est complété par les avis déposés par les Utilisateurs sur le Membre.
+                                                    </p>
+                                                    <p>
+                                                        E-ARTISANS.FR fournit au Membre, pour le Service Internet, un Outil permettant de créer des Sites Internet
+                                                        présentant l'offre commerciale des Membres, à l'exclusion de tout site marchand.
+                                                    </p>
+                                                    <p>
+                                                        E-ARTISANS.FR fournit également au Membre des conseils et un suivi des nouveautés du secteur des travaux par
+                                                        l'envoi d'une newsletter hebdomadaire.
+                                                    </p>
+                                                    <p>
+                                                        <span style="font-weight: bold; ">4.2 Accès au Service</span>
+                                                        Afin d'accéder au Service, les Membres doivent y souscrire par le biais du Site E-ARTISANS.FR PRO. A cette fin, les
+                                                        Membres doivent indiquer toutes les informations nécessaires dans le formulaire disponible sur le Site
+                                                    </p>
+                                                    <h1>ARTICLE 6 -</h1>
+                                                    <p>
+                                                        HABITATPRESTO, procéder au choix des Modules et/ou du Site Internet pour lesquels ils souhaitent souscrire, puis
+                                                        procéder au paiement après avoir vérifié et validé leur commande et reconnu avoir lu et accepté les présentes CGV.
+                                                        L'utilisation du Service est soumise au paiement d'une cotisation mensuelle et de frais de mise en service lors de la
+                                                        souscription.
+                                                        Pour le Service Chantier, les Membres choisissent les catégories et les départements pour lesquels ils souhaitent
+                                                        accéder aux Demandes de devis. Chaque Membre doit choisir au minimum une catégorie et un département.
+                                                        Les deux Services sont indépendants l'un de l'autre.
+                                                    </p>
+
+                                                        <h1 class="objet">DURÉE</h1>
+
+                                                    <p>
+                                                        <span style="font-weight: bold; ">5.1 Durée de l'abonnement</span>
+                                                        L'Abonnement prend effet au jour de l'encaissement par E-ARTISANS.FR du premier paiement ou au jour de la
+                                                        réception de l'autorisation de prélèvement en cas de paiement par prélèvement SEPA.
+                                                        Le contrat d'Abonnement est conclu pour une durée correspondant à à 12 (douze) Périodes Mensuelles (ci-après «
+                                                        Période Initiale d'Engagement ») selon les mentions du Bon de commande. A l'issue de cette durée, le contrat
+                                                        d'abonnement est renouvelé pour une durée indéterminée, sauf dénonciation par l'une ou l'autre des Parties dans
+                                                        les conditions indiquées à l'article 5.2 des présentes CGV.
+                                                    </p>
+                                                    <p>
+                                                        <span style="font-weight: bold; ">5.2. Modalités de dénonciation du renouvellement de l'abonnement</span>
+                                                        Chacune des Parties peut dénoncer le renouvellement de l'Abonnement, au plus tard 15 (quinze) jours avant le
+                                                        terme de la Période Initiale d'Engagement par lettre recommandée. Dans le cas où le Membre procède à cette
+                                                        dénonciation, il doit adresser sa lettre à Habitatpresto – C/O Société LESPACE, 1-5 Rue du 8 mai 1945 – 92110
+                                                        Clichy.
+                                                    </p>
+                                                    <p>
+                                                        <span style="font-weight: bold; ">5.3. Modalités de résiliation</span>
+                                                        A l'issue de la Période Initiale d'Engagement, chacune des Parties peut résilier l'Abonnement par lettre recommandée.
+                                                        Dans le cas où le Membre procède à cette résiliation, il doit adresser sa lettre à Habitatpresto – C/O Société LESPACE,
+                                                        1-5 Rue du 8 mai 1945 – 92110 Clichy.
+                                                        Dès lors que la demande de résiliation a été effectuée au plus tard 15 (quinze) jours avant la fin de la Période
+                                                        Mensuelle en cours, l'Abonnement est résilié à la fin de la Période Mensuelle en cours. Dans le cas contraire, la
+                                                        résiliation prend effet à la fin de la Période Mensuelle suivante.
+                                                    </p>
+                                                    <p>
+                                                        <span style="font-weight: bold; ">5.4. Résiliation pour faute</span>
+                                                        En vertu des présentes CGV, HABITATPRESTO s'engage notamment à :
+                                                    </p>
+                                                    <h1>ARTICLE 7 -</h1>
+                                                    <ul>
+                                                        <li>Fournir au Membre des Demandes de devis</li>
+                                                        <li>Délivrer le Service à compter de l'encaissement du premier paiement ou de la réception de l'autorisation de
+                                                        prélèvement en cas de paiement par prélèvement SEPA,</li>
+                                                        <li>Garantir une bonne performance des Sites Internet dans la limite d'une utilisation normale et raisonnable
+                                                        par le Membre. Le Membre est informé que si son utilisation n'est pas conforme, HABITATPRESTO ne pourra
+                                                        garantir cette performance,</li>
+                                                        <li>Garantit l'accès à l'Outil et aux Sites Internet à hauteur de 99%, à l'exclusion des périodes de maintenance,</li>
+                                                        <li>Assister le Membre lorsqu'il rencontre des difficultés techniques d'accès,</li>
+                                                        <li>Rendre accessible le Site 24 heures sur 24 et 7 jours sur 7 sous réserve d'éventuelles pannes et interventions
+                                                        de maintenance nécessaires au bon fonctionnement du Site.</li>
+                                                    </ul>
+                                                    <p>
+                                                        En vertu des présentes CGV, le Membre s'engage notamment à :
+                                                        <ul>
+                                                            <li>Payer le prix convenu aux échéances convenues,</li>
+                                                            <li>Respecter toutes dispositions légales et/ou règlementaires applicables, notamment celles relatives à son activité
+                                                            professionnelle,</li>
+                                                            <li>Adopter dans le cadre du Service un comportement qui n'est pas susceptible de nuire à la réputation de
+                                                            HABITATPRESTO,</li>
+                                                            <li>Respecter les droits d'auteurs sur son Site Internet et garantir HABITAPRESTO contre toute action ou
+                                                            réclamation intentée sur ce fondement par un tiers,</li>
+                                                            <li>Utiliser les Outils conformément aux CGV et uniquement pour les fonctionnalités mentionnées dans les CGV</li>
+                                                            <li>Respecter l'ordre public et les bonnes mœurs dans les Contenus qu'il publie sur son Site Internet,</li>
+                                                            <li>Ne pas revendre ou mettre à disposition le Site Internet ou les Outils d'HABITATPRESTO,</li>
+                                                            <li>Prévenir HABITATPRESTO de toute réclamation sur le Site Internet du Membre crée par HABITATPRESTO,</li>
+                                                            <li>Afficher les mentions légales sur son Site Internet permettant de l'identifier car le Membre est responsable du
+                                                        Contenu qu'il affiche sur son Site Internet en vertu de la loi du 21 juin 2004.</li>
+
+                                                        </ul>
+                                                    </p>
+                                                    <p>
+                                                        Sauf disposition contraire des présentes CGV concernant certains manquements, en cas de non-respect par l'une
+                                                        des Parties des obligations figurant ci-dessus, l'autre Partie pourra résilier le Contrat après envoi d'une lettre de mise
+                                                        en demeure avec avis de réception restée sans effet pendant un délai de quinze (15) jours.
+                                                    </p>
                                                 </div>
 
                                                 <!-- <div class="artisan-firma">

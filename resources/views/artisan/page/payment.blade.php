@@ -46,6 +46,13 @@
             padding: 0;
         }
 
+        .objet{
+            display: -webkit-box;display: -ms-flexbox;display: flex;
+            -webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
+            -webkit-box-align: center;-ms-flex-align: center;align-items: center;
+            -ms-flex-wrap: wrap;flex-wrap: wrap;
+        }
+
         .artisan-email-page * {
             font-family: Roboto;
             box-sizing: border-box;
