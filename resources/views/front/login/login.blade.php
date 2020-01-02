@@ -4,6 +4,7 @@
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
     {!! Html::style('css/front/register.css') !!}
     {!! Html::style('css/front/modal.css') !!}
+    {!! Html::style('compiled_css/default.css') !!}
 
     @endsection
 
@@ -19,8 +20,8 @@
       </div>
     </section>
     <section class="inscription">
-      <div class="content_register">
-        <div class="bloc_description">
+      <div class="content_register d-flex justify-content-center d-flex">
+        <!-- <div class="bloc_description">
           <div class="background_image_bande">
             <div class="title_inscritpion">
               <label for="" class="title">UN CHANTIER A REALISER ?</label>
@@ -41,7 +42,7 @@
 
           </div>
 
-        </div>
+        </div> -->
         <div class="bloc_form">
           <!-- {{ route('login') }} -->
           <!-- url(config('adminlte.login_url', 'login')) -->
@@ -75,8 +76,10 @@
             <div class="btn_form">
               <button type="submit" name="button" class="formular_button btn_artisan">SE CONNECTER  </button>
             </div>
-            <div class="text-center forget-password">
-              <a  class="modal_btn">Mot de passe oublié</a>
+            <div class="btn_form text-center forget-password">
+              <a  class="modal_btn" style="width: 100%;">
+                <button type="button" class="btn_artisan">Mot de passe oublié</button>
+              </a>
               <!-- <a href="{{route('recuperation')}}" class="">Mot de passe oublié</a> -->
             </div>
             

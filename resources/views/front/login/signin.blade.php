@@ -79,7 +79,8 @@
                 </div>
                 <ul class="list_avantages">
                   <li>Suivez <strong> l’avancement des projets</strong> dans votre espace personnel</li>
-                  <li>Utilisez <strong> l’application mobile</strong> pour gérer vos projets quand vous êtes sur un chantier  </li>
+                  <!-- <li>Utilisez <strong> l’application mobile</strong> pour gérer vos projets quand vous êtes sur un chantier  </li> -->
+                  <li>Recevez <strong>les demandes de devis</strong> en illimité dans votre département</li>
                 </ul>
               </div>
               <div class="images_avantages">

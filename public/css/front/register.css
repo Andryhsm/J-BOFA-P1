@@ -58,8 +58,11 @@
 }
 .bloc_form {
   display: flex;
-  flex: 1;
+  /*flex: 1;*/
   padding: 2%;
+  margin: 4rem 0;
+  width: 500px;
+  max-width: 100%;
 }
 .item_formulaire {
   width: 100%;
