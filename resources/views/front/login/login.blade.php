@@ -19,7 +19,7 @@
         </div>
       </div>
     </section>
-    <section class="inscription">
+    <section class="inscription" id="login-wrapper">
       <div class="content_register d-flex justify-content-center d-flex">
         <!-- <div class="bloc_description">
           <div class="background_image_bande">
