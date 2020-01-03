@@ -92,10 +92,10 @@
                                                         situé au 84 route de bonsecours 76000 Rouen
                                                         <p>Par le biais de ce Site, E-artisans. Fr entend faciliter la rencontre entre des personnes en recherche de professionnels
                                                         pour réaliser diverses prestations de travaux (ci-après « <span style="font-weight: bold; ">les Utilisateurs</span> ») et lesdits professionnels, membres du
-                                                        réseau e-artisans.frinscrits sur le Site e-artisans.frPRO (ci-après « <span style="font-weight: bold; ">les Membres</span>»). Dans ce cadre, artisans
+                                                        réseau e-artisans.fr inscrits sur le Site e-artisans.fr PRO (ci-après « <span style="font-weight: bold; ">les Membres</span>»). Dans ce cadre, artisans
                                                         met à disposition des Utilisateurs un service leur permettant d'effectuer en ligne une demande de devis, à laquelle
                                                         plusieurs Membres pourront répondre.</p>
-                                                        <p>Les Membres accèdent aux services de E-artisans.fr par le paiement d'une cotisation mensuelle.
+                                                        <p>Les Membres accèdent aux services de e-artisans.fr par le paiement d'une cotisation mensuelle.
                                                         Les Utilisateurs peuvent effectuer leurs demandes de devis par le biais du site Internet accessible à l'adresse URl<br>
                                                         <span style="color: #ff580c;">https://www.e-artisans.fr</span></p>
                                                         <p>Une fois la prise de contact effectuée entre l'Utilisateur et le Membre, l'éventuelle poursuite de la relation est effectuée
@@ -115,7 +115,7 @@
                                                         « <span style="font-weight: bold; ">Bon de commande</span> » : Désigne le document envoyé par email au Membre récapitulant le ou les Services souscrits.
                                                         « <span style="font-weight: bold; ">Demande de devis</span> » : Désigne le Processus permettant à l'Utilisateur, recherchant un professionnel pour exécuter
                                                         une prestation de service déterminée, de détailler cette recherche afin de recevoir par la suite des devis de
-                                                        professionnels Membres de E-artisans.fr
+                                                        professionnels Membres de e-artisans.fr
                                                     </p>
                                                     <p>
                                                         « <span style="font-weight: bold; ">Données ou Contenu(s)</span> » : Désigne les informations de toute nature, sous forme numérique, comme par exemple
@@ -706,7 +706,7 @@
                                                             <li>un nombre de salariés égal ou inférieur à 5.</li>
                                                         </ul>
                                                         Le formulaire doit être renvoyé à l’adresse suivante dans les 14 jours suivants la conclusion du contrat :
-                                                        artisans SAS (MYBESTPRO) - C/O Société LESPACE, 1-5 Rue du 8 mai 1945 - 92110 Clichy.
+                                                        artisans SAS (MYBESTPRO) - C/O Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.
                                                         Je vous notifie par la présente ma rétractation du contrat portant sur la vente du service ci-dessous :
                                                         Contrat souscrit le...................................................................................................... <br>Numéro de
                                                         la commande : ..........................................................................................<br>
