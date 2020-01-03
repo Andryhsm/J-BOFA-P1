@@ -8,7 +8,7 @@
 
               <div class="col-md-12">
                   <div class="copyright">
-                      <p>Copyright &copy; 2019. Tous droits réservés | <a class="legal_mention" href="{{ url('term&condition') }}">Mentions Légales</a></p>
+                      <p>Copyright &copy; 2019. Tous droits réservés | <a class="legal_mention" href="{{ url('term&condition') }}">Mentions Légales-CGU</a></p>
                       <ul>
                           <li><a href="#"><span class="ti-facebook"></span></a></li>
                           <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
