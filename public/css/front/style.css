@@ -398,7 +398,7 @@ p {
 }
 
 @media (max-width: 991px) {
-  .login_foat .compte_artisan {
+  .login_foat .compte_artisan, .login_foat .item_form {
     display: none;
   }
 }
