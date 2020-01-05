@@ -41,17 +41,17 @@
               <p>Site édité par Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.</p>
               
             </div>
-            <label for="" class="title_example_tarif">2 - ENREGISTREMENT SUR LE SITE ARTISANS</label>
+            <label for="" class="title_example_tarif">2 - ENREGISTREMENT SUR LE SITE e-artisans.fr</label>
             <div class="text_example">
               <p>Tout Enregistrement réalisé dans le cadre du présent Site est soumis aux Conditions Générales d’utilisation.</p>
             </div>
             <label for="" class="title_example_tarif">3 - LOI INFORMATIQUE, FICHIERS ET LIBERTÉS</label>
             <div class="text_example">
-              <p>En conformité avec les dispositions de la loi Informatique et Libertés du 6 janvier 1978, le traitement automatisé des données nominatives réalisées à partir du Site ARTISANS .Le règlement général sur la protection des données - RGPD
+              <p>En conformité avec les dispositions de la loi Informatique et Libertés du 6 janvier 1978, le traitement automatisé des données nominatives réalisées à partir du Site e-artisans.fr .Le règlement général sur la protection des données - RGPD
               23 mai 2018.</p>
-              <p>Les utilisateurs sont informés que les informations qu'ils communiquent via les formulaires présents sur le Site ARTISANS sont nécessaires à l'exécution de la prestation offerte par ARTISANS exploitant le Site Internet. Si l'utilisateur y consent, ces informations peuvent cependant être communiquées ou revendues aux Partenaires de la Société.</p>
-              <p>Les informations signalées par un astérisque " * " dans les formulaires ont un caractère obligatoire. L'enregistrement de ces informations par l'utilisateur est impératif pour le bon fonctionnement du service. L'utilisateur s'engage à ne communiquer et à s'inscrire sur le Site ARTISANS que des informations véridiques dont il est le dépositaire ou le mandataire.</p>
-              <p>L'utilisateur est aussi informé que des informations personnelles (Adresse IP, Date, Heure, temps de connections, etc...) sont aussi enregistrées lors de sa visite sur le Site ARTISANS. Ses informations sont stockées et analysées pour repérer et identifier des utilisateurs frauduleux. L'utilisateur est informé qu'il dispose d'un droit d'accès et de rectification portant sur les données le concernant en écrivant à l'exploitant du site dont les coordonnées sont : C/O Société LESPACE, 1-5 Rue du 8 mai 1945 - 92110 Clichy ou par e-mail à : <strong>info@artisan.com</strong>.</p>
+              <p>Les utilisateurs sont informés que les informations qu'ils communiquent via les formulaires présents sur le Site e-artisans.fr sont nécessaires à l'exécution de la prestation offerte par ARTISANS exploitant le Site Internet. Si l'utilisateur y consent, ces informations peuvent cependant être communiquées ou revendues aux Partenaires de la Société.</p>
+              <p>Les informations signalées par un astérisque " * " dans les formulaires ont un caractère obligatoire. L'enregistrement de ces informations par l'utilisateur est impératif pour le bon fonctionnement du service. L'utilisateur s'engage à ne communiquer et à s'inscrire sur le Site e-artisans.fr que des informations véridiques dont il est le dépositaire ou le mandataire.</p>
+              <p>L'utilisateur est aussi informé que des informations personnelles (Adresse IP, Date, Heure, temps de connections, etc...) sont aussi enregistrées lors de sa visite sur le Site e-artisans.fr. Ses informations sont stockées et analysées pour repérer et identifier des utilisateurs frauduleux. L'utilisateur est informé qu'il dispose d'un droit d'accès et de rectification portant sur les données le concernant en écrivant à l'exploitant du site dont les coordonnées sont : C/O Société LESPACE, 1-5 Rue du 8 mai 1945 - 92110 Clichy ou par e-mail à : <strong>info@artisan.com</strong>.</p>
             </div>
             <label for="" class="title_example_tarif">4 - MARQUES</label>
             <div class="text_example">
