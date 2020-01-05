@@ -91,7 +91,7 @@
 
         </div>
         <!-- route('register') -->
-        {!! Form::open(array('url' =>  route('register'),'files' => true,'class'=>'form-horizontal','id'=>'form-artisan','method'=>'POST')) !!}
+        {!! Form::open(array('url' =>  route('register'),'files' => true,'class'=>'form-horizontal d-flex justify-content-center','id'=>'form-artisan','method'=>'POST')) !!}
         {!! csrf_field() !!}
         <div class="bloc_form">
           <div class="item_formulaire">

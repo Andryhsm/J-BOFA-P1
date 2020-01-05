@@ -58,12 +58,17 @@
 }
 .bloc_form {
   display: flex;
-  /*flex: 1;*/
+  flex: 1;
   padding: 2%;
+}
+
+#login-wrapper .bloc_form {
+  -webkit-box-flex: 0;-ms-flex: none;flex: none;
   margin: 4rem 0;
   width: 500px;
   max-width: 100%;
 }
+
 .item_formulaire {
   width: 100%;
   border: 1px solid #4ac8f6;
