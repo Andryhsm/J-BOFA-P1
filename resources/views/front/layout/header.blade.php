@@ -3,23 +3,23 @@
         <div class="bg transition">
 
             <div class="container-fluid fixed">
-                <div class="login_foat">
+                <!--<div class="login_foat">
                 <div class="row">
                   <div class="item_form">
                     <label for="" class="email item_box_header">
                         <div class="icones_headers"> <i class="fa fa-phone"></i></div> 0603190999
-                    </label>
+                    </label> -->
                     <!-- 
                     <label for="" class="email item_box_header">
                         <div class="icones_headers"><i class="fa fa-phone"></i></div> +261 88 42 455 28
-                    </label> -->
-                  </div>
-                  <div class="compte_artisan">
-                    <!-- login --><a href="{{ route('connexion') }}" class="btn_artisan login_artisan">Se connecter</a>
-                    <!-- artisanlogin --><a href="{{route('inscription')}}" class="btn_artisan">S'inscrire</a>
+                    </label>
+                  </div> -->
+                  <!--<div class="compte_artisan">
+                    <a href="{{ route('connexion') }}" class="btn_artisan login_artisan">Se connecter</a>
+                    <a href="{{route('inscription')}}" class="btn_artisan">S'inscrire</a>
                   </div>
                 </div>
-              </div>
+              </div>-->
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
