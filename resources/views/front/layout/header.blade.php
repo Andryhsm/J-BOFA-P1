@@ -23,11 +23,16 @@
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}">
-                              <div class="image_bofa_logo">
-                                <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
-                              </div>
-                            </a>
+                            <div class="d-flex align-items-center">
+                                <a class="navbar-brand" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}">
+                                  <div class="image_bofa_logo">
+                                    <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
+                                  </div>
+                                </a>
+                                <label for="" class="email item_box_header">
+                                    <div class="icones_headers"> <i class="fa fa-phone"></i></div> +33767130959
+                                </label>
+                            </div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                               <span class="icon-menu"></span>
                             </button>
