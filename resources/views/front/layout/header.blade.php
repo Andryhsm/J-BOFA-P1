@@ -25,7 +25,7 @@
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <div class="d-flex align-items-center">
                                 <a class="navbar-brand" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}">
-                                  <div class="image_bofa_logo">
+                                  <div class="image_bofa_logo d-flex align-items-center">
                                     <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
                                   </div>
                                 </a>
