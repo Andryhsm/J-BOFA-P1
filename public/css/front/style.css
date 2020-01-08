@@ -54,6 +54,12 @@ p {
     .main-block {
       padding: 45px 0; } }
 
+.full-width { width: 100%; }
+
+.flex-one {
+    -webkit-box-flex: 1;-ms-flex: 1;flex: 1;
+}
+
 .light-bg {
   background: #f3f4f7; }
 
