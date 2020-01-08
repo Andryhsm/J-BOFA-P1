@@ -7,7 +7,7 @@
                 <div class="row">
                   <div class="item_form">
                     <label for="" class="email item_box_header">
-                        <div class="icones_headers"> <i class="fa fa-envelope-o"></i></div> loremipsum@dolorethasmany.com
+                        <div class="icones_headers"> <i class="fa fa-phone"></i></div> 0603190999
                     </label>
                     <!-- 
                     <label for="" class="email item_box_header">
