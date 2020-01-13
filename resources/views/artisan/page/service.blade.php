@@ -97,27 +97,27 @@
               <div class="service_site d-flex justify-content-between align-items-center">
                 <div class="form_item_site">
                   <img src="{!! url('/image/artisan/service/sites/site1.jpeg') !!}" alt="">
-                  <label for="" class="title_site_absolute">123 Artisan</label>
+                  <label for="" class="title_site_absolute">e-artisans.fr</label>
                 </div>
                 <div class="form_item_site">
                   <img src="{!! url('/image/artisan/service/sites/site2.png') !!}" alt="">
-                  <label for="" class="title_site_absolute">123 Artisan</label>
+                  <label for="" class="title_site_absolute">e-artisans.fr</label>
                 </div>
                 <div class="form_item_site">
                   <img src="{!! url('/image/artisan/service/sites/site3.png') !!}" alt="">
-                  <label for="" class="title_site_absolute">123 Artisan</label>
+                  <label for="" class="title_site_absolute">e-artisans.fr</label>
                 </div>
                 <div class="form_item_site">
                   <img src="{!! url('/image/artisan/service/sites/site4.jpg') !!}" alt="">
-                  <label for="" class="title_site_absolute">123 Artisan</label>
+                  <label for="" class="title_site_absolute">e-artisans.fr</label>
                 </div>
                 <div class="form_item_site">
                   <img src="{!! url('/image/artisan/service/sites/site5.jpg') !!}" alt="">
-                  <label for="" class="title_site_absolute">123 Artisan</label>
+                  <label for="" class="title_site_absolute">e-artisans.fr</label>
                 </div>
                 <div class="form_item_site">
                   <img src="{!! url('/image/artisan/service/sites/site6.jpg') !!}" alt="">
-                  <label for="" class="title_site_absolute">123 Artisan</label>
+                  <label for="" class="title_site_absolute">e-artisans.fr</label>
                 </div>
               </div>
               <div class="btn_separate_service">
@@ -259,7 +259,7 @@
                 <button class="btn_service">Je m'abonne</button>
               </div>
               <div class=" color_text_noir item_title_service d-flex justify-content-center align-items-center">
-                <label class="">EN TANT QUE CLIENT HABITATPRESTO, TÉLÉCHARGEZ GRATUITEMENT CES DOCUMENTS :</label>
+                <label class="">EN TANT QUE CLIENT e-artisans.fr, TÉLÉCHARGEZ GRATUITEMENT CES DOCUMENTS :</label>
               </div>
               <div class="item_service d-flex justify-content-between">
                   <div class="form_item_service d-flex justify-content-center align-items-center">

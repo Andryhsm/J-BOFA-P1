@@ -16,7 +16,7 @@
         	</div>
 
             <div class="name_entreprise justify-content-center align-items-center">
-                <h5 class="title_entreprise">Laetitia d'123 Artisan</h5>
+                <h5 class="title_entreprise">Laetitia d'e-artisans.fr</h5>
             </div>
 
             <div class="name_entreprise justify-content-center align-items-center">
@@ -46,7 +46,7 @@
                         <div class="item_doc_official">
                             <h5 class="title_profil">TITRE DU LABEL</h5>
                             <select class="select_input_base separate_upload" name="" required="required" >
-                                <!-- lien pour trouver la liste des options: https://membre.habitatpresto.com/profil/ajout-labels -->
+                                <!-- lien pour trouver la liste des options: https://membre.e-artisans.com/profil/ajout-labels -->
                                 <option value="" selected="selected">-- Choisissez --</option>
                                 <option value="">A E V</option>
                                 <option value="">A2p services</option>
@@ -119,7 +119,7 @@
 
                             </select>
                             <div class="messange_upload">
-                                 <p>Si votre certification est absente de la liste ci-dessus, merci d’en informer votre conseiller par téléphone au <strong>09 74 73 80 87</strong> ou par mail : <a href="#">membre@habitatpresto.com</a> . Il l’ajoutera pour vous.</p>
+                                 <p>Si votre certification est absente de la liste ci-dessus, merci d’en informer votre conseiller par téléphone au <strong>09 74 73 80 87</strong> ou par mail : <a href="#">membre@e-artisans.com</a> . Il l’ajoutera pour vous.</p>
                              </div>
                          </div>
                          <div class="item_doc_official">

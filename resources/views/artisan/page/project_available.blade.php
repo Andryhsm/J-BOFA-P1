@@ -77,7 +77,7 @@
                           <label for="" class="number_candidates">09 74 73 80 87</label>
                           <label for="" class="disponibility_candidates">Du lundi au vendredi de 9h00 à 18h00</label>
                           <small>(Prix d'un appel local)</small>
-                          <a href="#" class="email_candidates">adil.leroy@habitatpresto.com</a>
+                          <a href="#" class="email_candidates">adil.leroy@e-artisans.com</a>
                         </div>
                       </div>
                     </div>

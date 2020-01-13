@@ -15,7 +15,7 @@
             </div>
 
             <div class="name_entreprise justify-content-center align-items-center">
-                <h5 class="title_entreprise">Laetitia d'123 Artisan</h5>
+                <h5 class="title_entreprise">Laetitia d'e-artisans.fr</h5>
             </div>
 
             <div class="name_entreprise justify-content-center align-items-center">

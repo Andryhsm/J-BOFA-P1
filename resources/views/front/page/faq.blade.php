@@ -120,7 +120,7 @@
         <label class="bold_title_recrutement">Bienvenue à Tous !</label>
       </div>
       <div class="description_recrutement">
-        <p>Le site Habitatpresto appartient au groupe MybestPro depuis 2013. Situé en plein coeur de Paris, le groupe MyBestPro regroupe 250 salariés, découvrez nos offres d'emploi.</p>
+        <p>Le site e-artisans.fr appartient au groupe MybestPro depuis 2013. Situé en plein coeur de Paris, le groupe MyBestPro regroupe 250 salariés, découvrez nos offres d'emploi.</p>
       </div>
 
       <div class="btn_recrutement">

@@ -27,7 +27,7 @@
               <div class="col-12">
                 <div class="d-flex justify-content-between">
                     <h2>Mon conseiller</h2>
-                    <a href="https://membre.habitatpresto.com/rappel" title="Être appelé" class="be-called fancybox-ajax d-flex align-items-center">
+                    <a href="https://membre.e-artisans.com/rappel" title="Être appelé" class="be-called fancybox-ajax d-flex align-items-center">
                         Être appelé<i class="fa fa-angle-right"></i>
                     </a>
                 </div>
@@ -38,7 +38,7 @@
                       <p>Du lundi au vendredi de 9h00 à 18h00</p>
                       <small>(Prix d'un appel local)</small><br><br>
                       <p>
-                          <a href="mailto:maeva.leroy@habitatpresto.com">lorem@ipsum.com</a>
+                          <a href="mailto:maeva.leroy@e-artisans.com">lorem@ipsum.com</a>
                       </p>
                   </div>
               </div>
