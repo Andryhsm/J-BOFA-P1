@@ -29,6 +29,7 @@ class ViewProjectRepository {
         $this->model->travaux = $data['travaux'];
         $this->model->prestation = $data['prestation'];
         $this->model->comment = $data['comment'];
+        $this->model->durre = $data['durree'];
         if(isset($data['chauffeau'])){
             $this->model->type_energie = $data['energie_type'];
             $this->model->is_chauffe = $data['chauffeau'];

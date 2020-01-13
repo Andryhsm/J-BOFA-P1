@@ -1,0 +1,62 @@
+/* line 1, ../sass/default.scss */
+.hidden-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  background-color: transparent;
+  background: transparent;
+}
+
+/* line 10, ../sass/default.scss */
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+}
+/* line 15, ../sass/default.scss */
+.dropdown-wrapper .select-button {
+  background-color: transparent;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  padding-right: 25px !important;
+  position: relative;
+}
+/* line 23, ../sass/default.scss */
+.dropdown-wrapper .select-button .icon-select {
+  position: absolute;
+  right: 10px;
+}
+/* line 29, ../sass/default.scss */
+.dropdown-wrapper .dropdown-option {
+  position: absolute;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  z-index: 999;
+  box-shadow: 0 0.5px 2.5px 0 rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+  max-height: 13rem;
+  overflow-y: auto;
+  margin-top: 5px;
+  display: none;
+}
+/* line 44, ../sass/default.scss */
+.dropdown-wrapper .dropdown-option.active {
+  display: block;
+}
+/* line 47, ../sass/default.scss */
+.dropdown-wrapper ul li {
+  color: #007bff;
+  background-color: #ffffff;
+  padding: 10px 2rem;
+  cursor: pointer;
+  text-align: left;
+}
+/* line 54, ../sass/default.scss */
+.dropdown-wrapper ul li:hover {
+  background-color: #e9e9f0 !important;
+}

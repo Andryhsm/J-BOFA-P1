@@ -3,31 +3,38 @@
         <div class="bg transition">
 
             <div class="container-fluid fixed">
-                <div class="login_foat">
+                <!--<div class="login_foat">
                 <div class="row">
                   <div class="item_form">
                     <label for="" class="email item_box_header">
                         <div class="icones_headers"> <i class="fa fa-phone"></i></div> 0603190999
-                    </label>
+                    </label> -->
                     <!-- 
                     <label for="" class="email item_box_header">
                         <div class="icones_headers"><i class="fa fa-phone"></i></div> +261 88 42 455 28
-                    </label> -->
-                  </div>
-                  <div class="compte_artisan">
-                    <!-- login --><a href="{{ route('connexion') }}" class="btn_artisan login_artisan">Se connecter</a>
-                    <!-- artisanlogin --><a href="{{route('inscription')}}" class="btn_artisan">S'inscrire</a>
+                    </label>
+                  </div> -->
+                  <!--<div class="compte_artisan">
+                    <a href="{{ route('connexion') }}" class="btn_artisan login_artisan">Se connecter</a>
+                    <a href="{{route('inscription')}}" class="btn_artisan">S'inscrire</a>
                   </div>
                 </div>
-              </div>
+              </div>-->
                 <div class="row">
                     <div class="col-md-12">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="{{ url('/') }}">
-                              <div class="image_bofa_logo">
-                                <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
-                              </div>
-                            </a>
+                        <nav class="navbar navbar-expand-lg navbar-light full-width">
+                            <div class="flex-one d-flex align-items-center">
+                                <a class="navbar-brand" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}">
+                                  <div class="image_bofa_logo d-flex align-items-center">
+                                    <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
+                                  </div>
+                                </a>
+                                <div class="d-flex align-items-center justify-content-center flex-one">
+                                  <label for="" class="email item_box_header">
+                                      <div class="icones_headers"> <i class="fa fa-phone"></i></div> +33767130959
+                                  </label>
+                                </div>
+                            </div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                               <span class="icon-menu"></span>
                             </button>
@@ -56,8 +63,18 @@
                                          </a>
 
                                     </li>
-                                    
-                                    
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="{{ route('connexion') }}" >
+                                           Se connecter
+                                         </a>
+
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="{{ url('inscription') }}" >
+                                           S'inscrire
+                                         </a>
+
+                                    </li>
                                 </ul>
                             </div>
                         </nav>

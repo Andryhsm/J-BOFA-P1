@@ -37,6 +37,7 @@ $(document).ready(function(){
     // console.log($(this).closest('.btn_next_page').closest('#step-1').siblings('#step-2').html());
     var sel1 = $('.container_view_project').find('#sel1').val();
     var sel2 = $('.container_view_project').find('#sel2').val();
+    var durree = $('.container_view_project').find('#durree').val();
     var horaire = $('.container_view_project').find('#horaire').val();
     var name = $('.container_view_project').find('#last_name').val();
     var first_name = $('.container_view_project').find('#first_name').val();
@@ -100,7 +101,7 @@ $(document).ready(function(){
       $.ajax({
         url: base_url+'/create_devis',
         type:'POST',
-        data:{'id_category':id_category,'ville':ville,'last_name':last_name,'first_name':first_name,'batiment_type':batiment_type,'travaux':travaux,'prestation':prestation,'energie_type':energie_type,'chauffeau':chauffeau,'gender':gender,'phone':phone,'email':email,'category1':category1,'category2':category2,'hour':hour,'comment':comment},
+        data:{'id_category':id_category,'ville':ville,'last_name':last_name,'first_name':first_name,'batiment_type':batiment_type,'travaux':travaux,'prestation':prestation,'energie_type':energie_type,'chauffeau':chauffeau,'gender':gender,'phone':phone,'email':email,'category1':category1,'category2':category2,'hour':hour,'comment':comment,'durree':durree},
         success: function (success) {
           toastr.success('Devis enregistré !')
           $('.btn_next_page').find('#btn-step-3').closest('.btn_next_page').closest('#step-2').removeClass('active');

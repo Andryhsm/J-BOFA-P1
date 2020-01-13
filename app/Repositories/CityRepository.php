@@ -18,7 +18,7 @@ class CityRepository{
     }
 
     public function getCity($postal_code){
-    	return $this->model->where('ville_code_postal', 'LIKE', $postal_code.'%')->orderBy('ville_nom','asc')->get();
+    	return $this->model->where("ville_code_postal", "LIKE", $postal_code."%")->orderBy("ville_nom","asc")->get();
     }
 
     public function getAddress($city_id){

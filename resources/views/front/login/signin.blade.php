@@ -79,7 +79,8 @@
                 </div>
                 <ul class="list_avantages">
                   <li>Suivez <strong> l’avancement des projets</strong> dans votre espace personnel</li>
-                  <li>Utilisez <strong> l’application mobile</strong> pour gérer vos projets quand vous êtes sur un chantier  </li>
+                  <!-- <li>Utilisez <strong> l’application mobile</strong> pour gérer vos projets quand vous êtes sur un chantier  </li> -->
+                  <li>Recevez <strong>les demandes de devis</strong> en illimité dans votre département</li>
                 </ul>
               </div>
               <div class="images_avantages">
@@ -90,7 +91,7 @@
 
         </div>
         <!-- route('register') -->
-        {!! Form::open(array('url' =>  route('register'),'files' => true,'class'=>'form-horizontal','id'=>'form-artisan','method'=>'POST')) !!}
+        {!! Form::open(array('url' =>  route('register'),'files' => true,'class'=>'form-horizontal d-flex justify-content-center','id'=>'form-artisan','method'=>'POST')) !!}
         {!! csrf_field() !!}
         <div class="bloc_form">
           <div class="item_formulaire">
@@ -100,7 +101,18 @@
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Activité principal *</label>
-              <select required="required" tabindex="1" class="form-control input_form" name="category">
+              <!-- <div class="dropdown-wrapper">
+                <button type="button" class="select-button input_form" data-input="category">Sélectionnez une catégorie ...<span class="icon-select ti-angle-down"></span></button>
+                <ul class="dropdown-option">
+                  @if(isset($categories))
+                    @foreach($categories as $category)
+                      <li data-value="{{$category->id}}">{{$category->name}}</li>
+                    @endforeach
+                  @endif
+                </ul>
+              </div> -->
+
+              <select required="required" tabindex="1" class="form-control input_form" name="category" id="category">
                   <option value="selectionnez"> Sélectionnez une catégorie ...</option>
                   @if(isset($categories))
                     @foreach($categories as $category)
@@ -113,6 +125,15 @@
               <label for="" class="label_form">Code Postal *</label>
               <input type="text" class="input_form" id="postal_code" name="code_postal" value="" placeholder="Code Postal" required>
             </div>
+            <!--  <div class="formular_item">
+              <label for="" class="label_form">Ville *</label>
+              <div class="dropdown-wrapper">
+                <button type="button" class="select-button input_form" data-input="ville">Sélectionnez une ville ...<span class="icon-select ti-angle-down"></span></button>
+                <ul class="dropdown-option" id="list_ville"></ul> 
+              </div>
+              <input type="text" name="ville" id="ville" class="hidden-input">
+            </div>  -->
+            
             <div class="formular_item">
               <label for="" class="label_form">Ville *</label>
               <select required="required" tabindex="1" class="form-control input_form" name="ville" id="ville" disabled>

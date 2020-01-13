@@ -155,7 +155,17 @@
                     <option value="Commerce">Commerce</option>
                     <option value="Immeuble">Immeuble</option>
                   </select>
-                </div>
+                </div> 
+                <!-- <div class="dropdown-wrapper">
+                  <button type="button" class="select-button input_form" data-input="batiment_type">Choisissez...<span class="icon-select ti-angle-down"></span></button>
+                  <ul class="dropdown-option">
+                    <li data-value="Maison" individuelle="">Maison Individuelle</li>
+                    <li data-value="Appartement">Appartement</li>
+                    <li data-value="Bureau">Bureau</li>
+                    <li data-value="Commerce">Commerce</li>
+                    <li data-value="Immeuble">Immeuble</li>
+                  </ul>
+                </div> -->
               </div>
 
             @if($details && ($details->name == "Chauffe-eau" || $details->name == "Chauffe eau"))
@@ -184,6 +194,17 @@
                     <option value="Geothermique/aerothermique">Geothermique/aerothermique</option>
                   </select>
                 </div>
+                
+                <!-- <div class="dropdown-wrapper">
+                  <button type="button" class="select-button input_form" data-input="energie_type">Choisissez...<span class="icon-select ti-angle-down"></span></button>
+                  <ul class="dropdown-option">
+                    <li data-value="Electricite">Electricite</li>
+                    <li data-value="Gaz">Gaz</li>
+                    <li data-value="Fioul">Fioul</li>
+                    <li data-value="Solaire">Solaire</li>
+                    <li data-value="Geothermique/aerothermique">Geothermique/aerothermique</li>
+                  </ul>
+                </div> -->
               </div>
               @endif
           </div>
@@ -249,21 +270,41 @@
               </div>
               <div class="champ_item_step2 champ_item_flex_name">
                 <div class="item_input_step2 select_item_form_step2">
-                  <select class="form_select_step" id="sel1" name="category1">
-                    <option value="selectionnez"> Sélectionnez une catégorie ...</option>
-                    <option value="Particulier">Particulier</option>
-                    <option value="Societe">Societe</option>
-                    <option value="Commercant">Commercant</option>
-                    <option value="Industriel">Industriel</option>
-                    <option value="Profession Liberale">Profession Liberale</option>
-                    <option value="Syndic de copropriete">Syndic de copropriete</option>
-                    <option value="Promoteur-constructeur">Promoteur-constructeur</option>
-                    <option value="Administration">Administration</option>
-                    <option value="Association">Association</option>
-                    <option value="Architecte">Architecte</option>
-                    <option value="Agence immobiliere">Agence immobiliere</option>
-                    <option value="Autre">Autre</option>
-                  </select>
+                <select class="form_select_step" id="sel1" name="category1">
+                  <option value="selectionnez"> Sélectionnez une catégorie ...</option>
+                  <option value="Particulier">Particulier</option>
+                  <option value="Societe">Societe</option>
+                  <option value="Commercant">Commercant</option>
+                  <option value="Industriel">Industriel</option>
+                  <option value="Profession Liberale">Profession Liberale</option>
+                  <option value="Syndic de copropriete">Syndic de copropriete</option>
+                  <option value="Promoteur-constructeur">Promoteur-constructeur</option>
+                  <option value="Administration">Administration</option>
+                  <option value="Association">Association</option>
+                  <option value="Architecte">Architecte</option>
+                  <option value="Agence immobiliere">Agence immobiliere</option>
+                  <option value="Autre">Autre</option>
+                </select>
+                  
+                <!-- 
+                  <div class="dropdown-wrapper">
+                    <button type="button" class="select-button input_form" data-input="category1">Sélectionnez une catégorie ...<span class="icon-select ti-angle-down"></span></button>
+                    <ul class="dropdown-option">
+                      <li data-value="Particulier">Particulier</li>
+                      <li data-value="Societe">Societe</li>
+                      <li data-value="Commercant">Commercant</li>
+                      <li data-value="Industriel">Industriel</li>
+                      <li data-value="Profession Liberale">Profession Liberale</li>
+                      <li data-value="Syndic de copropriete">Syndic de copropriete</li>
+                      <li data-value="Promoteur-constructeur">Promoteur-constructeur</li>
+                      <li data-value="Administration">Administration</li>
+                      <li data-value="Association">Association</li>
+                      <li data-value="Architecte">Architecte</li>
+                      <li data-value="Agence immobiliere">Agence immobiliere</li>
+                      <li data-value="Autre">Autre</li>
+                    </ul>
+                  </div>
+                   -->
                 </div>
                 <div class="item_input_step2 select_item_form_step2">
                   <select class="form_select_step" id="sel2" name="category2">
@@ -276,6 +317,18 @@
                     <option value="Administrateur">Administrateur</option>
                     <option value="Autre">Autre</option>
                   </select>
+                  
+                  <!-- <div class="dropdown-wrapper">
+                    <button type="button" class="select-button input_form" data-input="category2">Sélectionnez une catégorie ...<span class="icon-select ti-angle-down"></span></button>
+                    <ul class="dropdown-option">
+                      <li data-value="Locataire">Locataire</li>
+                      <li data-value="Proprietaire occupant">Proprietaire occupant</li>
+                      <li data-value="Proprietaire bailleur">Proprietaire bailleur</li>
+                      <li data-value="Futur proprietaire">Futur proprietaire</li>
+                      <li data-value="Administrateur">Administrateur</li>
+                      <li data-value="Autre">Autre</li>
+                    </ul>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -303,6 +356,20 @@
           <div class="form_info_step1">
             <div class="form_info_step2">
               <div class="title_item_step2">
+                <label for="" >Durrée de travaux : </label>
+              </div>
+              <div class="champ_item_step2 select_item_form_step2">
+                <select class="form_select_step"  name="durree" id="durree">
+                  <option value="selectionnez"> Sélectionnez une durrée ...</option>
+                  <option value="3 mois"> 3 Mois</option>
+                  <option value="6 mois"> 6 Mois </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form_info_step1">
+            <div class="form_info_step2">
+              <div class="title_item_step2">
                 <label for="" >Horaires pour vous joindre : </label>
               </div>
               <div class="champ_item_step2 champ_item_flex_name select_item_form_step2">
@@ -314,6 +381,17 @@
                   <option value="17 : 00 - 18 : 00">17 : 00 - 18 : 00</option>
                   <option value="18 : 00 - 20 : 00">18 : 00 - 20 : 00</option>
                 </select>
+                
+                <!-- <div class="dropdown-wrapper">
+                  <button type="button" class="select-button input_form" data-input="horaire"> -- : -- <span class="icon-select ti-angle-down"></span></button>
+                  <ul class="dropdown-option">
+                    <li data-value="08 : 00 - 12 : 00">08 : 00 - 12 : 00</li>
+                    <li data-value="12 : 00 - 14 : 00">12 : 00 - 14 : 00</li>
+                    <li data-value="14 : 00 - 17 : 00">14 : 00 - 17 : 00</li>
+                    <li data-value="17 : 00 - 18 : 00">17 : 00 - 18 : 00</li>
+                    <li data-value="18 : 00 - 20 : 00">18 : 00 - 20 : 00</li>
+                  </ul>
+                </div> -->
               </div>
             </div>
           </div>

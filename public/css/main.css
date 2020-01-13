@@ -799,3 +799,7 @@ footer {
     footer li a:focus,
     footer li a:active {
       color: #496174; }
+
+button, a {
+  cursor: pointer;
+}
