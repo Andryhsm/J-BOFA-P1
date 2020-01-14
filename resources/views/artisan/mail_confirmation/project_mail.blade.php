@@ -164,10 +164,10 @@
 				<div class="artisan-mail-footer">
 					<p>Dès à présent vous pouvez contacter cette entreprise pour fixer un rendez-vous. Selon notre charte de qualité, les professionnels s'engagent à prendre contact avec vous sous 72h.</p>
 
-					<p>Nous vous remercions d'avoir fait appel au service HelloArtisan. Pour toute information complémentaire n'hésitez pas à nous contacter.</p>
+					<p>Nous vous remercions d'avoir fait appel au service e-artisans.fr. Pour toute information complémentaire n'hésitez pas à nous contacter.</p>
 
 					<p>Merci de votre confiance, à bientôt.</p>
-					<p>L'équipe HelloArtisan</p>
+					<p>L'équipe de e-artisans.fr</p>
 				</div>
 			</div>
 		</div>
