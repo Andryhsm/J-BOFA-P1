@@ -96,11 +96,12 @@ class ArtisanController extends Controller
         $project_accepteds = $this->view_repo->projectAccepted($user_id);
         $val = [];
         foreach ($project_accepteds as $value) {
-            # code...
-            array_push($val, $value->project_id);
+            $semaine = $this->acceptAt($value->accepted_at);
+            if($semaine<=7){
+                array_push($val, $value->project_id);
+            }
         }
         $project_availables = $this->view_repo->projectAvAcc($val);
-        //dd($project_accepteds);
         $user = $this->user_repo->findUser(auth()->user()->id);
         $postal = $user->city->ville_code_postal ;
         $code = $postal[0].$postal[1];
@@ -221,6 +222,7 @@ class ArtisanController extends Controller
         $diff =$this->getDate();
         $user_id = auth()->user()->id;
         $project_availables = $this->view_repo->projectAccepted($user_id);
+
         $user = $this->user_repo->findUser($user_id);
         $postal = $user->city->ville_code_postal ;
         $code = $postal[0].$postal[1];
@@ -290,7 +292,7 @@ class ArtisanController extends Controller
         $diff = $this->getDate();
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $stripe= Stripe\Charge::create ([
-            "amount" => 6 * 100,
+            "amount" => 270 * 100,
             "currency" => "eur",
             "source" => $request->stripeToken,
             "description" => "Test payment " 
@@ -359,6 +361,18 @@ class ArtisanController extends Controller
             return $hours;
         }
         
+    }
+
+    public function acceptAt($date_accept){
+        $since_start = strtotime(\Carbon\Carbon::now());
+        $date_accept = strtotime($date_accept);
+        $diff = abs($since_start - $date_accept);
+        $years = floor($diff / (365*60*60*24));
+        $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24)); 
+        $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+            $hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24) / (60*60));
+            //dd(\Carbon\Carbon::now().' '.$years.'  '.$months.' '.$days.' '.$hours);
+        return $days;
     }
 
 }
