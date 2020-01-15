@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------
+------------------------------------------------------------------
 Theme Name: Listing & Directory Website Template
 Version: 1.0
 Author: Surjith S M
@@ -411,13 +411,49 @@ p {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1023px) { /*992px*/
   .login_foat {
     display: none;
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+      -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-expand-lg .navbar-nav {
+      -webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-toggler {
+      display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-expand-lg .navbar-toggler {
+      display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+      display: block!important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-expand-lg .navbar-collapse {
+      display: -webkit-box!important; display: -ms-flexbox;display: flex!important;
+  }
+}
+
+@media (max-width: 1023px) { /*992px*/
   .navbar-nav {
     padding: 7px 20px; } }
 
@@ -449,7 +485,7 @@ p {
   left: 0;
   width: 100%;
   z-index: 1; }
-  @media (max-width: 992px) {
+  @media (max-width: 1023px) { /*992px*/
     .fixed {
       border: none;
       background: #252a33; } }
@@ -465,6 +501,12 @@ p {
   .dropdown-item:hover {
     color: #fff;
     background: none; }
+
+@media (max-width: 379px) {
+  .navbar .site-name {
+    display: none;
+  }
+}
 
 .ti-plus {
   font-size: 14px;
@@ -1412,4 +1454,4 @@ footer {
   background-color: #fff;
   color: #252a33;
 }
-/**END LINK BO*/
+/**END LINK BO

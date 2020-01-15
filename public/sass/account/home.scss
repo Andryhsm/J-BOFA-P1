@@ -64,13 +64,14 @@
 
 .mail_confirm {
 	width: 100%;
-    height: 50vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 	align-items: center;
 	
 	.activate_mail {
+	    max-width: 500px;
 		color: #474747;
 		font-family: 'Open Sans Condensed',sans-serif;
 		font-size: 20px;
@@ -80,7 +81,29 @@
 		line-height: 3.6rem;
 		text-transform: uppercase;
 	}
+
+	.inscription-welcoming {
+		margin-bottom: 20px;
+		padding: 30px 50px;
+		border: 2px solid #00adf1;
+		color: #00adf1;
+		font-size: 28px;
+		line-height: 1.2;
+	}
+
+	.link-home {
+		text-decoration: none;
+		margin-top: 20px;
+		cursor: pointer;
+		color: #00adf1;
+		font-size: 1rem;
+
+		.icon-arrow-left { 
+			margin-right: 8px;
+		}
+	}
 }
+
 .mail_not_active {
 	display: none;
 }
