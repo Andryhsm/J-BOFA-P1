@@ -34,14 +34,14 @@
                                                         id="payment-form">
                             @csrf
       
-                            <div class='form-row row'>
+                            <div class='form-row'>
                                 <div class='col-xs-12 form-group required'>
                                     <label class='control-label'>Nom du carte</label> <input
                                         class='form-control' size='4' type='text'>
                                 </div>
                             </div>
       
-                            <div class='form-row row'>
+                            <div class='form-row'>
                                 <div class='col-xs-12 form-group card required card_payment'>
                                     <label class='control-label'>Numero de la carte</label> <input
                                         autocomplete='off' class='form-control card-number' size='20'
@@ -49,7 +49,7 @@
                                 </div>
                             </div>
       
-                            <div class='form-row row'>
+                            <div class='form-row'>
                                 <div class='col-xs-12 col-md-4 form-group cvc required'>
                                     <label class='control-label'>CVC</label> <input autocomplete='off'
                                         class='form-control card-cvc' placeholder='ex. 311' size='4'
@@ -67,12 +67,12 @@
                                 </div>
                             </div>
       
-                            <div class='form-row row'>
+                            <div class='form-row'>
                                 <div class='col-md-12 form-group '>
                                     <input type="checkbox" name="cgv" required><label style="font-size: 10px">J'accepte les <span style="color: #337ab7;" id="cgv">Conditions Générales de vente </span> et renonce expressément à l'exercice de mon droit de rétractation</label>
                                 </div>
                             </div>
-                            <div class='form-row row' id="cgv_txt">
+                            <div class='form-row' id="cgv_txt">
                                 <div class='col-md-12  form-group hide' id="error">
                                     <div class='alert-warning alert cgv_txt'>
                                         <div class="artisan-email-page">
@@ -715,7 +715,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class='form-row row'>
+                            <div class='form-row'>
                                 <div class='col-md-12 error form-group hide'>
                                     <div class='alert-danger alert'>Ressayez s'il vous plait !.</div>
                                 </div>
