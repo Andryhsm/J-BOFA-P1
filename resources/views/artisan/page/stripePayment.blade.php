@@ -1,6 +1,6 @@
-<div class="container container_stripe">
+<div class="container container_stripe artisan-payment">
         <div class="row row_stripe">
-            <div class="col-md-12"> 
+            <div class="col-md-12 full-with-padding"> 
 
                 <div class="activate_pro">
                     <p class="text_pro">

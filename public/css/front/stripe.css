@@ -39,3 +39,14 @@ label {
 }
 
 
+@media screen and (max-width: 775px) {
+    .container_stripe.artisan-payment, .artisan-payment .full-with-padding {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .artisan-payment .row_stripe {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
