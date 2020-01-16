@@ -46,12 +46,14 @@
         <div class="bloc_form">
           <?php 
             $names = explode('_', $names);
-            //dd($names);
+            $id = $names[2];
+            $emails = explode('=',$names[0]);
+            $email = $emails[1];
           ?>
           <!-- {{ route('login') }} -->
           <!-- url(config('adminlte.login_url', 'login')) -->
           <div class="item_formulaire">
-            <label for="" class="title_inscription">Bonjour {{$names[1]}}. </label>
+            <label for="" class="title_inscription">Bonjour {{$names[1]}} </label>
             <div class="sparated_form_title">
               <div class="separate"></div>
             </div>
