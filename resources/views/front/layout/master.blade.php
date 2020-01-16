@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    	<title>Front Page | J-BOFA-P1</title>
+    	<title>E-artisans</title>
     	<meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
