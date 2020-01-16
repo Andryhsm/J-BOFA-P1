@@ -61,6 +61,13 @@
             <a class="link-home d-flex align-items-center" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}"><span class="icon-arrow-left"></span><span>Retour vers l'accueil</span></a>
         </div>
       </div>
+      <div class="pages_artisan">
+        <div class="mail_confirm ">
+            <div class="inscription-welcoming">
+              <span>Bienvenue dans votre espace!<span>
+            </div>
+        </div>
+      </div>
       @if(Auth::user()->email_verified_at != null)
       @if(count($project_accepteds) > 0)  
         <div class="pages_artisan project_list_page">
