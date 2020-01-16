@@ -117,6 +117,10 @@ Route::namespace('Auth')->group(function () {
     /* End admin auth*/
 
     Route::post('register','RegisterController@create')->name('register');
+    Route::get('confirmation/{names}',function($names)
+    {
+        return view('front/login/inscription',compact('names'));
+    })->name('confirmation');
 });
 // end Auth route
 
