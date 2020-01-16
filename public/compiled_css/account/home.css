@@ -64,7 +64,6 @@
 /* line 65, ../../sass/account/home.scss */
 .mail_confirm {
   width: 100%;
-  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,7 +73,7 @@
   padding: 2%;
   background-color: #fff;
 }
-/* line 77, ../../sass/account/home.scss */
+/* line 76, ../../sass/account/home.scss */
 .mail_confirm .activate_mail {
   max-width: 500px;
   color: #474747;
@@ -82,12 +81,12 @@
   font-size: 20px;
   text-align: center;
 }
-/* line 84, ../../sass/account/home.scss */
+/* line 83, ../../sass/account/home.scss */
 .mail_confirm .mail_thanks {
   line-height: 3.6rem;
   text-transform: uppercase;
 }
-/* line 89, ../../sass/account/home.scss */
+/* line 88, ../../sass/account/home.scss */
 .mail_confirm .inscription-welcoming {
   margin-bottom: 20px;
   padding: 30px 50px;
@@ -96,7 +95,7 @@
   font-size: 28px;
   line-height: 1.2;
 }
-/* line 98, ../../sass/account/home.scss */
+/* line 97, ../../sass/account/home.scss */
 .mail_confirm .link-home {
   text-decoration: none;
   margin-top: 20px;
@@ -104,12 +103,12 @@
   color: #00adf1;
   font-size: 1rem;
 }
-/* line 105, ../../sass/account/home.scss */
+/* line 104, ../../sass/account/home.scss */
 .mail_confirm .link-home .icon-arrow-left {
   margin-right: 8px;
 }
 
-/* line 111, ../../sass/account/home.scss */
+/* line 110, ../../sass/account/home.scss */
 .mail_not_active {
   display: none;
 }
