@@ -50,14 +50,16 @@
     @endsection
 
     @section('content')
-      <div class="mail_confirm {{(Auth::user()->email_verified_at != null) ? 'mail_not_active' : ''}}" >
-          <div class="inscription-welcoming">
-            <span>Bienvenue dans votre espace!<span>
-          </div>
-          <!-- <label for="" class="activate_mail mail_thanks">Merci Beaucoup pour votre inscription!</label> -->
-          <label for="" class="activate_mail">Veuillez activer votre compte à l'aide du email de validation envoyé à votre boite email</label>
+      <div class="pages_artisan">
+        <div class="mail_confirm {{(Auth::user()->email_verified_at != null) ? 'mail_not_active' : ''}}" >
+            <div class="inscription-welcoming">
+              <span>Bienvenue dans votre espace!<span>
+            </div>
+            <!-- <label for="" class="activate_mail mail_thanks">Merci Beaucoup pour votre inscription!</label> -->
+            <label for="" class="activate_mail">Veuillez activer votre compte à l'aide du email de validation envoyé à votre boite email</label>
 
-          <a class="link-home d-flex align-items-center" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}"><span class="icon-arrow-left"></span><span>Retour vers l'accueil</span></a>
+            <a class="link-home d-flex align-items-center" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}"><span class="icon-arrow-left"></span><span>Retour vers l'accueil</span></a>
+        </div>
       </div>
       @if(Auth::user()->email_verified_at != null)
       @if(count($project_accepteds) > 0)  
@@ -129,10 +131,6 @@
 
             </div>
 
-            <div class="mail_confirm {{(Auth::user()->email_verified_at != null) ? 'mail_not_active' : ''}}" >
-                <label for="" class="activate_mail mail_thanks">Merci Beaucoup pour votre inscription!</label>
-                <label for="" class="activate_mail">SVP, Veillez cliquer sur le lien de confirmation de votre compte dans votre boite mail</label>
-            </div>
           </div>
         </div>
         
