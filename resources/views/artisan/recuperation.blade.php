@@ -53,7 +53,7 @@
             </div>
 
             <div class="formular_item">
-              <input type="hidden" class="input_form" name="email" value="{{ isset($mail_conf) ? $mail_conf : '' }}" required autocomplete="email" autofocus>
+              <input type="hidden" class="input_form" name="id" value="{{$id}}" required  autofocus>
               @if ($errors->has('email'))
                   <span class="help-block">
                       <strong>{{ $errors->first('email') }}</strong>

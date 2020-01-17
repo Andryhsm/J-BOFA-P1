@@ -134,7 +134,7 @@ class UserRepository implements UserRepositoryInterface
     }
 
     public function reseteMdp($data){
-        $this->model = $this->model->where('email',$data['email'])->get();
+        $this->model = $this->model->where('id',$data['id'])->get();
         //dd($this->model);
         $this->model[0]->password = (!empty($data['password']))? Hash::make($data['password']) : $this->model[0]->password;
         $this->model[0]->save();
