@@ -110,3 +110,44 @@
 .mail_not_active {
 	display: none;
 }
+
+
+.modal-cgv {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	&:not(.hide) {
+		display: -webkit-box;display: -ms-flexbox;display: flex;
+	}
+
+	.modal-cgv-content {
+		width: 500px;
+		max-width: 100%;
+	}
+
+	.artisan-email-page {
+		max-height: 100%;
+		overflow: auto;
+	}
+
+	.artisan-page-content {
+		padding: 0 15px;
+	}
+
+	.alert-warning {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	input.blanc-point {
+		border: none;
+		outline: none;
+		background-color: transparent;
+	}
+}
