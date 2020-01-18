@@ -273,7 +273,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() { 
-            $('.content_page').on('click','#cgv',function(){
+            $('.content_page').on('click','#cgv, .close-modal',function(){
                 console.log(' +++++++++++++++++')
                 $('#cgv_txt').toggleClass('hide'); /*(this).closest('.form-row').siblings*/
             });

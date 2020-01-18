@@ -80,7 +80,6 @@
               <a  class="modal_btn" style="width: 100%;">
                 <button type="button" class="btn_artisan">Mot de passe oublié</button>
               </a>
-              <!-- <a href="{{route('recuperation')}}" class="">Mot de passe oublié</a> -->
             </div>
             
           </div>
@@ -101,7 +100,7 @@
 
           <div class="formular_item">
             <label class="label_form">Saisissez votre adresse e-mail ci-dessous et nous vous enverrons un lien pour réinitialiser votre mot de passe.</label>
-            <input type="hidden" name="url" value="{{route('recuperation')}}">
+            
             <input type="email" class="input_form" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
           </div>
 
