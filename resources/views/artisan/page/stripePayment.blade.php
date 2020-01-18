@@ -726,18 +726,18 @@
                             Le formulaire doit être renvoyé à l’adresse suivante dans les 14 jours suivants la conclusion du contrat :
                             e-artisans.fr SAS (MYBESTPRO) -Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.
                             Je vous notifie par la présente ma rétractation du contrat portant sur la vente du service ci-dessous :
-                            Contrat souscrit le <input type="" placeholder="......................................................................................................................................" class="blanc-point flex-one"> <br>
+                            Contrat souscrit le <input type="" placeholder="......................................................................................................................................" class="blanc-point flex-one" disabled> <br>
                                 <div class="d-flex full-width flex-wrap">
-                                    Numéro de la commande : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one">
+                                    Numéro de la commande : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one" disabled>
                                 </div>
                                 <div class="d-flex full-width flex-wrap">
-                                    Nom de la société : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one">
+                                    Nom de la société : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one" disabled>
                                 </div>
                                 <div class="d-flex full-width flex-wrap">
-                                    Siège social de la société : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one">
+                                    Siège social de la société : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one" disabled>
                                 </div>
                                 <div class="d-flex full-width flex-wrap">
-                                    Date : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one">
+                                    Date : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one" disabled>
                                 </div> 
                             </div>
                         </p>
