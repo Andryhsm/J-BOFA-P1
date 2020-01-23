@@ -21,30 +21,6 @@
     @endsection
 
     @section('side_nav')
-     <!--  <div class="nav_bar">
-        <div class="advisor-card">
-          <div class="row">
-              <div class="col-12">
-                <div class="d-flex justify-content-between">
-                    <h2>Mon conseiller</h2>
-                    <a href="https://membre.e-artisans.com/rappel" title="Être appelé" class="be-called fancybox-ajax d-flex align-items-center">
-                        Être appelé<i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
-                  
-                  <div class="contact text-center">
-                                          <p class="name">Maeva Leroy</p>
-                                      <p class="number">09 74 73 80 87</p>
-                      <p>Du lundi au vendredi de 9h00 à 18h00</p>
-                      <small>(Prix d'un appel local)</small><br><br>
-                      <p>
-                          <a href="mailto:maeva.leroy@e-artisans.com">lorem@ipsum.com</a>
-                      </p>
-                  </div>
-              </div>
-          </div>
-        </div>
-      </div> -->
 
       @include('artisan.layout.side_map')
     @endsection
@@ -63,7 +39,6 @@
 
       </div>
 
-      </div>
       @if(Auth::user()->email_verified_at != null)
       @if(count($project_accepteds) > 0)  
         <div class="pages_artisan project_list_page {{(Auth::user()->email_verified_at == null) ? 'mail_not_active' : ''}}">

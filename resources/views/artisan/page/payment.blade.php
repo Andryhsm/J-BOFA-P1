@@ -1,6 +1,6 @@
 @extends('artisan.layout.master')
 
-    @section('additional-css')
+    @section('additional-css')    
       {!! Html::style('css/front/project_available.css') !!}
       {!! Html::style('compiled_css/account/home.css') !!}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -31,8 +31,6 @@
         }
 
         .cgv_txt{
-
-            height: 400px;
             overflow-y: scroll;
         }
         .artisan-email-page {
@@ -40,8 +38,6 @@
             -webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
             -webkit-box-align: center;-ms-flex-align: center;align-items: center;
             -ms-flex-wrap: wrap;flex-wrap: wrap;
-            max-width: 700px;
-            margin: 40px   auto;
             background: #ffffff;
             padding: 0;
         }
@@ -277,8 +273,9 @@
 
     <script type="text/javascript">
         $(document).ready(function() { 
-            $('.content_page').on('click','#cgv',function(){
-                $(this).closest('.form-row').siblings('#cgv_txt').find('#error').toggleClass('hide');
+            $('.content_page').on('click','#cgv, .close-modal',function(){
+                console.log(' +++++++++++++++++')
+                $('#cgv_txt').toggleClass('hide'); /*(this).closest('.form-row').siblings*/
             });
         });
     </script>
