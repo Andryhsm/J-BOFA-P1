@@ -135,7 +135,7 @@
 		<div class="artisan-page-content">
 			<div class="artisan-introduction-text">
 				<p class="artisan-hello">Bonjour ,<p>
-				<p>Avant de pouvoir commencer à accéder à notre site vous devez confirmer votre adresse e-mail.  <a href="{{$content['url']}}"><strong>Confirmez</strong>&nbsp; </a> </p>
+				<p>Avant de pouvoir commencer à accéder à notre site vous devez modifier votre mot de passe.  <a href="{{$content['url']}}"><strong>Changer mot de passe</strong>&nbsp; </a> </p>
 			</div>
 
 			<div class="artisan-mail-footer">
