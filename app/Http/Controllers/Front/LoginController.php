@@ -31,18 +31,20 @@ class LoginController extends Controller
         $this->temoin_repo = $temoin_repo;
     }
     public function index() {
+        $contact = $this->user_repo->getContact();
         if(Auth::user()){
             return redirect('artisan/accueil');
         }
-      return view("front.login.login");
+      return view("front.login.login",compact('contact'));
     }
 
     public function inscription(){
+        $contact = $this->user_repo->getContact();
         $categories = $this->category_repo->getCategory();
         if(Auth::user()){
             return redirect('artisan/accueil');
         }
-    	return view("front.login.signin",compact("categories"));
+    	return view("front.login.signin",compact("categories","contact"));
     }
 
     public function getCity(Request $request){
@@ -78,14 +80,16 @@ class LoginController extends Controller
     {
         $temoins = $this->temoin_repo->getTemoins();
         $categories = $this->category_repo->getPopular();
-        return view('front.home.index', compact('temoins','categories'));
+        $contact = $this->user_repo->getContact();
+        return view('front.home.index', compact('temoins','categories','contact'));
     }
 
     public function newDevis(){
         $categories = $this->category_repo->getCategory();
         $details = false;
         $randoms = $this->category_repo->getRandom();
-        return view('front.page.view_project',compact("categories","details","randoms"));
+        $contact = $this->user_repo->getContact();
+        return view('front.page.view_project',compact("categories","details","randoms","contact"));
     }
 
     public function recuperMdp($id){
@@ -117,6 +121,12 @@ class LoginController extends Controller
             }
             
         }
+    }
+
+
+    public function hoWork(){
+        $contact = $this->user_repo->getContact();
+        return view('front.page.how_work',compact('contact'));
     }
 
     public function mdpReinitial(Request $request){

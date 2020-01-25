@@ -277,7 +277,8 @@ class ArtisanController extends Controller
         $category = auth()->user()->category_id;
         $project_notif = $this->view_repo->getNotif($user_id,$category,$postal);
         $notif = count($project_notif);
-        return view('artisan.page.payment',compact('diff','notif','project_availables','user'));
+        $contact = $this->user_repo->getContact();
+        return view('artisan.page.payment',compact('diff','notif','project_availables','user','contact'));
 
     }
  

@@ -336,12 +336,12 @@
                             <span style="font-weight: bold; ">5.2. Modalités de dénonciation du renouvellement de l'abonnement</span>
                             Chacune des Parties peut dénoncer le renouvellement de l'Abonnement, au plus tard 15 (quinze) jours avant le
                             terme de la Période Initiale d'Engagement par lettre recommandée. Dans le cas où le Membre procède à cette
-                            dénonciation, il doit adresser sa lettre à Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.
+                            dénonciation, il doit adresser sa lettre à Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.
                         </p>
                         <p>
                             <span style="font-weight: bold; ">5.3. Modalités de résiliation</span>
                             A l'issue de la Période Initiale d'Engagement, chacune des Parties peut résilier l'Abonnement par lettre recommandée.
-                            Dans le cas où le Membre procède à cette résiliation, il doit adresser sa lettre àJaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.
+                            Dans le cas où le Membre procède à cette résiliation, il doit adresser sa lettre àJaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.
                             Dès lors que la demande de résiliation a été effectuée au plus tard 15 (quinze) jours avant la fin de la Période
                             Mensuelle en cours, l'Abonnement est résilié à la fin de la Période Mensuelle en cours. Dans le cas contraire, la
                             résiliation prend effet à la fin de la Période Mensuelle suivante.
@@ -450,7 +450,7 @@
                             dans un délai de quatorze (14) jours à compter de la date de conclusion du Contrat.
                             Si le Membre souhaite se prévaloir de son droit de rétractation, il doit impérativement et ce, avant l'expiration du
                             délai de quatorze (14) jours, fournir à e-artisans.fr le formulaire type de rétractation préalablement rempli et
-                            qui se trouve en annexe des présentes Conditions Générales de Vente, par courrier, à Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.
+                            qui se trouve en annexe des présentes Conditions Générales de Vente, par courrier, à Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.
                         </p1>
                         <h1>ARTICLE 7 - AVIS DES UTILISATEURS</h1>
                             Les Utilisateurs ont la possibilité de laisser un avis sur la fiche de chaque Membre avec lequel ils ont été en contact
@@ -462,7 +462,7 @@
                             d'e-artisans.fr par écrit (par email ou par voie postale), en indiquant les éléments suivants :
                             <ul>
                                 <li>une pièce d'identité à jour ;</li>
-                                <li>Notre dénomination et notre adresse (e-artisans.fr,Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.) ;</li>
+                                <li>Notre dénomination et notre adresse (e-artisans.fr,Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.) ;</li>
                                 <li>La description des faits litigieux et leur localisation précise (indiquez notamment les passages du
                                 commentaire qui vous semblent litigieux, la date à laquelle le commentaire a été posté, et le nom ou le
                                 pseudonyme de la personne l'ayant posté) ;</li>
@@ -724,7 +724,7 @@
                             </ul>
                             <div class="d-flex full-width flex-wrap">
                             Le formulaire doit être renvoyé à l’adresse suivante dans les 14 jours suivants la conclusion du contrat :
-                            e-artisans.fr SAS (MYBESTPRO) -Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.
+                            e-artisans.fr SAS (MYBESTPRO) -Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.
                             Je vous notifie par la présente ma rétractation du contrat portant sur la vente du service ci-dessous :
                             Contrat souscrit le <input type="" placeholder="......................................................................................................................................" class="blanc-point flex-one" disabled> <br>
                                 <div class="d-flex full-width flex-wrap">

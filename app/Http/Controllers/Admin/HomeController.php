@@ -34,6 +34,13 @@ class HomeController extends Controller
         $derniers = $this->user_repo->getTenArtisan();
         $users = $this->user_repo->getAllUser();
         $admins = $this->admin_repo->getAll();
-        return view('admin.dashboard.index',compact('users','admins','derniers'));
+        $contact = $this->user_repo->getContact();
+        return view('admin.dashboard.index',compact('users','admins','derniers','contact'));
+    }
+
+
+    public function update(Request $request){
+        $this->user_repo->updateContact($request->all());
+        return redirect()->route('home');
     }
 }

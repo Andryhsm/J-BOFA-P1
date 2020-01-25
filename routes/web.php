@@ -18,6 +18,7 @@ Auth::routes();
 Route::prefix('admin')->namespace('Admin')->group(function () {
     //show homepage
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::post('contact','HomeController@update')->name('contact_site');
 
     Route::get('/emailing','EmailController@index')->name('emailing');
     Route::post('/sendemail','EmailController@sendEmial')->name('send_email');
@@ -77,13 +78,9 @@ Route::namespace('Front')->group(function () {
     //get all catégorie
     Route::get('category','CategoryController@getAllCategories')->name('catégory_list');
 
-    Route::get('how_work', function () {
-        return view('front.page.how_work');
-    });
+    Route::get('how_work','LoginController@hoWork');
     Route::get('faq','CityController@getFaq')->name('faq');
-    Route::get('term&condition', function () {
-        return view('front.page.term&condition');
-    });
+    Route::get('term&condition','CategoryController@termCondition');
     /**** Devis  ****/
     Route::get('view_project/{id}','LoginController@viewProject');
     Route::get('new_project','LoginController@getCategory')->name('view_project');
@@ -91,12 +88,8 @@ Route::namespace('Front')->group(function () {
     Route::post('create_devis','DevisController@createDevis')->name('create_devis');
     /**** End Devis ****/
     /** DEvis and presentation catégories */
-    Route::get('tarif_hour', function () {
-        return view('front.categories.tarif_hour');
-    });
-    Route::get('help_me', function () {
-        return view('front.categories.help_me');
-    });
+    Route::get('tarif_hour','CategoryController@tarifHoraire');
+    Route::get('help_me','CategoryController@help');
      Route::get('renovation','CategoryController@renovation');
     /* End Devis and presentation catégories*/
 

@@ -38,7 +38,7 @@
           <div class="tarif_example">
             <label for="" class="title_example_tarif">1 - PROPRIÉTÉ DU SITE</label>
             <div class="text_example">
-              <p>Site édité par Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763.</p>
+              <p>Site édité par Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.</p>
               
             </div>
             <label for="" class="title_example_tarif">2 - ENREGISTREMENT SUR LE SITE e-artisans.fr</label>
@@ -51,7 +51,7 @@
               23 mai 2018.</p>
               <p>Les utilisateurs sont informés que les informations qu'ils communiquent via les formulaires présents sur le Site e-artisans.fr sont nécessaires à l'exécution de la prestation offerte par ARTISANS exploitant le Site Internet. Si l'utilisateur y consent, ces informations peuvent cependant être communiquées ou revendues aux Partenaires de la Société.</p>
               <p>Les informations signalées par un astérisque " * " dans les formulaires ont un caractère obligatoire. L'enregistrement de ces informations par l'utilisateur est impératif pour le bon fonctionnement du service. L'utilisateur s'engage à ne communiquer et à s'inscrire sur le Site e-artisans.fr que des informations véridiques dont il est le dépositaire ou le mandataire.</p>
-              <p>L'utilisateur est aussi informé que des informations personnelles (Adresse IP, Date, Heure, temps de connections, etc...) sont aussi enregistrées lors de sa visite sur le Site e-artisans.fr. Ses informations sont stockées et analysées pour repérer et identifier des utilisateurs frauduleux. L'utilisateur est informé qu'il dispose d'un droit d'accès et de rectification portant sur les données le concernant en écrivant à Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : +33767130959 - Siren: 798351763. ou par e-mail à : <strong>info@artisan.com</strong>.</p>
+              <p>L'utilisateur est aussi informé que des informations personnelles (Adresse IP, Date, Heure, temps de connections, etc...) sont aussi enregistrées lors de sa visite sur le Site e-artisans.fr. Ses informations sont stockées et analysées pour repérer et identifier des utilisateurs frauduleux. L'utilisateur est informé qu'il dispose d'un droit d'accès et de rectification portant sur les données le concernant en écrivant à Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763. ou par e-mail à : <strong>info@artisan.com</strong>.</p>
             </div>
             <label for="" class="title_example_tarif">4 - MARQUES</label>
             <div class="text_example">
@@ -68,7 +68,7 @@
             </div>
             <div class="contact_footer d-flex flex-wrap" style="margin: 4rem 0;">
               <strong>Une question ? Un renseignement ? </strong>&nbsp; <p>Contactez-nous par téléphone : </p>&nbsp;
-              <label for="" class="tel_contact"> +261 88 42 455 28</label>&nbsp;
+              <label for="" class="tel_contact"> <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a></label>&nbsp;
               <p> ou par E-mail : </p>&nbsp; <label for="" class="tel_contact"> loremipsum@dolorethasmany.com</label>
             </div>
           </div>
@@ -119,7 +119,7 @@
     <section class="estimation_free">
       <div class="content_estimation_free">
         <label for="" class="title_simple_estimation">Pour une estimation gratuite et sans engagement, contactez-nous : </label>
-        <label for="" class="text_simple_estimation">04 75 78 989</label>
+        <label for="" class="text_simple_estimation"><a href="tel:{{$contact->phone}}">{{$contact->phone}}</a></label>
         <label for="" class="text_simple_estimation">loremipsum@dolorethasmany.com</label>
       </div>
     </section>

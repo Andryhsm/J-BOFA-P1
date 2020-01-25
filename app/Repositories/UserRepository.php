@@ -7,6 +7,7 @@ Use App\User;
 Use App\Models\LastSubscription;
 Use App\Models\Abonnement;
 Use App\Models\UserProfile;
+Use App\Models\Contact;
 use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
@@ -15,14 +16,16 @@ class UserRepository implements UserRepositoryInterface
     protected $user_profil;
     protected $user_abonnement;
     protected $subscribe;
+    protected $contact;
 
 
-	public function __construct(User $user,UserProfile $user_profil,LastSubscription $user_abonnement,Abonnement $subscribe)
+	public function __construct(User $user,UserProfile $user_profil,LastSubscription $user_abonnement,Abonnement $subscribe,Contact $contact)
     {
         $this->model = $user;
         $this->user_profil = $user_profil;
         $this->user_abonnement = $user_abonnement;
         $this->subscribe = $subscribe;
+        $this->contact = $contact;
     }
 
     public function findUser($user_id)
@@ -142,5 +145,14 @@ class UserRepository implements UserRepositoryInterface
 
     public function getOne($mail){
         return $this->model->with('profile','city','category')->where('email',$mail)->get();
+    }
+
+    public function getContact(){
+       return $this->contact->find(1);
+    }
+    public function updateContact($data){
+        $this->contact = $this->contact->find($data['id']);
+        $this->contact->phone = $data['phone'];
+        $this->contact->save();
     }
 }

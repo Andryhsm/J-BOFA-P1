@@ -64,7 +64,7 @@
 
     <div class="contact_footer">
       <strong>Une question ? Un renseignement ? </strong>&nbsp; <p>Contactez-nous par téléphone : </p>&nbsp;
-      <label for="" class="tel_contact"> +261 88 42 455 28</label>&nbsp;
+      <label for="" class="tel_contact"> <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a></label>&nbsp;
       <p> ou par E-mail : </p>&nbsp; <label for="" class="tel_contact"> loremipsum@dolorethasmany.com</label>
     </div>
 
