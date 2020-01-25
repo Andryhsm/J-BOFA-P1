@@ -71,14 +71,18 @@
                             </div>
                             <div class="item_formulaire">
                                 <label class="name_item_formulaire">Ville *</label>
-                                <select id="update_contact_titre" name="ville"  class="select_items">
-                                    <option value="choisissez">-- Choisissez --</option>
-                                    @if(isset($cities))
+                                @if(count($cities)>0)
+                                    <select id="update_contact_titre" name="ville"  class="select_items">
+                                        <option value="choisissez">-- Choisissez --</option>
                                         @foreach($cities as $citie)
                                             <option value="{{$citie->ville_id}}" {{($profil->city_id == $citie->ville_id) ? 'selected' : ''}}>{{$citie->ville_nom}}</option>
                                         @endforeach
-                                    @endif
-                                </select>
+                                    </select>
+                                @else
+                                    <input type="hidden" name="ville" value="{{$profil->city_id}}">
+                                    <input type="text" name="vi" placeholder="Année de création" value="{{($profil) ? $profil->city->ville_nom : ''}}" disabled>
+                                @endif
+                                
                             </div>
                             
                         </div>

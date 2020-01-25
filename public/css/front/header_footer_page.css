@@ -31,8 +31,9 @@
 }
 
 .user_status {
-  display: flex;
-  justify-content: flex-end;
+  display: -webkit-box;display: -ms-flexbox;display: flex;
+  -webkit-box-pack: end;-ms-flex-pack: end;justify-content: flex-end;
+  -webkit-box-align: center;-ms-flex-align: center;align-items: center;
   flex: 1;
 }
 .user_icones, .user_deconnexion {
@@ -114,17 +115,18 @@
     width: 27px;
     height: 22px;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
+    -webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;
     position: absolute;
     cursor: pointer;
     right: 1rem;
-    justify-content: space-between;
   }
   .responsive_menus.active .resp_menus {
         border: 1px solid #0062ae;
   }
   .user_status {
-    justify-content: center;
+    -webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
+    -webkit-box-align: center;-ms-flex-align: center;align-items: center;
   }
   .resp_menus {
     width: 100%;

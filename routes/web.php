@@ -101,7 +101,7 @@ Route::namespace('Front')->group(function () {
     /* End Devis and presentation catégories*/
 
     /* Recuperation mdp*/
-    Route::get('recuperation','LoginController@recuperMdp')->name('recuperation');
+    Route::get('recuperation/{id}','LoginController@recuperMdp')->name('recuperation');
     Route::post('recup_mdp','LoginController@updateMdp')->name('recup_mdp');
     Route::post('reinit_mdp','LoginController@mdpReinitial')->name('reinit_mdp');
     /* end Recuperation mdp*/
@@ -117,6 +117,10 @@ Route::namespace('Auth')->group(function () {
     /* End admin auth*/
 
     Route::post('register','RegisterController@create')->name('register');
+    Route::get('confirmation/{names}',function($names)
+    {
+        return view('front/login/inscription',compact('names'));
+    })->name('confirmation');
 });
 // end Auth route
 

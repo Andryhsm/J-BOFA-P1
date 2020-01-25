@@ -135,7 +135,7 @@
 		<div class="artisan-page-content">
 			<div class="artisan-introduction-text">
 				<p class="artisan-hello">Bonjour ,<p>
-				<p>Avant de pouvoir commencer à accéder à notre site vous devez confirmer votre adresse e-mail.  <form action="{{$content['url']}}" method="GET">{!! csrf_field() !!} <input type="hidden" name="email" value="{{$content['email']}}"> <button><strong>Confirmez</strong>&nbsp; </button> </form></p>
+				<p>Avant de pouvoir commencer à accéder à notre site vous devez modifier votre mot de passe.  <a href="{{$content['url']}}"><strong>Changer mot de passe</strong>&nbsp; </a> </p>
 			</div>
 
 			<div class="artisan-mail-footer">

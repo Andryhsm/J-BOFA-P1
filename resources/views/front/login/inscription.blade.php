@@ -3,6 +3,8 @@
     @section('additional-css')
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
     {!! Html::style('css/front/register.css') !!}
+    {!! Html::style('css/front/modal.css') !!}
+    {!! Html::style('compiled_css/default.css') !!}
 
     @endsection
 
@@ -12,14 +14,14 @@
         <img src="{!! url('/image/front/images/fond.jpg') !!}" class="img_fond" alt="" />
         <div class="description_header">
           <div class="text_header">
-              <h2>RECUPERER VOTRE MOT DE PASSE</h2>
+              <h2>E-ARTISANS.FR</h2>
           </div>
         </div>
       </div>
     </section>
-    <section class="inscription">
-      <div class="content_register">
-        <div class="bloc_description">
+    <section class="inscription" id="login-wrapper">
+      <div class="content_register d-flex justify-content-center d-flex">
+        <!-- <div class="bloc_description">
           <div class="background_image_bande">
             <div class="title_inscritpion">
               <label for="" class="title">UN CHANTIER A REALISER ?</label>
@@ -40,59 +42,36 @@
 
           </div>
 
-        </div>
+        </div> -->
         <div class="bloc_form">
+          <?php 
+            $names = explode('_', $names);
+            $id = $names[2];
+            $emails = explode('=',$names[0]);
+            $email = $emails[1];
+          ?>
           <!-- {{ route('login') }} -->
           <!-- url(config('adminlte.login_url', 'login')) -->
-          <form class="form-horizontal" role="form" method="POST" action="{{route('recup_mdp')}}">
-          {{ csrf_field() }}
           <div class="item_formulaire">
-            <label for="" class="title_inscription">Récuperation mot de passe</label>
+            <label for="" class="title_inscription">Bonjour {{$names[1]}} </label>
             <div class="sparated_form_title">
               <div class="separate"></div>
             </div>
 
             <div class="formular_item">
-              <input type="hidden" class="input_form" name="id" value="{{$id}}" required  autofocus>
-              @if ($errors->has('email'))
-                  <span class="help-block">
-                      <strong>{{ $errors->first('email') }}</strong>
-                  </span>
-              @endif
+              <label for="" class="label_form">Veuillez activer votre compte à l'aide du email de validation envoyé à votre boite email.</label>
             </div>
-            <div class="formular_item">
-              <label for="" class="label_form">Mot de passe*</label>
-              <input type="password" class="input_form" name="password" required autocomplete="current-password">
-              @if ($errors->has('password'))
-                  <span class="help-block">
-                      <strong>{{ $errors->first('password') }}</strong>
-                  </span>
-              @endif
+            <div class="btn_form text-center forget-password">
+              <a  class="modal_btn" style="width: 100%;" href="{{route('accueil')}}">
+                <button type="button" class="btn_artisan">Retour à l'accueil</button>
+              </a>
             </div>
-            <div class="formular_item">
-              <label for="" class="label_form">Confirmer mot de passe*</label>
-              <input type="password" class="input_form" name="confirm" required autocomplete="current-password">
-              @if ($errors->has('confirm'))
-                  <span class="help-block">
-                      <strong>{{ $errors->first('confirm') }}</strong>
-                  </span>
-              @endif
-            </div>
-
-            <div class="btn_form">
-              <button type="submit" name="button" class="formular_button btn_artisan">Valider  </button>
-            </div>
+            
           </div>
-        </form>
-
         </div>
       </div>
     </section>
-    @endsection
+@endsection
 
-    @section('additional-script')
-    
-    @endsection
-
-
-
+@section('additional-script')
+@endsection

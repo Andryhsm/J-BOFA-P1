@@ -29,11 +29,12 @@
                                     <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
                                   </div>
                                 </a>
-                                <div class="d-flex align-items-center justify-content-center flex-one">
+                                <a class="navbar-brand site-name" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}" style="font-size: 16px;">e-artisans.fr</a>
+                                <a class="d-flex align-items-center justify-content-center flex-one" href="tel:+33767130959">
                                   <label for="" class="email item_box_header">
                                       <div class="icones_headers"> <i class="fa fa-phone"></i></div> +33767130959
                                   </label>
-                                </div>
+                                </a>
                             </div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                               <span class="icon-menu"></span>

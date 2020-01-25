@@ -88,17 +88,16 @@ class LoginController extends Controller
         return view('front.page.view_project',compact("categories","details","randoms"));
     }
 
-    public function recuperMdp(){
-        $email = Input::get('email');
-        $user = $this->user_repo->getMail($email);
-        $mail_conf = $user[0]->email;
-        return view('artisan.recuperation',compact('mail_conf'));
+    public function recuperMdp($id){
+        // $email = Input::get('email');
+        // $user = $this->user_repo->getMail($email);
+        // $mail_conf = $user[0]->email;
+        return view('artisan.recuperation',compact('id'));
     }
 
     public function updateMdp(Request $request){
-        //dd($mdp->password);
+        //dd($id);
         $rules = array(
-            'email' => 'required | email' ,
             'password' => 'required' ,
             'confirm' => 'required' ,
         );
@@ -121,10 +120,14 @@ class LoginController extends Controller
     }
 
     public function mdpReinitial(Request $request){
+            $user = $this->user_repo->getOne($request->email);
+            $id = $user[0]->id;
+            //dd(url('recuperation/'.$id));
             $valueArray = [
                 'email'=>$request->email,
-                'url'=>$request->url,
+                'url'=>url("recuperation/".$id),
             ];
+            //dd($request->email);
             Mail::to($request->email)->send(new MdpInitialize($valueArray));
             return view('front.login.reinitial');
         //}

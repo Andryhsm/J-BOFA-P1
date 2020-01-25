@@ -82,18 +82,26 @@ class RegisterController extends Controller
         //     'password' => Hash::make($data['password']),
         // ]);
        $user = $this->user_repository->createUser($data->all());
-       if (auth()->attempt(['email' => $data->email, 'password' => $data->password])) {
-            //dd(auth()->guard('admin')->user());
+       // dd($user->id);
+       //if (auth()->attempt(['email' => $data->email, 'password' => $data->password])) {
+            //dd(auth()->user()->id);
+       $names = $data->first_name.' '.$data->name;
+       $email = $data->email;
+       $id = $user->id;
             $valueArray = [
                 'name' => $data->first_name.' '.$data->name,
                 'email'=>$data->email,
                 'message'=>'Vous recevez cet email car nous avons reçu une demande d\'inscription pour votre compte ce courrier. :)',
-                'url_confirm'=>url("artisan/confirm_email/".auth()->user()->id)
+                'url_confirm'=>url("artisan/confirm_email/".$user->id)
             ];
             Mail::to($data->email)->send(new MailConfirmation($valueArray));
-            return redirect()->route('artisan_home');
-        }else{
-            return redirect()->guest(route('connexion'));
-        }
+            return redirect('confirmation/names='.$email.'_'.$names.'_'.$id);
+        // }else{
+        //     return redirect()->guest(route('connexion'));
+        // }
+    }
+
+    public function after($names,$email,$id){
+        return view('front/login/inscription', compact('names','email','id'));
     }
 }

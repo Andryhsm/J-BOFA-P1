@@ -64,26 +64,102 @@
 /* line 65, ../../sass/account/home.scss */
 .mail_confirm {
   width: 100%;
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #cecece;
+  padding: 2%;
+  background-color: #fff;
 }
-/* line 73, ../../sass/account/home.scss */
+/* line 76, ../../sass/account/home.scss */
 .mail_confirm .activate_mail {
+  max-width: 500px;
   color: #474747;
   font-family: 'Open Sans Condensed',sans-serif;
   font-size: 20px;
   text-align: center;
 }
-/* line 79, ../../sass/account/home.scss */
+/* line 83, ../../sass/account/home.scss */
 .mail_confirm .mail_thanks {
   line-height: 3.6rem;
   text-transform: uppercase;
 }
+/* line 88, ../../sass/account/home.scss */
+.mail_confirm .inscription-welcoming {
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  border: 2px solid #00adf1;
+  color: #00adf1;
+  font-size: 28px;
+  line-height: 1.2;
+}
+/* line 97, ../../sass/account/home.scss */
+.mail_confirm .link-home {
+  text-decoration: none;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #00adf1;
+  font-size: 1rem;
+}
+/* line 104, ../../sass/account/home.scss */
+.mail_confirm .link-home .icon-arrow-left {
+  margin-right: 8px;
+}
 
-/* line 84, ../../sass/account/home.scss */
+/* line 110, ../../sass/account/home.scss */
 .mail_not_active {
   display: none;
+}
+
+/* line 115, ../../sass/account/home.scss */
+.modal-cgv {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 125, ../../sass/account/home.scss */
+.modal-cgv:not(.hide) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 129, ../../sass/account/home.scss */
+.modal-cgv .modal-cgv-content {
+  width: 500px;
+  max-width: 100%;
+}
+/* line 134, ../../sass/account/home.scss */
+.modal-cgv .artisan-email-page {
+  max-height: calc(100% - 70px);
+  overflow: auto;
+  margin-top: 15px;
+}
+/* line 140, ../../sass/account/home.scss */
+.modal-cgv .artisan-page-content {
+  padding: 0 15px;
+}
+/* line 144, ../../sass/account/home.scss */
+.modal-cgv .alert-warning {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+/* line 149, ../../sass/account/home.scss */
+.modal-cgv input.blanc-point {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+/* line 155, ../../sass/account/home.scss */
+.modal-cgv .close-modal {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 24px;
 }

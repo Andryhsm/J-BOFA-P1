@@ -59,6 +59,19 @@
 	}
 }
 
+@media screen and (max-width: 560px) {
+	.mail_confirm {
+		.inscription-welcoming {
+			width: 100%;
+			text-align: center;
+			padding: 20px 15px!important;
+			font-size: 1.5rem!important;
+		}
+
+		.activate_mail { font-size: 1.1rem!important; }
+	}
+}
+
 @media screen and (max-width: 500px) {
 	.nav_menu, .content_page {
 		padding-left: 15px;
