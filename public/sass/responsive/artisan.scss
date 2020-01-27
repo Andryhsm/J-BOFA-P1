@@ -57,6 +57,10 @@
 
 		}
 	}
+
+	.navbar {
+		.site-name { font-size: 30px;}
+	}
 }
 
 @media screen and (max-width: 560px) {
@@ -69,6 +73,27 @@
 		}
 
 		.activate_mail { font-size: 1.1rem!important; }
+	}
+
+	.navbar {
+		.site-name {
+			position: absolute;
+			bottom: 0;
+		    top: 0;
+		    right: 0;
+		    left: 0;
+		    display: flex;
+		    -webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
+		    -webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;
+		    font-size: 16px;
+		    margin: 0;
+		}
+
+		.email_box {
+			padding-bottom: 22px;
+		}
+
+		.navbar-brand { margin-right: 0;}
 	}
 }
 
