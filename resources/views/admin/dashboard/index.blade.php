@@ -1,5 +1,10 @@
 @extends('adminlte::page')
 
+@section('css')
+    {!! Html::style('compiled_css/account/main.css') !!}
+    {!! Html::style('vendor/adminlte/css/custom-modal.css') !!}
+@stop
+
 @section('title', 'Tableau de bord')
 
 @section('content_header')
@@ -165,11 +170,10 @@
           </button>
           <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="contact">
               <div class="modal-dialog modal-sm">
-                  <div class="modal-content">
-                      <div class="modal-body title_modal_delete">
+                  <div class="modal-content full-width">
+                      <div class="modal-body title_modal_delete full-width d-flex justify-content-center flex-wrap">
                          <label>Changement du numero téléphone</label>
-                           {!! Form::open(array('url' =>route('contact_site', ['contact' =>$contact->id]),'files' => true,'class'=>'form-horizontal','id'=>'form-contact','method'=>'POST')) !!}
-                            <div class="form-group">
+                           {!! Form::open(array('url' =>route('contact_site', ['contact' =>$contact->id]),'files' => true,'class'=>'form-horizontal full-width','id'=>'form-contact','method'=>'POST')) !!}
                               
                             <div class="form-group">
                               <label for="inputPhone" class="col-sm-3 control-label">Téléphone</label>
@@ -180,13 +184,13 @@
                               </div>
                             </div>
                             
-                            <div class="form-group">
-                              <div class="col-sm-12">
+                            <div class="form-group full-width">
+                              <div class="col-sm-12 d-flex justify-content-center">
                                 <button type="submit" class="btn pull-right  btn-success">Enregistrer</button>
                               </div>
                             </div>
                           {!! Form::close() !!}
-                      </div>
+                      
                       <!-- <div class="modal-footer foot_modal_delete">
                           <button type="button" data-dismiss="modal" class="btn btn-primary" id="delete">Supprimer</button>
                           <button type="button" data-dismiss="modal" class="btn">Annuler</button>
