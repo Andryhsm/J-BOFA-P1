@@ -8,6 +8,13 @@
           </div>
         </a>
       </div>
+      <div class="">
+        <a href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}">
+          <div class="">
+            <span style="font-size: 100%;color: #007bff; font-family: cursive;">e-artisans.fr</span>
+          </div>
+        </a>
+      </div>
       <div class="user_status">
         @if($diff  <=0 || $diff>3)
           <a href="{{ Url('/artisan/stripe') }}" class="versionPro">Passer en PRO</a>

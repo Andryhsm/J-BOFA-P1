@@ -29,7 +29,7 @@
                                     <img src="{!! url('/image/front/icones/logo_bofa.png') !!}" class="img_logo_bofa" alt="logo" />
                                   </div>
                                 </a>
-                                <a class="navbar-brand site-name" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}" style="font-size: 16px;">e-artisans.fr</a>
+                                <a class="navbar-brand site-name" href="{{ (Auth::user()) ? Url('/artisan/accueil') : Url('/') }}" style="font-size: 36px; font-style: italic;font-family: cursive;">e-artisans.fr</a>
                                 <a class="d-flex align-items-center justify-content-center flex-one" href="tel:{{$contact->phone}}">
                                   <label for="" class="email item_box_header">
                                       <div class="icones_headers"> <i class="fa fa-phone"></i></div> {{$contact->phone}}

@@ -9,9 +9,8 @@
       <meta http-equiv="content-type" content="text/html; charset=UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="csrf-token" content="{{ csrf_token() }}">
       <meta name="author" content="Colorlib">
-      <meta name="description" content="#">
+      <meta name="description" content="Vous pouvez définir une zone kilométrique autour d'une ville donnée.">
       <meta name="keywords" content="#">
   	  {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">

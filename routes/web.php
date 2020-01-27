@@ -125,6 +125,8 @@ Route::middleware(['auth'])->namespace('Artisan')->prefix('artisan')->group(func
     Route::get('profil/{id}','ArtisanController@showProfil')->name('artisan_profil');
     Route::get('confirm_email/{id}','ArtisanController@confirmMail')->name('confim');
     Route::get('coordonate/{id}','ArtisanController@coordonate')->name('artisan_coordonate');
+    Route::get('create_site','ArtisanController@createSite')->name('artisan_site');
+    Route::post('save_site','ArtisanController@saveSite')->name('create_site');
     Route::get('change_mdp','ArtisanController@ChangeMdp')->name('change_mdp');
     Route::get('document_official','ArtisanController@DocumentOfficial')->name('document_official');
     Route::get('label_quality','ArtisanController@LabelQuality')->name('label_quality');

@@ -143,7 +143,24 @@ class ArtisanController extends Controller
         $notif = count($project_notif);
         return view('artisan.page.coordonate',compact('profil','cities','diff','project_availables','notif'));
     }
-     public function ChangeMdp() {
+    public function createSite(){
+        $cities = auth()->user()->city_id;
+        $project_availables = $this->citie_repo->getAddress($cities);
+        $diff = $this->getDate();
+
+        $user = $this->user_repo->findUser(auth()->user()->id);
+        $postal = $user->city->ville_code_postal ;
+        $code = $postal[0].$postal[1];
+        $category = auth()->user()->category_id;
+        $project_notif = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
+        $notif = count($project_notif);
+        return view('artisan.page.site',compact('diff','project_availables','notif'));
+    }
+    public function saveSite(Request $request){
+        $this->user_repo->createSite($request->all());
+        return redirect()->route('artisan_site');
+    }
+    public function ChangeMdp() {
         $cities = auth()->user()->city_id;
         $project_availables = $this->citie_repo->getAddress($cities);
         $locations = $project_availables;
@@ -158,15 +175,18 @@ class ArtisanController extends Controller
     }
     public function DocumentOfficial() {
         $diff = $this->getDate();
-        return view('artisan.page.document_official',compact('diff'));
+        $project_availables=[];
+        return view('artisan.page.document_official',compact('diff','project_availables'));
     }
     public function LabelQuality() {
         $diff = $this->getDate();
-        return view('artisan.page.label_quality',compact('diff'));
+        $project_availables =[];
+        return view('artisan.page.label_quality',compact('diff','project_availables'));
     }
     public function Realisation() {
         $diff = $this->getDate();
-        return view('artisan.page.realisation',compact('diff'));
+        $project_availables = [];
+        return view('artisan.page.realisation',compact('diff','project_availables'));
     }
 
     public function updateProfil(Request $request){

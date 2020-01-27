@@ -8,6 +8,7 @@ Use App\Models\LastSubscription;
 Use App\Models\Abonnement;
 Use App\Models\UserProfile;
 Use App\Models\Contact;
+Use App\Models\Site;
 use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserRepositoryInterface
@@ -17,15 +18,17 @@ class UserRepository implements UserRepositoryInterface
     protected $user_abonnement;
     protected $subscribe;
     protected $contact;
+    protected $site;
 
 
-	public function __construct(User $user,UserProfile $user_profil,LastSubscription $user_abonnement,Abonnement $subscribe,Contact $contact)
+	public function __construct(User $user,UserProfile $user_profil,LastSubscription $user_abonnement,Abonnement $subscribe,Contact $contact,Site $site)
     {
         $this->model = $user;
         $this->user_profil = $user_profil;
         $this->user_abonnement = $user_abonnement;
         $this->subscribe = $subscribe;
         $this->contact = $contact;
+        $this->site = $site;
     }
 
     public function findUser($user_id)
@@ -154,5 +157,18 @@ class UserRepository implements UserRepositoryInterface
         $this->contact = $this->contact->find($data['id']);
         $this->contact->phone = $data['phone'];
         $this->contact->save();
+    }
+
+    public function createSite($data){
+        $this->site->name = $data['name'];
+        $this->site->email = $data['email'];
+        $this->site->budget = $data['budget'];
+        $this->site->enterprise = $data['enterprise'];
+        $this->site->phone = $data['phone'];
+        $this->site->message = $data['message'];
+        $this->site->subject = $data['subject'];
+        $this->site->user_id = auth()->user()->id;
+
+        $this->site->save();
     }
 }

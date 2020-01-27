@@ -72,7 +72,7 @@
 		        			</p>
 		        			<p>
 		        				<span class="label">Site web:</span>
-		        				<span class="value"><a href="" class="btn_orange_link_artisan">Créer mon site web ></a></span>
+		        				<span class="value"><a href="{{route('artisan_site')}}" class="btn_orange_link_artisan">Créer mon site web ></a></span>
 		        			</p>
 		        		</div>
 		        	</div>

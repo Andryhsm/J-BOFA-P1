@@ -5,7 +5,7 @@
                 <p class="text_pro">
                     Pour devenir un(e) membre Pro, veuillez payer 270€ pour une abonnement de 1 an
                 </p>
-                <p class="text_pro">360€ pour découvrir l'ensemble de vos projet et de profiter au maximum nos service</p>
+                <p class="text_pro">270€ pour découvrir l'ensemble de vos projet et de profiter au maximum nos service</p>
                 <p class="text_pro">Avec Stripe, nous assurons la sécuriter de votre payment</p>
 
             </div>
