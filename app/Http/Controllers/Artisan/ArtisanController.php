@@ -132,7 +132,8 @@ class ArtisanController extends Controller
         $cities = auth()->user()->city_id;
         $project_availables = $this->citie_repo->getAddress($cities);
         $profil = $this->user_repo->findUser($id);
-        $cities = $this->citie_repo->getAll();
+        // $cities = $this->citie_repo->getAll();
+        $cities = [];
         $diff = $this->getDate();
 
         $user = $this->user_repo->findUser(auth()->user()->id);
