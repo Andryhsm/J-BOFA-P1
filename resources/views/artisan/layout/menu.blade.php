@@ -30,7 +30,7 @@
       @endif
     </div>
   </a> -->
-  <a class="menus" href="{{ Url('/artisan/profil/'.Auth::user()->id.'') }}">
+  <a class="menus menu-link" data-val="{{$diff}}" href="{{ Url('/artisan/profil/'.Auth::user()->id.'') }}">
     <div class="item_menu">
       <label for="">Mon profil</label>
     </div>
@@ -59,7 +59,7 @@
       <div class="modal-content full-width">
           <div class="modal-body title_modal_delete full-width d-flex justify-content-center flex-wrap">
             <div class="form-group full-width d-flex justify-content-center">
-             <label id="artisan-modal-menu-message">Lorem ipsum</label>
+             <label id="artisan-modal-menu-message">Passez à la version pro pour 270 € ttc /an, soit 22,50 €/mois et recevez des demandes de devis en illimité dans votre département</label>
             </div>     
               
             <div class="col-sm-12 d-flex justify-content-center">
