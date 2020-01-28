@@ -117,7 +117,9 @@ p {
 
 .navbar-light .navbar-toggler {
   color: #fff;
-  border-color: #fff; }
+  border-color: #fff; 
+   z-index: 9999;
+}
 
 .header_search {
   display: flex;
@@ -466,13 +468,11 @@ p {
    
     .navbar .site-name {
       position: absolute;
-      bottom: 0;
-      top: 0;
+      top: 35px;
       right: 0;
       left: 0;
       display: flex;
       -webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;
-      -webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;
       font-size: 16px!important;
       margin: 0;
     }
