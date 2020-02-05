@@ -78,6 +78,24 @@
 
             };
         });
+
+        $(document).ready(function() {
+          $('.nav_menu').on('click','.menu-link',function(event){
+            var value=$(this).data('val');
+            if(value==0 || value>12){
+              event.preventDefault();
+              $('#artisan-modal-menu').toggleClass('no-fade');
+            }
+            
+            // $('#artisan-modal-menu-message').html($(this).data('message'))
+          })
+
+          $('.modal').on('click', '#close-artisan-modal-menu',function(event){
+            event.preventDefault();
+            $('#artisan-modal-menu').toggleClass('no-fade');
+          })
+        })
+
     </script>
     <script type="text/javascript">
         $.ajaxSetup({

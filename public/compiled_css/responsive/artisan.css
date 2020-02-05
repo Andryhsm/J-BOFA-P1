@@ -92,43 +92,43 @@
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 76, ../../sass/responsive/artisan.scss */
+  /* line 78, ../../sass/responsive/artisan.scss */
   .nav_menu, .content_page {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  /* line 81, ../../sass/responsive/artisan.scss */
+  /* line 83, ../../sass/responsive/artisan.scss */
   .service_page {
     padding: 0;
   }
 
-  /* line 83, ../../sass/responsive/artisan.scss */
+  /* line 85, ../../sass/responsive/artisan.scss */
   .header_page_service {
     width: 100%;
   }
 
-  /* line 85, ../../sass/responsive/artisan.scss */
+  /* line 87, ../../sass/responsive/artisan.scss */
   .coordonate_entreprise .liste_formulaire {
     width: 100%;
     margin-bottom: 20px;
   }
 
-  /* line 90, ../../sass/responsive/artisan.scss */
+  /* line 92, ../../sass/responsive/artisan.scss */
   .item_video_service {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  /* line 93, ../../sass/responsive/artisan.scss */
+  /* line 95, ../../sass/responsive/artisan.scss */
   .item_video_service .form_place_video {
     width: 100% !important;
   }
-  /* line 96, ../../sass/responsive/artisan.scss */
+  /* line 98, ../../sass/responsive/artisan.scss */
   .item_video_service .form_place_video:first-child {
     margin-bottom: 15px;
   }
 
-  /* line 100, ../../sass/responsive/artisan.scss */
+  /* line 102, ../../sass/responsive/artisan.scss */
   .liste_site_service .form_item_site {
     width: 300px !important;
     height: 250px !important;
@@ -137,12 +137,12 @@
     margin-top: 30px !important;
   }
 
-  /* line 108, ../../sass/responsive/artisan.scss */
+  /* line 110, ../../sass/responsive/artisan.scss */
   .project_list_page .project_desc, .project_list_page .btn_action_item {
     padding-left: 15px !important;
   }
 
-  /* line 112, ../../sass/responsive/artisan.scss */
+  /* line 114, ../../sass/responsive/artisan.scss */
   .project_list_page .project_desc {
     min-width: 120px !important;
   }

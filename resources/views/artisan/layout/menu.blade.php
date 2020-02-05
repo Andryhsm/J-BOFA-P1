@@ -4,7 +4,7 @@
       <label for="">Accueil</label>
     </div>
   </a>
-  <a class="menus" href="{{ route('artisan_home') }}" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>3 ) ? 'return false' : 'return true'}}" >
+  <a class="menus menu-link" href="{{ route('artisan_home') }}" data-val="{{$diff}}"  data-message="No projet disponible"> <!-- onclick="{{($diff <=0 || $diff>3 ) ? 'return false' : 'return true'}}" -->
     <div class="item_menu" >
       <label for="">Projet Disponible</label>
       <label for="" class="notification">{{isset($notif) ? $notif : 0}}</label>
@@ -14,7 +14,7 @@
     </div>
   </a>
 
-  <a class="menus" href="{{route('project_accepted')}}" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>3 ) ? 'return false' : 'return true'}}" >
+  <a class="menus menu-link" href="{{route('project_accepted')}}" data-val="{{$diff}}"  data-message="No projet accepté">
     <div class="item_menu">
       <label for="">Mes projet accéptés</label>
       <!-- @if($diff  <=0 || $diff>3)
@@ -30,7 +30,7 @@
       @endif
     </div>
   </a> -->
-  <a class="menus" href="{{ Url('/artisan/profil/'.Auth::user()->id.'') }}">
+  <a class="menus menu-link" data-val="{{$diff}}" href="{{ Url('/artisan/profil/'.Auth::user()->id.'') }}">
     <div class="item_menu">
       <label for="">Mon profil</label>
     </div>
@@ -43,7 +43,7 @@
       @endif
     </div>
   </a> -->
-  <a class="menus" data-val="{{$diff}}" onclick="{{($diff <=0 || $diff>3 ) ? 'return false' : 'return true'}}"  href="{{ route('service') }}">
+  <a class="menus menu-link" data-val="{{$diff}}" href="{{ route('service') }}" data-message="No service disponible">
     <div class="item_menu">
       <label for="">Services</label>
       <label for="" class="add_service">+</label>
@@ -52,4 +52,23 @@
       @endif -->
     </div>
   </a>
+</div>
+
+<div class="modal fade bs-example-modal-sm justify-content-center align-items-center" tabindex="-1" role="dialog" id="artisan-modal-menu">
+  <div class="modal-dialog modal-sm">
+      <div class="modal-content full-width">
+          <div class="modal-body title_modal_delete full-width d-flex justify-content-center flex-wrap">
+            <div class="form-group full-width d-flex justify-content-center">
+             <label id="artisan-modal-menu-message">Passez à la version pro pour 270 € ttc /an, soit 22,50 €/mois et recevez des demandes de devis en illimité dans votre département</label>
+            </div>     
+              
+            <div class="col-sm-12 d-flex justify-content-center">
+              <button type="button" class="btn pull-right btn-success" id="close-artisan-modal-menu">Fermer</button>
+            </div>
+                         
+          </div>
+      <!-- /.modal-content -->
+      </div>
+  <!-- /.modal-dialog -->
+  </div>
 </div>
