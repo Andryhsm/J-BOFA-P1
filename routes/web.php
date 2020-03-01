@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Models\Contact;
 
 Route::get('/', 'Front\LoginController@getIndex')->name('accueil');
 
@@ -112,7 +113,8 @@ Route::namespace('Auth')->group(function () {
     Route::post('register','RegisterController@create')->name('register');
     Route::get('confirmation/{names}',function($names)
     {
-        return view('front/login/inscription',compact('names'));
+        $contact = Contact::find(1);
+        return view('front/login/inscription',compact('names','contact'));
     })->name('confirmation');
 });
 // end Auth route

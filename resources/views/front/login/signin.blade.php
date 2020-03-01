@@ -112,7 +112,7 @@
                 </ul>
               </div> -->
 
-              <select required="required" tabindex="1" class="form-control input_form" name="category" id="category">
+              <select tabindex="1" class="form-control input_form" name="category" id="category" required>
                   <option value="selectionnez"> Sélectionnez une catégorie ...</option>
                   @if(isset($categories))
                     @foreach($categories as $category)
@@ -136,7 +136,7 @@
             
             <div class="formular_item">
               <label for="" class="label_form">Ville *</label>
-              <select required="required" tabindex="1" class="form-control input_form" name="ville" id="ville" disabled>
+              <select tabindex="1" class="form-control input_form" name="ville" id="ville" required>
                 <option value="selectionnez"> Sélectionnez une ville ...</option>
               </select>
             </div>
@@ -166,11 +166,12 @@
             </div>
             <div class="formular_item">
               <label for="" class="label_form">Confirmer votre mot de passe*</label>
-              <input type="password" class="input_form" name="confirmPassword" value="" placeholder="Confirmer votre mot de passe">
+              <input type="password" class="input_form" name="confirmPassword" value="" placeholder="Confirmer votre mot de passe" required>
             </div>
 
             <div class="btn_form">
-              <button type="submit" name="button" class="formular_button btn_artisan" value="ENREGISTRER">ENREGISTRER</button>
+                <input type="submit" style="display:none;">
+                <button type="button" name="button" class="formular_button btn_artisan" value="ENREGISTRER" id="valider">ENREGISTRER</button>
             </div>
           </div>
         </div>

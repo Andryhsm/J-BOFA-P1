@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     	<title>E-artisans</title>
-    	<meta charset="utf-8">
+    	
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="author" content="Colorlib">
@@ -81,6 +81,15 @@
 
         $(document).ready(function() {
           $('.nav_menu').on('click','.menu-link',function(event){
+            var value=$(this).data('val');
+            if(value==0 || value>12){
+              event.preventDefault();
+              $('#artisan-modal-menu').toggleClass('no-fade');
+            }
+            
+            // $('#artisan-modal-menu-message').html($(this).data('message'))
+          });
+          $('.dropdown_menus_resp').on('click','li',function(event){
             var value=$(this).data('val');
             if(value==0 || value>12){
               event.preventDefault();

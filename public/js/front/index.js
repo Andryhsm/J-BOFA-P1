@@ -68,8 +68,8 @@ $(document).ready(function(){
 
   	});
 
-    $('.inscription').on('keyup','#postal_code',function(data){
-      //$('#ville').trigger('change');
+    /*$('.inscription').on('keyup','#postal_code',function(data){
+      $('#ville').trigger('change');
 	     data = $(this).val();
       console.log('postal_code',data)
 	     if(data!=""){
@@ -79,7 +79,7 @@ $(document).ready(function(){
 	      $('#ville').html("");
 	      $('#ville').prop('disabled',true);
 	    }
-    });
+    });*/
     $('.inscription').on('change','#postal_code',function(data){
       //$('#ville').trigger('change');
        data = $(this).val();
@@ -93,7 +93,17 @@ $(document).ready(function(){
       }
     });
 
-    $('.form_item_project').on('keyup','#postal_code',function(data){
+    /*$('.form_item_project').on('keyup','#postal_code',function(data){
+       data = $(this).val();
+       if(data!=""){
+        getVille(data);
+      }
+      else{
+        $('#ville').html("");
+        $('#ville').prop('disabled',true);
+      }
+    });*/
+    $('.form_item_project').on('change','#postal_code',function(data){
        data = $(this).val();
        if(data!=""){
         getVille(data);
@@ -103,7 +113,7 @@ $(document).ready(function(){
         $('#ville').prop('disabled',true);
       }
     });
-    $('.container_view_project').on('keyup','#postal_code',function(data){
+    /*$('.container_view_project').on('keyup','#postal_code',function(data){
 	     data = $(this).val();
        console.log(data);
 	     if(data!=""){
@@ -113,7 +123,7 @@ $(document).ready(function(){
 	      $('#ville').html("");
 	      $('#ville').prop('disabled',true);
 	    }
-    });
+    });*/
     $('.container_view_project').on('change','#postal_code',function(data){
        data = $(this).val();
        console.log(data);

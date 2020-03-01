@@ -55,7 +55,8 @@ class LoginController extends Controller
         $categories = $this->category_repo->getCategory();
         $details = $this->category_repo->findCategory($id);
         $randoms = $this->category_repo->getRandom();
-        return view('front.page.view_project',compact("categories","details","randoms"));
+        $contact = $this->user_repo->getContact();
+        return view('front.page.view_project',compact("categories","details","randoms","contact"));
     }
 
     public function getCategory(){
@@ -65,8 +66,9 @@ class LoginController extends Controller
             $details = $categorie[0];
             $categories = $this->category_repo->getCategory();
             $randoms = $this->category_repo->getRandom();
+            $contact = $this->user_repo->getContact();
             //dd($details);
-            return view('front.page.view_project',compact("categories","details","randoms"));
+            return view('front.page.view_project',compact("categories","details","randoms","contact"));
         }else{
             return Redirect::back()->withInput()->withErrors('validator');
         }
@@ -96,7 +98,8 @@ class LoginController extends Controller
         // $email = Input::get('email');
         // $user = $this->user_repo->getMail($email);
         // $mail_conf = $user[0]->email;
-        return view('artisan.recuperation',compact('id'));
+        $contact = $this->user_repo->getContact();
+        return view('artisan.recuperation',compact('id','contact'));
     }
 
     public function updateMdp(Request $request){
@@ -130,17 +133,23 @@ class LoginController extends Controller
     }
 
     public function mdpReinitial(Request $request){
-            $user = $this->user_repo->getOne($request->email);
-            $id = $user[0]->id;
-            //dd(url('recuperation/'.$id));
-            $valueArray = [
-                'email'=>$request->email,
-                'url'=>url("recuperation/".$id),
-            ];
-            //dd($request->email);
-            Mail::to($request->email)->send(new MdpInitialize($valueArray));
-            return view('front.login.reinitial');
+        $user = $this->user_repo->getOne($request->email);
+        $id = $user[0]->id;
+        $contact = $this->user_repo->getContact();
+        //dd(url('recuperation/'.$id));
+        $valueArray = [
+            'email'=>$request->email,
+            'url'=>url("recuperation/".$id),
+        ];
+        //dd($request->email);
+        Mail::to($request->email)->send(new MdpInitialize($valueArray));
+        return view('front.login.reinitial',compact('contact'));
         //}
+    }
+    
+    public function confirmation($name){
+        $contact = $this->user_repo->getContact();
+        return view('front/login/inscription',compact('names','contact'));
     }
 
 }

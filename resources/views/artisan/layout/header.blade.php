@@ -35,21 +35,21 @@
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
-        <div class="responsive_menus">
+        <!--<div class="responsive_menus">
           <span class="resp_menus"></span>
           <span class="resp_menus"></span>
           <span class="resp_menus"></span>
 
           <ul class="dropdown_menus_resp">
             <li> Accueil</li>
-            <li> Projets Disponibles <!-- <label for="" class="number_project_resp">8</label> --></li>
-            <li> Projets accéptés</li>
-            <!-- <li> Evaluations</li> -->
-            <li> Mon Profil</li><!-- 
-            <li> Factures</li> -->
-            <li> Services</li>
+            <li data-val="{{$diff}}"> Projets Disponibles <!-- <label for="" class="number_project_resp">8</label> </li>
+            <li data-val="{{$diff}}"> Projets accéptés</li>
+            <!-- <li> Evaluations</li> 
+            <li data-val="{{$diff}}"> Mon Profil</li><!-- 
+            <li> Factures</li> 
+            <li data-val="{{$diff}}"> Services</li>
           </ul>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>

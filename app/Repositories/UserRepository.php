@@ -77,6 +77,7 @@ class UserRepository implements UserRepositoryInterface
     }
 
     public function deleteUser($data){
+        $this->user_abonnement->where('user_id',$data['user_id'])->delete();
         return $this->model->where('id', $data['user_id'])->delete();
     }
 

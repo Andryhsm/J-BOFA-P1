@@ -29,6 +29,7 @@ class RedirectIfAuthenticated
             
             default:
                 if (Auth::guard($guard)->check()) {
+                    //dd(Auth::guard($guard)->check());
                     return redirect('/artisan/accueil');
                 }
                 break;

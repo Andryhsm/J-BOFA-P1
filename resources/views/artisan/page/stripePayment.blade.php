@@ -7,8 +7,14 @@
                 </p>
                 <p class="text_pro">270€ pour découvrir l'ensemble de vos projet et de profiter au maximum nos service</p>
                 <p class="text_pro">Avec Stripe, nous assurons la sécuriter de votre payment</p>
-
+                
             </div>
+            @if (Session::has('success'))
+                <div class="alert alert-success text-center">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <p>{{ Session::get('success') }}</p>
+                </div>
+            @endif
             <div class="panel panel-default credit-card-box">
                 <div class="panel-heading display-table" >
                     <div class="row display-tr" >
@@ -20,12 +26,7 @@
                 </div>
                 <div class="panel-body d-flex flex-wrap justify-content-center">
   
-                    @if (Session::has('success'))
-                        <div class="alert alert-success text-center">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                            <p>{{ Session::get('success') }}</p>
-                        </div>
-                    @endif
+                    
   
                     <form role="form" action="{{ url('artisan/payment') }}" method="post" class="require-validation"
                                                      data-cc-on-file="false"
@@ -34,6 +35,7 @@
                         @csrf
   
                         <div class='form-row'>
+                            <input type="hidden" name="email" class="email" value="{{auth()->user()->email}}">
                             <div class='col-xs-12 form-group required'>
                                 <label class='control-label'>Nom du carte</label> <input
                                     class='form-control' size='4' type='text'>
@@ -91,7 +93,7 @@
 </div>
 
 <!-- Modal cgv -->
-<div>
+
 <div class='modal-cgv hide justify-content-center' id="cgv_txt">
     <div class='modal-cgv-content full-height full-width' id="error">
         <div class='alert-warning alert full-height full-width d-flex justify-content-end flex-wrap'>
@@ -106,23 +108,20 @@
                 <div class="artisan-page-content full-width">
                     <div class="artisan-introduction-text">
                         <p class="artisan-hello"><h1>INTRODUCTION</h1><p>
-                        <p>Le Site Internet accessible à l'adresse URL www.e-artisans.fr (ci-après « <span style="font-weight: bold; ">le Site
+                        <p>Le Site Internet accessible à l'adresse URL www.e-artisans.fr (ci-après « <span style="font-weight: bold; ">le Site<br>
                             E-artisans. Fr/connexion </span>») est la propriété de l’éditeur en programmation informatique Jaouad Azoum entrepreneur
-                            individuel
+                            individuel<br><br>
                             Inscrit au Registre du Commerce de Rouen SIRÈN 798351763 ,SIRET 79835176300023 , dont le siège social est
                             situé au 84 route de bonsecours 76000 Rouen
-                        </p>
-                        <p>Par le biais de ce Site, E-artisans. Fr entend faciliter la rencontre entre des personnes en recherche de professionnels
+                            <p>Par le biais de ce Site, E-artisans. Fr entend faciliter la rencontre entre des personnes en recherche de professionnels
                             pour réaliser diverses prestations de travaux (ci-après « <span style="font-weight: bold; ">les Utilisateurs</span> ») et lesdits professionnels, membres du
                             réseau e-artisans.fr inscrits sur le Site e-artisans.fr PRO (ci-après « <span style="font-weight: bold; ">les Membres</span>»). Dans ce cadre, artisans
                             met à disposition des Utilisateurs un service leur permettant d'effectuer en ligne une demande de devis, à laquelle
-                            plusieurs Membres pourront répondre.
-                        </p>
-                        <p>Les Membres accèdent aux services de e-artisans.fr par le paiement d'une cotisation mensuelle.
-                            Les Utilisateurs peuvent effectuer leurs demandes de devis par le biais du site Internet accessible à l'adresse URl
-                            <span style="color: #ff580c;">https://www.e-artisans.fr</span>
-                        </p>
-                        <p>Une fois la prise de contact effectuée entre l'Utilisateur et le Membre, l'éventuelle poursuite de la relation est effectuée
+                            plusieurs Membres pourront répondre.</p>
+                            <p>Les Membres accèdent aux services de e-artisans.fr par le paiement d'une cotisation mensuelle.
+                            Les Utilisateurs peuvent effectuer leurs demandes de devis par le biais du site Internet accessible à l'adresse URl<br>
+                            <span style="color: #ff580c;">https://www.e-artisans.fr</span></p>
+                            <p>Une fois la prise de contact effectuée entre l'Utilisateur et le Membre, l'éventuelle poursuite de la relation est effectuée
                             en-dehors des Sites e-arisans.fr de Jaouad AZOUM n'intervient en aucun cas dans la formation d'un éventuel accord
                             entre ces deux parties.
 
@@ -233,18 +232,16 @@
                                 <li>Chaque site peut contenir les éléments suivants : textes, images, titres, séparateurs, pictogrammes, formulaires
                                 </li>
                                 <li>personnalisables, cartes dynamiques.</li>
-                            </ul>
-                        </p>
-                        <p>Le Site Internet complet comprend les fonctionnalités suivantes :
-                            <ul>
-                                <li>Nom de domaine en .fr ou .com, récupérable par le Membre à tout moment dans les conditions prévues à
-                                l'article 11.2 des présentes CGV,</li>
-                                <li>Site compatible avec les mobiles et tablettes,</li>
-                                <li>Hébergement</li>
-                                <li>Modifications illimitées via un Espace Personnel, Nombre
-                                de pages : illimité,</li>
-                            </ul>
-                        </p>
+                            </ul></p>
+                            <p>Le Site Internet complet comprend les fonctionnalités suivantes :</p>
+                                <ul>
+                                    <li>Nom de domaine en .fr ou .com, récupérable par le Membre à tout moment dans les conditions prévues à
+                                    l'article 11.2 des présentes CGV,</li>
+                                    <li>Site compatible avec les mobiles et tablettes,</li>
+                                    <li>Hébergement</li>
+                                    <li>Modifications illimitées via un Espace Personnel, Nombre
+                                    de pages : illimité,</li>
+                                </ul>
                         <p>
                             Chaque site peut contenir les éléments suivants : textes, images, titres, séparateurs, pictogrammes,
                             formulaires personnalisables, diaporamas, albums photos, vidéos, boutons, un menu principal, menus secondaires, cartes, liaisons aux réseaux sociaux, un blog interne, un livre d'or, fichiers téléchargeables,
@@ -278,7 +275,7 @@
                             Membre restent celles en vigueur au jour de sa souscription, sauf acceptation par le Membre des nouvelles CGV.
                         </p>
                         <h1>ARTICLE 5 -</h1>
-                        <p>En cas de modification de l'un ou de plusieurs éléments essentiels des CGV, E-ARTISAN.FR s'engage à prévenir le
+                            <p>En cas de modification de l'un ou de plusieurs éléments essentiels des CGV, E-ARTISAN.FR s'engage à prévenir le
                             Membre, par une notification apparente sur son espace personnel, de ladite modification dans un délai de 30 (trente)
                             jours avant l'entrée en vigueur des Conditions Générales de Vente modifiées.
                         </p>
@@ -326,7 +323,7 @@
                             Les deux Services sont indépendants l'un de l'autre.
                         </p>
 
-                        <h1 class="objet">DURÉE</h1>
+                            <h1 class="objet">DURÉE</h1>
 
                         <p>
                             <span style="font-weight: bold; ">5.1 Durée de l'abonnement</span>
@@ -356,20 +353,18 @@
                             En vertu des présentes CGV, e-artisans.fr s'engage notamment à :
                         </p>
                         <h1>ARTICLE 7 -</h1>
-                        <p>
-                            <ul>
-                                <li>Fournir au Membre des Demandes de devis</li>
-                                <li>Délivrer le Service à compter de l'encaissement du premier paiement ou de la réception de l'autorisation de
-                                prélèvement en cas de paiement par prélèvement SEPA,</li>
-                                <li>Garantir une bonne performance des Sites Internet dans la limite d'une utilisation normale et raisonnable
-                                par le Membre. Le Membre est informé que si son utilisation n'est pas conforme, e-artisans.fr ne pourra
-                                garantir cette performance,</li>
-                                <li>Garantit l'accès à l'Outil et aux Sites Internet à hauteur de 99%, à l'exclusion des périodes de maintenance,</li>
-                                <li>Assister le Membre lorsqu'il rencontre des difficultés techniques d'accès,</li>
-                                <li>Rendre accessible le Site 24 heures sur 24 et 7 jours sur 7 sous réserve d'éventuelles pannes et interventions
-                                de maintenance nécessaires au bon fonctionnement du Site.</li>
-                            </ul>
-                        </p>
+                        <ul>
+                            <li>Fournir au Membre des Demandes de devis</li>
+                            <li>Délivrer le Service à compter de l'encaissement du premier paiement ou de la réception de l'autorisation de
+                            prélèvement en cas de paiement par prélèvement SEPA,</li>
+                            <li>Garantir une bonne performance des Sites Internet dans la limite d'une utilisation normale et raisonnable
+                            par le Membre. Le Membre est informé que si son utilisation n'est pas conforme, e-artisans.fr ne pourra
+                            garantir cette performance,</li>
+                            <li>Garantit l'accès à l'Outil et aux Sites Internet à hauteur de 99%, à l'exclusion des périodes de maintenance,</li>
+                            <li>Assister le Membre lorsqu'il rencontre des difficultés techniques d'accès,</li>
+                            <li>Rendre accessible le Site 24 heures sur 24 et 7 jours sur 7 sous réserve d'éventuelles pannes et interventions
+                            de maintenance nécessaires au bon fonctionnement du Site.</li>
+                        </ul>
                         <p>
                             En vertu des présentes CGV, le Membre s'engage notamment à :
                             <ul>
@@ -406,22 +401,19 @@
                             sommes dues à la date considérée et (ii) le paiement de frais de gestion équivalant à cinquante (50) % du montant de
                             l'Abonnement restant à échoir. Ce montant ne saurait être inférieur à cent (100) euros.
                             A l'issue de la Période Initiale d'Engagement, e-artisans.fr est libre de modifier ses tarifs.En cours d'Abonnement, le Membre peut ajouter des Modules selon les modalités indiquées à l'article 6.3 des présentes
-                            CGV.
-                        </p1>
-                        <p1><span style="font-weight: bold; ">6.2 Paiement du prix</span>
+                            CGV.</p1>
+                            <p1><span style="font-weight: bold; ">6.2 Paiement du prix</span>
                             <span style="font-weight: bold; ">6.2.1 Modalités de paiement</span>
-                            Le paiement se fait mensuellement à terme à échoir.
-                        </p1>
-                        <p1><span style="font-weight: bold; ">6.2.2 Moyens de paiement</span>
+                            Le paiement se fait mensuellement à terme à échoir.</p1>
+                            <p1><span style="font-weight: bold; ">6.2.2 Moyens de paiement</span>
                             Le Membre peut procéder au paiement par chèque, virement bancaire, prélèvement bancaire ou carte bancaire.
                             Dès lors que le Membre choisit de payer par carte bancaire, il devra indiquer au plus tard 10 jours avant l'expiration de
                             sa carte bancaire le nouveau moyen de paiement qu'il souhaite utiliser pour effectuer le paiement des échéances
                             suivantes.
                             Durant la Période d'Engagement Initiale, le défaut de communication de cette information dans le délai imparti entraîne
                             l'exigibilité immédiate de toutes les sommes restant dues, qui pourront être prélevées avant l'échéance de la carte
-                            bancaire.
-                        </p1>
-                        <p1><span style="font-weight: bold; ">6.2.3 Retard de paiement</span>
+                            bancaire.</p1>
+                            <p1><span style="font-weight: bold; ">6.2.3 Retard de paiement</span>
                             Au bout de 3 tentatives de paiement restées infructueuses, le Membre sera considéré comme étant en retard de
                             paiement et pourra voir son Espace Personnel bloqué.
                             Le Membre sera invité à régulariser sa situation afin de pouvoir de nouveau accéder aux Services.
@@ -439,14 +431,12 @@
                             premier jour de la Période Mensuelle suivante dès lors que la demande a été faite au plus tard 15 jours avant la fin de
                             la Période Mensuelle en cours. Dans le cas contraire, la modification est effective au premier jour de la prochaine
                             Période Mensuelle.
-                            Le tarif applicable en cas d'ajout de Module est le tarif en vigueur pour ce Module au jour de la demande d'ajout.
-                        </p1>
-                        <p1><span style="font-weight: bold; ">6.4 Frais de résiliation</span>
+                            Le tarif applicable en cas d'ajout de Module est le tarif en vigueur pour ce Module au jour de la demande d'ajout.</p1>
+                            <p1><span style="font-weight: bold; ">6.4 Frais de résiliation</span>
                             Au cours de la période initiale d'engagement, chacune des Parties pourra résilier par anticipation l'Abonnement en
                             justifiant d'un motif légitime et impérieux. Toute résiliation anticipée par le Membre entraînera l'application de frais
-                            d'indemnité tels que définis à l'article 6.1 des présentes CGV.
-                        </p1>
-                        <p1><span style="font-weight: bold; ">6.5 Droit de rétractation</span>
+                            d'indemnité tels que définis à l'article 6.1 des présentes CGV.</p1>
+                            <p1><span style="font-weight: bold; ">6.5 Droit de rétractation</span>
                             Le Membre, en tant que professionnel est informé que conformément à l'article L. 221-3 du Code de la
                             consommation, il est susceptible de disposer d'un droit de rétractation à condition que soient réunies les trois
                             conditions suivantes :
@@ -455,8 +445,8 @@
                                 <li>L'objet du contrat n'entre pas dans le champ de l'activité principale du Membre ; </li>
                                 <li>Membre embauche un nombre de salariés inférieur ou égal à cing.</li>
                             </ul>
-                        </p1>
-                        <p1>
+                            </p1>
+                            <p1>
                             En conséquence, dans l'hypothèse où les conditions cumulatives prévues par l'article susvisé seraient remplies par
                             le Membre, ce dernier pourra notifier à e-artisans.fr, sa volonté de se prévaloir de son droit de rétractation
                             dans un délai de quatorze (14) jours à compter de la date de conclusion du Contrat.
@@ -465,7 +455,6 @@
                             qui se trouve en annexe des présentes Conditions Générales de Vente, par courrier, à Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.
                         </p1>
                         <h1>ARTICLE 7 - AVIS DES UTILISATEURS</h1>
-                        <p>
                             Les Utilisateurs ont la possibilité de laisser un avis sur la fiche de chaque Membre avec lequel ils ont été en contact
                             (c'est-à-dire chaque Membre s'étant engagé à leur fournir un devis). De la même façon, les Membres ont la
                             possibilité de poster une réponse à chaque avis ainsi laissé par un Utilisateur sur leurs fiches.e-artisans.fr effectue un contrôle à priori des avis laissés afin de vérifier que ces derniers ne contiennent pas
@@ -484,18 +473,15 @@
                                 <li>La copie de la correspondance adressée à l'auteur du commentaire ou la justification du fait que vous n'avez
                                 pas pu le contacter.</li>
                             </ul>
-                        </p>
-                        <p1>
+                            <p1>
                             En tout état de cause, le contenu des avis ainsi laissés engage la pleine responsabilité de leurs auteurs.
                             Les avis publiés font apparaître la date de publication de ce dernier ou la date de la dernière modification.
                             Les avis sont classés du plus récent au plus ancien, la date de publication faisant foi, et ne font l'objet d'aucune
                             contrepartie de quelque nature que ce soit.
                             Les avis publiés sur le Site le sont sans limitation de durée et ce dès leur publication par les Utilisateurs ou les
                             Membres. Il convient toutefois de noter qu'un certain délai peut intervenir entre la date de rédaction de l'avis et la
-                            date de publication de ce dernier sur le Site.
-                        </p1>
-                        <h1>ARTICLE 8 - MODIFICATIONS DU SITE ET/OU DU SERVICE</h1>
-                        <p>
+                            date de publication de ce dernier sur le Site.</p1>
+                            <h1>ARTICLE 8 - MODIFICATIONS DU SITE ET/OU DU SERVICE</h1>
                             e-artisans.fr peut de plein droit modifier son Service sans autre formalité que de porter ses modifications dans
                             les présentes CGV. Dans ce cas, les nouvelles CGV sont applicables à la relation entre le Membre et
                             e-artisans.fr dans un délai d'un (1) mois après leur communication au Membre par e-artisans.fr.
@@ -506,9 +492,8 @@
                             lettre recommandée avec avis de réception à e-artisans.fr.
                             L'accès au Site e-artisans.fr est possible 24 heures sur 24, 7 jours sur 7, sous réserve d'éventuelle panne ou
                             intervention de maintenance nécessaire au bon fonctionnement du Site.
-                        </p>
-                        <h1>ARTICLE 9 - OBLIGATIONS DES MEMBRES</h1>
-                        <p><span style="font-weight: bold; ">9.1 Obligations générales</span>
+                            <h1>ARTICLE 9 - OBLIGATIONS DES MEMBRES</h1>
+                            <span style="font-weight: bold; ">9.1 Obligations générales</span>
                             Le Membre s'engage à payer le prix dû, tel qu'il a été déterminé lors de sa souscription au Service.
                             Il est formellement interdit à tout Membre de revendre ou transférer les coordonnées ainsi que toute autre
                             information confidentielle publiée sur le Site e-artisans.fr ou transmise par e-artisans.fr à un ou
@@ -533,13 +518,11 @@
                             Le Membre s'engage à respecter toute disposition légale et/ou règlementaire applicable, notamment les dispositions
                             applicables à son activité professionnelle.
                             Le Membre est responsable des informations qu'il diffuse sur sa fiche Membre.
-                        </p>
-                        <p1><span style="font-weight: bold; ">9.2 Obligations en droit de la consommation</span>
+                            <p1><span style="font-weight: bold; ">9.2 Obligations en droit de la consommation</span>
                             Si le Membre intervient en qualité de professionnel, il lui appartient de respecter l'ensemble des règles issues du
                             droit de la consommation applicables et notamment les dispositions des articles L. 111-1 et suivants et L. 221-5 et L.221-6 du Code de la consommation ainsi que les dispositions des articles 1174 et suivants et 1366 du Code civil
-                            applicables aux contrats conclus sous forme électronique.
-                        </p1>
-                        <p1><span style="font-weight: bold; ">9.3 Obligations fiscales</span>
+                            applicables aux contrats conclus sous forme électronique.</p1>
+                            <p1><span style="font-weight: bold; ">9.3 Obligations fiscales</span>
                             En tant que professionnel, le Membre doit effectuer une déclaration d'existence et choisir son régime fiscal auprès des
                             services fiscaux.
                             Conformément à l'article 242 bis du Code général des impôts, il est rappelé que chaque Membre est susceptible d'être
@@ -550,15 +533,11 @@
                                 <li>Un redressement fiscal entraînant la régularisation des sommes dues (avec pénalités de
                                 retard) Des amendes forfaitaires allant de 1,5% à 5% sur les sommes non déclarées Des
                                 sanctions pénales :</li>
-                                <li>
-                                    <ul>
-                                        <li>Peine d'emprisonnement (jusqu'à 5 ans, hors circonstances aggravantes)</li>
-                                        <li>Une amende (jusqu'à 500 000 euros, hors circonstances aggravantes)</li>
-                                        <li>Une interdiction d'exercer une profession indépendante ou de gérer une
-                                        entreprise La privation des droits civiques, civils et familiaux Des peines de
-                                        confiscation.</li>
-                                    </ul>
-                                </li>
+                                <li><ul><li>Peine d'emprisonnement (jusqu'à 5 ans, hors circonstances aggravantes)</li>
+                                <li>Une amende (jusqu'à 500 000 euros, hors circonstances aggravantes)</li>
+                                <li>Une interdiction d'exercer une profession indépendante ou de gérer une
+                                entreprise La privation des droits civiques, civils et familiaux Des peines de
+                                confiscation.</ul></li>
                             </ul>
                         </p1>
                         <p>
@@ -580,8 +559,8 @@
                             remboursement à hauteur des cotisations et contributions dues.
                         </p>
                         <h1>ARTICLE 10 - RESPONSABILITES D'e-artisans.fr</h1>
-                        <span style="font-weight: bold;">10.1 Responsabilité d'e-artisans.fr concernant le Service Chantier</span>
-                        <p1>
+                            <span style="font-weight: bold;">10.1 Responsabilité d'e-artisans.fr concernant le Service Chantier</span>
+                            <p1>
                             Le rôle de e-artisans.fr se limite à faciliter la rencontre entre les Utilisateurs et les Membres, en tant que simple
                             intermédiaire technique.
                             Le rôle de e-artisans.fr se limite ainsi à proposer un système permettant cette rencontre et à effectuer dans ce
@@ -604,10 +583,9 @@
                             devis, et elle ne pourra en aucun cas être tenue pour responsable des différends qui pourraient survenir entre les deux
                             parties.
                             e-artisans.fr décline toute responsabilité civile et/ou pénale quant aux conséquences directes et indirectes de sa
-                            mise en relation entre Utilisateurs et Membres.
-                        </p1>
-                        <p1><span style="font-weight: bold;">10.2 Responsabilité d'e-artisans.fr concernant le Service internet</span></p1>
-                        <p1>
+                            mise en relation entre Utilisateurs et Membres.</p1>
+                            <p1><span style="font-weight: bold;">10.2 Responsabilité d'e-artisans.fr concernant le Service internet</span></p1>
+                            <p1>
                             e-artisans.fr ne répond que d'une obligation de moyen concernant l'Outil, et le Site Internet, objets des présentes.
                             e-artisans.fr n'engagera pas sa responsabilité en cas de force majeure entendue au sens de la jurisprudence
                             française ou de faute du Membre.
@@ -626,18 +604,17 @@
                             internaute et l'éditeur du Site Internet.
                         </p1>
                         <h1>ARTICLE 11 - PROPRIÉTÉ INTELLECTUELLE</h1>
-                        <span style="font-weight: bold;">11.1 Conditions applicables au Site e-artisans.fr PRO</span>
-                        <p1>
+                            <span style="font-weight: bold;">11.1 Conditions applicables au Site e-artisans.fr PRO</span>
+                            <p1>
                             Le Site e-artisans.fr PRO constitue une œuvre protégée au titre de la propriété intellectuelle. Cette œuvre
                             comprend mais n'est pas limitée à sa structure générale, son arborescence, ses textes ainsi que toutes autres données
                             pouvant y figurer. Le Site e-artisans.fr PRO et les informations qui y figurent ne peuvent pas être reproduits, ni
                             servir à la réalisation d'œuvres dérivées sans l'accord préalable et écrit de e-artisans.fr.
                             Toute reproduction, représentation, modification, publication, transmission totale ou partielle du Site ou de son contenu
                             ou plus généralement toute exploitation non autorisée par e-artisans.fr du Site e-artisans.fr PRO et des
-                            informations qui y sont diffusées constitue une contrefaçon sanctionnée par le Code de la propriété intellectuelle.
-                        </p1>
-                        <p1><span style="font-weight: bold;">11.2 Conditions applicables au Site Internet à l'Outil</span></p1>
-                        <p1>Le Contenu, la structure et le logiciel mis en œuvre pour le fonctionnement de l'Outil sont protégés par le droit d'auteur.
+                            informations qui y sont diffusées constitue une contrefaçon sanctionnée par le Code de la propriété intellectuelle.</p1>
+                            <p1><span style="font-weight: bold;">11.2 Conditions applicables au Site Internet à l'Outil</span></p1>
+                            <p1>Le Contenu, la structure et le logiciel mis en œuvre pour le fonctionnement de l'Outil sont protégés par le droit d'auteur.
                             Toute représentation ou reproduction intégrale ou partielle faite sans le consentement de e-artisans.fr ou de sesayants droit ou ayants cause constitue une violation des dispositions du Code de la propriété intellectuelle et sera
                             susceptible de donner lieu à des poursuites judiciaires.
                             Il en est de même pour la traduction, l'adaptation ou la transformation, l'arrangement ou la reproduction par un art ou
@@ -677,22 +654,20 @@
                         </p1>
                         <h1>ARTICLE 13 - VIRUS - SÉCURITÉ INFORMATIQUE</h1>
                         <p1>e-artisans.fr s'engage à faire ses meilleurs efforts pour mettre en place toutes les procédures permettant de
-                            limiter les risques liés aux intrusions, piratages, ou à l'insertion de virus sur son serveur et/ou sur le Site
-                            e-artisans.fr PRO. Elle met aussi tout en œuvre pour sécuriser au maximum le contenu du Site
-                            e-artisans.fr PRO.
-                            Cependant, il est bien entendu que e-artisans.fr ne saurait s'engager sur une garantie absolue, et décline toute
-                            responsabilité en cas d'intrusion, piratage, ou en cas d'insertion de virus sur son serveur et/ou sur le Site
-                            e-artisans.fr PRO et/ou dans les emails transmis.
-                        </p1>
+                        limiter les risques liés aux intrusions, piratages, ou à l'insertion de virus sur son serveur et/ou sur le Site
+                        e-artisans.fr PRO. Elle met aussi tout en œuvre pour sécuriser au maximum le contenu du Site
+                        e-artisans.fr PRO.
+                        Cependant, il est bien entendu que e-artisans.fr ne saurait s'engager sur une garantie absolue, et décline toute
+                        responsabilité en cas d'intrusion, piratage, ou en cas d'insertion de virus sur son serveur et/ou sur le Site
+                        e-artisans.fr PRO et/ou dans les emails transmis.</p1>
                         <h1>ARTICLE 14 - PREREQUIS TECHNIQUES</h1>
                         <p1>Les Sites Internet ont été testés sur des ordinateurs PC et MAC fonctionnant avec les systèmes d'exploitation suivants
-                            : Windows XP, 7, Vista et 8 Mac OS X 10.8 Ainsi que pour les navigateurs Chrome version 25 Firefox version 19 Safari
-                            version 5.
-                            Le Membre est informé du fait qu'il existe une possibilité qu'apparaissent des dysfonctionnements sur des ordinateurs
-                            ou à partir de navigateurs ne figurant pas dans les listes précitées ou à partir d'ordinateur disposant d'une connexion
-                            internet particulièrement lente. Le Membre reconnait avoir pris connaissance, des prérequis techniques visés au
-                            présent article.
-                        </p1>
+                        : Windows XP, 7, Vista et 8 Mac OS X 10.8 Ainsi que pour les navigateurs Chrome version 25 Firefox version 19 Safari
+                        version 5.
+                        Le Membre est informé du fait qu'il existe une possibilité qu'apparaissent des dysfonctionnements sur des ordinateurs
+                        ou à partir de navigateurs ne figurant pas dans les listes précitées ou à partir d'ordinateur disposant d'une connexion
+                        internet particulièrement lente. Le Membre reconnait avoir pris connaissance, des prérequis techniques visés au
+                        présent article.</p1>
                         <h1>ARTICLE 15 - DONNÉES PERSONNELLES</h1>
                         <p1>
                             Dans le cadre des présentes CGV, e-artisans.fr est amené à traiter des données relatives aux Membres (les «
@@ -709,33 +684,27 @@
                         </p1>
                         <h1>ARTICLE 16 - COOKIES</h1>
                         <p1>Des cookies sont utilisés par e-artisans.fr. Si le Membre ne souhaite pas que de tels cookies soient placés, il
-                            peut les refuser en modifiant les paramètres de son navigateur Internet. Dans ce cas, il se peut qu'il ne puisse bénéficier
-                            de la totalité des fonctions et services proposés sur le Site e-artisans.fr PRO.
-                        </p1>
+                        peut les refuser en modifiant les paramètres de son navigateur Internet. Dans ce cas, il se peut qu'il ne puisse bénéficier
+                        de la totalité des fonctions et services proposés sur le Site e-artisans.fr PRO.</p1>
                         <h1>ARTICLE 17 - DISPOSITIONS FINALES</h1>
                         <p1><span style="font-weight: bold;">17.1 Nullité</span>
-                            Au cas où l'une des dispositions des présentes CGV deviendrait ou serait déclarée nulle, interdite ou sans effet, la
-                            validité des autres dispositions desdites CGV n'en serait pas pour autant remise en cause.
-                            Dans une telle hypothèse, les parties devront dans la mesure du possible remplacer la stipulation annulée par une
-                            stipulation valable correspondant à l'esprit et à l'objet des présentes.
-                        </p1>
+                        Au cas où l'une des dispositions des présentes CGV deviendrait ou serait déclarée nulle, interdite ou sans effet, la
+                        validité des autres dispositions desdites CGV n'en serait pas pour autant remise en cause.
+                        Dans une telle hypothèse, les parties devront dans la mesure du possible remplacer la stipulation annulée par une
+                        stipulation valable correspondant à l'esprit et à l'objet des présentes.</p1>
                         <p1><span style="font-weight: bold;">17.2 Non-renonciation</span>
-                            Le fait, pour e-artisans.fr, de ne pas se prévaloir à titre temporaire ou permanent d'une ou plusieurs clauses des
-                            présentes CGV, n'emportera en aucun cas renonciation à se prévaloir du reste desdites CGV.
-                        </p1>
+                        Le fait, pour e-artisans.fr, de ne pas se prévaloir à titre temporaire ou permanent d'une ou plusieurs clauses des
+                        présentes CGV, n'emportera en aucun cas renonciation à se prévaloir du reste desdites CGV.</p1>
                         <p1><span style="font-weight: bold;">17.3 Loi applicable</span>
-                            La loi applicable aux relations contractuelles entre e-artisans.fr et les Membres est la loi française.
-                        </p1>
+                        La loi applicable aux relations contractuelles entre e-artisans.fr et les Membres est la loi française.</p1>
                         <p1><span style="font-weight: bold;">17.4 Règlement amiable</span>
-                            Sauf dispositions d'ordre public, tous litiges qui pourraient survenir dans le cadre de l'exécution des présentes CGV
-                            devront, avant toute action judiciaire, être soumis à l'appréciation de e-artisans.fr en vue d'un règlement amiable.
-                            Il est expressément rappelé que les demandes de règlement amiable ne suspendent pas les délais ouverts pour intenter
-                            les actions judiciaires.
-                        </p1>
+                        Sauf dispositions d'ordre public, tous litiges qui pourraient survenir dans le cadre de l'exécution des présentes CGV
+                        devront, avant toute action judiciaire, être soumis à l'appréciation de e-artisans.fr en vue d'un règlement amiable.
+                        Il est expressément rappelé que les demandes de règlement amiable ne suspendent pas les délais ouverts pour intenter
+                        les actions judiciaires.</p1>
                         <p1><span style="font-weight: bold;">17.5 Attribution de compétence</span>
-                            A défaut d'accord amiable entre les parties concernant l'interprétation ou l'exécution des présentes CGV, le Tribunal de
-                            commerce de Paris en France sera exclusivement compétent pour juger d'éventuels litiges.
-                        </p1>
+                        A défaut d'accord amiable entre les parties concernant l'interprétation ou l'exécution des présentes CGV, le Tribunal de
+                        commerce de Paris en France sera exclusivement compétent pour juger d'éventuels litiges.</p1>
                         <p1><span style="font-weight: bold;">17.6 Force majeure</span>
                             L'exécution par e-artisans.fr de ses obligations contractuelles sera suspendue en cas de survenance de tout
                             événement relevant de la force majeure telle que définie à l'alinéa 1 de l'article 1218 du Code civil.
@@ -756,10 +725,10 @@
                                 <li>un nombre de salariés égal ou inférieur à 5.</li>
                             </ul>
                             <div class="d-flex full-width flex-wrap">
-                                Le formulaire doit être renvoyé à l’adresse suivante dans les 14 jours suivants la conclusion du contrat :
-                                e-artisans.fr SAS (MYBESTPRO) -Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.
-                                Je vous notifie par la présente ma rétractation du contrat portant sur la vente du service ci-dessous :
-                                Contrat souscrit le <input type="" placeholder="......................................................................................................................................" class="blanc-point flex-one" disabled> <br>
+                            Le formulaire doit être renvoyé à l’adresse suivante dans les 14 jours suivants la conclusion du contrat :
+                            e-artisans.fr SAS (MYBESTPRO) -Jaouad AZOUM ENTREPRISE INDIVIDUELLE dont le siège social est situé au 84 route de bonsecours 76000 Rouen - Téléphone : <a href="tel:{{$contact->phone}}">{{$contact->phone}}</a> - Siren: 798351763.
+                            Je vous notifie par la présente ma rétractation du contrat portant sur la vente du service ci-dessous :
+                            Contrat souscrit le <input type="" placeholder="......................................................................................................................................" class="blanc-point flex-one" disabled> <br>
                                 <div class="d-flex full-width flex-wrap">
                                     Numéro de la commande : <input type="" placeholder="......................................................................................................." class="blanc-point flex-one" disabled>
                                 </div>
@@ -774,11 +743,10 @@
                                 </div> 
                             </div>
                         </p>
+                        
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>

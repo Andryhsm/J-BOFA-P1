@@ -39,21 +39,30 @@ class ArtisanController extends Controller
 
     public function index()
     {
-        //dd(auth()->user()->id);
-        $cities = auth()->user()->city_id;
-        $user = $this->user_repo->findUser(auth()->user()->id);
-        $postal = $user->city->ville_code_postal ;
-        $code = $postal[0].$postal[1];
-        $temoins = $this->temoin_repo->getTemoins();
-        $locations = $this->citie_repo->getAddress($cities);
-        $category = auth()->user()->category_id;
-        $project_availables = $this->view_repo->projectDispo($category,$code);
-        $notif_available = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
-        $notif = count($notif_available);
-        //dd(count($notif_available));
-        $diff = $this->getDate();
-        //dd($locations);
-        return view('artisan.page.index', compact('temoins','locations','diff','notif','project_availables','user'));
+        //dd(auth()->user()->status);
+        $contact = $this->user_repo->getContact();
+        if(auth()->user()->status==0){
+        
+            $cities = auth()->user()->city_id;
+            $user = $this->user_repo->findUser(auth()->user()->id);
+            $postal = $user->city->ville_code_postal ;
+            $code = $postal[0].$postal[1];
+            $temoins = $this->temoin_repo->getTemoins();
+            $locations = $this->citie_repo->getAddress($cities);
+            $category = auth()->user()->category_id;
+            $project_availables = $this->view_repo->projectDispo($category,$code);
+            $notif_available = $this->view_repo->getNotif(auth()->user()->id,$category,$postal);
+            $notif = count($notif_available);
+            //dd(count($notif_available));
+            $diff = $this->getDate();
+            //dd($locations);
+            return view('artisan.page.index', compact('temoins','locations','diff','notif','project_availables','user'));
+        }else{
+            //dd(auth()->user());
+            session()->forget('guest');
+            session()->flush();
+            return view('front.login.status',compact('contact'));
+        }
     }
 
     // public function index()
@@ -313,13 +322,20 @@ class ArtisanController extends Controller
     {
         $diff = $this->getDate();
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $customer = Stripe\Customer::create(array(
+            'email' => $request->email,
+            'source'  => $request->stripeToken
+        ));
         $stripe= Stripe\Charge::create ([
-            "amount" => 270 * 100,
+            'customer' =>$customer->id,
+            "amount" => 10 * 100,
             "currency" => "eur",
-            "source" => $request->stripeToken,
-            "description" => "Test payment " 
+            'receipt_email' => auth()->user()->email,
+            "description" => "Test payment " ,
         ]);
+        //dd($customer);
         $this->user_repo->addAbonnement($stripe);
+        //toastr()->success('Payment réussi!');
         Session::flash('success', 'Payment réussi!');
         // dd($stripe);
         return back();

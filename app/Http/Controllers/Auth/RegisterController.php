@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
@@ -57,7 +58,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'confirmed'],
+            'password' => ['required', 'string', 'confirmPassword'],
         ]);
     }
 
@@ -81,13 +82,14 @@ class RegisterController extends Controller
         //     'status' => 1,
         //     'password' => Hash::make($data['password']),
         // ]);
-       $user = $this->user_repository->createUser($data->all());
-       // dd($user->id);
-       //if (auth()->attempt(['email' => $data->email, 'password' => $data->password])) {
-            //dd(auth()->user()->id);
-       $names = $data->first_name.' '.$data->name;
-       $email = $data->email;
-       $id = $user->id;
+        //if($data->category != "" || $data->category!="selectionnez" || $data->ville!="selectionnez" || $data->ville!=""){
+            $user = $this->user_repository->createUser($data->all());
+            // dd($user->id);
+            //if (auth()->attempt(['email' => $data->email, 'password' => $data->password])) {
+                //dd(auth()->user()->id);
+            $names = $data->first_name.' '.$data->name;
+            $email = $data->email;
+            $id = $user->id;
             $valueArray = [
                 'name' => $data->first_name.' '.$data->name,
                 'email'=>$data->email,
@@ -96,9 +98,15 @@ class RegisterController extends Controller
             ];
             Mail::to($data->email)->send(new MailConfirmation($valueArray));
             return redirect('confirmation/names='.$email.'_'.$names.'_'.$id);
-        // }else{
-        //     return redirect()->guest(route('connexion'));
-        // }
+            // }else{
+            //     return redirect()->guest(route('connexion'));
+            //}
+        /*}
+        else{
+            
+            toastr()->error('Les deux mot de passe ne sont pas identique!');
+            return Redirect::back();
+        }*/
     }
 
     public function after($names,$email,$id){
