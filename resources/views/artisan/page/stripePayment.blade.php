@@ -36,6 +36,7 @@
   
                         <div class='form-row'>
                             <input type="hidden" name="email" class="email" value="{{auth()->user()->email}}">
+                            <input type="hidden" name="name" class="name" value="{{auth()->user()->first_name.' '.auth()->user()->name}}">
                             <div class='col-xs-12 form-group required'>
                                 <label class='control-label'>Nom du carte</label> <input
                                     class='form-control' size='4' type='text'>
@@ -46,6 +47,14 @@
                             <div class='col-xs-12 form-group card required card_payment'>
                                 <label class='control-label'>Numero de la carte</label> <input
                                     autocomplete='off' class='form-control card-number' size='20'
+                                    type='text'>
+                            </div>
+                        </div>
+                        <div class='form-row'>
+                            <div class='col-xs-12 form-group required address'>
+                                <label class='control-label'>Adresse</label> 
+                                <input
+                                    autocomplete='off' class='form-control adress_pay' name="address" size='20'
                                     type='text'>
                             </div>
                         </div>

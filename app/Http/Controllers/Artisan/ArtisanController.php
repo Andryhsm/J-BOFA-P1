@@ -41,7 +41,7 @@ class ArtisanController extends Controller
     {
         //dd(auth()->user()->status);
         $contact = $this->user_repo->getContact();
-        if(auth()->user()->status==0){
+        if(auth()->user()->email_verified_at!=null){
         
             $cities = auth()->user()->city_id;
             $user = $this->user_repo->findUser(auth()->user()->id);
@@ -326,14 +326,15 @@ class ArtisanController extends Controller
             'email' => $request->email,
             'source'  => $request->stripeToken
         ));
+        //dd($customer);
         $stripe= Stripe\Charge::create ([
             'customer' =>$customer->id,
             "amount" => 10 * 100,
             "currency" => "eur",
             'receipt_email' => auth()->user()->email,
-            "description" => "Test payment " ,
+            "description" => "Abonnement" ,
         ]);
-        //dd($customer);
+        //dd($stripe);
         $this->user_repo->addAbonnement($stripe);
         //toastr()->success('Payment réussi!');
         Session::flash('success', 'Payment réussi!');
@@ -410,7 +411,7 @@ class ArtisanController extends Controller
         $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
             $hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24) / (60*60));
             //dd(\Carbon\Carbon::now().' '.$years.'  '.$months.' '.$days.' '.$hours);
-        return $days;
+        return $months;
     }
 
 }

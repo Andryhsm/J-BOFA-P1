@@ -235,6 +235,7 @@
             Stripe.createToken({
                 number: $('.card-number').val(),
                 cvc: $('.card-cvc').val(),
+                address_city: $('.adress_pay').val(),
                 exp_month: $('.card-expiry-month').val(),
                 exp_year: $('.card-expiry-year').val()
             }, stripeResponseHandler);
