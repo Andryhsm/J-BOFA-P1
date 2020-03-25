@@ -235,8 +235,13 @@
             Stripe.createToken({
                 number: $('.card-number').val(),
                 cvc: $('.card-cvc').val(),
+                // address_city: $('.adress_pay').val(),
                 exp_month: $('.card-expiry-month').val(),
-                exp_year: $('.card-expiry-year').val()
+                name: $('.card-expiry-month').data('val'),
+                exp_year: $('.card-expiry-year').val(),
+                // address_country: $('.adress_pay').val(),
+                address_line1: $('.adress_pay').val(),
+                address_state: 'France'
             }, stripeResponseHandler);
         }
     

@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+
 	var currencies=[];
   var ids =[];
 	var position= [];

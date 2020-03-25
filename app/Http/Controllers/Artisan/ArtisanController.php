@@ -41,7 +41,7 @@ class ArtisanController extends Controller
     {
         //dd(auth()->user()->status);
         $contact = $this->user_repo->getContact();
-        if(auth()->user()->status==0){
+        if(auth()->user()->email_verified_at!=null){
         
             $cities = auth()->user()->city_id;
             $user = $this->user_repo->findUser(auth()->user()->id);
@@ -55,7 +55,7 @@ class ArtisanController extends Controller
             $notif = count($notif_available);
             //dd(count($notif_available));
             $diff = $this->getDate();
-            //dd($locations);
+            //dd($diff);
             return view('artisan.page.index', compact('temoins','locations','diff','notif','project_availables','user'));
         }else{
             //dd(auth()->user());
@@ -326,14 +326,15 @@ class ArtisanController extends Controller
             'email' => $request->email,
             'source'  => $request->stripeToken
         ));
+        //dd($customer);
         $stripe= Stripe\Charge::create ([
             'customer' =>$customer->id,
             "amount" => 10 * 100,
             "currency" => "eur",
             'receipt_email' => auth()->user()->email,
-            "description" => "Test payment " ,
+            "description" => "Abonnement" ,
         ]);
-        //dd($customer);
+        // dd($stripe);
         $this->user_repo->addAbonnement($stripe);
         //toastr()->success('Payment réussi!');
         Session::flash('success', 'Payment réussi!');
@@ -393,10 +394,10 @@ class ArtisanController extends Controller
             $hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24) / (60*60));
             $minutes = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24 - $hours*60*60)/ 60);
             //dd($minutes + 1);
-            return $hours + 1;
+            return $months + 1;
         }else{
-            $hours=0;
-            return $hours;
+            $months=0;
+            return $months;
         }
         
     }

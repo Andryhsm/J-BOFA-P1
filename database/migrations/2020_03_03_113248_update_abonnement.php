@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateAccepted extends Migration
+class UpdateAbonnement extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class UpdateAccepted extends Migration
      */
     public function up()
     {
-        //
-        Schema::table('project_accepted',function(Blueprint $table){
-            $table->timestamp('accepted_at')->nullable();
+        Schema::table('abonnement',function(Blueprint $table)
+        {
+            $table->string('address')->nullable();
         });
     }
 

@@ -36,9 +36,10 @@
   
                         <div class='form-row'>
                             <input type="hidden" name="email" class="email" value="{{auth()->user()->email}}">
+                            <input type="hidden" name="name" class='form-control name_user' value="{{auth()->user()->name}}">
                             <div class='col-xs-12 form-group required'>
                                 <label class='control-label'>Nom du carte</label> <input
-                                    class='form-control' size='4' type='text'>
+                                    class='form-control' size='4' type='text' name="name" placeholder="exemple: visa">
                             </div>
                         </div>
   
@@ -46,7 +47,15 @@
                             <div class='col-xs-12 form-group card required card_payment'>
                                 <label class='control-label'>Numero de la carte</label> <input
                                     autocomplete='off' class='form-control card-number' size='20'
-                                    type='text'>
+                                    type='text' placeholder="123 123 123 123 1231">
+                            </div>
+                        </div>
+                        <div class='form-row'>
+                            <div class='col-xs-12 form-group required address'>
+                                <label class='control-label'>Adresse</label> 
+                                <input
+                                    autocomplete='on' class='form-control adress_pay' name="address" 
+                                    type='text' placeholder="n° et nom de voie, rue, route">
                             </div>
                         </div>
   
@@ -59,7 +68,7 @@
                             <div class='col-xs-12 col-md-4 form-group expiration required'>
                                 <label class='control-label'>Mois d'expiration</label> <input
                                     class='form-control card-expiry-month' placeholder='MM' size='2'
-                                    type='text'>
+                                    type='text' data-val="{{auth()->user()->first_name.' '.auth()->user()->name}}">
                             </div>
                             <div class='col-xs-12 col-md-4 form-group expiration required'>
                                 <label class='control-label'>Année d'expiration</label> <input
