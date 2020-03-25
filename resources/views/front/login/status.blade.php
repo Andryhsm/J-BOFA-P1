@@ -1,9 +1,11 @@
+
 @extends('front.layout.master')
 
     @section('additional-css')
     {!! Html::style('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css') !!}
     {!! Html::style('css/front/register.css') !!}
     {!! Html::style('css/front/modal.css') !!}
+    {!! Html::style('compiled_css/default.css') !!}
 
     @endsection
 
@@ -13,14 +15,14 @@
         <img src="{!! url('/image/front/images/fond.jpg') !!}" class="img_fond" alt="" />
         <div class="description_header">
           <div class="text_header">
-              <h2>SE CONNECTER</h2>
+              <h2>E-ARTISANS.FR</h2>
           </div>
         </div>
       </div>
     </section>
-    <section class="inscription">
-      <div class="content_register">
-        <div class="bloc_description">
+    <section class="inscription" id="login-wrapper">
+      <div class="content_register d-flex justify-content-center d-flex">
+        <!-- <div class="bloc_description">
           <div class="background_image_bande">
             <div class="title_inscritpion">
               <label for="" class="title">UN CHANTIER A REALISER ?</label>
@@ -41,28 +43,30 @@
 
           </div>
 
-        </div>
+        </div> -->
         <div class="bloc_form">
           <!-- {{ route('login') }} -->
           <!-- url(config('adminlte.login_url', 'login')) -->
-          <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
-          {{ csrf_field() }}
           <div class="item_formulaire">
-            <label for="" class="title_inscription">Validez votre inscription</label>
+            <label for="" class="title_inscription">Bonjour  </label>
             <div class="sparated_form_title">
               <div class="separate"></div>
             </div>
 
             <div class="formular_item">
               <label for="" class="label_form">Un e-mail vous a été envoyé. Suivez les instructions pour confirmer votre inscription.</label>
+            </div>
+            <div class="btn_form text-center forget-password">
+              <a  class="modal_btn" style="width: 100%;" href="{{route('accueil')}}">
+                <button type="button" class="btn_artisan">Retour à l'accueil</button>
+              </a>
+            </div>
             
           </div>
-        </form>
         </div>
       </div>
     </section>
 @endsection
 
 @section('additional-script')
-  
 @endsection

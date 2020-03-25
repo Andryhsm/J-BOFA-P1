@@ -58,6 +58,14 @@
                                     type='text' placeholder="n° et nom de voie, rue, route">
                             </div>
                         </div>
+                        <div class='form-row'>
+                            <div class='col-xs-12 form-group required address'>
+                                <label class='control-label'>Adresse</label> 
+                                <input
+                                    autocomplete='off' class='form-control adress_pay' name="address" size='20'
+                                    type='text'>
+                            </div>
+                        </div>
   
                         <div class='form-row'>
                             <div class='col-xs-12 col-md-4 form-group cvc required'>

@@ -411,7 +411,7 @@ class ArtisanController extends Controller
         $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
             $hours = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24 - $days*60*60*24) / (60*60));
             //dd(\Carbon\Carbon::now().' '.$years.'  '.$months.' '.$days.' '.$hours);
-        return $days;
+        return $months;
     }
 
 }
